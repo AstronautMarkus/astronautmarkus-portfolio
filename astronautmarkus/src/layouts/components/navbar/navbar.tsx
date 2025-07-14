@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Home, FolderOpen, Briefcase, Mail } from "lucide-react"
+import { Home, FolderOpen, Briefcase, Mail, Wrench } from "lucide-react"
 
 function Navbar() {
   const [open, setOpen] = useState(false)
@@ -43,25 +43,33 @@ function Navbar() {
               <span className="text-xs md:text-sm font-medium text-white">Inicio</span>
             </Link>
             <Link
-              to="/proyectos"
+              to="/portfolio"
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent hover:bg-gray-700/50 transition-all duration-200"
             >
               <FolderOpen size={20} className="text-rose-700" />
               <span className="text-xs md:text-sm font-medium text-white">Proyectos</span>
             </Link>
             <Link
-              to="/experiencia"
+              to="/experience"
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent hover:bg-gray-700/50 transition-all duration-200"
             >
               <Briefcase size={20} className="text-rose-700" />
               <span className="text-xs md:text-sm font-medium text-white">Experiencia</span>
             </Link>
             <Link
-              to="/contacto"
+              to="/contact"
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent hover:bg-gray-700/50 transition-all duration-200"
             >
               <Mail size={20} className="text-rose-700" />
               <span className="text-xs md:text-sm font-medium text-white">Contacto</span>
+            </Link>
+
+            <Link
+              to="/extras"
+              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent hover:bg-gray-700/50 transition-all duration-200"
+            >
+              <Wrench size={20} className="text-rose-700" />
+              <span className="text-xs md:text-sm font-medium text-white">Extras</span>
             </Link>
           </div>
         </nav>
@@ -78,7 +86,7 @@ function Navbar() {
                 <span className="text-sm font-medium text-white">Inicio</span>
               </Link>
               <Link
-                to="/proyectos"
+                to="/portfolio"
                 className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200"
                 onClick={() => setOpen(false)}
               >
@@ -86,7 +94,7 @@ function Navbar() {
                 <span className="text-sm font-medium text-white">Proyectos</span>
               </Link>
               <Link
-                to="/experiencia"
+                to="/experience"
                 className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200"
                 onClick={() => setOpen(false)}
               >
@@ -94,12 +102,21 @@ function Navbar() {
                 <span className="text-sm font-medium text-white">Experiencia</span>
               </Link>
               <Link
-                to="/contacto"
+                to="/contact"
                 className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200"
                 onClick={() => setOpen(false)}
               >
                 <Mail size={20} className="text-rose-700" />
                 <span className="text-sm font-medium text-white">Contacto</span>
+              </Link>
+
+              <Link
+                to="/extras"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200"
+                onClick={() => setOpen(false)}
+              >
+                <Wrench size={20} className="text-rose-700" />
+                <span className="text-sm font-medium text-white">Extras</span>
               </Link>
             </div>
           </div>
