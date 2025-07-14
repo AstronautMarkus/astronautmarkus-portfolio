@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <header className="w-full">
-      <div className="w-full max-w-7xl mx-auto bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-700/50 mt-2">
+      <div className="w-full max-w-7xl mx-auto bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-700/50 mt-2">
         <nav className="flex items-center px-4 py-3 md:px-6 md:py-4">
           <img src="/favicon.jpg" alt="favicon" className="w-8 h-8 rounded-full mr-3 select-none" draggable={false} />
           <span className="text-lg md:text-xl font-bold text-white mr-auto select-none">astronautmarkus.dev</span>

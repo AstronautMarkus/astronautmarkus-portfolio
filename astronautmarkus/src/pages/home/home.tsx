@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="flex items-center justify-center p-4">
-      <div className="w-full max-w-md mx-auto shadow-xl border-0 bg-gray-800/95 backdrop-blur-sm rounded-lg overflow-hidden transition-colors">
+      <div className="w-full max-w-md mx-auto shadow-xl border-0 bg-gray-800/80 backdrop-blur-sm rounded-lg overflow-hidden transition-colors">
         <div className="w-full h-32 md:h-40 bg-gradient-to-r from-blue-500 to-purple-600 relative">
           <img
             src={BannerCard}

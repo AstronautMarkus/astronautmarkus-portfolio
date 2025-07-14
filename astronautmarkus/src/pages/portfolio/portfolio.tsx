@@ -29,7 +29,7 @@ function Portfolio() {
             <p className="text-white mb-4">{category.description}</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {projects.filter(p => p.categorySlug === category.slug).map(proyecto => (
-                <div key={proyecto.slug} className="bg-gray-800/95 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-shadow relative flex flex-col items-center">
+                <div key={proyecto.slug} className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-shadow relative flex flex-col items-center">
                   <h3 className="text-xl font-semibold mb-2 text-center text-white">{proyecto.title}</h3>
                   {proyecto.imageUrl ? (
                     <img
