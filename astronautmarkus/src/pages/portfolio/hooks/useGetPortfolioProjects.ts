@@ -53,6 +53,29 @@ const projects: Project[] = [
         imageUrl: '/projects/fumoindex.jpg',
         privateRepo: false,
     },
+    
+    {
+        slug: 'abbybot-project',
+        title: 'AbbyBot Project',
+        description: 'Bot multifuncional para Discord, con funciones de moderación, música y más. Desarrollado con Discord.py y amor (lo más importante).',
+        technologies: ["Discord.py", "Python", "MySQL"],
+        categorySlug: 'personal',
+        githubUrl: 'https://github.com/AbbyBot/Discord-AbbyBot',
+        imageUrl: '/projects/abbybotproject.png',
+
+    },
+
+    {
+        slug: 'blog-astronautmarkus',
+        title: 'Blog de AstronautMarkus',
+        description: 'Blog informático donde se comparten artículos sobre desarrollo web, programación y tecnología en general. Creado con Laravel y Tailwind CSS.',
+        technologies: ["Laravel", "Blade", "Tailwind CSS", "MySQL", "PHP"],
+        categorySlug: 'personal',
+        githubUrl: 'https://github.com/AstronautMarkus/blog.astronautmarkus.dev',
+        imageUrl: '/projects/blog-astronautmarkus.png',
+
+    },
+    
 ];
 
 export function useGetPortfolioProjects() {
