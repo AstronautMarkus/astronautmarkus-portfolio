@@ -1,4 +1,5 @@
 import Navbar from './components/navbar/navbar'
+import Footer from './components/footer/footer'
 import BackgroundImg from '../assets/img/background.jpg'
 
 interface LayoutAppProps {
@@ -25,8 +26,11 @@ function LayoutApp({ children }: LayoutAppProps) {
       </div>
 
       <main className="flex-1 overflow-y-auto">
-        <div className="p-4">
-          {children}
+        <div className="p-4 min-h-full flex flex-col">
+          <div className="flex-1">
+            {children}
+          </div>
+          <Footer />
         </div>
       </main>
     </div>
