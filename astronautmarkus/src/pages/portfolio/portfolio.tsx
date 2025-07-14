@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import TuxPenguin from "../assets/img/tux-linux-penguin.gif";
+import TuxPenguin from "../../assets/img/tux-linux-penguin.gif";
 
 function Portfolio() {
   const proyectosFake = [

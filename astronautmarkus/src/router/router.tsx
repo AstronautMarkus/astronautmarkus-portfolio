@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import LayoutApp from '../layouts/layoutApp'
 
-import Home from '../pages/home'
-import Portfolio from '../pages/portfolio'
+import Home from '../pages/home/home'
+import Portfolio from '../pages/portfolio/portfolio'
 
 function Router() {
     return (

@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail, MapPin, Globe, Code, Server, Shield, Wrench, Instagram } from "lucide-react"
-import BannerCard from "../assets/img/banner_card.jpg";
+import BannerCard from "../../assets/img/banner_card.jpg";
 import { Link } from "react-router-dom";
 
 function Home() {
