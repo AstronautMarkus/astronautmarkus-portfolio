@@ -1,10 +1,10 @@
-import { Github, Linkedin, Mail, MapPin, Globe, Code, Server, Shield, Wrench, Instagram } from "lucide-react"
+import { Mail, MapPin, Globe, Code, Server, Shield, Wrench } from "lucide-react"
 import BannerCard from "../../assets/img/banner_card.jpg";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="flex items-center justify-center p-4">
       <div className="w-full max-w-md mx-auto shadow-xl border-0 bg-gray-800/95 backdrop-blur-sm rounded-lg overflow-hidden transition-colors">
         <div className="w-full h-32 md:h-40 bg-gradient-to-r from-blue-500 to-purple-600 relative">
           <img
@@ -32,7 +32,7 @@ function Home() {
         <div className="px-6 pb-6 space-y-6">
           <div className="text-center">
             <p className="text-gray-300 text-sm leading-relaxed">
-              "Analista Programador con experiencia en el desarrollo de aplicaciones web FullStack y experiencia en administración de sistemas. Me apasiona aprender nuevas tecnologías y mejorar mis habilidades constantemente. Busco contribuir con mi experiencia en proyectos desafiantes y colaborar en equipos multidisciplinarios."
+              Analista Programador con experiencia FullStack y administración de sistemas. Apasionado por aprender y aportar en proyectos desafiantes.
             </p>
           </div>
 
@@ -59,47 +59,16 @@ function Home() {
               </span>
             </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            <a
-              href="https://github.com/astronautmarkus"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-gray-300 bg-transparent border border-gray-600 rounded-md hover:bg-gray-700 hover:text-white hover:border-gray-700 transition-colors"
-            >
-              <Github className="w-4 h-4" />
-              GitHub
-            </a>
-
-            <a
-              href="https://linkedin.com/in/markusreyes/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-gray-300 bg-transparent border border-gray-600 rounded-md hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-colors"
-            >
-              <Linkedin className="w-4 h-4" />
-              LinkedIn
-            </a>
-
-            <a
-              href="https://instagram.com/sky._marc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-gray-300 bg-transparent border border-gray-600 rounded-md hover:bg-pink-500 hover:text-white hover:border-pink-500 transition-colors"
-            >
-              <Instagram className="w-4 h-4" />
-              Instagram
-            </a>
-
-            <a
-              href="mailto:marcos@reyesandfriends.cl"
-              className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-gray-300 bg-transparent border border-gray-600 rounded-md hover:bg-green-600 hover:text-white hover:border-green-600 transition-colors"
+          
+          <div className="pt-4">
+            <Link
+              to="/contact"
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white border border-white hover:bg-white hover:text-blue-700 rounded-md transition-all mb-2 bg-transparent"
             >
               <Mail className="w-4 h-4" />
-              Email
-            </a>
-          </div>
+              Contacto
+            </Link>
 
-          <div className="pt-4">
             <Link
               to="/portfolio"
               className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-rose-700 hover:bg-rose-800 rounded-md transition-all"
