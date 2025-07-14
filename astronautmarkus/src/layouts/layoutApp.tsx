@@ -1,8 +1,11 @@
-import { Outlet } from 'react-router-dom'
 import Navbar from './components/navbar/navbar'
 import BackgroundImg from '../assets/img/background.jpg'
 
-function LayoutApp() {
+interface LayoutAppProps {
+  children: React.ReactNode
+}
+
+function LayoutApp({ children }: LayoutAppProps) {
   return (
     <div className="h-screen flex flex-col relative overflow-hidden">
       <div className="absolute inset-0 -z-20">
@@ -23,7 +26,7 @@ function LayoutApp() {
 
       <main className="flex-1 overflow-y-auto">
         <div className="p-4">
-          <Outlet />
+          {children}
         </div>
       </main>
     </div>
