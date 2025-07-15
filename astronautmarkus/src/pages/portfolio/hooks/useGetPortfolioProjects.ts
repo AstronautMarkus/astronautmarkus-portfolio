@@ -45,7 +45,7 @@ const categories: Category[] = [
 const projects: Project[] = [
     {
         slug: 'fumo-index',
-        title: 'Fumo Index',
+        title: 'The Fumo Index (ふも)',
         description: 'Plataforma web para la documentación y recolección de peluches FumoFumo basados en la serie de videojuegos Touhou. Ahora adaptados a más franquicias.',
         technologies: ['React', 'TypeScript','Laravel','MySQL', 'Tailwind CSS'],
         categorySlug: 'personal',
@@ -53,7 +53,6 @@ const projects: Project[] = [
         imageUrl: '/projects/fumoindex.jpg',
         privateRepo: false,
     },
-    
     {
         slug: 'abbybot-project',
         title: 'AbbyBot Project',
@@ -62,9 +61,7 @@ const projects: Project[] = [
         categorySlug: 'personal',
         githubUrl: 'https://github.com/AbbyBot/Discord-AbbyBot',
         imageUrl: '/projects/abbybotproject.png',
-
     },
-
     {
         slug: 'blog-astronautmarkus',
         title: 'Blog de AstronautMarkus',
@@ -73,9 +70,34 @@ const projects: Project[] = [
         categorySlug: 'personal',
         githubUrl: 'https://github.com/AstronautMarkus/blog.astronautmarkus.dev',
         imageUrl: '/projects/blog-astronautmarkus.png',
-
     },
-    
+    {
+        slug: 'multi-stock-sync',
+        title: 'Multi Stock Sync',
+        description: 'Desarrollo de un software de sincronización de productos con conexión a Mercado Libre, utilizando JWT para autenticación y autorización, y una API RESTful para la gestión de productos.',
+        technologies: ['React', 'Node.js', 'Bootstrap', 'Chart.js'],
+        categorySlug: 'professional-practice',
+        githubUrl: 'https://github.com/astronautmarkus/Multi-Stock-Sync',
+        imageUrl: '/projects/multi-stock-sync.png',
+    },
+    {
+        slug: 'multi-stock-sync-back',
+        title: 'Multi Stock Sync Back',
+        description: 'Backend del software de sincronización de productos, desarrollado con Laravel. Implementa JWT para autenticación y autorización, y una API RESTful para la gestión de productos.',
+        technologies: ['Laravel', 'Sanctum', 'MySQL', 'PHP'],
+        categorySlug: 'professional-practice',
+        githubUrl: 'https://github.com/astronautmarkus/Multi-Stock-Sync-Back',
+        imageUrl: '/projects/multi-stock-sync-back.png',
+    },
+    {
+        slug: 'multi-stock-sync-api-viewer',
+        title: 'Multi Stock API Viewer',
+        description: 'Documentación de la API del software de sincronización de productos, generada con Swagger. Permite a los desarrolladores explorar y probar la API fácilmente.',
+        technologies: ['Laravel', 'Swagger'],
+        categorySlug: 'professional-practice',
+        githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-API-Viewer',
+        imageUrl: '/projects/multi-stock-api-viewer.png',
+    },
 ];
 
 export function useGetPortfolioProjects() {
