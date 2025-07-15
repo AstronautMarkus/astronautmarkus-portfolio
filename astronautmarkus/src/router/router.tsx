@@ -5,6 +5,7 @@ import LayoutApp from '../layouts/layoutApp'
 
 import Home from '../pages/home/home'
 import Portfolio from '../pages/portfolio/portfolio'
+import Contact from '../pages/contact/contact'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -82,7 +83,7 @@ function Router() {
                 transition={pageTransition}
                 style={{ height: '100%' }}
               >
-                <div>Contact Page</div>
+                <Contact />
               </motion.div>
             }
           />

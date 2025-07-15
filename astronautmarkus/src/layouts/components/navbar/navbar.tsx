@@ -11,7 +11,7 @@ function Navbar() {
         <nav className="flex items-center px-4 py-3 md:px-6 md:py-4">
           <img src="/favicon.jpg" alt="favicon" className="w-8 h-8 rounded-full mr-3 select-none" draggable={false} />
           <span className="text-lg md:text-xl font-bold text-white mr-auto select-none">
-            {window.location.href}
+            AstronautMarkus.dev
           </span>
 
           <button
