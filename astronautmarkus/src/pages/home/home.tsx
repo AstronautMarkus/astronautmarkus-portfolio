@@ -1,5 +1,6 @@
 import { Mail, MapPin, Globe, Code, Server, Shield, Wrench } from "lucide-react"
 import BannerCard from "../../assets/img/banner_card.jpg";
+import ProfilePicture from "../../assets/img/profile_picture.jpg";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -14,9 +15,11 @@ function Home() {
             style={{ zIndex: 0 }}
           />
           <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 1 }}>
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-2xl font-semibold">
-              MR
-            </div>
+            <img
+              src={ProfilePicture}
+              alt="Profile"
+              className="w-32 h-32 rounded-full object-cover shadow-lg"
+            />
           </div>
         </div>
 
