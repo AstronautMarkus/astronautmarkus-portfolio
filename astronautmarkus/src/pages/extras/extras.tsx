@@ -1,5 +1,7 @@
-import { Code, Camera, FileText, Heart, Github } from "lucide-react"
+import { Code, Camera, FileText, Heart, Github,Copyright } from "lucide-react"
 import { Link } from "react-router-dom";
+
+const year = new Date().getFullYear();
 
 function Extras() {
   return (
@@ -98,8 +100,9 @@ function Extras() {
                 Este proyecto está bajo la licencia MIT. Puedes usar, modificar y distribuir el código libremente. 
                 Solo se requiere mantener el aviso de copyright y la licencia en las copias.
               </p>
-              <p className="text-gray-400 text-xs mt-2">
-                © 2024 Marcos Reyes - Todos los derechos reservados
+              <p className="text-gray-400 text-xs mt-2 flex items-center gap-1">
+                <Copyright size={10} />
+                {year} Marcos Reyes - Todos los derechos reservados
               </p>
             </div>
           </div>
