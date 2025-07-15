@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart, Copyright } from "lucide-react"
+import { Github, Linkedin, Mail, Heart, Copyright, Coffee } from "lucide-react"
 
 const year = new Date().getFullYear();
 
@@ -17,7 +17,7 @@ function Footer() {
 
           <div className="flex items-center gap-2 mb-3 md:mb-0">
             <span className="text-xs text-gray-300 flex items-center gap-1">
-              Hecho con <Heart size={12} className="text-rose-700" /> y mucho café
+              Hecho con <Heart size={12} className="text-rose-700" /> y mucho <Coffee size={12} className="text-rose-700" />
             </span>
           </div>
 

@@ -1,4 +1,4 @@
-import { Code, Camera, FileText, Heart, Github,Copyright } from "lucide-react"
+import { Code, Camera, FileText, Heart, Github,Copyright, Coffee } from "lucide-react"
 import { Link } from "react-router-dom";
 
 const year = new Date().getFullYear();
@@ -15,21 +15,27 @@ function Extras() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           <div className="space-y-6">
-            <h2 className="text-xl font-semibold text-white mb-4">Tecnologías Utilizadas</h2>
+            <h2 className="text-xl font-semibold text-white mb-4 text-center">Tecnologías Utilizadas</h2>
             
             <div className="flex items-center gap-4 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
               <Code className="text-rose-700 w-6 h-6" />
               <div>
                 <p className="text-white font-medium">React + TypeScript</p>
                 <p className="text-gray-300">Framework principal del proyecto</p>
+                <Link to="https://vite.dev/guide/" target="_blank" className="text-rose-400 hover:text-rose-300 transition-colors text-sm">
+                 vite.dev/guide
+                </Link>
               </div>
             </div>
 
             <div className="flex items-center gap-4 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
               <Code className="text-rose-700 w-6 h-6" />
               <div>
-                <p className="text-white font-medium">Vite</p>
-                <p className="text-gray-300">Build tool y dev server</p>
+                <p className="text-white font-medium">Nginx</p>
+                <p className="text-gray-300">Despliegue y servidor web</p>
+                <Link to="https://nginx.org/en/docs/" target="_blank" className="text-rose-400 hover:text-rose-300 transition-colors text-sm">
+                  nginx.org/en/docs
+                </Link>
               </div>
             </div>
 
@@ -38,6 +44,9 @@ function Extras() {
               <div>
                 <p className="text-white font-medium">Tailwind CSS</p>
                 <p className="text-gray-300">Estilos y diseño responsive</p>
+                <Link to="https://tailwindcss.com/docs" target="_blank" className="text-rose-400 hover:text-rose-300 transition-colors text-sm">
+                  tailwindcss.com/docs
+                </Link>
               </div>
             </div>
 
@@ -46,13 +55,16 @@ function Extras() {
               <div>
                 <p className="text-white font-medium">Lucide React</p>
                 <p className="text-gray-300">Iconos utilizados en la web</p>
+                <Link to="https://lucide.dev/" target="_blank" className="text-rose-400 hover:text-rose-300 transition-colors text-sm">
+                  lucide.dev
+                </Link>
               </div>
             </div>
 
           </div>
 
           <div className="space-y-6">
-            <h2 className="text-xl font-semibold text-white mb-4">Recursos y Créditos</h2>
+            <h2 className="text-xl font-semibold text-white mb-4 text-center">Recursos y Créditos</h2>
 
             <div className="flex items-center gap-4 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
               <Camera className="text-rose-700 w-6 h-6" />
@@ -71,7 +83,9 @@ function Extras() {
               <Heart className="text-rose-700 w-6 h-6" />
               <div>
                 <p className="text-white font-medium">Desarrollado con</p>
-                <p className="text-gray-300">Mucho café y pasión por el código</p>
+                <p className="text-gray-300">
+                  Mucho <Coffee size={12} className="inline text-rose-700" /> y pasión por el código
+                </p>
               </div>
             </div>
 
@@ -81,7 +95,7 @@ function Extras() {
               <Github className="text-rose-700 w-6 h-6" />
               <div>
                 <p className="text-white font-medium">Código Fuente</p>
-                <Link to="https://github.com/astronautmarkus/astronautmarkus-site" target="_blank" className="text-gray-300 hover:text-rose-400 transition-colors">
+                <Link to="https://github.com/astronautmarkus/astronautmarkus-site" target="_blank" className="text-rose-400 hover:text-rose-300 transition-colors text-sm">
                   Ver en GitHub
                 </Link>
               </div>
@@ -98,7 +112,6 @@ function Extras() {
               <p className="text-white font-medium mb-2">Licencia MIT</p>
               <p className="text-gray-300 text-sm leading-relaxed">
                 Este proyecto está bajo la licencia MIT. Puedes usar, modificar y distribuir el código libremente. 
-                Solo se requiere mantener el aviso de copyright y la licencia en las copias.
               </p>
               <p className="text-gray-400 text-xs mt-2 flex items-center gap-1">
                 <Copyright size={10} />
