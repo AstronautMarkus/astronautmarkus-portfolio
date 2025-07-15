@@ -125,6 +125,7 @@ const projects: Project[] = [
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/Camello-s-Food_repartidor',
         imageUrl: '/projects/camellosfood-repartidor.jpg',
+        privateRepo: true,
     },
     {
         slug: 'constru-mic',
