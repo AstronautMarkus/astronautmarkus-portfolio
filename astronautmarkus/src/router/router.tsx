@@ -7,6 +7,7 @@ import Home from '../pages/home/home'
 import Portfolio from '../pages/portfolio/portfolio'
 import Contact from '../pages/contact/contact'
 import Experience from '../pages/experience/experience'
+import Extras from '../pages/extras/extras'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -99,7 +100,7 @@ function Router() {
                 transition={pageTransition}
                 style={{ height: '100%' }}
               >
-                <div>Extras Page</div>
+                <Extras />
               </motion.div>
             }
           />
