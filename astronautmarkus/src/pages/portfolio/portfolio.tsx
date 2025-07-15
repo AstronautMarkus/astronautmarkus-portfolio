@@ -1,5 +1,5 @@
 import { useGetPortfolioProjects } from "./hooks/useGetPortfolioProjects";
-import { Github, Lock, Cat } from "lucide-react";
+import { Github, Lock, Cat, Mail } from "lucide-react";
 import TuxPenguin from "../../assets/img/tux-linux-penguin.gif";
 import { Link } from "react-router-dom";
 
@@ -74,6 +74,20 @@ function Portfolio() {
             </div>
           </div>
         ))}
+
+        <footer className="mt-16 text-center">
+            <p className="text-white mb-4 text-lg italic">
+            Estos son mis proyectos más importantes. Si te interesa colaborar o tienes alguna pregunta, ¡contáctame!
+            </p>
+            <Link
+              to="/contact"
+              className="w-full max-w-2xl inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-rose-700 hover:bg-rose-800 rounded-md transition-all mb-2"
+            >
+              <Mail className="w-4 h-4" />
+              Contacto
+            </Link>
+        </footer>
+
       </div>
     </div>
   )

@@ -34,12 +34,7 @@ const categories: Category[] = [
         slug: 'institute',
         title: 'Proyectos del Instituto',
         description: 'Proyectos desarrollados como parte de mi formación académica en el instituto, Duoc UC. Enfocados en el aprendizaje práctico.',
-    },
-    {
-        slug: 'collaborated',
-        title: 'Proyectos Colaborativos',
-        description: 'Proyectos donde he colaborado con otros desarrolladores, conocidos y amigos, para crear soluciones innovadoras y útiles.',
-    },
+    }
 ];
 
 const projects: Project[] = [
