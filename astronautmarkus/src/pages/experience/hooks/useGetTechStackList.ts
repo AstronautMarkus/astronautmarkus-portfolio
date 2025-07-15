@@ -37,6 +37,19 @@ import mongodbIcon from "../../../assets/icons/mongodb.svg";
 import mysqlIcon from "../../../assets/icons/mysql.png";
 import oracleSqlIcon from "../../../assets/icons/oracle-sql.png";
 import sqliteIcon from "../../../assets/icons/sqlite.png";
+import Fortinet from "../../../assets/icons/fortinet.png";
+import Fedora from "../../../assets/icons/fedora.png";
+import OracleLinux from "../../../assets/icons/oracle-linux.png";
+import AlmaLinux from "../../../assets/icons/almalinux.png";
+import EndeavourOS from "../../../assets/icons/endeavouros.png";
+import Ubuntu from "../../../assets/icons/ubuntu.png";
+import RaspberryPI from "../../../assets/icons/raspberry.png";
+import Nginx from "../../../assets/icons/nginx.webp";
+import Apache from "../../../assets/icons/apache.png";
+import Bash from "../../../assets/icons/bash.png";
+import Vue from "../../../assets/icons/vue.png";
+import TailwindCSS from "../../../assets/icons/tailwindcss.png";
+import RefineDev from "../../../assets/icons/refinedev.png";
 
 export type TechStackCategory =
   | "Frontend"
@@ -45,7 +58,8 @@ export type TechStackCategory =
   | "DevOps"
   | "Database"
   | "Tools"
-  | "Sistemas Operativos";
+  | "Sistemas Operativos"
+  | "Sysadmin - Servidores";
 
 export interface TechStackItem {
   name: string;
@@ -55,8 +69,10 @@ export interface TechStackItem {
 
 export function useGetTechStackList() {
   const techStack: TechStackItem[] = [
-    { name: "Angular", icon: angularIcon, category: "Frontend" },
     { name: "React", icon: reactIcon, category: "Frontend" },
+    { name: "Vue", icon: Vue, category: "Frontend" },
+    { name: "Angular", icon: angularIcon, category: "Frontend" },
+    { name: "Tailwind CSS", icon: TailwindCSS, category: "Frontend" },
     { name: "Bootstrap", icon: bootstrapIcon, category: "Frontend" },
     { name: "Bulma", icon: bulmaIcon, category: "Frontend" },
     { name: "CSS", icon: cssIcon, category: "Frontend" },
@@ -70,9 +86,9 @@ export function useGetTechStackList() {
     { name: "Flask", icon: flaskIcon, category: "Backend" },
     { name: "Django", icon: djangoIcon, category: "Backend" },
     { name: "Laravel", icon: laravelIcon, category: "Backend" },
-    { name: "Php", icon: phpIcon, category: "Backend" },
+    { name: "PHP", icon: phpIcon, category: "Backend" },
     { name: "Docker", icon: dockerIcon, category: "DevOps" },
-    { name: "Systemd", icon: systemdIcon, category: "DevOps" },
+    { name: "Systemd", icon: systemdIcon, category: "Sysadmin - Servidores" },
     { name: "Git", icon: gitIcon, category: "DevOps" },
     { name: "Github", icon: githubIcon, category: "DevOps" },
     { name: "Github Actions", icon: githubActionsIcon, category: "DevOps" },
@@ -94,6 +110,17 @@ export function useGetTechStackList() {
     { name: "Mysql", icon: mysqlIcon, category: "Database" },
     { name: "Oracle SQL", icon: oracleSqlIcon, category: "Database" },
     { name: "Sqlite", icon: sqliteIcon, category: "Database" },
+    { name: "Fortinet", icon: Fortinet, category: "Sysadmin - Servidores" },
+    { name: "Fedora", icon: Fedora, category: "Sistemas Operativos" },
+    { name: "Oracle Linux", icon: OracleLinux, category: "Sysadmin - Servidores" },
+    { name: "AlmaLinux", icon: AlmaLinux, category: "Sysadmin - Servidores" },
+    { name: "EndeavourOS", icon: EndeavourOS, category: "Sistemas Operativos" },
+    { name: "Ubuntu", icon: Ubuntu, category: "Sistemas Operativos" },
+    { name: "Raspberry Pi", icon: RaspberryPI, category: "IoT" },
+    { name: "Nginx", icon: Nginx, category: "Sysadmin - Servidores" },
+    { name: "Apache", icon: Apache, category: "Sysadmin - Servidores" },
+    { name: "Bash", icon: Bash, category: "Sysadmin - Servidores" },
+    { name: "Refine Dev", icon: RefineDev, category: "Tools" },
   ];
 
   const grouped: Record<TechStackCategory, TechStackItem[]> = {
@@ -104,6 +131,7 @@ export function useGetTechStackList() {
     Database: [],
     Tools: [],
     "Sistemas Operativos": [],
+    "Sysadmin - Servidores": [],
   };
   techStack.forEach(item => grouped[item.category].push(item));
 
