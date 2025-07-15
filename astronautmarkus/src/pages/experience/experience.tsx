@@ -1,8 +1,10 @@
-import { Briefcase, Calendar, Code, Database, Globe, Server, Palette } from "lucide-react";
+import { Briefcase, Calendar } from "lucide-react";
 import { useGetExperienceProjects } from "./hooks/useGetExperienceProjects";
+import { useGetTechStackList } from "./hooks/useGetTechStackList";
 
 function Experience() {
   const { projects } = useGetExperienceProjects();
+  const techStack = useGetTechStackList();
 
   return (
     <div className="flex items-center justify-center p-4">
@@ -49,50 +51,21 @@ function Experience() {
 
         <div className="border-t border-gray-700/50 pt-8">
           <h2 className="text-xl font-semibold text-white mb-6 text-center">Tech Stack</h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            
-            <div className="flex items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
-              <Code className="text-rose-700 w-6 h-6" />
-              <span className="text-white font-medium">React</span>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
-              <Code className="text-rose-700 w-6 h-6" />
-              <span className="text-white font-medium">TypeScript</span>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
-              <Server className="text-rose-700 w-6 h-6" />
-              <span className="text-white font-medium">Node.js</span>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
-              <Database className="text-rose-700 w-6 h-6" />
-              <span className="text-white font-medium">PostgreSQL</span>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
-              <Palette className="text-rose-700 w-6 h-6" />
-              <span className="text-white font-medium">Tailwind</span>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
-              <Globe className="text-rose-700 w-6 h-6" />
-              <span className="text-white font-medium">Next.js</span>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
-              <Database className="text-rose-700 w-6 h-6" />
-              <span className="text-white font-medium">MongoDB</span>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
-              <Code className="text-rose-700 w-6 h-6" />
-              <span className="text-white font-medium">Python</span>
-            </div>
-
-          </div>
+          {Object.entries(techStack).map(([category, items]) => (
+            items.length > 0 && (
+              <div key={category} className="mb-6">
+                <h3 className="text-lg font-semibold text-white mb-4">{category}</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {items.map((tech) => (
+                    <div key={tech.name} className="flex items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
+                      <img src={tech.icon} alt={tech.name} className="w-6 h-6" />
+                      <span className="text-white font-medium">{tech.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )
+          ))}
         </div>
 
       </div>
