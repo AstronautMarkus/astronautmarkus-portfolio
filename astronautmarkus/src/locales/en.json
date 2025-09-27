@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "about-me": "About me",
     "portfolio": "Portfolio", 
     "experience": "Experience",
     "contact": "Contact",
@@ -8,6 +9,13 @@
   },
   "utils": {
     "no-image": "No image available, waja"
+  },
+  "not-found": {
+    "banner-title": "Page Not Found",
+    "title": "Oops! It seems you got lost",
+    "description": "The page you are looking for does not exist. It might have been moved or deleted.",
+    "home-button": "Go Home",
+    "back-button": "Go Back"
   },
   "home": {
     "name": "Marcos Reyes Martínez",

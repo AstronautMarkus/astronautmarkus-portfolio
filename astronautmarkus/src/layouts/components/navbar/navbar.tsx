@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Home, FolderOpen, Briefcase, Mail, Wrench } from "lucide-react"
+import { Home, FolderOpen, Briefcase, Mail, Wrench, CircleUser } from "lucide-react"
 import { useI18n } from "../../../contexts/i18nContext"
 
 import EnglishFlag from "../../../assets/img/flags/english.png"
@@ -51,6 +51,13 @@ function Navbar() {
           </button>
 
           <div className="hidden md:flex gap-2 md:gap-4 items-center">
+            <Link
+              to="/about-me"
+              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
+            >
+              <CircleUser size={20} className="text-rose-700" />
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.about-me')}</span>
+            </Link>
             <Link
               to="/portfolio"
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"

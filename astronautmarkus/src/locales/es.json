@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "about-me": "Sobre mí",
     "portfolio": "Portafolio", 
     "experience": "Experiencia",
     "contact": "Contacto",
@@ -9,6 +10,13 @@
   "utils": {
     "no-image": "No hay imagen disponible, waja"
   },
+    "not-found": {
+      "banner-title": "Página No Encontrada",
+      "title": "¡Ups! Parece que te perdiste",
+      "description": "La página que buscas no existe. Puede que haya sido movida o eliminada.",
+      "home-button": "Ir al Inicio",
+      "back-button": "Volver"
+    },
   "home": {
     "name": "Marcos Reyes Martínez",
     "title": "Analista Programador Computacional",
