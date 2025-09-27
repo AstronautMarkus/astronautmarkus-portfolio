@@ -10,13 +10,13 @@
   "utils": {
     "no-image": "No hay imagen disponible, waja"
   },
-    "not-found": {
-      "banner-title": "Página No Encontrada",
-      "title": "¡Ups! Parece que te perdiste",
-      "description": "La página que buscas no existe. Puede que haya sido movida o eliminada.",
-      "home-button": "Ir al Inicio",
-      "back-button": "Volver"
-    },
+  "not-found": {
+    "banner-title": "Página No Encontrada",
+    "title": "¡Ups! Parece que te perdiste",
+    "description": "La página que buscas no existe. Puede que haya sido movida o eliminada.",
+    "home-button": "Ir al Inicio",
+    "back-button": "Volver"
+  },
   "home": {
     "name": "Marcos Reyes Martínez",
     "title": "Analista Programador Computacional",
@@ -34,6 +34,116 @@
       "devops": "Automatización y DevOps",
       "consulting": "Consultoría en AppSec / DevSecOps",
       "anything": "Lo que tu necesites, para ser honesto"
+    }
+  },
+  "about-me": {
+    "banner": {
+      "title": "Sobre Mí",
+      "subtitle": "Conoce más sobre AstronautMarkus"
+    },
+    "intro": {
+      "title": "¡Hola! Soy Marcos (otra vez)",
+      "description": "Desarrollador full-stack apasionado bla bla bla...",
+      "additional": "A parte de programar, tengo algunas otras pasiones y curiosidades que me gustaría compartir contigo, eso creo."
+    },
+    "sections": {
+      "about-me": "Sobre mí",
+      "curious-facts": "Datos Curiosos",
+      "questions": "Preguntas / Recomendaciones"
+    },
+    "cards": {
+      "modder": {
+        "title": "Ex-Modder y creador de contenido",
+        "description": "Durante mi infancia / adolescencia me dedicada a realizar mods para GTA:San Andreas y videos narrados con Loquendo, diría que no odio a nada pero esta va pa la comunidad del modding y GTA:SA 🖕"
+      },
+      "caffeine": {
+        "title": "Me gusta la C₈H₁₀N₄O₂",
+        "description": "El combustible que mantiene mi código funcionando o cualquier otra cosa que me mantenga despierto"
+      },
+      "knowledge": {
+        "title": "Conocimientos que nadie pidió",
+        "description": "Diría que soy ese tipo como 'Lester' en los grupos sociales, con datos que nadie sabe ni nadie pregunta. Sabían que las orcas no son ballenas? son delfines."
+      }
+    },
+    "facts": {
+      "computers": {
+        "title": "1. Computadoras",
+        "description": "Empecé con las computadoras a los 4, con una Compaq presario con Windows Vista, 512MB de RAM y un procesador que se pegaba cada dos por tres."
+      },
+      "career": {
+        "title": "2. Decisión de carrera",
+        "description": "Honestamente, nunca dije \"quiero ser programador\", solo un dia pase con mi madre cerca de un instituto en 2021 y revise su lista de carreas y dije, \"ya esa\", 'Analista Programador Computacional' y ya, LMAO. Ni si quiera pensé en ver otras opciones."
+      },
+      "hello-world": {
+        "title": "3. Hello world",
+        "description": "Mi primer 'Hello World' ni siquiera me salió bien, no entendía el concepto de las comillas, puse algo como print(\"hello world) y nunca funcionó. Ahora que lo considero, nunca fui muy bueno en la carrera, solo al final me tomé las cosas en serio y remonté con honores."
+      },
+      "heights": {
+        "title": "4. Edificios, aviones, alturas...",
+        "description": "Tengo un extraño miedo, sufro de vertigo, especialmente con escaleras desplegables, a la vez siento un gran rechazo al mirar un edificio hacia arriba, no se, ver lo alto que es, y lo más raro es que no le temo a estar en un piso alto de un edificio o a los aviones, es hasta ilógico."
+      }
+    },
+    "qa": {
+      "age": {
+        "question": "¿Cuántos años tienes?",
+        "answer": "Tengo {{age}} años, o dicho de otra forma, tengo {{days}} días, nací el 16 de marzo de 2003 y empecé en el mundo de la programación desde los 18, nunca me canso de aprender, esto explica porque mi tech stack tiene tantas herramientas."
+      },
+      "language": {
+        "question": "¿Cuál es tu lenguaje favorito?",
+        "answer": "La verdad, no tengo un lenguaje favorito como tal, solo se que el lenguaje que mas detesto es JavaScript, lo odio con todo mi ser pero estamos obligados a usarlo, así es la vida no creen? Como lenguajes favoritos diría que PHP y Python, es lo único que uso al día a día practicamente, pero me gusta experimentar con otros lenguajes de vez en cuando."
+      },
+      "remote": {
+        "question": "¿Trabajas de forma remota?",
+        "answer": "Sí, honestamente detesto rodearme de gente, salir a un lugar para trabajar en un lugar rodeado de más gente, no es lo mío. Prefiero mil veces trabajar desde casa, en mi espacio, con mi música y mi café."
+      },
+      "freetime": {
+        "question": "¿Qué te gusta hacer en tu tiempo libre?",
+        "answer": "Me gusta escuchar música todo el día sin importar la hora, eso sí tengo un gusto especial por la musíca de altos BPM, como el eurobeat, mi género favorito. También me gusta jugar videojuegos, especialmente de Halo y Star Wars. También por el bien de la humanidad, debería salir a caminar y tomar aire fresco de vez en cuando."
+      },
+      "coffee": {
+        "question": "¿Cuánto café tomas al día?",
+        "answer": "Como mínimo 3-4 tazas, suelo beber como nada 150mg de cafeína, hay días que no consumo nada y otros que me paso, pero en promedio es lo que consumo una cantidad más del promedio."
+      },
+      "pets": {
+        "question": "¿Tienes mascotas?",
+        "answer": "Sí, por supuesto. Tengo muchos gatos, más abajo verán todos los gatos que tengo, mis compañeros de vida."
+      },
+      "project": {
+        "question": "¿Cuál fue tu primer proyecto?",
+        "answer": "Mi primer proyecto aún lo estoy construyendo, no es algo informático, es algo que va mas allá, prefiero no contarlo, pero es un proyecto de vida, la razón de porqué despierto en las mañanas, la razón para estar vivo, dejémoslo así, estoy trabajando en algo, pero aún no está listo para mostrarse al mundo. Si vuelves algún día, serás de los primeros en saber la existencia de este proyecto!"
+      },
+      "study": {
+        "question": "¿Estudias o eres autodidacta?",
+        "answer": "Una mezcla de ambos. Después de titularme en 2025, sigo estudiando todos los días, aprendiendo por mi cuenta cualquier cosa, actualmente estoy pensando en aprender diseño gráfico y ciberseguridad, para hacerme aún más poderoso."
+      },
+      "waifu": {
+        "question": "¿Tienes una waifu?",
+        "answer": "Como todo informático geek promedio, sí, tengo una waifu, es Chariot Du Nord, de la serie Little Witch Academia. Es una bruja muy linda y poderosa, me gusta su personalidad y su diseño."
+      },
+      "substances": {
+        "question": "¿A parte del café? ¿Alcohol? ¿Drogas?",
+        "answer": "Nah, no consumo nada de eso, no me gusta el alcohol ni las drogas, el café es cultura, es un estilo de vida, el alcohol y drogas son dependencia, yo siempre he apreciado el concepto de libertad, en todos los sentidos, y esas cosas te atan a un vicio, ¿Pero el café no lo hace? bueno... según estudios, no...? Creo que es un mal menor."
+      },
+      "alias": {
+        "question": "¿Por qué tu alias es AstronautMarkus?",
+        "answer": "No sé, yo creo que los alias mientras más simples son más recordables, o sea, que crees que sea mas recordable 'xX_MarquinhosGaming777_Xx' o 'AstronautMarkus'? no es fácil encontrar algo tan sencillo, tuve suerte de hecho al combinar algo común como 'Astronaut' con mi nombre, el estar disponible hasta en el dominio, a parte diría que es mi forma de apoyar la exploración espacial, que es algo que me gusta mucho, y 'Markus' es un nombre que me gusta, es mi nombre pero más 'cool'."
+      },
+      "series": {
+        "question": "¿Serie favorita?",
+        "answer": "No soy de ver series ni televisión la verdad, pero si quieres que te recomiende una serie buenísima, 'Mr. Robot', la mejor serie que he visto en mi vida, trata sobre un hacker con problemas mentales, es una serie que te hace pensar mucho, y tiene giros argumentales que te dejan loco. ¿Saben por que me gusta tanto? porque a diferencia de otros medios donde los 'hackeos' son exagerades nivel Hollywood con colores verdes y animaciones estilo Matrix, acá salen comandos Linux reales, procedimientos reales, es parecido al realismo de Breaking Bad con las drogas, acá es con la informática."
+      },
+      "videogame": {
+        "question": "¿Videojuego favorito?",
+        "answer": "Complicado, pero para ser un poco más amigable diré por consola, para PC mi videojuego favorito es Halo: Combat Evolved, lo solía jugar en la escuela cuando llevaba la Laptop a escondidas, no le digan a nadie. Para PS2 que es la única consola relevante que he tenido, mi videjuego favorito es SOCOM 3: U.S. Navy SEALs, mi tío me lo regaló un dia, me encanta ese juegaso, es tan simple pero tan bueno."
+      },
+      "story": {
+        "question": "¿Algún suceso que no te guste contar?",
+        "answer": "Sí, más que suceso es que cuando era chiquito, un día llegó mi tío con pollo asado para el almuerzo y me traía un juego para la PS2, el Devil May Cry, pero el 2, ya saben el dilema con ese juego, el gesto de mi tío fue muy lindo, algo que si o si haré con mi sobrino, ahora yo soy el tío, el juego para todos es malísimo, para mi es normal, porque claro no conocía nada de la saga, de todas formas me hizo muy feliz ese día, y el pollo asado estaba delicioso."
+      },
+      "os": {
+        "question": "¿Sistema operativo favorito?",
+        "answer": "Diría que entre Manjaro y Linux Mint, ambos son la versión 'chill' de Linux, ya ahora me siento 'más viejo' para estar haciéndome un Arch Linux para el trabajo diario, prefiero Mint para el día a día ya que como usa Ubuntu de base los paquetes son estables, y Manjaro para cuando quiero experimentar un poco más, ya que es rolling release y tiene software más actualizado."
+      }
     }
   },
   "portfolio": {

@@ -36,6 +36,116 @@
       "anything": "Whatever you need, to be honest"
     }
     },
+    "about-me": {
+      "banner": {
+        "title": "About Me",
+        "subtitle": "Learn more about AstronautMarkus"
+      },
+      "intro": {
+        "title": "Hello! I'm Marcos (again)",
+        "description": "Passionate full-stack developer blah blah blah...",
+        "additional": "Apart from programming, I have some other passions and curiosities that I'd like to share with you, I think."
+      },
+      "sections": {
+        "about-me": "About me",
+        "curious-facts": "Curious Facts",
+        "questions": "Questions / Recommendations"
+      },
+      "cards": {
+        "modder": {
+          "title": "Ex-Modder and content creator",
+          "description": "During my childhood/adolescence I was dedicated to making mods for GTA:San Andreas and videos narrated with Loquendo, I would say I don't hate anything but this one goes to the modding community and GTA:SA 🖕"
+        },
+        "caffeine": {
+          "title": "I like C₈H₁₀N₄O₂",
+          "description": "The fuel that keeps my code running or anything else that keeps me awake"
+        },
+        "knowledge": {
+          "title": "Knowledge nobody asked for",
+          "description": "I'd say I'm that 'Lester' type in social groups, with facts that nobody knows and nobody asks. Did you know that orcas are not whales? They're dolphins."
+        }
+      },
+      "facts": {
+        "computers": {
+          "title": "1. Computers",
+          "description": "I started with computers at age 4, with a Compaq Presario with Windows Vista, 512MB RAM and a processor that froze every now and then."
+        },
+        "career": {
+          "title": "2. Career decision",
+          "description": "Honestly, I never said 'I want to be a programmer', one day I just passed by an institute with my mother in 2021 and checked their career list and said, 'that one', 'Computer Programming Analyst' and that's it, LMAO. I didn't even think about looking at other options."
+        },
+        "hello-world": {
+          "title": "3. Hello world",
+          "description": "My first 'Hello World' didn't even work, I didn't understand the concept of quotes, I put something like print(\"hello world) and it never worked. Now that I think about it, I was never very good at school, only at the end I took things seriously and graduated with honors."
+        },
+        "heights": {
+          "title": "4. Buildings, planes, heights...",
+          "description": "I have a strange fear, I suffer from vertigo, especially with folding stairs, at the same time I feel a great rejection when looking up at a building, I don't know, seeing how tall it is, and the strangest thing is that I'm not afraid of being on a high floor of a building or planes, it's even illogical."
+        }
+      },
+      "qa": {
+        "age": {
+          "question": "How old are you?",
+          "answer": "I'm {{age}} years old, or in other words, I'm {{days}} days old, I was born on March 16, 2003 and started in the programming world since I was 18, I never get tired of learning, this explains why my tech stack has so many tools."
+        },
+        "language": {
+          "question": "What's your favorite language?",
+          "answer": "The truth is, I don't have a favorite language as such, I just know that the language I hate the most is JavaScript, I hate it with all my being but we are forced to use it, that's life, right? As favorite languages I would say PHP and Python, it's the only thing I use daily practically, but I like to experiment with other languages from time to time."
+        },
+        "remote": {
+          "question": "Do you work remotely?",
+          "answer": "Yes, honestly I hate being around people, going to a place to work in a place surrounded by more people, it's not for me. I prefer a thousand times to work from home, in my space, with my music and my coffee."
+        },
+        "freetime": {
+          "question": "What do you like to do in your free time?",
+          "answer": "I like to listen to music all day regardless of the time, I do have a special taste for high BPM music, like eurobeat, my favorite genre. I also like to play video games, especially Halo and Star Wars. Also for the good of humanity, I should go out for walks and get fresh air from time to time."
+        },
+        "coffee": {
+          "question": "How much coffee do you drink per day?",
+          "answer": "At least 3-4 cups, I usually drink about 150mg of caffeine like nothing, there are days when I don't consume anything and others when I overdo it, but on average it's what I consume, an above-average amount."
+        },
+        "pets": {
+          "question": "Do you have pets?",
+          "answer": "Yes, of course. I have many cats, below you'll see all the cats I have, my life companions."
+        },
+        "project": {
+          "question": "What was your first project?",
+          "answer": "My first project I'm still building, it's not something computer-related, it's something that goes beyond, I prefer not to tell, but it's a life project, the reason why I wake up in the mornings, the reason to be alive, let's leave it like that, I'm working on something, but it's not ready to show to the world yet. If you come back someday, you'll be among the first to know about the existence of this project!"
+        },
+        "study": {
+          "question": "Do you study or are you self-taught?",
+          "answer": "A mix of both. After graduating in 2025, I continue studying every day, learning anything on my own, I'm currently thinking about learning graphic design and cybersecurity, to become even more powerful."
+        },
+        "waifu": {
+          "question": "Do you have a waifu?",
+          "answer": "Like every average geek programmer, yes, I have a waifu, it's Chariot Du Nord, from the Little Witch Academia series. She's a very cute and powerful witch, I like her personality and design."
+        },
+        "substances": {
+          "question": "Apart from coffee? Alcohol? Drugs?",
+          "answer": "Nah, I don't consume any of that, I don't like alcohol or drugs, coffee is culture, it's a lifestyle, alcohol and drugs are dependency, I've always appreciated the concept of freedom, in every sense, and those things tie you to a vice, But doesn't coffee do that? well... according to studies, no...? I think it's a lesser evil."
+        },
+        "alias": {
+          "question": "Why is your alias AstronautMarkus?",
+          "answer": "I don't know, I think the simpler aliases are, the more memorable they are, I mean, what do you think is more memorable 'xX_MarquinhosGaming777_Xx' or 'AstronautMarkus'? It's not easy to find something so simple, I was actually lucky to combine something common like 'Astronaut' with my name, being available even as a domain, besides I'd say it's my way of supporting space exploration, which is something I really like, and 'Markus' is a name I like, it's my name but more 'cool'."
+        },
+        "series": {
+          "question": "Favorite series?",
+          "answer": "I'm not really into watching series or television, but if you want me to recommend an awesome series, 'Mr. Robot', the best series I've ever seen, it's about a hacker with mental problems, it's a series that makes you think a lot, and has plot twists that drive you crazy. Do you know why I like it so much? Because unlike other media where 'hacking' is exaggerated Hollywood-level with green colors and Matrix-style animations, here they show real Linux commands, real procedures, it's similar to the realism of Breaking Bad with drugs, here it's with computer science."
+        },
+        "videogame": {
+          "question": "Favorite video game?",
+          "answer": "Complicated, but to be a bit more friendly I'll say by console, for PC my favorite video game is Halo: Combat Evolved, I used to play it at school when I secretly brought the laptop, don't tell anyone. For PS2 which is the only relevant console I've had, my favorite video game is SOCOM 3: U.S. Navy SEALs, my uncle gave it to me one day, I love that great game, it's so simple but so good."
+        },
+        "story": {
+          "question": "Any event you don't like to tell?",
+          "answer": "Yes, more than an event is that when I was little, one day my uncle came with roasted chicken for lunch and brought me a game for the PS2, Devil May Cry, but the 2nd one, you know the dilemma with that game, my uncle's gesture was very nice, something I will definitely do with my nephew, now I'm the uncle, the game is terrible for everyone, for me it's normal, because of course I didn't know anything about the saga, anyway it made me very happy that day, and the roasted chicken was delicious."
+        },
+        "os": {
+          "question": "Favorite operating system?",
+          "answer": "I'd say between Manjaro and Linux Mint, both are the 'chill' version of Linux, now I feel 'older' to be setting up an Arch Linux for daily work, I prefer Mint for daily use since it uses Ubuntu as base so packages are stable, and Manjaro for when I want to experiment a bit more, since it's rolling release and has more updated software."
+        }
+      }
+    },
     "portfolio": {
       "banner_title": "My Portfolio",
       "banner_subtitle": "My crazy but awesome projects!",
