@@ -148,6 +148,11 @@
           "answer":"As I mentioned above, I like music with high BPM, like Eurobeat or J-Pop. While coding, I usually listen to 'Toho Eurobeat', a series of albums with Eurobeat music based on the Touhou Project video game series. It's very energetic music that helps me focus and get energized; that kind of music is like a shot of serotonin for my head XD.",
           "extra-note":"I share the Spotify playlist I usually listen to while coding, it has quite a few hours of music, take a look:"
         }
+      },
+      "playlists": {
+        "title": "Recommended Playlists",
+        "description": "Here are some playlists I usually listen to while working or coding, I hope you like them as much as I do.",
+        "footer": "I would say it's not the most mainstream, but it works for me and that's what matters."
       }
     },
     "portfolio": {

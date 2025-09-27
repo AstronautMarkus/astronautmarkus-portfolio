@@ -148,6 +148,11 @@
         "answer":"Como comenté arriba me gusta la música con altos BPM, como el Eurobeat o J-Pop, al programar suelo escuchar 'Toho Eurobeat', una serie de álbumes con música Eurobeat basada en la serie de videojuegos Touhou Project, es música muy energética y me ayuda a concentrarme y estimularme, ese tipo de música es como un shot de serotonina para mi cabeza XD.",
         "extra-note":"Comparto la playlist de Spotify que suelo oír mientras programo, tiene bastantes horas de música, échale un vistazo:"
       }
+    },
+    "playlists": {
+      "title": "Playlists Recomendadas",
+      "description": "Aquí algunas playlists que suelo escuchar mientras trabajo o programo, espero que te gusten tanto como a mí.",
+      "footer":"Diría que no es lo mas mainstream, pero a mi me funciona y eso es lo que importa."
     }
   },
   "portfolio": {

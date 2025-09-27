@@ -424,6 +424,58 @@ function AboutMe() {
           </div>
         </div>
 
+        <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
+          <h2 className="text-2xl font-bold mb-4 text-white text-center">{t('about-me.playlists.title')}</h2>
+          <p className="text-gray-300 text-center mb-6 max-w-3xl mx-auto">
+            {t('about-me.playlists.description')}
+          </p>
+          <div className="flex overflow-x-auto gap-6 pb-4">
+            
+            <div className="flex-shrink-0 bg-gray-700/50 rounded-lg p-4 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+              <iframe
+                style={{ borderRadius: "12px" }}
+                src="https://open.spotify.com/embed/playlist/5r6Lp0iFPR3fwZoPSbfCLl?utm_source=generator"
+                width="300"
+                height="152"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="Coding Vibes playlist"
+              ></iframe>
+            </div>
+
+            <div className="flex-shrink-0 bg-gray-700/50 rounded-lg p-4 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+              <iframe
+                style={{ borderRadius: "12px" }}
+                src="https://open.spotify.com/embed/playlist/03OXOTX3VQyHLpQMb0lVwW?utm_source=generator&theme=0"
+                width="300"
+                height="152"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="Chill Beats playlist"
+              ></iframe>
+            </div>
+
+            <div className="flex-shrink-0 bg-gray-700/50 rounded-lg p-4 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+              <iframe
+                style={{ borderRadius: "12px" }}
+                src="https://open.spotify.com/embed/album/1P4zxnE9WYLHs4k8VZPlNw?utm_source=generator"
+                width="300"
+                height="152"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="Focus Zone playlist"
+              ></iframe>
+            </div>
+
+          </div>
+          <p className="text-gray-400 text-center mt-6 max-w-2xl mx-auto text-sm">
+            {t('about-me.playlists.footer')}
+          </p>
+        </div>
+
       </div>
     </div>
   );
