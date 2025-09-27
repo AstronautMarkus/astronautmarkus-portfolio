@@ -142,6 +142,11 @@
         "os": {
           "question": "Favorite operating system?",
           "answer": "I'd say between Manjaro and Linux Mint, both are the 'chill' version of Linux, now I feel 'older' to be setting up an Arch Linux for daily work, I prefer Mint for daily use since it uses Ubuntu as base so packages are stable, and Manjaro for when I want to experiment a bit more, since it's rolling release and has more updated software."
+        },
+        "music-coding":{
+          "question":"What music do you listen to while coding?",
+          "answer":"As I mentioned above, I like music with high BPM, like Eurobeat or J-Pop. While coding, I usually listen to 'Toho Eurobeat', a series of albums with Eurobeat music based on the Touhou Project video game series. It's very energetic music that helps me focus and get energized; that kind of music is like a shot of serotonin for my head XD.",
+          "extra-note":"I share the Spotify playlist I usually listen to while coding, it has quite a few hours of music, take a look:"
         }
       }
     },

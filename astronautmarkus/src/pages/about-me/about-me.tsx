@@ -304,20 +304,18 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.waifu.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.waifu.answer')}</p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <img
-                      src={Chariot}
-                      alt="Chariot"
-                      className="w-20 h-20 object-cover rounded-lg pointer-events-none"
-                    />
-                  </div>
+            <div className="bg-gray-700/50 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+              <div className="flex flex-col sm:flex-row gap-4 items-center">
+                <div className="flex-1 sm:w-7/10">
+                  <h3 className="text-lg font-semibold text-white">{t('about-me.qa.waifu.question')}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.waifu.answer')}</p>
+                </div>
+                <div className="sm:w-3/10 flex justify-center">
+                  <img
+                    src={Chariot}
+                    alt="Chariot"
+                    className="w-32 h-32 object-cover rounded-lg pointer-events-none"
+                  />
                 </div>
               </div>
             </div>
@@ -394,6 +392,35 @@ function AboutMe() {
                 </div>
               </div>
             </div>
+
+            <div className="bg-gray-700/50 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+              <div className="flex flex-col gap-4">
+                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.music-coding.question')}</h3>
+                <div className="flex flex-col gap-4">
+                  <div className="flex-1">
+                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.music-coding.answer')}</p>
+                  </div>
+                </div>
+                <div className="flex justify-center">
+                  <div className="w-full max-w-xs sm:max-w-md">
+                    <iframe
+                      style={{ borderRadius: "12px" }}
+                      src="https://open.spotify.com/embed/playlist/5r6Lp0iFPR3fwZoPSbfCLl?utm_source=generator"
+                      width="100%"
+                      height="152"
+                      frameBorder="0"
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                      title="Spotify playlist"
+                      className="mb-4"
+                    ></iframe>
+                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.music-coding.extra-note')}</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
