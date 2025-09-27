@@ -7,6 +7,9 @@
     "extras": "Extras",
     "projects": "Proyectos"
   },
+  "utils": {
+    "no-image": "No hay imagen disponible, waja"
+  },
   "home": {
     "name": "Marcos Reyes Martínez",
     "title": "Analista Programador Computacional",
@@ -25,5 +28,12 @@
       "consulting": "Consultoría en AppSec / DevSecOps",
       "anything": "Lo que tu necesites, para ser honesto"
     }
+  },
+  "portfolio": {
+    "banner_title": "Mi Portafolio",
+    "banner_subtitle": "Mis proyectos alocados pero geniales!",
+    "banner_info":"Cada proyecto en mi portafolio muestra distintas tecnologías y habilidades que he desarrollado a lo largo de mi carrera. Demostrando que no existe una sola forma de abordar un problema, con creatividad, inteligencia, \"anarquismo\" y pasión por la tecnología, siempre encuentro soluciones innovadoras y efectivas.",
+    "banner_info_note":"Es posible que no estén todos mis proyectos informáticos, no suelo actualizar esta lista constantemente. Para revisar todos, visita mi perfil de GitHub:",
+    "github_profile": "Visita mi perfil de GitHub"
   }
 }

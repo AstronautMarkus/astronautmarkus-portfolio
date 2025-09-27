@@ -7,6 +7,9 @@
     "extras": "Extras",
     "projects": "Projects"
   },
+  "utils": {
+    "no-image": "No image available, waja"
+  },
   "home": {
     "name": "Marcos Reyes Martínez",
     "title": "Computer Programming Analyst",
@@ -25,5 +28,12 @@
       "consulting": "AppSec / DevSecOps Consulting",
       "anything": "Whatever you need, to be honest"
     }
-  }
+    },
+    "portfolio": {
+      "banner_title": "My Portfolio",
+      "banner_subtitle": "My crazy but awesome projects!",
+      "banner_info": "Each project in my portfolio showcases different technologies and skills that I have developed throughout my career. Demonstrating that there is not just one way to approach a problem, with creativity, intelligence, 'anarchism', and a passion for technology, I always find innovative and effective solutions.",
+      "banner_info_note": "Not all of my IT projects may be listed here, as I don't update this list constantly. To see them all, visit my GitHub profile:",
+      "github_profile": "Visit my GitHub profile"
+    }
 }

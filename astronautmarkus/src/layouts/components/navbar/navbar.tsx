@@ -1,7 +1,10 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Home, FolderOpen, Briefcase, Mail, Wrench, Globe } from "lucide-react"
+import { Home, FolderOpen, Briefcase, Mail, Wrench } from "lucide-react"
 import { useI18n } from "../../../contexts/i18nContext"
+
+import EnglishFlag from "../../../assets/img/flags/english.png"
+import SpanishFlag from "../../../assets/img/flags/spanish.png"
 
 function Navbar() {
   const [open, setOpen] = useState(false)
@@ -81,13 +84,17 @@ function Navbar() {
 
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group hover:bg-rose-700/20"
+              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group cursor-pointer"
               title={`Cambiar a ${language === 'es' ? 'English' : 'Español'}`}
             >
-              <Globe size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white">
-                {language.toUpperCase()}
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">
+                {language === 'es' ? 'Español' : 'English'}
               </span>
+              <img 
+                src={language === 'es' ? SpanishFlag : EnglishFlag} 
+                alt={language === 'es' ? 'Español' : 'English'}
+                className="w-6 h-4 object-cover rounded-sm pointer-events-none"
+              />
             </button> 
           </div>
         </nav>
@@ -138,12 +145,16 @@ function Navbar() {
 
               <button
                 onClick={() => { toggleLanguage(); setOpen(false); }}
-                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group hover:bg-rose-700/20"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
               >
-                <Globe size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white">
-                  {language === 'es' ? 'English' : 'Español'}
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">
+                  {language === 'es' ? 'Español' : 'English'}
                 </span>
+                <img 
+                  src={language === 'es' ? SpanishFlag : EnglishFlag} 
+                  alt={language === 'es' ? 'Español' : 'English'}
+                  className="w-6 h-4 object-cover rounded-sm"
+                />
               </button>
             </div>
           </div>
