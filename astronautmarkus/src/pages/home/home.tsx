@@ -1,5 +1,5 @@
 import { Mail, MapPin, Globe, Code, Server, Shield, Wrench } from "lucide-react"
-import BannerCard from "../../assets/img/banner_card.jpg";
+import BannerCard from "../../assets/img/banners/home_banner.jpg";
 import ProfilePicture from "../../assets/img/profile_picture.jpg";
 import { Link } from "react-router-dom";
 import { useI18n } from "../../contexts/i18nContext";

@@ -1,8 +1,8 @@
 import { useGetPortfolioProjects } from "./hooks/useGetPortfolioProjects";
 import { Github, Lock } from "lucide-react";
-import TuxPenguin from "../../assets/img/tux-linux-penguin.gif";
-import PortfolioBannerCard from "../../assets/img/portfolio_banner_card.jpg";
-import Nope from "../../assets/img/nope.gif";
+import TuxPenguin from "../../assets/img/animated/tux-linux-penguin.gif";
+import PortfolioBannerCard from "../../assets/img/banners/portfolio_banner.jpg";
+import Nope from "../../assets/img/animated/nope.gif";
 import { useI18n } from "../../contexts/i18nContext";
 import { Link } from "react-router-dom";
 
