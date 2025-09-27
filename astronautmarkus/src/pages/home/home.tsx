@@ -9,7 +9,7 @@ function Home() {
 
   return (
     <div className="min-h-screen p-4">
-      <div className="w-full max-w-7xl mx-auto space-y-8">
+      <div className="w-full max-w-6xl mx-auto space-y-8">
 
         <div className="hidden md:block">
           <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl">

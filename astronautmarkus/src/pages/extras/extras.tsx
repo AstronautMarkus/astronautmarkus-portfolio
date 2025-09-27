@@ -6,7 +6,7 @@ const year = new Date().getFullYear();
 function Extras() {
   return (
     <div className="flex items-center justify-center p-4">
-      <div className="w-full max-w-4xl mx-auto bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-700/50 p-8">
+      <div className="w-full max-w-6xl mx-auto bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-700/50 p-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Créditos y Extras</h1>
           <p className="text-gray-300 text-lg">Información adicional sobre este proyecto y sus recursos</p>
