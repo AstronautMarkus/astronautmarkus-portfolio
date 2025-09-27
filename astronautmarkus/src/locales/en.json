@@ -1,0 +1,29 @@
+{
+  "navbar": {
+    "home": "Home",
+    "portfolio": "Portfolio", 
+    "experience": "Experience",
+    "contact": "Contact",
+    "extras": "Extras",
+    "projects": "Projects"
+  },
+  "home": {
+    "name": "Marcos Reyes Martínez",
+    "title": "Computer Programming Analyst",
+    "location": "Santiago, Chile",
+    "aboutTitle": "About me",
+    "aboutText": "I'm Marcos Reyes Martínez, a passionate Computer Programming Analyst with years (and tons) of experience in Web Development and systems administration. I specialize in FullStack Web Development, as well as Linux and Windows systems administration, networks and computer security, protecting every component and detail to save your information.",
+    "contactProjectsTitle": "Visit my projects or let's talk",
+    "contactButton": "Contact",
+    "portfolioButton": "View Projects / Portfolio",
+    "servicesTitle": "Services I offer",
+    "services": {
+      "webDev": "FullStack Web Development",
+      "serverAdmin": "Linux/Windows Server Administration",
+      "security": "Computer Security and Networks",
+      "devops": "Automation and DevOps",
+      "consulting": "AppSec / DevSecOps Consulting",
+      "anything": "Whatever you need, to be honest"
+    }
+  }
+}

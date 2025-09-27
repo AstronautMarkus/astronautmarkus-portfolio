@@ -1,0 +1,29 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "portfolio": "Portafolio", 
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "extras": "Extras",
+    "projects": "Proyectos"
+  },
+  "home": {
+    "name": "Marcos Reyes Martínez",
+    "title": "Analista Programador Computacional",
+    "location": "Santiago de Chile",
+    "aboutTitle": "Sobre mí",
+    "aboutText": "Soy Marcos Reyes Martínez, un apasionado Analista Programador Computacional con años (y toneladas) de experiencia en Desarrollo Web y administración de sistemas. Me especializo en el Desarrollo Web FullStack, también en la administración de sistemas Linux y Windows, redes y seguridad informática, protegiendo cada componente y detalle de salvar tu información.",
+    "contactProjectsTitle": "Visita mis proyectos o hablemos",
+    "contactButton": "Contacto",
+    "portfolioButton": "Ver Proyectos / Portafolio",
+    "servicesTitle": "Servicios que ofrezco",
+    "services": {
+      "webDev": "Desarrollo Web FullStack",
+      "serverAdmin": "Administración de Servidores Linux/Windows",
+      "security": "Seguridad Informática y Redes",
+      "devops": "Automatización y DevOps",
+      "consulting": "Consultoría en AppSec / DevSecOps",
+      "anything": "Lo que tu necesites, para ser honesto"
+    }
+  }
+}

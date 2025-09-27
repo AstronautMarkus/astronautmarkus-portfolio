@@ -1,9 +1,15 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Home, FolderOpen, Briefcase, Mail, Wrench } from "lucide-react"
+import { Home, FolderOpen, Briefcase, Mail, Wrench, Globe } from "lucide-react"
+import { useI18n } from "../../../contexts/i18nContext"
 
 function Navbar() {
   const [open, setOpen] = useState(false)
+  const { language, setLanguage, t } = useI18n()
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'es' ? 'en' : 'es')
+  }
 
   return (
     <header className="w-full">
@@ -36,43 +42,53 @@ function Navbar() {
             />
           </button>
 
-          <div className="hidden md:flex gap-2 md:gap-4">
+          <div className="hidden md:flex gap-2 md:gap-4 items-center">
             <Link
               to="/"
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
             >
               <Home size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Inicio</span>
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.home')}</span>
             </Link>
             <Link
               to="/portfolio"
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
             >
               <FolderOpen size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Portafolio</span>
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.portfolio')}</span>
             </Link>
             <Link
               to="/experience"
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
             >
               <Briefcase size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Experiencia</span>
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.experience')}</span>
             </Link>
             <Link
               to="/contact"
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
             >
               <Mail size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Contacto</span>
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.contact')}</span>
             </Link>
-
             <Link
               to="/extras"
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
             >
               <Wrench size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Extras</span>
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.extras')}</span>
             </Link>
+
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group hover:bg-rose-700/20"
+              title={`Cambiar a ${language === 'es' ? 'English' : 'Español'}`}
+            >
+              <Globe size={20} className="text-rose-700" />
+              <span className="text-xs md:text-sm font-medium text-white">
+                {language.toUpperCase()}
+              </span>
+            </button> 
           </div>
         </nav>
 
@@ -85,7 +101,7 @@ function Navbar() {
                 onClick={() => setOpen(false)}
               >
                 <Home size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Inicio</span>
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.home')}</span>
               </Link>
               <Link
                 to="/portfolio"
@@ -93,7 +109,7 @@ function Navbar() {
                 onClick={() => setOpen(false)}
               >
                 <FolderOpen size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Proyectos</span>
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.projects')}</span>
               </Link>
               <Link
                 to="/experience"
@@ -101,7 +117,7 @@ function Navbar() {
                 onClick={() => setOpen(false)}
               >
                 <Briefcase size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Experiencia</span>
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.experience')}</span>
               </Link>
               <Link
                 to="/contact"
@@ -109,17 +125,26 @@ function Navbar() {
                 onClick={() => setOpen(false)}
               >
                 <Mail size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Contacto</span>
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.contact')}</span>
               </Link>
-
               <Link
                 to="/extras"
                 className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
                 onClick={() => setOpen(false)}
               >
                 <Wrench size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Extras</span>
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.extras')}</span>
               </Link>
+
+              <button
+                onClick={() => { toggleLanguage(); setOpen(false); }}
+                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group hover:bg-rose-700/20"
+              >
+                <Globe size={20} className="text-rose-700" />
+                <span className="text-sm font-medium text-white">
+                  {language === 'es' ? 'English' : 'Español'}
+                </span>
+              </button>
             </div>
           </div>
         )}
