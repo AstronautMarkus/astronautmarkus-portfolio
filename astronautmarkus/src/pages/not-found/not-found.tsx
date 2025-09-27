@@ -55,7 +55,7 @@ function NotFound() {
                     </div>
                 </div>
 
-                <div className="bg-gray-900/40 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+                <div className="bg-gray-900/40  rounded-xl p-8 shadow-xl">
                     <div className="text-center space-y-6">
 
                         <div className="flex justify-center mb-6">
@@ -96,7 +96,7 @@ function NotFound() {
                     </div>
                 </div>
 
-                <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-xl">
+                <div className="bg-gray-800/80  rounded-xl p-6 shadow-xl">
                     <div className="text-center">
                         <p className="text-gray-400 text-sm">
                             Si crees que esto es un error, puedes contactarme a través de mis redes sociales.

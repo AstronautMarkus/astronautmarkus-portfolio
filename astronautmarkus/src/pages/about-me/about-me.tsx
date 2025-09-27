@@ -85,7 +85,7 @@ function AboutMe() {
           </div>
         </div>
 
-        <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="flex-shrink-0">
               <img
@@ -106,10 +106,10 @@ function AboutMe() {
           </div>
         </div>
 
-        <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white text-center">{t('about-me.sections.about-me')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 text-center flex flex-col items-center">
+            <div className="bg-gray-700/50 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 text-center flex flex-col items-center">
               <h3 className="text-xl font-semibold mb-3 text-white">{t('about-me.cards.modder.title')}</h3>
               <img
                 src={CJ}
@@ -119,7 +119,7 @@ function AboutMe() {
               <p className="text-gray-300 text-sm">{t('about-me.cards.modder.description')}</p>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 text-center flex flex-col items-center">
+            <div className="bg-gray-700/50 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 text-center flex flex-col items-center">
               <h3 className="text-xl font-semibold mb-3 text-white">{t('about-me.cards.caffeine.title')}</h3>
               <img
                 src={Coffeine}
@@ -129,7 +129,7 @@ function AboutMe() {
               <p className="text-gray-300 text-sm">{t('about-me.cards.caffeine.description')}</p>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 text-center flex flex-col items-center">
+            <div className="bg-gray-700/50 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 text-center flex flex-col items-center">
               <h3 className="text-xl font-semibold mb-3 text-white">{t('about-me.cards.knowledge.title')}</h3>
               <img
                 src={Lester}
@@ -141,10 +141,10 @@ function AboutMe() {
           </div>
         </div>
 
-        <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white">{t('about-me.sections.curious-facts')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 text-rose-700 mt-1">
                   <Star size={20} />
@@ -156,7 +156,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 text-rose-700 mt-1">
                   <Star size={20} />
@@ -168,7 +168,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 text-rose-700 mt-1">
                   <Star size={20} />
@@ -187,7 +187,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 text-rose-700 mt-1">
                   <Star size={20} />
@@ -201,11 +201,11 @@ function AboutMe() {
           </div>
         </div>
 
-        <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white text-center">{t('about-me.sections.questions')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.age.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -220,7 +220,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.language.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -238,7 +238,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.remote.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -249,7 +249,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.freetime.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -260,7 +260,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.coffee.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -271,7 +271,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.pets.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -282,7 +282,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.project.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -293,7 +293,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.study.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -304,7 +304,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.waifu.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -322,7 +322,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.substances.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -333,7 +333,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.alias.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -344,7 +344,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.series.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -362,7 +362,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.videogame.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -373,7 +373,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.story.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -384,7 +384,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.os.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">

@@ -57,7 +57,7 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
           <p className="text-gray-300 text-lg leading-relaxed text-center mb-4">
             {t("portfolio.banner_info")}
           </p>
@@ -89,12 +89,12 @@ function Portfolio() {
 
         <div className="space-y-10">
           {categories.map(category => (
-            <div key={category.slug} className="bg-gray-900/40 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+            <div key={category.slug} className="bg-gray-900/40  rounded-xl p-8 shadow-xl">
               <h2 className="text-2xl font-bold mb-2 text-white">{category.title}</h2>
               <p className="text-gray-300 mb-6">{category.description}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {projects.filter(p => p.categorySlug === category.slug).map(proyecto => (
-                  <div key={proyecto.slug} className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 relative flex flex-col items-center">
+                  <div key={proyecto.slug} className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 relative flex flex-col items-center">
                     <h3 className="text-xl font-semibold mb-2 text-center text-white">{proyecto.title}</h3>
                     {proyecto.imageUrl ? (
                       <img

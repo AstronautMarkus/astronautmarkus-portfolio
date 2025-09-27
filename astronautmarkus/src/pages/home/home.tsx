@@ -76,7 +76,7 @@ function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+              <div className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
                 <h2 className="text-2xl font-bold text-white mb-4">{t('home.aboutTitle')}</h2>
                 <p className="text-gray-300 text-lg leading-relaxed">
                   {t('home.aboutText')}
@@ -84,7 +84,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-xl">
+            <div className="bg-gray-800/80 rounded-xl p-6 shadow-xl">
               <h3 className="text-xl font-bold text-white mb-4">{t('home.contactProjectsTitle')}</h3>
               <div className="space-y-3">
                 <Link
@@ -105,7 +105,7 @@ function Home() {
             </div>
           </div>
 
-            <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+            <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
             <h2 className="text-2xl font-bold text-white mb-6">{t('home.servicesTitle')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="flex items-center gap-3 p-4 bg-blue-900/30 rounded-lg">

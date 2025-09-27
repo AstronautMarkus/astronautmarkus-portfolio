@@ -58,9 +58,9 @@ function Experience() {
           </div>
         </div>
 
-        <div className="bg-gray-900/40 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-900/40  rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white">{t("experience.reyes-and-friends.title")}</h2>
-          <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6">
+          <div className="bg-gray-700/50  rounded-lg p-6">
             <div className="flex flex-col md:flex-row items-start gap-6">
               <div className="flex-1">
                 <div className="flex items-start gap-4 mb-4">
@@ -103,10 +103,10 @@ function Experience() {
           </div>
         </div>
 
-        <div className="bg-gray-900/40 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-900/40  rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white">{t("experience.featured-project.section-title")}</h2>
 
-          <div className="bg-gray-700/50 backdrop-blur-sm rounded-lg p-6">
+          <div className="bg-gray-700/50  rounded-lg p-6">
             <div className="flex flex-col md:flex-row items-start gap-6">
               <div className="flex-1">
                 <div className="flex items-start gap-4 mb-4">
@@ -141,7 +141,7 @@ function Experience() {
           </div>
         </div>
 
-        <div className="bg-gray-900/40 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-900/40 rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white">{t("experience.tech-stack.title")}</h2>
           {Object.entries(techStack).map(([category, items]) => (
             items.length > 0 && (
