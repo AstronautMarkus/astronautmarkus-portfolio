@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Home, FolderOpen, Briefcase, Mail, Wrench, CircleUser } from "lucide-react"
+import { FolderOpen, Briefcase, Mail, Wrench, CircleUser } from "lucide-react"
 import { useI18n } from "../../../contexts/i18nContext"
 
 import EnglishFlag from "../../../assets/img/flags/english.png"
@@ -108,12 +108,12 @@ function Navbar() {
           <div className="md:hidden border-t border-gray-700/50">
             <div className="flex flex-col gap-1 px-4 py-3">
               <Link
-                to="/"
+                to="/about-me"
                 className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
                 onClick={() => setOpen(false)}
               >
-                <Home size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.home')}</span>
+                <CircleUser size={20} className="text-rose-700" />
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.about-me')}</span>
               </Link>
               <Link
                 to="/portfolio"
@@ -149,7 +149,7 @@ function Navbar() {
               </Link>
 
               <button
-                onClick={() => { toggleLanguage(); setOpen(false); }}
+                onClick={toggleLanguage}
                 className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
               >
                 <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">
