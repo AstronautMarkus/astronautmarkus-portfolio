@@ -18,14 +18,13 @@ function LayoutApp({ children }: LayoutAppProps) {
             backgroundPosition: 'center',
           }}
         />
-        <div className="absolute inset-0 bg-black opacity-30" />
       </div>
 
-      <div className="sticky top-0 z-20">
+      <div className="fixed top-0 left-0 right-0 z-50">
         <Navbar />
       </div>
 
-      <main className="flex-1 overflow-y-auto">
+      <main className="flex-1 overflow-y-auto pt-20">
         <div className="p-4 min-h-full flex flex-col">
           <div className="flex-1">
             {children}

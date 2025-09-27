@@ -9,9 +9,9 @@ function Navbar() {
     <header className="w-full">
       <div className="w-full max-w-7xl mx-auto bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-700/50 mt-2">
         <nav className="flex items-center px-4 py-3 md:px-6 md:py-4">
-          <img src="/favicon.jpg" alt="favicon" className="w-8 h-8 rounded-full mr-3 select-none" draggable={false} />
-          <span className="text-lg md:text-xl font-bold text-white mr-auto select-none">
-            AstronautMarkus.dev
+          <img src="/favicon.jpg" alt="favicon" className="w-8 h-8 rounded-full mr-3 pointer-events-none" />
+          <span className="text-lg md:text-xl font-bold text-white mr-auto">
+            astronautmarkus.dev
           </span>
 
           <button
@@ -39,39 +39,39 @@ function Navbar() {
           <div className="hidden md:flex gap-2 md:gap-4">
             <Link
               to="/"
-              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent hover:bg-gray-700/50 transition-all duration-200 "
+              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
             >
               <Home size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white">Inicio</span>
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Inicio</span>
             </Link>
             <Link
               to="/portfolio"
-              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent hover:bg-gray-700/50 transition-all duration-200"
+              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
             >
               <FolderOpen size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white">Proyectos</span>
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Portafolio</span>
             </Link>
             <Link
               to="/experience"
-              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent hover:bg-gray-700/50 transition-all duration-200"
+              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
             >
               <Briefcase size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white">Experiencia</span>
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Experiencia</span>
             </Link>
             <Link
               to="/contact"
-              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent hover:bg-gray-700/50 transition-all duration-200"
+              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
             >
               <Mail size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white">Contacto</span>
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Contacto</span>
             </Link>
 
             <Link
               to="/extras"
-              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent hover:bg-gray-700/50 transition-all duration-200"
+              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
             >
               <Wrench size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white">Extras</span>
+              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Extras</span>
             </Link>
           </div>
         </nav>
@@ -81,44 +81,44 @@ function Navbar() {
             <div className="flex flex-col gap-1 px-4 py-3">
               <Link
                 to="/"
-                className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
                 onClick={() => setOpen(false)}
               >
                 <Home size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white">Inicio</span>
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Inicio</span>
               </Link>
               <Link
                 to="/portfolio"
-                className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
                 onClick={() => setOpen(false)}
               >
                 <FolderOpen size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white">Proyectos</span>
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Proyectos</span>
               </Link>
               <Link
                 to="/experience"
-                className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
                 onClick={() => setOpen(false)}
               >
                 <Briefcase size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white">Experiencia</span>
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Experiencia</span>
               </Link>
               <Link
                 to="/contact"
-                className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
                 onClick={() => setOpen(false)}
               >
                 <Mail size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white">Contacto</span>
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Contacto</span>
               </Link>
 
               <Link
                 to="/extras"
-                className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-700/50 transition-all duration-200"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
                 onClick={() => setOpen(false)}
               >
                 <Wrench size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white">Extras</span>
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">Extras</span>
               </Link>
             </div>
           </div>
