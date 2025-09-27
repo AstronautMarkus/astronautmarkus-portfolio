@@ -16,7 +16,7 @@ function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           <div className="space-y-6">
-            <h2 className="text-xl font-semibold text-white mb-4">{t('contact.personalInfo')}</h2>
+            <h2 className="text-xl font-semibold text-white mb-4">{t('contact.personal-info')}</h2>
             <div className="flex items-center gap-4 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all duration-200">
               <Mail className="text-rose-700 w-6 h-6" />
               <div>
