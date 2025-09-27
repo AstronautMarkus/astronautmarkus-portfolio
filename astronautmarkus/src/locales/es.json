@@ -34,6 +34,97 @@
     "banner_subtitle": "Mis proyectos alocados pero geniales!",
     "banner_info":"Cada proyecto en mi portafolio muestra distintas tecnologías y habilidades que he desarrollado a lo largo de mi carrera. Demostrando que no existe una sola forma de abordar un problema, con creatividad, inteligencia, \"anarquismo\" y pasión por la tecnología, siempre encuentro soluciones innovadoras y efectivas.",
     "banner_info_note":"Es posible que no estén todos mis proyectos informáticos, no suelo actualizar esta lista constantemente. Para revisar todos, visita mi perfil de GitHub:",
-    "github_profile": "Visita mi perfil de GitHub"
+    "github_profile": "Visita mi perfil de GitHub",
+    "private_repo": "Este repositorio es privado, lo siento 😈",
+    "private_repo_real":"realmente no",
+    "categories": {
+      "personal": {
+        "title": "Proyectos Personales",
+        "description": "Proyectos personales desarrollados para aprender y experimentar con nuevas tecnologías y contribuir a la comunidad."
+      },
+      "professional-practice": {
+        "title": "Práctica Profesional",
+        "description": "Proyectos realizados durante mi práctica profesional, aplicando conocimientos adquiridos en un entorno real."
+      },
+      "institute": {
+        "title": "Proyectos del Instituto",
+        "description": "Proyectos desarrollados como parte de mi formación académica en el instituto, Duoc UC. Enfocados en el aprendizaje práctico."
+      }
+    },
+    "projects": {
+      "fumo-index": {
+        "title": "The Fumo Index (ふも)",
+        "description": "Plataforma web para la documentación y recopilación de peluches FumoFumo basados en la serie de videojuegos Touhou, ahora adaptada a más franquicias."
+      },
+      "abbybot-project": {
+        "title": "AbbyBot Project",
+        "description": "Bot multifuncional para Discord, con funciones de moderación, música y más. Desarrollado con Discord.py y, sobre todo, mucho entusiasmo."
+      },
+      "blog-astronautmarkus": {
+        "title": "Blog de AstronautMarkus",
+        "description": "Blog informático donde se comparten artículos sobre desarrollo web, programación y tecnología en general. Creado con Laravel y Tailwind CSS."
+      },
+      "abbybot-project-website": {
+        "title": "Sitio Web de AbbyBot",
+        "description": "Sitio web oficial del bot AbbyBot, donde los usuarios pueden encontrar información sobre el bot, sus comandos y más. Desarrollado con Flask y Bootstrap. Dockerizado para producción."
+      },
+      "multi-stock-sync": {
+        "title": "Multi Stock Sync",
+        "description": "Software para la sincronización de productos con conexión a Mercado Libre, utilizando JWT para autenticación y autorización, y una API RESTful para la gestión de productos."
+      },
+      "multi-stock-sync-back": {
+        "title": "Multi Stock Sync Back",
+        "description": "Backend del software de sincronización de productos, desarrollado con Laravel. Implementa JWT para autenticación y autorización, y una API RESTful para la gestión de productos."
+      },
+      "multi-stock-sync-api-viewer": {
+        "title": "Multi Stock API Viewer",
+        "description": "Documentación de la API del software de sincronización de productos, generada con Swagger. Permite a los desarrolladores explorar y probar la API fácilmente."
+      },
+      "mofustore": {
+        "title": "MOFUStore",
+        "description": "Plataforma de comercio electrónico para comprar fumos de Touhou Project. Proyecto realizado en el segundo año de instituto."
+      },
+      "camellosfood-repartidor": {
+        "title": "CamellosFood - Repartidor",
+        "description": "Aplicación de reparto de comida para Android, construida con Ionic y Django."
+      },
+      "constru-mic": {
+        "title": "CONSTRU_MIC",
+        "description": "Plataforma de comercio electrónico para materiales de construcción, desarrollada con Django y Bootstrap."
+      },
+      "puppies-crud": {
+        "title": "Puppies CRUD",
+        "description": "CRUD sencillo para gestionar cachorros, usando Ionic y Json-Server."
+      },
+      "mofulunches-web": {
+        "title": "MofuLunches Web",
+        "description": "Frontend en Flask para el panel de administración y cocineros de MofuLunches."
+      },
+      "mofulunches-api": {
+        "title": "MofuLunches API",
+        "description": "Backend SOA para la plataforma MofuLunches, soportando interfaces móviles, web y tótem."
+      },
+      "mofulunches-totem": {
+        "title": "MofuLunches Totem",
+        "description": "Aplicación desarrollada con Electron y Arduino para gestionar pedidos y pagos."
+      },
+      "mofulunches-eldimon": {
+        "title": "MofuLunches ElDimon",
+        "description": "Script de Arduino que gestiona la comunicación con la API de MofuLunches."
+      },
+      "mofulunches-listener": {
+        "title": "MofuLunches ElDimon Listener",
+        "description": "Interfaz gráfica en Python para escanear y leer eventos de la API ElDimon usando PyQt5."
+      },
+      "mofulunches-app": {
+        "title": "MofuLunches App",
+        "description": "Aplicación móvil para cocineros, desarrollada con Ionic, para gestionar pedidos en MofuLunches."
+      },
+      "firestore": {
+        "title": "FireStore",
+        "description": "Este proyecto no es mío, pero gracias a él mi compañera aprobó el semestre. Aplicación móvil para gestionar inventarios de plantas en oficinas, desarrollada con Ionic y Firebase."
+      }
+    },
+    "view_repository": "Ver repositorio"
   }
 }

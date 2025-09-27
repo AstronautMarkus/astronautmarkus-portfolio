@@ -1,5 +1,5 @@
 import { useGetPortfolioProjects } from "./hooks/useGetPortfolioProjects";
-import { Github, Lock, Cat } from "lucide-react";
+import { Github, Lock } from "lucide-react";
 import TuxPenguin from "../../assets/img/tux-linux-penguin.gif";
 import PortfolioBannerCard from "../../assets/img/portfolio_banner_card.jpg";
 import Nope from "../../assets/img/nope.gif";
@@ -124,10 +124,15 @@ function Portfolio() {
                     </div>
                     <div className="mt-4 flex justify-center">
                       {proyecto.privateRepo ? (
-                        <span title="Repositorio privado" className="flex items-center gap-1 text-gray-400 text-sm">
+                        <span
+                          title="Repositorio privado"
+                          className="flex items-center gap-1 text-gray-400 text-sm relative group"
+                        >
                           <Lock size={20} />
-                          Este repositorio es privado
-                          <Cat size={16} />
+                          {t("portfolio.private_repo")}
+                          <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 bg-gray-900 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg z-20">
+                            {t("portfolio.private_repo_real")}
+                          </span>
                         </span>
                       ) : (
                         proyecto.githubUrl && (
@@ -138,7 +143,7 @@ function Portfolio() {
                             className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-rose-700 hover:bg-rose-800 rounded-md transition-all"
                           >
                             <Github size={16} />
-                            Ver repositorio
+                            {t("portfolio.view_repository")}
                           </Link>
                         )
                       )}
