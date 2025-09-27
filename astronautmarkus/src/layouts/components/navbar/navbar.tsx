@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { FolderOpen, Briefcase, Mail, Wrench, CircleUser } from "lucide-react"
+import { FolderOpen, Briefcase, Mail, CircleUser } from "lucide-react"
 import { useI18n } from "../../../contexts/i18nContext"
-
 import EnglishFlag from "../../../assets/img/flags/english.png"
 import SpanishFlag from "../../../assets/img/flags/spanish.png"
 
@@ -79,18 +78,11 @@ function Navbar() {
               <Mail size={20} className="text-rose-700" />
               <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.contact')}</span>
             </Link>
-            <Link
-              to="/extras"
-              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
-            >
-              <Wrench size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.extras')}</span>
-            </Link>
 
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group cursor-pointer"
-              title={`Cambiar a ${language === 'es' ? 'English' : 'Español'}`}
+              title={`${language === 'es' ? 'Change to English' : 'Cambiar a Español'}`}
             >
               <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">
                 {language === 'es' ? 'Español' : 'English'}
@@ -139,15 +131,6 @@ function Navbar() {
                 <Mail size={20} className="text-rose-700" />
                 <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.contact')}</span>
               </Link>
-              <Link
-                to="/extras"
-                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
-                onClick={() => setOpen(false)}
-              >
-                <Wrench size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.extras')}</span>
-              </Link>
-
               <button
                 onClick={toggleLanguage}
                 className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"

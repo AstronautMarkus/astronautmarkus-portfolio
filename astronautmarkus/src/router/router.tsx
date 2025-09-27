@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import LayoutApp from '../layouts/layoutApp'
@@ -7,7 +7,6 @@ import Home from '../pages/home/home'
 import Portfolio from '../pages/portfolio/portfolio'
 import Contact from '../pages/contact/contact'
 import Experience from '../pages/experience/experience'
-import Extras from '../pages/extras/extras'
 import NotFound from '../pages/not-found/not-found'
 import AboutMe from '../pages/about-me/about-me'
 
@@ -88,21 +87,6 @@ function Router() {
                 style={{ height: '100%' }}
               >
                 <Contact />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/extras"
-            element={
-              <motion.div
-                variants={pageVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                transition={pageTransition}
-                style={{ height: '100%' }}
-              >
-                <Extras />
               </motion.div>
             }
           />
