@@ -102,31 +102,36 @@ function Home() {
             </div>
           </div>
 
-          <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 shadow-xl">
-            <h2 className="text-2xl font-bold text-white mb-6">Especialidades</h2>
+            <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 shadow-xl">
+            <h2 className="text-2xl font-bold text-white mb-6">Servicios que ofrezco</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="flex items-center gap-3 p-4 bg-blue-900/30 rounded-lg">
-                <Code className="w-6 h-6 text-blue-300" />
-                <span className="text-blue-200 font-medium">FullStack Development</span>
+              <Code className="w-6 h-6 text-blue-300" />
+              <span className="text-blue-200 font-medium">Desarrollo Web FullStack</span>
               </div>
               <div className="flex items-center gap-3 p-4 bg-green-900/30 rounded-lg">
-                <Server className="w-6 h-6 text-green-300" />
-                <span className="text-green-200 font-medium">System Administration</span>
+              <Server className="w-6 h-6 text-green-300" />
+              <span className="text-green-200 font-medium">Administración de Servidores Linux/Windows</span>
               </div>
               <div className="flex items-center gap-3 p-4 bg-red-900/30 rounded-lg">
-                <Shield className="w-6 h-6 text-red-300" />
-                <span className="text-red-200 font-medium">Redes y Seguridad</span>
+              <Shield className="w-6 h-6 text-red-300" />
+              <span className="text-red-200 font-medium">Seguridad Informática y Redes</span>
               </div>
               <div className="flex items-center gap-3 p-4 bg-purple-900/30 rounded-lg">
-                <Wrench className="w-6 h-6 text-purple-300" />
-                <span className="text-purple-200 font-medium">DevOps</span>
+              <Wrench className="w-6 h-6 text-purple-300" />
+              <span className="text-purple-200 font-medium">Automatización y DevOps</span>
               </div>
               <div className="flex items-center gap-3 p-4 bg-yellow-900/30 rounded-lg">
-                <Shield className="w-6 h-6 text-yellow-300" />
-                <span className="text-yellow-200 font-medium">AppSec / DevSecOps</span>
+              <Shield className="w-6 h-6 text-yellow-300" />
+              <span className="text-yellow-200 font-medium">Consultoría en AppSec / DevSecOps</span>
+              </div>
+              <div className="flex items-center gap-3 p-4 bg-white rounded-lg opacity-60">
+              <Globe className="w-6 h-6 text-black" />
+              <span className="text-black font-medium">Lo que tu necesites, para ser honesto</span>
               </div>
             </div>
-          </div>
+            </div>
+
         </div>
       </div>
     </div>
