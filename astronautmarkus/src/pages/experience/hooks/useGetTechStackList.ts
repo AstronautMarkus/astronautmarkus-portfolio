@@ -58,8 +58,8 @@ export type TechStackCategory =
   | "DevOps"
   | "Database"
   | "Tools"
-  | "Sistemas Operativos"
-  | "Sysadmin - Servidores";
+  | "Linux / OS"
+  | "Sysadmin";
 
 export interface TechStackItem {
   name: string;
@@ -88,7 +88,7 @@ export function useGetTechStackList() {
     { name: "Laravel", icon: laravelIcon, category: "Backend" },
     { name: "PHP", icon: phpIcon, category: "Backend" },
     { name: "Docker", icon: dockerIcon, category: "DevOps" },
-    { name: "Systemd", icon: systemdIcon, category: "Sysadmin - Servidores" },
+    { name: "Systemd", icon: systemdIcon, category: "Sysadmin" },
     { name: "Git", icon: gitIcon, category: "DevOps" },
     { name: "Github", icon: githubIcon, category: "DevOps" },
     { name: "Github Actions", icon: githubActionsIcon, category: "DevOps" },
@@ -99,10 +99,10 @@ export function useGetTechStackList() {
     { name: "Electron", icon: electronIcon, category: "Tools" },
     { name: "Firebase", icon: firebaseIcon, category: "Tools" },
     { name: "Arduino", icon: arduinoIcon, category: "IoT" },
-    { name: "Linux", icon: linuxIcon, category: "Sistemas Operativos" },
-    { name: "Arch Linux", icon: archIcon, category: "Sistemas Operativos" },
-    { name: "Debian", icon: debianIcon, category: "Sistemas Operativos" },
-    { name: "Manjaro", icon: manjaroIcon, category: "Sistemas Operativos" },
+    { name: "Linux", icon: linuxIcon, category: "Linux / OS" },
+    { name: "Arch Linux", icon: archIcon, category: "Linux / OS" },
+    { name: "Debian", icon: debianIcon, category: "Linux / OS" },
+    { name: "Manjaro", icon: manjaroIcon, category: "Linux / OS" },
     { name: "Java", icon: javaIcon, category: "Backend" },
     { name: "Cassandra", icon: cassandraIcon, category: "Database" },
     { name: "Mariadb", icon: mariadbIcon, category: "Database" },
@@ -110,16 +110,16 @@ export function useGetTechStackList() {
     { name: "Mysql", icon: mysqlIcon, category: "Database" },
     { name: "Oracle SQL", icon: oracleSqlIcon, category: "Database" },
     { name: "Sqlite", icon: sqliteIcon, category: "Database" },
-    { name: "Fortinet", icon: Fortinet, category: "Sysadmin - Servidores" },
-    { name: "Fedora", icon: Fedora, category: "Sistemas Operativos" },
-    { name: "Oracle Linux", icon: OracleLinux, category: "Sysadmin - Servidores" },
-    { name: "AlmaLinux", icon: AlmaLinux, category: "Sysadmin - Servidores" },
-    { name: "EndeavourOS", icon: EndeavourOS, category: "Sistemas Operativos" },
-    { name: "Ubuntu", icon: Ubuntu, category: "Sistemas Operativos" },
+    { name: "Fortinet", icon: Fortinet, category: "Sysadmin" },
+    { name: "Fedora", icon: Fedora, category: "Linux / OS" },
+    { name: "Oracle Linux", icon: OracleLinux, category: "Sysadmin" },
+    { name: "AlmaLinux", icon: AlmaLinux, category: "Sysadmin" },
+    { name: "EndeavourOS", icon: EndeavourOS, category: "Linux / OS" },
+    { name: "Ubuntu", icon: Ubuntu, category: "Linux / OS" },
     { name: "Raspberry Pi", icon: RaspberryPI, category: "IoT" },
-    { name: "Nginx", icon: Nginx, category: "Sysadmin - Servidores" },
-    { name: "Apache", icon: Apache, category: "Sysadmin - Servidores" },
-    { name: "Bash", icon: Bash, category: "Sysadmin - Servidores" },
+    { name: "Nginx", icon: Nginx, category: "Sysadmin" },
+    { name: "Apache", icon: Apache, category: "Sysadmin" },
+    { name: "Bash", icon: Bash, category: "Sysadmin" },
     { name: "Refine Dev", icon: RefineDev, category: "Tools" },
   ];
 
@@ -130,8 +130,8 @@ export function useGetTechStackList() {
     DevOps: [],
     Database: [],
     Tools: [],
-    "Sistemas Operativos": [],
-    "Sysadmin - Servidores": [],
+    "Linux / OS": [],
+    "Sysadmin": [],
   };
   techStack.forEach(item => grouped[item.category].push(item));
 

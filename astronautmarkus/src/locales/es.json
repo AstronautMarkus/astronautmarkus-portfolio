@@ -243,5 +243,27 @@
       }
     },
     "view_repository": "Ver repositorio"
+  },
+  "experience": {
+    "banner": {
+      "title": "Mi Experiencia",
+      "subtitle": "Proyectos profesionales y habilidades técnicas"
+    },
+    "reyes-and-friends": {
+      "title": "Reyes&Friends",
+      "position": "Fundador & Desarrollador",
+      "period": "2025 - Actualidad",
+      "description": "Desde 2025, lidero Reyes&Friends, mi propio negocio enfocado en el desarrollo de proyectos informáticos a medida para clientes. Me encargo de la creación, diseño y despliegue de soluciones tecnológicas, abarcando desde sitios web hasta sistemas personalizados."
+    },
+    "featured-project": {
+      "section-title": "Proyecto Destacado",
+      "title": "Multi Stock Sync",
+      "company": "Centro de prácticas LastDon",
+      "period": "Dic 2024 - Feb 2025",
+      "description": "Desarrollo de un software de sincronización de productos con conexión a Mercado Libre, utilizando JWT para autenticación y autorización, y una API RESTful para la gestión de productos."
+    },
+    "tech-stack": {
+      "title": "Lista de Tecnologías"
+    }
   }
 }

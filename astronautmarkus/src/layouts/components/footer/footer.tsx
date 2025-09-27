@@ -16,9 +16,11 @@ function Footer() {
           </div>
 
           <div className="flex items-center gap-2 mb-3 md:mb-0">
-            <span className="text-white flex items-center gap-1 text-sm italic">
-              "If I told you I loved you would you still have survived?"
-            </span>
+            <a href="https://open.spotify.com/intl-es/track/7CbuTYkrYpqFeVVtmuuGaJ" target="_blank" className="text-white flex items-center gap-1 text-sm italic cursor-pointer group">
+              <span className="relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">
+                "If I told you I loved you would you still have survived?"
+              </span>
+            </a>
           </div>
 
           <div className="flex gap-2">

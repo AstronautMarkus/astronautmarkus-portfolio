@@ -243,5 +243,27 @@
         }
       },
       "view_repository": "View repository"
+    },
+    "experience": {
+      "banner": {
+        "title": "My Experience",
+        "subtitle": "Professional projects and technical skills"
+      },
+      "reyes-and-friends": {
+        "title": "Reyes&Friends",
+        "position": "Founder & Developer",
+        "period": "2025 - Present",
+        "description": "Since 2025, I lead Reyes&Friends, my own business focused on developing custom IT projects for clients. I handle the creation, design and deployment of technological solutions, ranging from websites to custom systems."
+      },
+      "featured-project": {
+        "section-title": "Featured Project",
+        "title": "Multi Stock Sync",
+        "company": "LastDon internship center",
+        "period": "Dec 2024 - Feb 2025",
+        "description": "Development of a product synchronization software with Mercado Libre connection, using JWT for authentication and authorization, and a RESTful API for product management."
+      },
+      "tech-stack": {
+        "title": "Tech Stack"
+      }
     }
 }
