@@ -6,8 +6,9 @@ import Coffeine from "../../assets/img/animated/coffee.gif";
 import Lester from "../../assets/img/animated/lester.gif";
 import HelloWorld from "../../assets/img/animated/hello-world.gif";
 import JavascriptMeme from "../../assets/img/about-me/javascript-meme.jpg";
-import Chariot from "../../assets/img/about-me/chariot.webp";
+import Chariot from "../../assets/img/about-me/102661516_p0_master1200.jpg";
 import MrRobot from "../../assets/img/about-me/mr-robot.gif";
+import BanderaTux from "../../assets/img/about-me/banderatux.gif";
 import { useI18n } from "../../contexts/i18nContext";
 
 function AboutMe() {
@@ -109,7 +110,7 @@ function AboutMe() {
         <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white text-center">{t('about-me.sections.about-me')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-700/50 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 text-center flex flex-col items-center">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all  text-center flex flex-col items-center">
               <h3 className="text-xl font-semibold mb-3 text-white">{t('about-me.cards.modder.title')}</h3>
               <img
                 src={CJ}
@@ -119,7 +120,7 @@ function AboutMe() {
               <p className="text-gray-300 text-sm">{t('about-me.cards.modder.description')}</p>
             </div>
 
-            <div className="bg-gray-700/50 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 text-center flex flex-col items-center">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all text-center flex flex-col items-center">
               <h3 className="text-xl font-semibold mb-3 text-white">{t('about-me.cards.caffeine.title')}</h3>
               <img
                 src={Coffeine}
@@ -129,7 +130,7 @@ function AboutMe() {
               <p className="text-gray-300 text-sm">{t('about-me.cards.caffeine.description')}</p>
             </div>
 
-            <div className="bg-gray-700/50 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 text-center flex flex-col items-center">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all text-center flex flex-col items-center">
               <h3 className="text-xl font-semibold mb-3 text-white">{t('about-me.cards.knowledge.title')}</h3>
               <img
                 src={Lester}
@@ -144,7 +145,7 @@ function AboutMe() {
         <div className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white">{t('about-me.sections.curious-facts')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 text-rose-700 mt-1">
                   <Star size={20} />
@@ -156,7 +157,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-800/70">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 text-rose-700 mt-1">
                   <Star size={20} />
@@ -168,7 +169,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-800/70">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 text-rose-700 mt-1">
                   <Star size={20} />
@@ -176,18 +177,18 @@ function AboutMe() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-white">{t('about-me.facts.hello-world.title')}</h3>
                   <p className="text-gray-300 text-sm">{t('about-me.facts.hello-world.description')}</p>
-                  <div className="mt-2 flex justify-center">
+                    <div className="mt-2 flex justify-center">
                     <img
                       src={HelloWorld}
                       alt="Hello World"
-                      className="w-30 object-contain rounded-lg pointer-events-none"
+                      className="h-48 object-contain rounded-lg pointer-events-none"
                     />
-                  </div>
+                    </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-800/70">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 text-rose-700 mt-1">
                   <Star size={20} />
@@ -201,11 +202,11 @@ function AboutMe() {
           </div>
         </div>
 
-        <div className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white text-center">{t('about-me.sections.questions')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.age.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -220,7 +221,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.language.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -238,7 +239,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.remote.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -249,7 +250,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.freetime.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -260,7 +261,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.coffee.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -271,7 +272,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.pets.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -282,7 +283,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80  rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.project.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -293,7 +294,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.study.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -304,7 +305,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col sm:flex-row gap-4 items-center">
                 <div className="flex-1 sm:w-7/10">
                   <h3 className="text-lg font-semibold text-white">{t('about-me.qa.waifu.question')}</h3>
@@ -320,7 +321,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80  rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.substances.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -331,7 +332,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80  rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.alias.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -342,7 +343,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.series.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -360,7 +361,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.videogame.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -371,7 +372,7 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.story.question')}</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -382,18 +383,25 @@ function AboutMe() {
               </div>
             </div>
 
-            <div className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.os.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.os.answer')}</p>
-                  </div>
+              <h3 className="text-lg font-semibold text-white">{t('about-me.qa.os.question')}</h3>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex-1">
+                <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.os.answer')}</p>
                 </div>
+              </div>
+              <div className="flex justify-center mt-4">
+                <img
+                src={BanderaTux}
+                alt="Bandera Tux"
+                className="w-64 h-64 object-contain rounded-lg pointer-events-none"
+                />
+              </div>
               </div>
             </div>
 
-            <div className="bg-gray-700/50 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
               <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{t('about-me.qa.music-coding.question')}</h3>
                 <div className="flex flex-col gap-4">
@@ -430,8 +438,8 @@ function AboutMe() {
             {t('about-me.playlists.description')}
           </p>
           <div className="flex overflow-x-auto gap-6 pb-4">
-            
-            <div className="flex-shrink-0 bg-gray-700/50 rounded-lg p-4 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+
+            <div className="flex-shrink-0 bg-gray-800/80 rounded-lg p-4 hover:shadow-2xl transition-all">
               <iframe
                 style={{ borderRadius: "12px" }}
                 src="https://open.spotify.com/embed/playlist/5r6Lp0iFPR3fwZoPSbfCLl?utm_source=generator"
@@ -444,7 +452,7 @@ function AboutMe() {
               ></iframe>
             </div>
 
-            <div className="flex-shrink-0 bg-gray-700/50 rounded-lg p-4 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="flex-shrink-0 bg-gray-800/80 rounded-lg p-4 hover:shadow-2xl transition-all">
               <iframe
                 style={{ borderRadius: "12px" }}
                 src="https://open.spotify.com/embed/playlist/03OXOTX3VQyHLpQMb0lVwW?utm_source=generator&theme=0"
@@ -457,7 +465,7 @@ function AboutMe() {
               ></iframe>
             </div>
 
-            <div className="flex-shrink-0 bg-gray-700/50 rounded-lg p-4 hover:shadow-2xl transition-all hover:bg-gray-700/70">
+            <div className="flex-shrink-0 bg-gray-800/80 rounded-lg p-4 hover:shadow-2xl transition-all">
               <iframe
                 style={{ borderRadius: "12px" }}
                 src="https://open.spotify.com/embed/album/1P4zxnE9WYLHs4k8VZPlNw?utm_source=generator"

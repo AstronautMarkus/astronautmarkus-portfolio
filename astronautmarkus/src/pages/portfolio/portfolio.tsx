@@ -64,7 +64,7 @@ function Portfolio() {
           <p className="text-gray-400 text-center mb-6">
             {t("portfolio.banner_info_note")}
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 bg-gray-900/40 rounded-lg p-4 shadow-inner max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 bg-gray-800/80 rounded-lg p-4 shadow-inner max-w-md mx-auto">
             <img
               src="https://github.com/astronautmarkus.png"
               alt="astronautmarkus avatar"
@@ -89,12 +89,12 @@ function Portfolio() {
 
         <div className="space-y-10">
           {categories.map(category => (
-            <div key={category.slug} className="bg-gray-900/40  rounded-xl p-8 shadow-xl">
+            <div key={category.slug} className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
               <h2 className="text-2xl font-bold mb-2 text-white">{category.title}</h2>
               <p className="text-gray-300 mb-6">{category.description}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {projects.filter(p => p.categorySlug === category.slug).map(proyecto => (
-                  <div key={proyecto.slug} className="bg-gray-700/50  rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-700/70 relative flex flex-col items-center">
+                  <div key={proyecto.slug} className="bg-gray-800/80  rounded-lg p-6 hover:shadow-2xl transition-all relative flex flex-col items-center">
                     <h3 className="text-xl font-semibold mb-2 text-center text-white">{proyecto.title}</h3>
                     {proyecto.imageUrl ? (
                       <img
@@ -104,14 +104,14 @@ function Portfolio() {
                       />
                     ) : (
                         <div
-                        className="w-32 h-32 bg-gray-800 flex items-center justify-center rounded-lg mb-4 group relative"
+                        className="w-32 h-32 bg-gray-800/80 flex items-center justify-center rounded-lg mb-4 group relative"
                         >
                         <img
                           src={Nope}
                           alt="No image available"
                           className="w-24 h-24 object-contain pointer-events-none"
                         />
-                        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full bg-gray-900 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap mt-1 shadow-lg z-20">
+                        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full bg-gray-800/80 text-white text-xs rounded px-2 py-1 opacity-0 transition-opacity pointer-events-none whitespace-nowrap mt-1 shadow-lg z-20">
                           {t("utils.no-image")}
                         </span>
                         </div>

@@ -8,7 +8,7 @@ import { useI18n } from "../../contexts/i18nContext";
 function Experience() {
   const techStack = useGetTechStackList();
   const { t } = useI18n()
-  
+
 
   return (
     <div className="min-h-screen p-4">
@@ -58,9 +58,9 @@ function Experience() {
           </div>
         </div>
 
-        <div className="bg-gray-900/40  rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white">{t("experience.reyes-and-friends.title")}</h2>
-          <div className="bg-gray-700/50  rounded-lg p-6">
+          <div className="bg-gray-800/80  rounded-lg p-6">
             <div className="flex flex-col md:flex-row items-start gap-6">
               <div className="flex-1">
                 <div className="flex items-start gap-4 mb-4">
@@ -84,29 +84,25 @@ function Experience() {
                     <p className="text-gray-300 text-base leading-relaxed mb-4">
                       {t("experience.reyes-and-friends.description")}
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="bg-green-700/20 text-green-300 px-3 py-1 rounded-full text-sm font-medium">Desarrollo Web</span>
-                      <span className="bg-purple-700/20 text-purple-300 px-3 py-1 rounded-full text-sm font-medium">Sistemas a Medida</span>
-                      <span className="bg-orange-700/20 text-orange-300 px-3 py-1 rounded-full text-sm font-medium">Consultoría</span>
-                    </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-56 flex items-center justify-center mt-4 md:mt-0">
+              <div className="w-full md:w-56 flex items-center justify-center mt-0 md:mt-0 self-center md:self-start">
                 <img
                   src={ReyesAndFriendsLogo}
                   alt="Reyes&Friends"
                   className="w-full h-auto object-contain pointer-events-none"
+                  style={{ maxHeight: "80px" }}
                 />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="bg-gray-900/40  rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white">{t("experience.featured-project.section-title")}</h2>
 
-          <div className="bg-gray-700/50  rounded-lg p-6">
+          <div className="bg-gray-800/80  rounded-lg p-6">
             <div className="flex flex-col md:flex-row items-start gap-6">
               <div className="flex-1">
                 <div className="flex items-start gap-4 mb-4">
@@ -141,7 +137,7 @@ function Experience() {
           </div>
         </div>
 
-        <div className="bg-gray-900/40 rounded-xl p-8 shadow-xl">
+        <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
           <h2 className="text-2xl font-bold mb-6 text-white">{t("experience.tech-stack.title")}</h2>
           {Object.entries(techStack).map(([category, items]) => (
             items.length > 0 && (
@@ -149,7 +145,7 @@ function Experience() {
                 <h3 className="text-lg font-semibold text-white mb-4">{category}</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {items.map((tech) => (
-                    <div key={tech.name} className="flex items-center gap-3 p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700/70 transition-all duration-200">
+                    <div key={tech.name} className="flex items-center gap-3 p-4 bg-gray-800/80 rounded-lg transition-all duration-200 hover:shadow-xl">
                       <img src={tech.icon} alt={tech.name} className="h-6 pointer-events-none" />
                       <span className="text-white font-medium">{tech.name}</span>
                     </div>
