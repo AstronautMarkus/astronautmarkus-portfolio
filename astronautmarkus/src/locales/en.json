@@ -277,12 +277,13 @@
     },
     "contact":{
       "title":"Contact",
-      "subtitle":"Let's talk! I really like to talk with new persons, developers and explore new oportunities.",
+      "subtitle":"Connect, Collaborate, Create",
       "personal-info":"Personal Info",
       "email":"Email",
       "location":"Location",
       "location-data":"Santiago, Chile",
       "website":"Website",
-      "website-data":"https://astronautmarkus.dev , this same site, lmao"    
+      "website-data":"https://astronautmarkus.dev , this same site, lmao",
+      "social-media":"Social Media"
     }
 }

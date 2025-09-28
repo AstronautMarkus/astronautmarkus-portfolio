@@ -277,12 +277,13 @@
   },
   "contact":{
       "title":"Contacto",
-      "subtitle":"¡Hablemos! Me encanta conectar con nuevas personas, desarrolladores y explorar grandes oportunidades.",
+      "subtitle":"Conectar, Colaborar, Crear",
       "personal-info":"Información Personal",
       "email":"Correo electrónico",
       "location":"Ubicación",
       "location-data":"Santiago de Chile",
       "website":"Sitio Web",
-      "website-data":"https://astronautmarkus.dev , este mismo sitio, waja"    
+      "website-data":"https://astronautmarkus.dev , este mismo sitio, waja",
+      "social-media":"Redes Sociales"
     }
 }
