@@ -1,17 +1,40 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Link } from "react-router-dom"
-import { FolderOpen, Briefcase, Mail, CircleUser } from "lucide-react"
+import { FolderOpen, Briefcase, Mail, CircleUser, ChevronDown, User, FileText } from "lucide-react"
 import { useI18n } from "../../../contexts/i18nContext"
 import EnglishFlag from "../../../assets/img/flags/english.png"
 import SpanishFlag from "../../../assets/img/flags/spanish.png"
 
 function Navbar() {
   const [open, setOpen] = useState(false)
+  const [infoDropdownOpen, setInfoDropdownOpen] = useState(false)
   const { language, setLanguage, t } = useI18n()
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   const toggleLanguage = () => {
     setLanguage(language === 'es' ? 'en' : 'es')
   }
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setInfoDropdownOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
+
+  // Close dropdown when mobile menu is closed
+  useEffect(() => {
+    if (!open) {
+      setInfoDropdownOpen(false)
+    }
+  }, [open])
 
   return (
     <header className="w-full">
@@ -30,7 +53,6 @@ function Navbar() {
           <button
             className="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg focus:outline-none"
             onClick={() => setOpen(!open)}
-            aria-label="Abrir menú"
           >
             <span
               className={`block w-7 h-1 rounded bg-rose-700 mb-1 transition-all duration-300 ${
@@ -50,13 +72,44 @@ function Navbar() {
           </button>
 
           <div className="hidden md:flex gap-2 md:gap-4 items-center">
-            <Link
-              to="/about-me"
-              className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
-            >
-              <CircleUser size={20} className="text-rose-700" />
-              <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.about-me')}</span>
-            </Link>
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setInfoDropdownOpen(!infoDropdownOpen)}
+                className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group cursor-pointer"
+              >
+                <CircleUser size={20} className="text-rose-700" />
+                <span className="text-xs md:text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.info.title')}</span>
+                <ChevronDown 
+                  size={16} 
+                  className={`text-white transition-transform duration-200 ${infoDropdownOpen ? 'rotate-180' : ''}`} 
+                />
+              </button>
+              
+              {infoDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 bg-gray-800/80 border border-gray-700/50 rounded-lg shadow-lg py-2 min-w-[150px] z-50">
+                  <Link
+                    to="/about-me"
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-300 hover:text-white transition-all duration-200 group"
+                    onClick={() => setInfoDropdownOpen(false)}
+                  >
+                    <User size={16} className="text-rose-700" />
+                    <span className="relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">
+                      {t('navbar.info.about-me')}
+                    </span>
+                  </Link>
+                  <Link
+                    to="/bio"
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-300 hover:text-white transition-all duration-200 group"
+                    onClick={() => setInfoDropdownOpen(false)}
+                  >
+                    <FileText size={16} className="text-rose-700" />
+                    <span className="relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">
+                      {t('navbar.info.bio')}
+                    </span>
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link
               to="/portfolio"
               className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 rounded-lg border border-transparent transition-all duration-200 group"
@@ -99,14 +152,49 @@ function Navbar() {
         {open && (
           <div className="md:hidden border-t border-gray-700/50">
             <div className="flex flex-col gap-1 px-4 py-3">
-              <Link
-                to="/about-me"
-                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
-                onClick={() => setOpen(false)}
-              >
-                <CircleUser size={20} className="text-rose-700" />
-                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.about-me')}</span>
-              </Link>
+              <div>
+                <button
+                  onClick={() => setInfoDropdownOpen(!infoDropdownOpen)}
+                  className="flex items-center justify-between w-full gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
+                >
+                  <div className="flex items-center gap-3">
+                    <CircleUser size={20} className="text-rose-700" />
+                    <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.info.title')}</span>
+                  </div>
+                  <ChevronDown 
+                    size={16} 
+                    className={`text-white transition-transform duration-200 ${infoDropdownOpen ? 'rotate-180' : ''}`} 
+                  />
+                </button>
+                
+                {infoDropdownOpen && (
+                  <div className="ml-4 mt-1">
+                    <Link
+                      to="/about-me"
+                      className="flex items-center gap-2 px-6 py-2 text-sm text-gray-300 hover:text-white rounded-lg hover:bg-gray-700/50 transition-all duration-200"
+                      onClick={() => {
+                        setOpen(false)
+                        setInfoDropdownOpen(false)
+                      }}
+                    >
+                      <User size={16} className="text-rose-700" />
+                      {t('navbar.info.about-me')}
+                    </Link>
+                    <Link
+                      to="/bio"
+                      className="flex items-center gap-2 px-6 py-2 text-sm text-gray-300 hover:text-white rounded-lg hover:bg-gray-700/50 transition-all duration-200"
+                      onClick={() => {
+                        setOpen(false)
+                        setInfoDropdownOpen(false)
+                      }}
+                    >
+                      <FileText size={16} className="text-rose-700" />
+                      {t('navbar.info.bio')}
+                    </Link>
+                  </div>
+                )}
+              </div>
+              
               <Link
                 to="/portfolio"
                 className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"

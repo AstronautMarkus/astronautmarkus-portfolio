@@ -4,7 +4,12 @@
     "portfolio": "Portafolio", 
     "experience": "Experiencia",
     "contact": "Contacto",
-    "projects": "Proyectos"
+    "projects": "Proyectos",
+    "info": {
+      "title": "Info",
+      "about-me": "Sobre mí",
+      "bio": "Biografía"
+    }
   },
   "utils": {
     "no-image": "No hay imagen disponible, waja"
