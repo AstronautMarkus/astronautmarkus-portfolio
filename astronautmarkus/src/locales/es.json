@@ -9,7 +9,8 @@
       "title": "Info",
       "about-me": "Sobre mí",
       "bio": "Biografía"
-    }
+    },
+    "blog": "Visitar Blog"
   },
   "utils": {
     "no-image": "No hay imagen disponible, waja"
