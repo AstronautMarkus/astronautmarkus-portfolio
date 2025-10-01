@@ -9,6 +9,7 @@ import Contact from '../pages/contact/contact'
 import Experience from '../pages/experience/experience'
 import NotFound from '../pages/not-found/not-found'
 import AboutMe from '../pages/about-me/about-me'
+import Bio from '../pages/bio/bio'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -102,6 +103,21 @@ function Router() {
                 style={{ height: '100%' }}
               >
                 <AboutMe />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/bio"
+            element={
+              <motion.div
+                variants={pageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={pageTransition}
+                style={{ height: '100%' }}
+              >
+                <Bio />
               </motion.div>
             }
           />
