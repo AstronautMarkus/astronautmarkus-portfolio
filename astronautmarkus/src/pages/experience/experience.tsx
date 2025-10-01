@@ -4,6 +4,7 @@ import CatComputer from "../../assets/img/animated/cat-cat-on-computer.gif";
 import ExperienceBanner from "../../assets/img/banners/experience_banner.jpg";
 import ReyesAndFriendsLogo from "../../assets/img/logos/reyesandfriends-white.svg";
 import { useI18n } from "../../contexts/i18nContext";
+import { Link } from "react-router-dom";
 
 function Experience() {
   const techStack = useGetTechStackList();
@@ -84,6 +85,19 @@ function Experience() {
                     <p className="text-gray-300 text-base leading-relaxed mb-4">
                       {t("experience.reyes-and-friends.description")}
                     </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      <Link
+                        to="https://www.reyesandfriends.cl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-rose-700 hover:bg-rose-800 text-white font-semibold px-5 py-2 rounded-full shadow transition-colors duration-200"
+                      >
+                        <Briefcase className="w-4 h-4" />
+                        {t("experience.reyes-and-friends.visit-website")}
+                      </Link>
+                    </div>
+
                   </div>
                 </div>
               </div>
