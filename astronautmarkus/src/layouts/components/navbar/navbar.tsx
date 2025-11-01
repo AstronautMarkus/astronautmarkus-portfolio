@@ -162,49 +162,26 @@ function Navbar() {
         {open && (
           <div className="md:hidden border-t border-gray-700/50">
             <div className="flex flex-col gap-1 px-4 py-3">
-              <div>
-                <button
-                  onClick={() => setInfoDropdownOpen(!infoDropdownOpen)}
-                  className="flex items-center justify-between w-full gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
-                >
-                  <div className="flex items-center gap-3">
-                    <CircleUser size={20} className="text-rose-700" />
-                    <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">{t('navbar.info.title')}</span>
-                  </div>
-                  <ChevronDown 
-                    size={16} 
-                    className={`text-white transition-transform duration-200 ${infoDropdownOpen ? 'rotate-180' : ''}`} 
-                  />
-                </button>
-                
-                {infoDropdownOpen && (
-                  <div className="ml-4 mt-1">
-                    <Link
-                      to="/about-me"
-                      className="flex items-center gap-2 px-6 py-2 text-sm text-gray-300 hover:text-white rounded-lg hover:bg-gray-700/50 transition-all duration-200"
-                      onClick={() => {
-                        setOpen(false)
-                        setInfoDropdownOpen(false)
-                      }}
-                    >
-                      <User size={16} className="text-rose-700" />
-                      {t('navbar.info.about-me')}
-                    </Link>
-                    <Link
-                      to="/bio"
-                      className="flex items-center gap-2 px-6 py-2 text-sm text-gray-300 hover:text-white rounded-lg hover:bg-gray-700/50 transition-all duration-200"
-                      onClick={() => {
-                        setOpen(false)
-                        setInfoDropdownOpen(false)
-                      }}
-                    >
-                      <FileText size={16} className="text-rose-700" />
-                      {t('navbar.info.bio')}
-                    </Link>
-                  </div>
-                )}
-              </div>
-              
+              <Link
+                to="/about-me"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
+                onClick={() => setOpen(false)}
+              >
+                <User size={20} className="text-rose-700" />
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">
+                  {t('navbar.info.about-me')}
+                </span>
+              </Link>
+              <Link
+                to="/bio"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
+                onClick={() => setOpen(false)}
+              >
+                <FileText size={20} className="text-rose-700" />
+                <span className="text-sm font-medium text-white relative after:content-[''] after:block after:h-[2px] after:bg-rose-700 after:scale-x-0 after:transition-transform after:duration-300 after:origin-left group-hover:after:scale-x-100">
+                  {t('navbar.info.bio')}
+                </span>
+              </Link>
               <Link
                 to="/portfolio"
                 className="flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group"
