@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useI18n } from '../../../contexts/i18nContext';
 
 export type Technology = string;
 
@@ -19,29 +19,29 @@ export type Category = {
     description: string;
 };
 
-const categories: Category[] = [
+const categoriesData: Category[] = [
     {
         slug: 'personal',
-        title: 'Proyectos Personales',
-        description: 'Proyectos personales desarrollados para aprender y experimentar con nuevas tecnologías y contribuir a la comunidad.',
+        title: '', // Will be filled by translation
+        description: '', // Will be filled by translation
     },
     {
         slug: 'professional-practice',
-        title: 'Práctica Profesional',
-        description: 'Proyectos realizados durante mi práctica profesional, aplicando conocimientos adquiridos en un entorno real.',
+        title: '', // Will be filled by translation
+        description: '', // Will be filled by translation
     },
     {
         slug: 'institute',
-        title: 'Proyectos del Instituto',
-        description: 'Proyectos desarrollados como parte de mi formación académica en el instituto, Duoc UC. Enfocados en el aprendizaje práctico.',
+        title: '', // Will be filled by translation
+        description: '', // Will be filled by translation
     }
 ];
 
-const projects: Project[] = [
+const projectsData: Project[] = [
     {
         slug: 'fumo-index',
-        title: 'The Fumo Index (ふも)',
-        description: 'Plataforma web para la documentación y recopilación de peluches FumoFumo basados en la serie de videojuegos Touhou, ahora adaptada a más franquicias.',
+        title: '', // Will be filled by translation
+        description: '', // Will be filled by translation
         technologies: ['React', 'TypeScript', 'Laravel', 'MySQL', 'Tailwind CSS'],
         categorySlug: 'personal',
         githubUrl: 'https://github.com/astronautmarkus/fumoindex',
@@ -50,8 +50,8 @@ const projects: Project[] = [
     },
     {
         slug: 'abbybot-project',
-        title: 'AbbyBot Project',
-        description: 'Bot multifuncional para Discord, con funciones de moderación, música y más. Desarrollado con Discord.py y, sobre todo, mucho entusiasmo.',
+        title: '',
+        description: '',
         technologies: ['Discord.py', 'Python', 'MySQL'],
         categorySlug: 'personal',
         githubUrl: 'https://github.com/AbbyBot/Discord-AbbyBot',
@@ -59,8 +59,8 @@ const projects: Project[] = [
     },
     {
         slug: 'blog-astronautmarkus',
-        title: 'Blog de AstronautMarkus',
-        description: 'Blog informático donde se comparten artículos sobre desarrollo web, programación y tecnología en general. Creado con Laravel y Tailwind CSS.',
+        title: '',
+        description: '',
         technologies: ['Laravel', 'Blade', 'Tailwind CSS', 'MySQL', 'PHP'],
         categorySlug: 'personal',
         githubUrl: 'https://github.com/AstronautMarkus/blog.astronautmarkus.dev',
@@ -68,8 +68,8 @@ const projects: Project[] = [
     },
     {
         slug: 'abbybot-project-website',
-        title: 'Sitio Web de AbbyBot',
-        description: 'Sitio web oficial del bot AbbyBot, donde los usuarios pueden encontrar información sobre el bot, sus comandos y más. Desarrollado con Flask y Bootstrap. Dockerizado para producción.',
+        title: '',
+        description: '',
         technologies: ['Flask', 'Python', 'Bootstrap', 'MySQL', 'Gunicorn', 'Docker'],
         categorySlug: 'personal',
         githubUrl: 'https://github.com/AbbyBot/Discord-AbbyBot',
@@ -77,8 +77,8 @@ const projects: Project[] = [
     },
     {
         slug: 'multi-stock-sync',
-        title: 'Multi Stock Sync',
-        description: 'Software para la sincronización de productos con conexión a Mercado Libre, utilizando JWT para autenticación y autorización, y una API RESTful para la gestión de productos.',
+        title: '',
+        description: '',
         technologies: ['React', 'Node.js', 'Bootstrap', 'Chart.js'],
         categorySlug: 'professional-practice',
         githubUrl: 'https://github.com/astronautmarkus/Multi-Stock-Sync',
@@ -86,8 +86,8 @@ const projects: Project[] = [
     },
     {
         slug: 'multi-stock-sync-back',
-        title: 'Multi Stock Sync Back',
-        description: 'Backend del software de sincronización de productos, desarrollado con Laravel. Implementa JWT para autenticación y autorización, y una API RESTful para la gestión de productos.',
+        title: '',
+        description: '',
         technologies: ['Laravel', 'Sanctum', 'MySQL', 'PHP'],
         categorySlug: 'professional-practice',
         githubUrl: 'https://github.com/astronautmarkus/Multi-Stock-Sync-Back',
@@ -95,8 +95,8 @@ const projects: Project[] = [
     },
     {
         slug: 'multi-stock-sync-api-viewer',
-        title: 'Multi Stock API Viewer',
-        description: 'Documentación de la API del software de sincronización de productos, generada con Swagger. Permite a los desarrolladores explorar y probar la API fácilmente.',
+        title: '',
+        description: '',
         technologies: ['Laravel', 'Swagger'],
         categorySlug: 'professional-practice',
         githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-API-Viewer',
@@ -104,8 +104,8 @@ const projects: Project[] = [
     },
     {
         slug: 'mofustore',
-        title: 'MOFUStore',
-        description: 'Plataforma de comercio electrónico para comprar fumos de Touhou Project. Proyecto realizado en el segundo año de instituto.',
+        title: '',
+        description: '',
         technologies: ['Python', 'Django', 'Bootstrap', 'MySQL'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/MOFUStore',
@@ -114,8 +114,8 @@ const projects: Project[] = [
     },
     {
         slug: 'camellosfood-repartidor',
-        title: 'CamellosFood - Repartidor',
-        description: 'Aplicación de reparto de comida para Android, construida con Ionic y Django.',
+        title: '',
+        description: '',
         technologies: ['Ionic', 'Angular', 'Django'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/Camello-s-Food_repartidor',
@@ -124,8 +124,8 @@ const projects: Project[] = [
     },
     {
         slug: 'constru-mic',
-        title: 'CONSTRU_MIC',
-        description: 'Plataforma de comercio electrónico para materiales de construcción, desarrollada con Django y Bootstrap.',
+        title: '',
+        description: '',
         technologies: ['Django', 'Bootstrap', 'MySQL'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/MarcosKingsDuoc/CONSTRU_MIC',
@@ -133,16 +133,16 @@ const projects: Project[] = [
     },
     {
         slug: 'puppies-crud',
-        title: 'Puppies CRUD',
-        description: 'CRUD sencillo para gestionar cachorros, usando Ionic y Json-Server.',
+        title: '',
+        description: '',
         technologies: ['Ionic', 'Json-Server'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/Puppies_CRUD',
     },
     {
         slug: 'mofulunches-web',
-        title: 'MofuLunches Web',
-        description: 'Frontend en Flask para el panel de administración y cocineros de MofuLunches.',
+        title: '',
+        description: '',
         technologies: ['Flask', 'Bootstrap'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-Web',
@@ -150,8 +150,8 @@ const projects: Project[] = [
     },
     {
         slug: 'mofulunches-api',
-        title: 'MofuLunches API',
-        description: 'Backend SOA para la plataforma MofuLunches, soportando interfaces móviles, web y tótem.',
+        title: '',
+        description: '',
         technologies: ['Python', 'Flask', 'MongoDB'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-API',
@@ -159,8 +159,8 @@ const projects: Project[] = [
     },
     {
         slug: 'mofulunches-totem',
-        title: 'MofuLunches Totem',
-        description: 'Aplicación desarrollada con Electron y Arduino para gestionar pedidos y pagos.',
+        title: '',
+        description: '',
         technologies: ['Electron', 'Arduino', 'React'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-Totem',
@@ -168,8 +168,8 @@ const projects: Project[] = [
     },
     {
         slug: 'mofulunches-eldimon',
-        title: 'MofuLunches ElDimon',
-        description: 'Script de Arduino que gestiona la comunicación con la API de MofuLunches.',
+        title: '',
+        description: '',
         technologies: ['Arduino', 'C++'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-ElDimon',
@@ -177,8 +177,8 @@ const projects: Project[] = [
     },
     {
         slug: 'mofulunches-listener',
-        title: 'MofuLunches ElDimon Listener',
-        description: 'Interfaz gráfica en Python para escanear y leer eventos de la API ElDimon usando PyQt5.',
+        title: '',
+        description: '',
         technologies: ['Python', 'PyQt5'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-ElDimon_Listener',
@@ -186,8 +186,8 @@ const projects: Project[] = [
     },
     {
         slug: 'mofulunches-app',
-        title: 'MofuLunches App',
-        description: 'Aplicación móvil para cocineros, desarrollada con Ionic, para gestionar pedidos en MofuLunches.',
+        title: '',
+        description: '',
         technologies: ['Ionic'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-APP',
@@ -195,8 +195,8 @@ const projects: Project[] = [
     },
     {
         slug: 'firestore',
-        title: 'FireStore',
-        description: 'Este proyecto no es mío, pero gracias a él mi compañera aprobó el semestre. Aplicación móvil para gestionar inventarios de plantas en oficinas, desarrollada con Ionic y Firebase.',
+        title: '',
+        description: '',
         technologies: ['Ionic', 'Firebase'],
         categorySlug: 'institute',
         githubUrl: 'https://github.com/AstronautMarkus/Firestore',
@@ -204,11 +204,22 @@ const projects: Project[] = [
 ];
 
 export function useGetPortfolioProjects() {
-    const [projectList] = useState<Project[]>(projects);
-    const [categoryList] = useState<Category[]>(categories);
+    const { t } = useI18n();
+    
+    const projects = projectsData.map(project => ({
+        ...project,
+        title: t(`portfolio.projects.${project.slug}.title`),
+        description: t(`portfolio.projects.${project.slug}.description`)
+    }));
+    
+    const categories = categoriesData.map(category => ({
+        ...category,
+        title: t(`portfolio.categories.${category.slug}.title`),
+        description: t(`portfolio.categories.${category.slug}.description`)
+    }));
 
     return {
-        projects: projectList,
-        categories: categoryList,
+        projects,
+        categories,
     };
 }

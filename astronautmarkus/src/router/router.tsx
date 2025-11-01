@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import LayoutApp from '../layouts/layoutApp'
@@ -7,7 +7,9 @@ import Home from '../pages/home/home'
 import Portfolio from '../pages/portfolio/portfolio'
 import Contact from '../pages/contact/contact'
 import Experience from '../pages/experience/experience'
-import Extras from '../pages/extras/extras'
+import NotFound from '../pages/not-found/not-found'
+import AboutMe from '../pages/about-me/about-me'
+import Bio from '../pages/bio/bio'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -90,7 +92,7 @@ function Router() {
             }
           />
           <Route
-            path="/extras"
+            path="/about-me"
             element={
               <motion.div
                 variants={pageVariants}
@@ -100,11 +102,40 @@ function Router() {
                 transition={pageTransition}
                 style={{ height: '100%' }}
               >
-                <Extras />
+                <AboutMe />
               </motion.div>
             }
           />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route
+            path="/bio"
+            element={
+              <motion.div
+                variants={pageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={pageTransition}
+                style={{ height: '100%' }}
+              >
+                <Bio />
+              </motion.div>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <motion.div
+                variants={pageVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={pageTransition}
+                style={{ height: '100%' }}
+              >
+                <NotFound />
+              </motion.div>
+            }
+          />
         </Routes>
       </AnimatePresence>
     </LayoutApp>
