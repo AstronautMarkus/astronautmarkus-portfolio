@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 
 const LayoutApp: React.FC = () => {
     return (
-        <div className="bg-gray-50 flex flex-col relative">
+        <div className="bg-gray-100 flex flex-col relative">
             <Header />
             <main className="flex-1">
                 <Outlet />

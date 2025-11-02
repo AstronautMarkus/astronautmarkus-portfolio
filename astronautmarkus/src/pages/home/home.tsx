@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Background from "../../assets/img/background.png";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-02.png";
+import ProfilePic from "../../assets/img/profile.png";
 import { Github, Linkedin, Mail, Rocket, Twitter, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -61,7 +62,7 @@ function Home() {
                                     href="https://github.com/astronautmarkus"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white/10 hover:bg-rose-700 transition rounded-full p-2 sm:p-3 shadow text-white flex items-center"
+                                    className="bg-white/10 hover:bg-gray-800 transition rounded-full p-2 sm:p-3 shadow text-white flex items-center hover:scale-115 transform transition duration-300"
                                 >
                                     <Github size={24} />
                                 </a>
@@ -69,7 +70,7 @@ function Home() {
                                     href="https://linkedin.com/in/markusreyes"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white/10 hover:bg-rose-700 transition rounded-full p-2 sm:p-3 shadow text-white flex items-center"
+                                    className="bg-white/10 hover:bg-blue-600 transition rounded-full p-2 sm:p-3 shadow text-white flex items-center hover:scale-115 transform transition duration-300"
                                 >
                                     <Linkedin size={24} />
                                 </a>
@@ -77,7 +78,7 @@ function Home() {
                                     href="https://x.com/astronautmarkus"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white/10 hover:bg-rose-700 transition rounded-full p-2 sm:p-3 shadow text-white flex items-center"
+                                    className="bg-white/10 hover:bg-black transition rounded-full p-2 sm:p-3 shadow text-white flex items-center hover:scale-115 transform transition duration-300"
                                 >
                                     <Twitter size={24} />
                                 </a>
@@ -85,7 +86,7 @@ function Home() {
                                     href="https://instagram.com/astronautmarkusdev"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white/10 hover:bg-rose-700 transition rounded-full p-2 sm:p-3 shadow text-white flex items-center"
+                                    className="bg-white/10 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition rounded-full p-2 sm:p-3 shadow text-white flex items-center hover:scale-115 transform transition duration-300"
                                 >
                                     <Instagram size={24} />
                                 </a>
@@ -115,14 +116,14 @@ function Home() {
                     >
                         <Link
                             to="/contact"
-                            className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-rose-700 text-white rounded-lg font-bold shadow-lg hover:bg-rose-800 transition justify-center text-sm sm:text-base md:text-lg"
+                            className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-rose-700 text-white rounded-lg font-bold shadow-lg hover:bg-rose-800 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
                         >
                             <Mail size={18} />
                             Hangout
                         </Link>
                         <Link
                             to="/projects"
-                            className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-white/20 text-white rounded-lg font-bold shadow-lg hover:bg-white/40 transition justify-center text-sm sm:text-base md:text-lg"
+                            className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-white/20 text-white rounded-lg font-bold shadow-lg hover:bg-white/40 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
                         >
                             <Rocket size={18} />
                             View Projects / Experiments
@@ -130,6 +131,51 @@ function Home() {
                     </motion.div>
                 </div>
             </section>
+
+            <section className="py-16">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <motion.div
+                        className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl mx-auto"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.1 }}
+                    >
+                        <motion.div
+                            className="flex-shrink-0"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
+                        >
+                        <div className="w-64 h-64 bg-gray-300 rounded-full flex items-center justify-center shadow-lg">
+                            <img src={ProfilePic} alt="Profile" className="w-full h-full object-cover rounded-full pointer-events-none" />
+                        </div>
+                        </motion.div>
+                        
+                        <motion.div
+                            className="flex-1 text-center lg:text-left"
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7, delay: 0.3 }}
+                        >
+                            <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-6">Who am I?</h2>
+                            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <Link
+                                to="/contact"
+                                className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-rose-700 text-white rounded-lg font-bold shadow-lg hover:bg-rose-800 transition justify-center lg:justify-start text-sm sm:text-base md:text-lg w-fit mx-auto lg:mx-0 hover:scale-105 transform transition duration-300"
+                            >
+                                <Mail size={18} />
+                                Get In Touch
+                            </Link>
+                        </motion.div>
+                    </motion.div>
+                </div>
+            </section>
+
         </>
     );
 }

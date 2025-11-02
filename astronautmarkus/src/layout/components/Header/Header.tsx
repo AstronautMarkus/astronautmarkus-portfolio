@@ -88,7 +88,7 @@ function Header() {
                     href="https://blog.astronautmarkus.dev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full transition-colors font-semibold ${blogBtnClass}`}
+                    className={`hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full transition-all font-semibold ${blogBtnClass} hover:scale-105 transform duration-300`}
                 >
                     <BookOpen size={18} /> blog.astronautmarkus.dev
                 </a>
