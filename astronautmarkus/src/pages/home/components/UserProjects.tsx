@@ -5,6 +5,8 @@ import { Rocket, ChevronRight } from "lucide-react";
 // Importing images
 
 import MultiStockSync from "../../../assets/img/projects/multi-stock-sync.png";
+import MofuLunchesWeb from "../../../assets/img/projects/mofu-lunches-web.jpg";
+import MofuLunchesTotem from "../../../assets/img/projects/mofu-lunches-totem.jpg";
 
 type Tag = {
   name: string;
@@ -32,7 +34,29 @@ const projects: Project[] = [
       { name: "MySQL", color: "#00758f", textColor: "white" },
     ],
     slug: "multi-stock-sync",
-  }
+  },
+  {
+    title: "Mofu Lunches Web",
+    description: "Administrative web platform for managing food requests in companies, with multiple services and API Gateway for links with digital totems.",
+    image: MofuLunchesWeb,
+    tags: [
+      { name: "Flask", color: "#151515ff", textColor: "white" },
+      { name: "Bootstrap", color: "#553c7b", textColor: "white" },
+      { name: "MongoDB", color: "#3FA037", textColor: "white" }
+    ],
+    slug: "mofu-lunches-web",
+  },
+  {
+    title: "Mofu Lunches Totem",
+    description: "Digital totem for ordering food in companies, with touch screen interface and connection to the Mofu Lunches web platform.",
+    image: MofuLunchesTotem,
+    tags: [
+      { name: "Electron", color: "#9FEAF9", textColor: "black" },
+      { name: "React", color: "#61DBFB", textColor: "black" },
+      { name: "Bootstrap", color: "#553c7b", textColor: "white" }
+    ],
+    slug: "mofu-lunches-totem",
+  },
 ];
 
 const UserProjects: React.FC = () => (
@@ -59,12 +83,12 @@ const UserProjects: React.FC = () => (
         {projects.map((project, idx) => (
           <motion.div
             key={project.slug}
-            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
           >
-            <div className="h-48 bg-gray-100 flex items-center justify-center">
+            <div className="h-48 bg-gray-100 flex items-center justify-center border-b border-gray-200">
               {project.image ? (
                 <img
                   src={project.image}
