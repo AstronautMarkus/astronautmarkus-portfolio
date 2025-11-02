@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 import Background from "../../assets/img/background.png";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-02.png";
 import ProfilePic from "../../assets/img/profile.png";
-import { Github, Linkedin, Mail, Rocket, Twitter, Instagram, ChevronRight } from "lucide-react";
+import { Github, Linkedin, Mail, Rocket, Twitter, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 
 
 import LastPosts from "./components/LastPosts";
 import UserStats from "./components/UserStats";
+import UserProjects from "./components/UserProjects";
 
-import MultiStockSync from "../../assets/img/projects/multi-stock-sync.png";
+
 
 function Home() {
 
@@ -179,127 +180,7 @@ function Home() {
                 </div>
             </section>
 
-            <section className="py-16 bg-gray-50">
-                <div className="container mx-auto px-4 sm:px-6">
-                    <motion.div
-                        className="text-center mb-12"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.1 }}
-                    >
-                        <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-4">Featured Projects</h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Here are some of my recent projects that showcase my skills in full-stack development and systems administration.
-                        </p>
-                    </motion.div>
-
-                    <motion.div
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.2 }}
-                    >
-                        <motion.div
-                            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
-                        >
-                            <div className="h-48 bg-gradient-to-r from-rose-500 to-pink-500">
-                                <img
-                                    src={MultiStockSync}
-                                    alt="Multi Stock Sync"
-                                    className="w-full h-full object-cover pointer-events-none"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Multi Stock Sync</h3>
-                                <p className="text-gray-600 mb-4">Web platform to manage businesses in POS format with direct implementation to MercadoLibre, inventory functions, business, receipts, etc.</p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="px-3 py-1 bg-[#61DBFB] text-black text-xs font-semibold rounded-full">React</span>
-                                    <span className="px-3 py-1 bg-[#553c7b] text-white text-xs font-semibold rounded-full">Bootstrap</span>
-                                    <span className="px-3 py-1 bg-[#F05340] text-white text-xs font-semibold rounded-full">Laravel</span>
-                                    <span className="px-3 py-1 bg-[#00758f] text-white text-xs font-semibold rounded-full">MySQL</span>
-                                </div>
-                                <Link
-                                    to="/projects/multi-stock-sync"
-                                    className="text-rose-600 font-semibold hover:text-rose-800 transition flex items-center gap-1"
-                                >
-                                    View Details
-                                    <ChevronRight size={16} />
-                                </Link>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                        >
-                            <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-500"></div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Task Management App</h3>
-                                <p className="text-gray-600 mb-4">Modern task management application with real-time updates</p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">TypeScript</span>
-                                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">Express</span>
-                                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">Socket.io</span>
-                                </div>
-                                <Link
-                                    to="/projects"
-                                    className="text-rose-600 font-semibold hover:text-rose-800 transition flex items-center gap-1"
-                                >
-                                    View Details
-                                    <ChevronRight size={16} />
-                                </Link>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.5 }}
-                        >
-                            <div className="h-48 bg-gradient-to-r from-green-500 to-teal-500"></div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Linux Server Setup</h3>
-                                <p className="text-gray-600 mb-4">Personal enterprise Rack setup with HP Proliant Server, AMD Ryzen, Fortigate etc.</p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">Linux</span>
-                                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">Docker</span>
-                                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">Bash</span>
-                                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">Fortigate</span>
-                                </div>
-                                <Link
-                                    to="/projects"
-                                    className="text-rose-600 font-semibold hover:text-rose-800 transition flex items-center gap-1"
-                                >
-                                    View Details
-                                    <ChevronRight size={16} />
-                                </Link>
-                            </div>
-                        </motion.div>
-                    </motion.div>
-
-                    <motion.div
-                        className="text-center mt-12"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.6 }}
-                    >
-                        <Link
-                            to="/projects"
-                            className="inline-flex items-center gap-2 px-8 py-3 bg-rose-600 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-700 transition hover:scale-105 transform duration-300"
-                        >
-                            <Rocket size={20} />
-                            View All Projects
-                        </Link>
-                    </motion.div>
-
-                </div>
-            </section>
+            <UserProjects />
 
             <LastPosts />
 
