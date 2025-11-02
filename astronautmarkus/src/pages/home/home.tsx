@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Background from "../../assets/img/background.png";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-02.png";
 import { Github, Linkedin, Mail, Rocket, Twitter, Instagram } from "lucide-react";
+import { motion } from "framer-motion";
 
 function Home() {
     return (
@@ -17,22 +18,45 @@ function Home() {
 
                 <div className="relative z-20 w-full max-w-6xl px-4 sm:px-6 flex flex-col items-center">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center w-full mb-10 md:mb-16">
-                        <div className="flex flex-col justify-end items-center text-center w-full">
-                            <h1
+                        <motion.div
+                            className="flex flex-col justify-end items-center text-center w-full"
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
+                        >
+                            <motion.h1
                                 className="flex flex-col items-center gap-2 text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-5 md:mb-8 mt-4 sm:mt-6 drop-shadow-lg"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.3 }}
                             >
                                 <span>
                                     AstronautMarkusDev
                                 </span>
-                            </h1>
-                            <h2 className="flex flex-col items-center gap-2 text-lg sm:text-xl md:text-2xl text-rose-600 font-semibold mb-3 md:mb-4">
+                            </motion.h1>
+                            <motion.h2
+                                className="flex flex-col items-center gap-2 text-lg sm:text-xl md:text-2xl text-rose-600 font-semibold mb-3 md:mb-4"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.4 }}
+                            >
                                 Fullstack Developer & Systems Administrator
-                            </h2>
-                            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-md sm:max-w-xl mb-6 md:mb-8 drop-shadow">
+                            </motion.h2>
+                            <motion.p
+                                className="text-base sm:text-lg md:text-xl text-white/80 max-w-md sm:max-w-xl mb-6 md:mb-8 drop-shadow"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.5 }}
+                            >
                                 Hello, I'm Markus Reyes, a Fullstack Developer and Systems Administrator. I build user-friendly apps and solve tech problems using modern tools. I enjoy learning new things and keeping up with industry trends. Let's connect and work together!
-                            </p>
+                            </motion.p>
 
-                            <div className="flex gap-4 sm:gap-6 justify-center flex-wrap">
+                            <motion.div
+                                className="flex gap-4 sm:gap-6 justify-center flex-wrap"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.6 }}
+                            >
                                 <a
                                     href="https://github.com/astronautmarkus"
                                     target="_blank"
@@ -65,9 +89,14 @@ function Home() {
                                 >
                                     <Instagram size={24} />
                                 </a>
-                            </div>
-                        </div>
-                        <div className="flex flex-col items-center justify-end relative w-full">
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                            className="flex flex-col items-center justify-end relative w-full"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8, delay: 0.7 }}
+                        >
                             <div className="relative">
                                 <img
                                     src={AstronautMarkus}
@@ -76,9 +105,14 @@ function Home() {
                                     style={{ objectFit: "contain" }}
                                 />
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
-                    <div className="flex flex-col md:flex-row gap-3 md:gap-4 mb-4 w-full items-center justify-center">
+                    <motion.div
+                        className="flex flex-col md:flex-row gap-3 md:gap-4 mb-4 w-full items-center justify-center"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.8 }}
+                    >
                         <Link
                             to="/contact"
                             className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-rose-700 text-white rounded-lg font-bold shadow-lg hover:bg-rose-800 transition justify-center text-sm sm:text-base md:text-lg"
@@ -93,7 +127,7 @@ function Home() {
                             <Rocket size={18} />
                             View Projects / Experiments
                         </Link>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
         </>
