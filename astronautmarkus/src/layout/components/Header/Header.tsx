@@ -1,32 +1,69 @@
 import AstronautMarkus from "../../../assets/img/astronautmarkus/AstronautMarkus-01.png";
-import { Menu, Github, Linkedin, User, Code, BookOpen, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, Github, Linkedin, User, Code, BookOpen, X, Instagram } from "lucide-react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
     const [navOpen, setNavOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 0);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const headerClass = `px-6 h-16 flex items-center justify-between transition-colors duration-300 fixed top-0 left-0 w-full z-50 ${
+        isMobile
+            ? "bg-white shadow"
+            : scrolled
+                ? "bg-white shadow"
+                : "bg-transparent"
+    }`;
+
+    const textClass = (isMobile || scrolled)
+        ? "text-gray-800 hover:text-rose-700"
+        : "text-white hover:text-rose-700";
+
+    const iconTextClass = (isMobile || scrolled)
+        ? "text-gray-700 hover:text-rose-700"
+        : "text-white hover:text-rose-700";
+
+    const blogBtnClass = (isMobile || scrolled)
+        ? "bg-rose-700 text-white hover:bg-rose-800"
+        : "bg-white text-rose-700 hover:bg-rose-700 hover:text-white";
 
     return (
         <>
-            <header className="bg-white dark:bg-gray-900 shadow-lg px-6 py-4 flex items-center justify-between transition-colors duration-300 relative z-50">
+            <header className={headerClass}>
                 <div className="flex items-center gap-2">
                     <img src={AstronautMarkus} alt="Astronaut Markus" className="w-8 h-8 pointer-events-none" />
-                    <Link to="/" className="md:text-xl text-base font-bold text-gray-800 dark:text-white tracking-tight hover:text-rose-700 transition-colors">
+                    <Link to="/" className={`md:text-xl text-base font-bold tracking-tight transition-colors ${textClass}`}>
                         AstronautMarkusDev
                     </Link>
                 </div>
                 <nav className="hidden md:flex flex-1 justify-center items-center gap-6">
-                    <Link to="/about" className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-rose-700 transition-colors">
+                    <Link to="/about" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
                         <User size={18} /> About Me
                     </Link>
-                    <Link to="/projects" className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-rose-700 transition-colors">
+                    <Link to="/projects" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
                         <Code size={18} /> Projects
                     </Link>
                     <a
                         href="https://github.com/astronautmarkus"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-rose-700 transition-colors"
+                        className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}
                     >
                         <Github size={18} /> GitHub
                     </a>
@@ -34,21 +71,31 @@ function Header() {
                         href="https://linkedin.com/in/markusreyes"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-rose-700 transition-colors"
+                        className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}
                     >
                         <Linkedin size={18} /> LinkedIn
+                    </a>
+                    <a
+                        href="https://instagram.com/astronautmarkusdev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}
+                    >
+                        <Instagram size={18} /> Instagram
                     </a>
                 </nav>
                 <a
                     href="https://blog.astronautmarkus.dev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-700 text-white hover:bg-rose-800 transition-colors font-semibold"
+                    className={`hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full transition-colors font-semibold ${blogBtnClass}`}
                 >
-                    <BookOpen size={18} /> Blog informático
+                    <BookOpen size={18} /> blog.astronautmarkus.dev
                 </a>
                 <button
-                    className="md:hidden p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-rose-700 hover:text-white transition-colors ml-2"
+                    className={`md:hidden p-2 rounded-full transition-colors ml-2 ${
+                        scrolled ? "bg-gray-100 text-gray-800 hover:bg-rose-700 hover:text-white" : "bg-white text-rose-700 hover:bg-rose-700 hover:text-white"
+                    }`}
                     onClick={() => setNavOpen(!navOpen)}
                     aria-label={navOpen ? "Cerrar menú" : "Abrir menú"}
                 >
@@ -57,7 +104,7 @@ function Header() {
             </header>
 
             <div
-                className={`fixed top-[64px] left-0 w-full bg-white dark:bg-gray-900 shadow-lg transition-transform duration-300 z-40 md:hidden ${
+                className={`fixed top-16 left-0 w-full bg-white transition-transform duration-300 z-40 md:hidden ${
                     navOpen ? "translate-y-0" : "-translate-y-full"
                 }`}
                 style={{ height: "calc(100vh - 64px)" }}
@@ -65,14 +112,14 @@ function Header() {
                 <div className="flex flex-col gap-4 px-6 py-8">
                     <Link
                         to="/about"
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-rose-700 transition-colors text-lg font-medium"
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
                         onClick={() => setNavOpen(false)}
                     >
                         <User size={20} /> About Me
                     </Link>
                     <Link
                         to="/projects"
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-rose-700 transition-colors text-lg font-medium"
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
                         onClick={() => setNavOpen(false)}
                     >
                         <Code size={20} /> Projects
@@ -81,7 +128,7 @@ function Header() {
                         href="https://github.com/astronautmarkus"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-rose-700 transition-colors text-lg font-medium"
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
                         onClick={() => setNavOpen(false)}
                     >
                         <Github size={20} /> GitHub
@@ -90,7 +137,7 @@ function Header() {
                         href="https://linkedin.com/in/markusreyes"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-rose-700 transition-colors text-lg font-medium"
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
                         onClick={() => setNavOpen(false)}
                     >
                         <Linkedin size={20} /> LinkedIn
@@ -99,7 +146,7 @@ function Header() {
                         href="https://blog.astronautmarkus.dev"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 rounded-full bg-rose-700 text-white hover:bg-rose-800 transition-colors font-semibold text-lg"
+                        className={`flex items-center gap-2 px-4 py-2 rounded-full transition-colors font-semibold text-lg ${blogBtnClass}`}
                         onClick={() => setNavOpen(false)}
                     >
                         <BookOpen size={20} /> Blog informático
