@@ -13,6 +13,7 @@ type Post = {
   url: string;
   banner_image: string;
   tags: string[];
+  type?: string;
 };
 
 const LastPosts: React.FC = () => {
@@ -103,7 +104,7 @@ const LastPosts: React.FC = () => {
         >
           {posts.map((post, index) => (
             <motion.div
-              key={post.url}
+              key={post.url || post.title}
               className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -121,30 +122,34 @@ const LastPosts: React.FC = () => {
                 <p className="text-gray-600 mb-4 line-clamp-2">
                   {post.description}
                 </p>
-                <div className="text-xs text-gray-400 mb-2">
-                  {new Date(post.publishDate).toLocaleDateString()}
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {post.tags.slice(0, 4).map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-4">
-                  <Link
-                    to={post.url}
-                    className="text-rose-600 font-semibold hover:text-rose-800 transition flex items-center gap-1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Read on my blog website
-                    <ChevronRight size={16} />
-                  </Link>
-                </div>
+                {post.type !== "wip" && (
+                  <>
+                    <div className="text-xs text-gray-400 mb-2">
+                      {new Date(post.publishDate).toLocaleDateString()}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {post.tags.slice(0, 4).map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="mt-4">
+                      <Link
+                        to={post.url}
+                        className="text-rose-600 font-semibold hover:text-rose-800 transition flex items-center gap-1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Read on my blog website
+                        <ChevronRight size={16} />
+                      </Link>
+                    </div>
+                  </>
+                )}
               </div>
             </motion.div>
           ))}
