@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 
 import LastPosts from "./components/LastPosts";
 
+import MultiStockSync from "../../assets/img/projects/multi-stock-sync.png";
+
 function Home() {
     return (
         <>
@@ -246,17 +248,24 @@ function Home() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.3 }}
                         >
-                            <div className="h-48 bg-gradient-to-r from-rose-500 to-pink-500"></div>
+                            <div className="h-48 bg-gradient-to-r from-rose-500 to-pink-500">
+                                <img
+                                    src={MultiStockSync}
+                                    alt="Multi Stock Sync"
+                                    className="w-full h-full object-cover pointer-events-none"
+                                />
+                            </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">E-Commerce Platform</h3>
-                                <p className="text-gray-600 mb-4">Full-stack e-commerce solution with React, Node.js, and PostgreSQL</p>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">Multi Stock Sync</h3>
+                                <p className="text-gray-600 mb-4">Web platform to manage businesses in POS format with direct implementation to MercadoLibre, inventory functions, business, receipts, etc.</p>
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">React</span>
-                                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">Node.js</span>
-                                    <span className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full">PostgreSQL</span>
+                                    <span className="px-3 py-1 bg-[#61DBFB] text-black text-xs font-semibold rounded-full">React</span>
+                                    <span className="px-3 py-1 bg-[#553c7b] text-white text-xs font-semibold rounded-full">Bootstrap</span>
+                                    <span className="px-3 py-1 bg-[#F05340] text-white text-xs font-semibold rounded-full">Laravel</span>
+                                    <span className="px-3 py-1 bg-[#00758f] text-white text-xs font-semibold rounded-full">MySQL</span>
                                 </div>
                                 <Link
-                                    to="/projects"
+                                    to="/projects/multi-stock-sync"
                                     className="text-rose-600 font-semibold hover:text-rose-800 transition flex items-center gap-1"
                                 >
                                     View Details
