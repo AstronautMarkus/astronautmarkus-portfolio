@@ -24,49 +24,21 @@ function AnimatedRoutes() {
             mode="wait"
             onExitComplete={() => setPendingScroll(true)}
         >
-            <Routes location={location} key={location.pathname}>
-                <Route element={<LayoutApp />}>
-                    <Route
-                        path="/"
-                        element={
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.4 }}
-                            >
-                                <Home />
-                            </motion.div>
-                        }
-                    />
-                    <Route
-                        path="/about-me"
-                        element={
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.4 }}
-                            >
-                                <AboutMe />
-                            </motion.div>
-                        }
-                    />
-                    <Route
-                        path="/tech-stack"
-                        element={
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.4 }}
-                            >
-                                <TechStackView />
-                            </motion.div>
-                        }
-                    />
-                </Route>
-            </Routes>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                key={location.pathname}
+            >
+                <Routes location={location}>
+                    <Route element={<LayoutApp />}>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about-me" element={<AboutMe />} />
+                        <Route path="/tech-stack" element={<TechStackView />} />
+                    </Route>
+                </Routes>
+            </motion.div>
         </AnimatePresence>
     );
 }
