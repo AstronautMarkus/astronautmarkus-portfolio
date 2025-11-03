@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { ChevronRight, Rocket } from "lucide-react";
+import { BookOpen, ChevronRight } from "lucide-react";
 
 const BLOG_URL = import.meta.env.VITE_BLOG_URL;
 
@@ -167,7 +167,7 @@ const LastPosts: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Rocket size={20} />
+            <BookOpen size={20} />
             Visit Blog
           </a>
         </motion.div>

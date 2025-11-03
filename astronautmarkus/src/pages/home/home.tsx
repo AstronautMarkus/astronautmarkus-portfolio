@@ -93,7 +93,7 @@ function Home() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.5 }}
                             >
-                                Hello, I'm Markus Reyes, a Fullstack Developer and Systems Administrator. I build user-friendly apps and solve tech problems using modern tools. I enjoy learning new things and keeping up with industry trends. Let's connect and work together!
+                                Hello, I'm Marcos Reyes, a Fullstack Developer and Systems Administrator. I build user-friendly apps and solve tech problems using modern tools. I enjoy learning new things and keeping up with industry trends. Let's connect and work together!
                             </motion.p>
 
                             <motion.div
