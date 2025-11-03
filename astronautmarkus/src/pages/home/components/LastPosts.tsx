@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Rocket } from "lucide-react";
 
 const BLOG_URL = import.meta.env.VITE_BLOG_URL;
 
@@ -154,6 +154,24 @@ const LastPosts: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        <motion.div
+          className="flex justify-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+        >
+          <a
+            href={BLOG_URL}
+            className="inline-flex items-center gap-2 px-8 py-3 bg-rose-700 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-800 transition hover:scale-105 transform duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Rocket size={20} />
+            Visit Blog
+          </a>
+        </motion.div>
+
       </div>
     </section>
   );

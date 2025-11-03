@@ -134,7 +134,7 @@ const UserProjects: React.FC = () => (
       >
         <Link
           to="/projects"
-          className="inline-flex items-center gap-2 px-8 py-3 bg-rose-600 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-700 transition hover:scale-105 transform duration-300"
+          className="inline-flex items-center gap-2 px-8 py-3 bg-rose-700 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-800 transition hover:scale-105 transform duration-300"
         >
           <Rocket size={20} />
           View All Projects

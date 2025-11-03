@@ -164,7 +164,7 @@ function TechStack({ fullList = false }: TechStackProps) {
                                 
                                 <a
                                     href="/tech-stack"
-                                    className="px-6 py-3 bg-rose-600 text-white rounded-lg font-semibold shadow hover:bg-rose-700 transition"
+                                    className="px-6 py-3 bg-rose-700 text-white rounded-lg font-semibold shadow hover:bg-rose-800 transition transition hover:scale-105 transform duration-300"
                                 >
                                     View Full Tech Stack
                                 </a>
