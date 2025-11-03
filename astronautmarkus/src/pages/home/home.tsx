@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 import LastPosts from "./components/LastPosts";
 import UserStats from "./components/UserStats";
-import UserProjects from "./components/UserProjects";
+import FeaturedProjects from "./components/FeaturedProjects";
 import TechStack from "./components/TechStack";
 import FinalPageUrls from "./components/FinalPageUrls";
 
@@ -216,7 +216,7 @@ function Home() {
                 </div>
             </section>
 
-            <UserProjects />
+            <FeaturedProjects />
 
             <LastPosts />
 

@@ -59,7 +59,7 @@ const projects: Project[] = [
   },
 ];
 
-const UserProjects: React.FC = () => (
+const FeaturedProjects: React.FC = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4 sm:px-6">
       <motion.div
@@ -144,4 +144,4 @@ const UserProjects: React.FC = () => (
   </section>
 );
 
-export default UserProjects;
+export default FeaturedProjects;
