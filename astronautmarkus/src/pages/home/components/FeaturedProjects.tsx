@@ -6,7 +6,7 @@ import { Rocket, ChevronRight } from "lucide-react";
 
 import MultiStockSync from "../../../assets/img/projects/multi-stock-sync.png";
 import MofuLunchesWeb from "../../../assets/img/projects/mofu-lunches-web.jpg";
-import MofuLunchesTotem from "../../../assets/img/projects/mofu-lunches-totem.jpg";
+import TurnoMaster from "../../../assets/img/projects/turnomaster.png";
 
 type Tag = {
   name: string;
@@ -28,10 +28,10 @@ const projects: Project[] = [
     description: "Web platform to manage businesses in POS format with direct implementation to MercadoLibre, inventory functions, business, receipts, etc.",
     image: MultiStockSync,
     tags: [
-      { name: "React", color: "#61DBFB", textColor: "black" },
-      { name: "Bootstrap", color: "#553c7b", textColor: "white" },
-      { name: "Laravel", color: "#F05340", textColor: "white" },
-      { name: "MySQL", color: "#00758f", textColor: "white" },
+      { name: "React", color: "#61DAFB", textColor: "black" },
+      { name: "Bootstrap", color: "#7952B3", textColor: "white" },
+      { name: "Laravel", color: "#FF2D20", textColor: "white" },
+      { name: "MySQL", color: "#4479A1", textColor: "white" },
     ],
     slug: "multi-stock-sync",
   },
@@ -41,21 +41,22 @@ const projects: Project[] = [
     image: MofuLunchesWeb,
     tags: [
       { name: "Flask", color: "#151515ff", textColor: "white" },
-      { name: "Bootstrap", color: "#553c7b", textColor: "white" },
-      { name: "MongoDB", color: "#3FA037", textColor: "white" }
+      { name: "Bootstrap", color: "#7952B3", textColor: "white" },
+      { name: "MongoDB", color: "#47A248", textColor: "white" }
     ],
     slug: "mofu-lunches-web",
   },
   {
-    title: "Mofu Lunches Totem",
-    description: "Digital totem for ordering food in companies, with touch screen interface and connection to the Mofu Lunches web platform.",
-    image: MofuLunchesTotem,
+    title: "TurnoMaster",
+    description: "A smart and efficient scheduling system for businesses. Easily manage shifts, track attendance, and optimize working hours.",
+    image: TurnoMaster,
     tags: [
-      { name: "Electron", color: "#9FEAF9", textColor: "black" },
-      { name: "React", color: "#61DBFB", textColor: "black" },
-      { name: "Bootstrap", color: "#553c7b", textColor: "white" }
+      { name: "React", color: "#61DAFB", textColor: "black" },
+      { name: "TailwindCSS", color: "#06B6D4", textColor: "white" },
+      { name: "Laravel", color: "#FF2D20", textColor: "white" },
+      { name: "MySQL", color: "#4479A1", textColor: "white" },
     ],
-    slug: "mofu-lunches-totem",
+    slug: "turnomaster",
   },
 ];
 
