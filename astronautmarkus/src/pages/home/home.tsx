@@ -80,7 +80,7 @@ function Home() {
                                 </span>
                             </motion.h1>
                             <motion.h2
-                                className="flex flex-col items-center gap-2 text-lg sm:text-xl md:text-2xl text-rose-600 font-semibold mb-3 md:mb-4"
+                                className="flex flex-col items-center gap-2 text-lg sm:text-xl md:text-2xl text-rose-700 font-semibold mb-3 md:mb-4"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.4 }}
@@ -203,10 +203,10 @@ function Home() {
                         >
                             <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-6">Who am I?</h2>
                             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                                My full name is <strong>Marcos Andrés Alberto Reyes Martínez</strong>, yes, quite long. I was born on <span className="text-rose-600 font-semibold">March 16, 2003</span> in <strong>Santiago, Chile</strong>. For as long as I can remember, I've been sitting at the computer, always with the desire to <span className="text-rose-600 font-semibold">create things</span>. Sometimes I can't sleep thinking about new projects or ideas I could carry out.
+                                My full name is <strong>Marcos Andrés Alberto Reyes Martínez</strong>, yes, quite long. I was born on <span className="text-rose-700 font-semibold">March 16, 2003</span> in <strong>Santiago, Chile</strong>. For as long as I can remember, I've been sitting at the computer, always with the desire to <span className="text-rose-700 font-semibold">create things</span>. Sometimes I can't sleep thinking about new projects or ideas I could carry out.
                             </p>
                             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                               I graduated as a <strong>Computer Programmer Analyst</strong> in <span className="text-rose-600 font-semibold">2025</span> from <strong>Duoc UC institute</strong>. I currently work as an independent <span className="text-rose-600 font-semibold">Full Stack Developer</span> and also as an independent <span className="text-rose-600 font-semibold">Linux Systems Administrator</span>. I love learning new technologies and tools that allow me to improve my skills and knowledge in software development and systems administration.
+                               I graduated as a <strong>Computer Programmer Analyst</strong> in <span className="text-rose-700 font-semibold">2025</span> from <strong>Duoc UC institute</strong>. I currently work as an independent <span className="text-rose-700 font-semibold">Full Stack Developer</span> and also as an independent <span className="text-rose-700 font-semibold">Linux Systems Administrator</span>. I love learning new technologies and tools that allow me to improve my skills and knowledge in software development and systems administration.
                                I'd say the thing that entertains me the most is <strong>SSR</strong>. How far you can leverage it with creative thinking to achieve interesting things. <span className="italic text-gray-600"> <br /><br /> "Can you imagine reviving an old browser with an intermediate SSR web between the client and server? Crazy things that go through my head."</span>
                             </p>
                         </motion.div>

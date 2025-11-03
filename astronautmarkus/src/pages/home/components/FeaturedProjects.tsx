@@ -117,7 +117,7 @@ const FeaturedProjects: React.FC = () => (
               </div>
               <Link
                 to={`/projects/${project.slug}`}
-                className="text-rose-600 font-semibold hover:text-rose-800 transition flex items-center gap-1"
+                className="text-rose-700 font-semibold hover:text-rose-800 transition flex items-center gap-1"
               >
                 View Details
                 <ChevronRight size={16} />

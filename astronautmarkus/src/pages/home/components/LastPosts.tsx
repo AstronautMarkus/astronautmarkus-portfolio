@@ -140,7 +140,7 @@ const LastPosts: React.FC = () => {
                     <div className="mt-4">
                       <Link
                         to={post.url}
-                        className="text-rose-600 font-semibold hover:text-rose-800 transition flex items-center gap-1"
+                        className="text-rose-700 font-semibold hover:text-rose-800 transition flex items-center gap-1"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
