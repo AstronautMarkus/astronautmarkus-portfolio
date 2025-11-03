@@ -122,7 +122,7 @@ function TechStack({}: TechStackProps) {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.3 + catIdx * 0.2 }}
                             >
-                                <h3 className="text-2xl font-semibold text-rose-600 mb-6 text-center">{cat.category}</h3>
+                                <h3 className="text-2xl font-semibold text-rose-700 mb-6 text-center">{cat.category}</h3>
                                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                                     {cat.techs.map((tech, index) => (
                                         <motion.div

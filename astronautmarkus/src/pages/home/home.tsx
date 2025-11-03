@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import LastPosts from "./components/LastPosts";
 import UserStats from "./components/UserStats";
 import FeaturedProjects from "./components/FeaturedProjects";
-import TechStack from "./components/TechStack";
+import TechStackDemo from "./components/TechStackDemo";
 import FinalPageUrls from "./components/FinalPageUrls";
 
 
@@ -220,7 +220,7 @@ function Home() {
 
             <LastPosts />
 
-            <TechStack />
+            <TechStackDemo />
 
             <FinalPageUrls />
 
