@@ -32,6 +32,8 @@ const projects: Project[] = [
       { name: "Bootstrap", color: "#7952B3", textColor: "white" },
       { name: "Laravel", color: "#FF2D20", textColor: "white" },
       { name: "MySQL", color: "#4479A1", textColor: "white" },
+      { name: "Chart.js", color: "#FF6384", textColor: "black" },
+      { name: "Axios", color: "#5A29E4", textColor: "white" }
     ],
     slug: "multi-stock-sync",
   },
@@ -55,6 +57,8 @@ const projects: Project[] = [
       { name: "TailwindCSS", color: "#06B6D4", textColor: "white" },
       { name: "Laravel", color: "#FF2D20", textColor: "white" },
       { name: "MySQL", color: "#4479A1", textColor: "white" },
+      { name: "Chart.js", color: "#FF6384", textColor: "black" },
+      { name: "Axios", color: "#5A29E4", textColor: "white" }
     ],
     slug: "turnomaster",
   },
