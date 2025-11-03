@@ -30,7 +30,7 @@ const LastPosts: React.FC = () => {
 
   if (loading)
     return (
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 flex flex-col items-center justify-center min-h-[200px]">
           <motion.div
             className="flex flex-col items-center"

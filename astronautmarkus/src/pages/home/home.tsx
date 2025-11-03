@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import LastPosts from "./components/LastPosts";
 import UserStats from "./components/UserStats";
 import UserProjects from "./components/UserProjects";
+import TechStack from "./components/TechStack";
 
 
 
@@ -183,6 +184,8 @@ function Home() {
             <UserProjects />
 
             <LastPosts />
+
+            <TechStack />
 
         </>
     );
