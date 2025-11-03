@@ -159,8 +159,8 @@ function TechStack({ fullList = false }: TechStackProps) {
                     </div>
                     {!fullList && (
                         <>
-                            <p className="text-center text-gray-600">...and many more technologies in my <strong>Full Tech Stack!</strong></p>
-                            <div className="flex justify-center mt-10">
+                            <p className="text-center text-gray-600 mt-10 mb-10">...and many more technologies in my <strong>Full Tech Stack!</strong></p>
+                            <div className="flex justify-center">
                                 
                                 <a
                                     href="/tech-stack"
