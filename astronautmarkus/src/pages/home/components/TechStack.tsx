@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Code } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const techCategories = [
     {
@@ -163,15 +164,15 @@ function TechStack({ fullList = false }: TechStackProps) {
                             <p className="text-center text-gray-600 mt-10 mb-10">...and many more technologies in my <strong>Full Tech Stack!</strong></p>
                             <div className="flex justify-center">
 
-                                <a
-                                    href="/tech-stack"
+                                <Link
+                                    to="/tech-stack"
                                     className="inline-flex items-center gap-2 px-8 py-3 bg-rose-700 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-800 transition hover:scale-105 transform duration-300"
-                                    target="_blank"
+                                    
                                     rel="noopener noreferrer"
                                 >
                                     <Code size={20} />
                                     View Full Tech Stack
-                                </a>
+                                </Link>
                             </div>
                         </>
                     )}
