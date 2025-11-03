@@ -4,6 +4,7 @@ import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-02
 import ProfilePic from "../../assets/img/profile.png";
 import { Github, Linkedin, Mail, Rocket, Twitter, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 
 import LastPosts from "./components/LastPosts";
@@ -15,6 +16,29 @@ import FinalPageUrls from "./components/FinalPageUrls";
 
 
 function Home() {
+    const fullText = "AstronautMarkusDev";
+    const [typedText, setTypedText] = useState("");
+    const [showCursor, setShowCursor] = useState(true);
+
+    useEffect(() => {
+        let typingTimeout: ReturnType<typeof setTimeout>;
+        let cursorInterval: ReturnType<typeof setInterval>;
+
+        if (typedText.length < fullText.length) {
+            typingTimeout = setTimeout(() => {
+                setTypedText(fullText.slice(0, typedText.length + 1));
+            }, 90);
+        } else {
+            cursorInterval = setInterval(() => {
+                setShowCursor((prev) => !prev);
+            }, 500);
+        }
+
+        return () => {
+            clearTimeout(typingTimeout);
+            clearInterval(cursorInterval);
+        };
+    }, [typedText, fullText]);
 
     return (
         <>
@@ -42,7 +66,17 @@ function Home() {
                                 transition={{ duration: 0.7, delay: 0.3 }}
                             >
                                 <span>
-                                    AstronautMarkusDev
+                                    {typedText}
+                                    <span
+                                        style={{
+                                            opacity: showCursor ? 1 : 0,
+                                            transition: "opacity 0.2s",
+                                            color: "#f43f5e",
+                                            fontWeight: "bold"
+                                        }}
+                                    >
+                                        |
+                                    </span>
                                 </span>
                             </motion.h1>
                             <motion.h2
