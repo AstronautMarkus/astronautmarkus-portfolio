@@ -8,7 +8,14 @@ import EventSchedule from "./components/EventSchedule";
 function AboutMe() {
     return (
         <section className="min-h-screen flex flex-col items-center justify-center py-16 px-4 bg-white">
-            <h1 className="text-4xl font-bold text-rose-700 mb-12 mt-12 text-center">About Me</h1>
+            <motion.h1
+                className="text-4xl font-bold text-rose-700 mb-12 mt-12 text-center"
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0 }}
+            >
+                About Me
+            </motion.h1>
 
             <motion.div
                 className="max-w-7xl w-full mx-auto flex flex-col md:flex-row items-center mb-16"
