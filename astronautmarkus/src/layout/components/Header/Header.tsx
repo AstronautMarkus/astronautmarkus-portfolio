@@ -1,5 +1,5 @@
 import AstronautMarkus from "../../../assets/img/astronautmarkus/AstronautMarkus-01.png";
-import { Menu, Github, Linkedin, User, Code, BookOpen, X, Instagram } from "lucide-react";
+import { Menu, Github, Linkedin, User, Code, BookOpen, X, Instagram, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -59,6 +59,9 @@ function Header() {
                     </Link>
                     <Link to="/projects" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
                         <Code size={18} /> Projects
+                    </Link>
+                    <Link to="/contact" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
+                        <Mail size={18} /> Contact
                     </Link>
                     <a
                         href="https://github.com/astronautmarkus"
