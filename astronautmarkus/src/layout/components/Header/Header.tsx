@@ -1,13 +1,14 @@
 import AstronautMarkus from "../../../assets/img/astronautmarkus/AstronautMarkus-01.png";
 import { Menu, Github, Linkedin, User, Code, BookOpen, X, Instagram } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
     const [navOpen, setNavOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,25 +24,25 @@ function Header() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const isTransparent = (!isMobile && !scrolled && location.pathname === "/");
+
     const headerClass = `px-6 h-16 flex items-center justify-between transition-colors duration-300 fixed top-0 left-0 w-full z-50 ${
-        isMobile
-            ? "bg-white shadow"
-            : scrolled
-                ? "bg-white shadow"
-                : "bg-transparent"
+        isTransparent
+            ? "bg-transparent"
+            : "bg-white shadow"
     }`;
 
-    const textClass = (isMobile || scrolled)
-        ? "text-gray-800 hover:text-rose-700"
-        : "text-white hover:text-rose-700";
+    const textClass = isTransparent
+        ? "text-white hover:text-rose-700"
+        : "text-gray-800 hover:text-rose-700";
 
-    const iconTextClass = (isMobile || scrolled)
-        ? "text-gray-700 hover:text-rose-700"
-        : "text-white hover:text-rose-700";
+    const iconTextClass = isTransparent
+        ? "text-white hover:text-rose-700"
+        : "text-gray-700 hover:text-rose-700";
 
-    const blogBtnClass = (isMobile || scrolled)
-        ? "bg-rose-700 text-white hover:bg-rose-800"
-        : "bg-white text-rose-700 hover:bg-rose-700 hover:text-white";
+    const blogBtnClass = isTransparent
+        ? "bg-white text-rose-700 hover:bg-rose-700 hover:text-white"
+        : "bg-rose-700 text-white hover:bg-rose-800";
 
     return (
         <>
@@ -53,7 +54,7 @@ function Header() {
                     </Link>
                 </div>
                 <nav className="hidden md:flex flex-1 justify-center items-center gap-6">
-                    <Link to="/about" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
+                    <Link to="/about-me" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
                         <User size={18} /> About Me
                     </Link>
                     <Link to="/projects" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
