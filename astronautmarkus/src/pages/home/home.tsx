@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Background from "../../assets/img/background.png";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-02.png";
 import ProfilePic from "../../assets/img/profile.png";
-import { Github, Linkedin, Mail, Rocket, Twitter, Instagram } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Instagram, Code } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -169,7 +169,7 @@ function Home() {
                             to="/projects"
                             className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-white/20 text-white rounded-lg font-bold shadow-lg hover:bg-white/40 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
                         >
-                            <Rocket size={18} />
+                            <Code size={18} />
                             View Projects / Experiments
                         </Link>
                     </motion.div>

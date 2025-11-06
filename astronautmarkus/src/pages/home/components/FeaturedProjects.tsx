@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Rocket, ChevronRight } from "lucide-react";
+import { ChevronRight, Code } from "lucide-react";
 
-// Importing images
 
 import MultiStockSync from "../../../assets/img/projects/multi-stock-sync.png";
 import MofuLunchesWeb from "../../../assets/img/projects/mofu-lunches-web.jpg";
@@ -141,7 +140,7 @@ const FeaturedProjects: React.FC = () => (
           to="/projects"
           className="inline-flex items-center gap-2 px-8 py-3 bg-rose-700 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-800 transition hover:scale-105 transform duration-300"
         >
-          <Rocket size={20} />
+          <Code size={20} />
           View All Projects
         </Link>
       </motion.div>
