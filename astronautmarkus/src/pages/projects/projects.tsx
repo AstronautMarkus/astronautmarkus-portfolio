@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 
@@ -78,6 +77,7 @@ type Project = {
   image: string | null;
   tags: Tag[];
   slug: string;
+  year: string | number;
 };
 
 function styleTag(tag: Tag): Tag {
@@ -101,6 +101,7 @@ const projects: Project[] = [
       styleTag({ name: "Axios" })
     ],
     image: TurnoMaster,
+    year: 2025,
   },
   {
     slug: 'fumo-index',
@@ -114,6 +115,7 @@ const projects: Project[] = [
       styleTag({ name: "Tailwind CSS" })
     ],
     image: FumoIndex,
+    year: 2025,
   },
   {
     slug: 'abbybot-project',
@@ -125,6 +127,7 @@ const projects: Project[] = [
       styleTag({ name: "MySQL" })
     ],
     image: AbbyBotProject,
+    year: 2024,
   },
   {
     slug: 'blog-astronautmarkus',
@@ -138,6 +141,7 @@ const projects: Project[] = [
       styleTag({ name: "PHP" })
     ],
     image: BlogAstronautMarkus,
+    year: 2025,
   },
   {
     slug: 'abbybot-project-website',
@@ -152,6 +156,7 @@ const projects: Project[] = [
       styleTag({ name: "Docker" })
     ],
     image: AbbyBotProjectWebsite,
+    year: 2024,
   },
   {
     slug: 'multi-stock-sync',
@@ -165,6 +170,7 @@ const projects: Project[] = [
       styleTag({ name: "Axios" })
     ],
     image: MultiStockSync,
+    year: 2025,
   },
   {
     slug: 'multi-stock-sync-back',
@@ -177,6 +183,7 @@ const projects: Project[] = [
       styleTag({ name: "PHP" })
     ],
     image: MultiStockSyncBack,
+    year: 2025,
   },
   {
     slug: 'multi-stock-sync-api-viewer',
@@ -187,6 +194,7 @@ const projects: Project[] = [
       styleTag({ name: "Swagger" })
     ],
     image: MultiStockSyncApiViewer,
+    year: 2025,
   },
   {
     slug: 'mofustore',
@@ -199,6 +207,7 @@ const projects: Project[] = [
       styleTag({ name: "MySQL" })
     ],
     image: MofuStore,
+    year: 2023,
   },
   {
     slug: 'camellosfood-repartidor',
@@ -210,6 +219,7 @@ const projects: Project[] = [
       styleTag({ name: "Django" })
     ],
     image: CamellosFoodRepartidor,
+    year: 2023,
   },
   {
     slug: 'constru-mic',
@@ -221,6 +231,7 @@ const projects: Project[] = [
       styleTag({ name: "MySQL" })
     ],
     image: ConstruMic,
+    year: 2024,
   },
   {
     slug: 'mofulunches-web',
@@ -231,6 +242,7 @@ const projects: Project[] = [
       styleTag({ name: "Bootstrap" })
     ],
     image: MofuLunchesWeb,
+    year: 2024,
   },
   {
     slug: 'mofulunches-api',
@@ -242,6 +254,7 @@ const projects: Project[] = [
       styleTag({ name: "MongoDB" })
     ],
     image: MofuLunchesApi,
+    year: 2024,
   },
   {
     slug: 'mofulunches-totem',
@@ -253,6 +266,7 @@ const projects: Project[] = [
       styleTag({ name: "React" })
     ],
     image: MofuLunchesTotem,
+    year: 2024,
   },
   {
     slug: 'mofulunches-eldimon',
@@ -263,6 +277,7 @@ const projects: Project[] = [
       styleTag({ name: "C++" })
     ],
     image: MofuLunchesElDimon,
+    year: 2024,
   },
   {
     slug: 'mofulunches-listener',
@@ -273,27 +288,8 @@ const projects: Project[] = [
       styleTag({ name: "PyQt5" })
     ],
     image: MofuLunchesElDimonListener,
-  },
-  {
-    slug: 'mofulunches-app',
-    title: 'Mofu Lunches App',
-    description: 'Mobile app for Mofu Lunches built with Ionic.',
-    tags: [
-      styleTag({ name: "Ionic" }),
-      styleTag({ name: "Angular" })
-    ],
-    image: null,
-  },
-  {
-    slug: 'firestore',
-    title: 'Firestore',
-    description: 'App built with Ionic and Firebase.',
-    tags: [
-      styleTag({ name: "Ionic" }),
-      styleTag({ name: "Firebase" })
-    ],
-    image: null,
-  },
+    year: 2024,
+  }
 ];
 
 
@@ -334,7 +330,7 @@ function Projects() {
                 )}
               </div>
               <div className="p-6 flex flex-col flex-1">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">{project.title} ({project.year})</h2>
                 <p className="text-gray-600 mb-4 text-base flex-1">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
@@ -350,13 +346,12 @@ function Projects() {
                     </span>
                   ))}
                 </div>
-                <Link
-                  to={`/projects/${project.slug}`}
-                  className="inline-flex items-center justify-center gap-2 px-3 py-2 bg-rose-700 text-white rounded-lg font-semibold shadow hover:bg-rose-800 transition hover:scale-105 transform duration-300 mt-auto w-fit mx-auto"
+                <button
+                  className="cursor-pointer inline-flex items-center justify-center gap-2 px-3 py-2 bg-rose-700 text-white rounded-lg font-semibold shadow hover:bg-rose-800 transition hover:scale-105 transform duration-300 mt-auto w-fit mx-auto"
                 >
                   View Details
                   <ChevronRight size={18} />
-                </Link>
+                </button>
               </div>
             </motion.section>
           ))}
