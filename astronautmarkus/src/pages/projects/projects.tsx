@@ -18,6 +18,7 @@ import MofuLunchesApi from "../../assets/img/projects/mofulunches-api.jpg";
 import MofuLunchesTotem from "../../assets/img/projects/mofulunches-totem.jpg";
 import MofuLunchesElDimon from "../../assets/img/projects/mofulunches-eldimon.jpg";
 import MofuLunchesElDimonListener from "../../assets/img/projects/mofulunches-eldimon-listener.jpg";
+import ESP8266Labs from "../../assets/img/projects/esp8266-labs.png";
 
 // Tag styles mapping
 const tagStyles: Record<string, { color: string; textColor: string }> = {
@@ -89,6 +90,18 @@ function styleTag(tag: Tag): Tag {
 }
 
 const projects: Project[] = [
+  {
+    slug: 'esp8266-labs',
+    title: 'ESP8266-Labs',
+    description: 'Personal compilation of experiments performed with an ESP8266 with integrated OLED screen and libraries. ',
+    tags: [
+      styleTag({ name: "Arduino" }),
+      styleTag({ name: "C++" }),
+    ],
+    image: ESP8266Labs,
+    year: 2025,
+    githubUrl: 'https://github.com/AstronautMarkus/ESP8266-Labs',
+  },
   {
     slug: 'turnomaster',
     title: 'TurnoMaster',
