@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronRight, Code } from "lucide-react";
+import { Code } from "lucide-react";
 
 
 import MultiStockSync from "../../../assets/img/projects/multi-stock-sync.png";
@@ -118,13 +118,6 @@ const FeaturedProjects: React.FC = () => (
                   </span>
                 ))}
               </div>
-              <Link
-                to={`/projects/${project.slug}`}
-                className="text-rose-700 font-semibold hover:text-rose-800 transition flex items-center gap-1"
-              >
-                View Details
-                <ChevronRight size={16} />
-              </Link>
             </div>
           </motion.div>
         ))}
