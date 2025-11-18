@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import FinalPageUrls from "./components/FinalPageUrls/FinalPageUrls";
 
 const LayoutApp: React.FC = () => {
     return (
@@ -11,6 +12,7 @@ const LayoutApp: React.FC = () => {
             <main className="flex-1">
                 <Outlet />
             </main>
+            <FinalPageUrls />
             <Footer />
         </div>
     );

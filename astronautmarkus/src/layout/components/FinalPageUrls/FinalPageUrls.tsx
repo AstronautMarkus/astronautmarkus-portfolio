@@ -8,7 +8,7 @@ function FinalPageUrls() {
             <div className="container mx-auto px-4 sm:px-6 text-center items-center justify-center">
                 <motion.img
                     src={AstronautMarkus}
-                    alt="Astronaut Markus"
+                    alt="AstronautMarkus"
                     className="mx-auto mb-4 h-24 pointer-events-none"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -20,7 +20,7 @@ function FinalPageUrls() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.3 }}
                 >
-                    AstronautMarkusDev
+                    AstronautMarkus.dev
                 </motion.h1>
             </div>
             <div className="container mx-auto px-4 sm:px-6 mt-8 flex flex-col items-center">
@@ -37,6 +37,9 @@ function FinalPageUrls() {
                     <Link to="/contact" className="text-rose-700 hover:underline font-medium">Contact</Link>
                 </motion.nav>
             </div>
+            <blockquote className="mt-12 text-center text-lg italic text-gray-500 max-w-xl mx-auto border-l-4 border-rose-700 pl-4">
+               "Why don't you just fix your little problem and light this candle?" – Alan Shepard
+            </blockquote>
         </section>
     )
 }
