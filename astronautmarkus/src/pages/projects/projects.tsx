@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, LockIcon } from "lucide-react";
 
 
 import TurnoMaster from "../../assets/img/projects/turnomaster.png";
@@ -78,6 +78,7 @@ type Project = {
   tags: Tag[];
   slug: string;
   year: string | number;
+  githubUrl?: string | null;
 };
 
 function styleTag(tag: Tag): Tag {
@@ -104,7 +105,7 @@ const projects: Project[] = [
     year: 2025,
   },
   {
-    slug: 'fumo-index',
+    slug: 'fumoindex',
     title: 'The Fumo Index',
     description: 'Portfolio project for tracking Fumo plushies. Built with React, TypeScript, Laravel, MySQL, and Tailwind CSS.',
     tags: [
@@ -116,6 +117,7 @@ const projects: Project[] = [
     ],
     image: FumoIndex,
     year: 2025,
+    githubUrl: 'https://github.com/astronautmarkus/fumoindex',
   },
   {
     slug: 'abbybot-project',
@@ -128,6 +130,7 @@ const projects: Project[] = [
     ],
     image: AbbyBotProject,
     year: 2024,
+    githubUrl: 'https://github.com/AbbyBot/Discord-AbbyBot',
   },
   {
     slug: 'blog-astronautmarkus',
@@ -142,6 +145,7 @@ const projects: Project[] = [
     ],
     image: BlogAstronautMarkus,
     year: 2025,
+    githubUrl: 'https://github.com/AstronautMarkus/blog.astronautmarkus.dev',
   },
   {
     slug: 'abbybot-project-website',
@@ -157,6 +161,7 @@ const projects: Project[] = [
     ],
     image: AbbyBotProjectWebsite,
     year: 2024,
+    githubUrl: 'https://github.com/AbbyBot/AbbyBot-Website',
   },
   {
     slug: 'multi-stock-sync',
@@ -171,6 +176,7 @@ const projects: Project[] = [
     ],
     image: MultiStockSync,
     year: 2025,
+    githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-Sync',
   },
   {
     slug: 'multi-stock-sync-back',
@@ -184,6 +190,7 @@ const projects: Project[] = [
     ],
     image: MultiStockSyncBack,
     year: 2025,
+    githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-Sync-Back',
   },
   {
     slug: 'multi-stock-sync-api-viewer',
@@ -195,6 +202,7 @@ const projects: Project[] = [
     ],
     image: MultiStockSyncApiViewer,
     year: 2025,
+    githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-API-Viewer',
   },
   {
     slug: 'mofustore',
@@ -220,6 +228,7 @@ const projects: Project[] = [
     ],
     image: CamellosFoodRepartidor,
     year: 2023,
+    githubUrl: 'https://github.com/AstronautMarkus/CamellosFood-Repartidor-3.0',
   },
   {
     slug: 'constru-mic',
@@ -232,6 +241,7 @@ const projects: Project[] = [
     ],
     image: ConstruMic,
     year: 2024,
+    githubUrl: 'https://github.com/MarcosKingsDuoc/CONSTRU_MIC',
   },
   {
     slug: 'mofulunches-web',
@@ -255,6 +265,7 @@ const projects: Project[] = [
     ],
     image: MofuLunchesApi,
     year: 2024,
+    githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-API',
   },
   {
     slug: 'mofulunches-totem',
@@ -267,6 +278,7 @@ const projects: Project[] = [
     ],
     image: MofuLunchesTotem,
     year: 2024,
+    githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-Totem',
   },
   {
     slug: 'mofulunches-eldimon',
@@ -278,6 +290,7 @@ const projects: Project[] = [
     ],
     image: MofuLunchesElDimon,
     year: 2024,
+    githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-ElDimon',
   },
   {
     slug: 'mofulunches-listener',
@@ -289,6 +302,7 @@ const projects: Project[] = [
     ],
     image: MofuLunchesElDimonListener,
     year: 2024,
+    githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-ElDimon_Listener',
   }
 ];
 
@@ -346,12 +360,25 @@ function Projects() {
                     </span>
                   ))}
                 </div>
-                <button
-                  className="cursor-pointer inline-flex items-center justify-center gap-2 px-3 py-2 bg-rose-700 text-white rounded-lg font-semibold shadow hover:bg-rose-800 transition hover:scale-105 transform duration-300 mt-auto w-fit mx-auto"
-                >
-                  View Details
-                  <ChevronRight size={18} />
-                </button>
+                {project.githubUrl ? (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer inline-flex items-center justify-center gap-2 px-3 py-2 bg-rose-700 text-white rounded-lg font-semibold shadow hover:bg-rose-800 transition hover:scale-105 transform duration-300 mt-auto w-fit mx-auto"
+                  >
+                    View Details
+                    <ChevronRight size={18} />
+                  </a>
+                ) : (
+                  <button
+                    disabled
+                    className="inline-flex items-center justify-center gap-2 px-3 py-2 bg-gray-300 text-gray-500 rounded-lg font-semibold shadow mt-auto w-fit mx-auto cursor-not-allowed"
+                  >
+                    This repository is private
+                    <LockIcon size={18} />
+                  </button>
+                )}
               </div>
             </motion.section>
           ))}
