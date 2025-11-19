@@ -266,6 +266,7 @@ const projects: Project[] = [
     ],
     image: MofuLunchesWeb,
     year: 2024,
+    githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-Web',
   },
   {
     slug: 'mofulunches-api',

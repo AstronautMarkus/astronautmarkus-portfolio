@@ -118,14 +118,6 @@ function Home() {
                                     <Linkedin size={24} />
                                 </a>
                                 <a
-                                    href="https://x.com/astronautmarkus"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-white/10 hover:bg-black transition rounded-full p-2 sm:p-3 shadow text-white flex items-center hover:scale-115 transform transition duration-300"
-                                >
-                                    <Twitter size={24} />
-                                </a>
-                                <a
                                     href="https://instagram.com/astronautmarkusdev"
                                     target="_blank"
                                     rel="noopener noreferrer"
