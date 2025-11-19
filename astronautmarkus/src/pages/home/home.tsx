@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Background from "../../assets/img/background.png";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-02.png";
 import ProfilePic from "../../assets/img/profile.png";
-import { Github, Linkedin, Mail, Twitter, Instagram, Code } from "lucide-react";
+import { Github, Linkedin, Mail, Instagram, Code } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 

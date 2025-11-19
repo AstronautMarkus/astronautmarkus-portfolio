@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Rocket, Twitter, Instagram, BookOpen } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Instagram, BookOpen } from "lucide-react";
 
 const socialLinks = [
     {
