@@ -13,6 +13,7 @@ import FeaturedProjects from "./components/FeaturedProjects";
 import TechStackDemo from "./components/TechStackDemo";
 
 
+import SeoHelmet from "../../utils/SeoHelmet";
 
 function Home() {
     const fullText = "AstronautMarkusDev";
@@ -41,6 +42,11 @@ function Home() {
 
     return (
         <>
+            <SeoHelmet
+                title="AstronautMarkusDev Portfolio - Home"
+                description="Welcome to the portfolio of Marcos Reyes, a Fullstack Developer and Systems Administrator. Explore projects, blog posts, and get in touch!"
+                keywords="AstronautMarkusDev, Marcos Reyes, Fullstack Developer, Systems Administrator, Portfolio, Projects, Blog"
+            />
             <section className="relative min-h-screen flex justify-center pt-32">
                 <img
                     src={Background}
