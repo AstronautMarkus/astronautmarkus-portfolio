@@ -94,7 +94,7 @@ function Header() {
                     rel="noopener noreferrer"
                     className={`hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full transition-all font-semibold ${blogBtnClass} hover:scale-105 transform duration-300`}
                 >
-                    <BookOpen size={18} /> blog.astronautmarkus.dev
+                    <BookOpen size={18} /> My Tech Blog
                 </a>
                 <button
                     className={`md:hidden p-2 rounded-full transition-colors ml-2 ${
@@ -153,7 +153,7 @@ function Header() {
                         className={`flex items-center gap-2 px-4 py-2 rounded-full transition-colors font-semibold text-lg ${blogBtnClass}`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <BookOpen size={20} /> Blog informático
+                        <BookOpen size={20} /> My Tech Blog
                     </a>
                 </div>
             </div>
