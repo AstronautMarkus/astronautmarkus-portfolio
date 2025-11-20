@@ -1,5 +1,5 @@
 import AstronautMarkus from "../../../assets/img/astronautmarkus/AstronautMarkus-01.png";
-import { Menu, Github, Linkedin, User, Code, BookOpen, X, Instagram, Mail } from "lucide-react";
+import { Menu, Github, Linkedin, User, Code, BookOpen, X, Instagram, Mail, GalleryThumbnails } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -63,6 +63,9 @@ function Header() {
                     <Link to="/contact" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
                         <Mail size={18} /> Contact
                     </Link>
+                    <Link to="/gallery" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
+                        <GalleryThumbnails size={18} /> Gallery
+                    </Link>
                     <a
                         href="https://github.com/astronautmarkus"
                         target="_blank"
@@ -115,7 +118,7 @@ function Header() {
             >
                 <div className="flex flex-col gap-4 px-6 py-8">
                     <Link
-                        to="/about"
+                        to="/about-me"
                         className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
                         onClick={() => setNavOpen(false)}
                     >
@@ -127,6 +130,20 @@ function Header() {
                         onClick={() => setNavOpen(false)}
                     >
                         <Code size={20} /> Projects
+                    </Link>
+                    <Link
+                        to="/contact"
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
+                        onClick={() => setNavOpen(false)}
+                    >
+                        <Mail size={20} /> Contact
+                    </Link>
+                    <Link
+                        to="/gallery"
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
+                        onClick={() => setNavOpen(false)}
+                    >
+                        <GalleryThumbnails size={20} /> Gallery
                     </Link>
                     <a
                         href="https://github.com/astronautmarkus"
@@ -145,6 +162,15 @@ function Header() {
                         onClick={() => setNavOpen(false)}
                     >
                         <Linkedin size={20} /> LinkedIn
+                    </a>
+                    <a
+                        href="https://instagram.com/astronautmarkusdev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
+                        onClick={() => setNavOpen(false)}
+                    >
+                        <Instagram size={20} /> Instagram
                     </a>
                     <a
                         href="https://blog.astronautmarkus.dev"
