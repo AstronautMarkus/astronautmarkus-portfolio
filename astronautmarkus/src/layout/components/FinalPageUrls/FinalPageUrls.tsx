@@ -35,9 +35,10 @@ function FinalPageUrls() {
                     <Link to="/projects" className="text-rose-700 hover:underline font-medium">Projects</Link>
                     <Link to="/tech-stack" className="text-rose-700 hover:underline font-medium">Tech Stack</Link>
                     <Link to="/contact" className="text-rose-700 hover:underline font-medium">Contact</Link>
+                    <Link to="/gallery" className="text-rose-700 hover:underline font-medium">Gallery</Link>
                 </motion.nav>
             </div>
-            <blockquote className="mt-12 text-center text-lg italic text-gray-500 max-w-xl mx-auto border-l-4 border-rose-700 pl-4">
+            <blockquote className="mt-12 text-center text-lg italic text-gray-500 max-w-xl mx-auto border-l-4 border-rose-700 pl-4 w-[95%]">
                "Why don't you just fix your little problem and light this candle?" – Alan Shepard
             </blockquote>
         </section>
