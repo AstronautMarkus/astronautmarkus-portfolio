@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import LayoutApp from '../layout/LayoutApp';
 import React from 'react';
 
@@ -23,6 +23,7 @@ function AnimatedRoutes() {
                 <Route path="/tech-stack" element={<TechStackView />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/projects" element={<Projects />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
         </Routes>
     );
