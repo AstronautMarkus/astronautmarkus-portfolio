@@ -6,6 +6,7 @@ import Picture from "../../assets/img/about-me/picture.jpg";
 import EventSchedule from "./components/EventSchedule";
 
 import SeoHelmet from "../../utils/SeoHelmet";
+import { Camera, Coffee, Keyboard, Star, MonitorSmartphone } from "lucide-react";
 
 function AboutMe() {
     return (
@@ -104,23 +105,36 @@ function AboutMe() {
                     transition={{ duration: 0.7, delay: 1.0 }}
                 >
                     <motion.h3
-                        className="text-xl font-bold text-rose-700 mb-4 mt-2 text-center"
+                        className="text-2xl font-extrabold text-rose-700 mb-6 mt-2 text-center tracking-wide"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 1.1 }}
                     >
-                        Fun Fact
+                        <Star className="w-7 h-7 text-rose-700 inline-block mr-2" aria-label="star" /> Fun Facts
                     </motion.h3>
-                    <motion.p
-                        className="text-lg text-gray-700 mb-6 leading-relaxed text-center italic"
+                    <motion.ul
+                        className="w-full flex flex-col gap-6"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 1.2 }}
                     >
-                        <span>
-                            On my very first day, I couldn’t even print in Python because I didn’t know you had to use parentheses. Now, I have a <strong>Bot powered by artificial intelligence</strong>, a <strong>24U rack</strong> with servers, firewall, and switch, plus a <strong>networking lab</strong> at home. <span className="text-rose-700 font-semibold">Learning truly never ends!</span>
-                        </span>
-                    </motion.p>
+                        <li className="bg-gray-100 rounded-xl p-5 shadow-lg text-gray-700 text-lg flex items-center gap-3 justify-center">
+                            <Camera className="w-7 h-7 text-rose-700" aria-label="camera" />
+                            I almost never take photos of myself! Only once a year for my CV or official documents.
+                        </li>
+                        <li className="bg-gray-100 rounded-xl p-5 shadow-lg text-gray-700 text-lg flex items-center gap-3 justify-center">
+                            <Coffee className="w-7 h-7 text-rose-700" aria-label="coffee" />
+                            I'm probably addicted to caffeine—I can't live without my daily cup of coffee or Monster Energy.
+                        </li>
+                        <li className="bg-gray-100 rounded-xl p-5 shadow-lg text-gray-700 text-lg flex items-center gap-3 justify-center">
+                            <Keyboard className="w-7 h-7 text-rose-700" aria-label="keyboard" />
+                            I hate frontend, I hate JavaScript, but we're forced to use it, aren't we?
+                        </li>
+                        <li className="bg-gray-100 rounded-xl p-5 shadow-lg text-gray-700 text-lg flex items-center gap-3 justify-center">
+                            <MonitorSmartphone className="w-7 h-7 text-rose-700" aria-label="star" />
+                            An unpopular truth? The people who hate technology the most are usually the ones who end up needing it the most.
+                        </li>
+                    </motion.ul>
                 </motion.div>
             </section>
         </>
