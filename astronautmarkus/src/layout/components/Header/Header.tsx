@@ -101,7 +101,9 @@ function Header() {
                 </a>
                 <button
                     className={`md:hidden p-2 rounded-full transition-colors ml-2 ${
-                        scrolled ? "bg-gray-100 text-gray-800 hover:bg-rose-700 hover:text-white" : "bg-white text-rose-700 hover:bg-rose-700 hover:text-white"
+                        isTransparent
+                            ? "bg-white text-rose-700 hover:bg-rose-700 hover:text-white"
+                            : "bg-gray-100 text-gray-800 hover:bg-rose-700 hover:text-white"
                     }`}
                     onClick={() => setNavOpen(!navOpen)}
                     aria-label={navOpen ? "Cerrar menú" : "Abrir menú"}
