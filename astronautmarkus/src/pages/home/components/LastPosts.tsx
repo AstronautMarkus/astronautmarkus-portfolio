@@ -4,16 +4,17 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { BookOpen, ChevronRight } from "lucide-react";
 
-const BLOG_URL = import.meta.env.VITE_BLOG_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 type Post = {
+  id: number;
   title: string;
   description: string;
-  publishDate: string;
-  url: string;
-  banner_image: string;
+  image_url: string;
+  slug: string;
   tags: string[];
-  type?: string;
+  url: string;
+  views_count: number;
 };
 
 const LastPosts: React.FC = () => {
@@ -22,7 +23,7 @@ const LastPosts: React.FC = () => {
 
   useEffect(() => {
     axios
-      .post(`${BLOG_URL}/data/posts`)
+      .get(`${API_URL}/posts`)
       .then((res) => setPosts(res.data))
       .catch(() => setPosts([]))
       .finally(() => setLoading(false));
@@ -104,14 +105,14 @@ const LastPosts: React.FC = () => {
         >
           {posts.map((post, index) => (
             <motion.div
-              key={post.url || post.title}
+              key={post.id}
               className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
             >
               <img
-                src={post.banner_image}
+                src={post.image_url}
                 alt={post.title}
                 className="h-48 w-full object-cover pointer-events-none"
               />
@@ -122,34 +123,27 @@ const LastPosts: React.FC = () => {
                 <p className="text-gray-600 mb-4 line-clamp-2">
                   {post.description}
                 </p>
-                {post.type !== "wip" && (
-                  <>
-                    <div className="text-xs text-gray-400 mb-2">
-                      {new Date(post.publishDate).toLocaleDateString()}
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {post.tags.slice(0, 4).map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full"
-                        >
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="mt-4">
-                      <Link
-                        to={post.url}
-                        className="text-rose-700 font-semibold hover:text-rose-800 transition flex items-center gap-1"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Read on my blog website
-                        <ChevronRight size={16} />
-                      </Link>
-                    </div>
-                  </>
-                )}
+                <div className="flex flex-wrap gap-2">
+                  {post.tags.slice(0, 4).map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-4 justify-center flex">
+                  <Link
+                    to={post.url}
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-rose-700 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-800 transition hover:scale-105 transform duration-300 mt-4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read More
+                    <ChevronRight size={16} />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -162,7 +156,7 @@ const LastPosts: React.FC = () => {
           transition={{ duration: 0.7, delay: 0.6 }}
         >
           <a
-            href={BLOG_URL}
+            href={API_URL}
             className="inline-flex items-center gap-2 px-8 py-3 bg-rose-700 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-800 transition hover:scale-105 transform duration-300"
             target="_blank"
             rel="noopener noreferrer"
