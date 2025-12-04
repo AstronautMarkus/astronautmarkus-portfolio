@@ -23,7 +23,7 @@ const LastPosts: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/posts`)
+      .get(`${API_URL}/posts/`)
       .then((res) => setPosts(res.data))
       .catch(() => setPosts([]))
       .finally(() => setLoading(false));
