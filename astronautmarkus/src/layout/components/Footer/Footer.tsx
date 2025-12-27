@@ -40,7 +40,7 @@ function Footer() {
                             src={AstronautMarkus}
                             alt="AstronautMarkus"
                         />
-                        <span className="md:text-xl text-base font-bold tracking-tight transition-colors text-gray-100 hover:text-rose-700 cursor-pointer">
+                        <span className="md:text-xl text-base font-bold tracking-tight transition-colors text-gray-100 hover:text-purple-700 cursor-pointer">
                             AstronautMarkusDev
                         </span>
                     </div>
