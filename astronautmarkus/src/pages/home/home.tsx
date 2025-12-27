@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Background from "../../assets/img/background.png";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-02.png";
+import ReyesAndFriends from "../../assets/img/icons/reyesandfriends.svg";
 import ProfilePic from "../../assets/img/profile.png";
 import { Github, Linkedin, Mail, Instagram, Code } from "lucide-react";
 import { motion } from "framer-motion";
@@ -62,14 +63,31 @@ function Home() {
 
                 <div className="relative z-20 w-full max-w-6xl px-4 sm:px-6 flex flex-col items-center">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center w-full mb-10 md:mb-16">
+
                         <motion.div
-                            className="flex flex-col justify-end items-center text-center w-full"
+                            className="order-1 md:order-1 flex flex-col items-center justify-center w-full"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <div className="relative flex justify-center md:justify-end w-full">
+                                <img
+                                    src={AstronautMarkus}
+                                    alt="AstronautMarkus"
+                                    className="w-60 h-60 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] pointer-events-none bg-transparent drop-shadow-2xl"
+                                    style={{ objectFit: "contain" }}
+                                />
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            className="order-2 md:order-2 flex flex-col justify-center items-center md:items-start text-center md:text-left w-full"
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7, delay: 0.2 }}
+                            transition={{ duration: 0.7, delay: 0.3 }}
                         >
                             <motion.h1
-                                className="flex flex-col items-center gap-2 text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-5 md:mb-8 mt-4 sm:mt-6 drop-shadow-lg"
+                                className="flex flex-col items-center md:items-start gap-2 text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-5 md:mb-8 mt-4 sm:mt-6 drop-shadow-lg"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.3 }}
@@ -89,12 +107,12 @@ function Home() {
                                 </span>
                             </motion.h1>
                             <motion.h2
-                                className="flex flex-col items-center gap-2 text-lg sm:text-xl md:text-2xl text-rose-700 font-semibold mb-3 md:mb-4"
+                                className="flex flex-col items-center md:items-start gap-2 text-lg sm:text-xl md:text-2xl text-rose-700 font-semibold mb-3 md:mb-4"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.4 }}
                             >
-                            {t('home.subtitle')}
+                                {t('home.subtitle')}
                             </motion.h2>
                             <motion.p
                                 className="text-base sm:text-lg md:text-xl text-white/80 max-w-md sm:max-w-xl mb-6 md:mb-8 drop-shadow"
@@ -104,9 +122,8 @@ function Home() {
                             >
                                 {t('home.description')}
                             </motion.p>
-
                             <motion.div
-                                className="flex gap-4 sm:gap-6 justify-center flex-wrap"
+                                className="flex gap-4 sm:gap-6 justify-center md:justify-start flex-wrap mb-6"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.6 }}
@@ -115,65 +132,67 @@ function Home() {
                                     href="https://github.com/astronautmarkus"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white/10 hover:bg-gray-800 transition rounded-full p-2 sm:p-3 shadow text-white flex items-center hover:scale-115 transform transition duration-300"
+                                    className="bg-white/10 hover:bg-gray-800 transition rounded-full p-3 sm:p-4 shadow text-white flex items-center justify-center hover:scale-115 transform transition duration-300"
+                                    style={{ width: "3.5rem", height: "3.5rem" }}
                                 >
-                                    <Github size={24} />
+                                    <Github size={48} />
                                 </a>
                                 <a
                                     href="https://linkedin.com/in/markusreyes"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white/10 hover:bg-blue-600 transition rounded-full p-2 sm:p-3 shadow text-white flex items-center hover:scale-115 transform transition duration-300"
+                                    className="bg-white/10 hover:bg-blue-600 transition rounded-full p-3 sm:p-4 shadow text-white flex items-center justify-center hover:scale-115 transform transition duration-300"
+                                    style={{ width: "3.5rem", height: "3.5rem" }}
                                 >
-                                    <Linkedin size={24} />
+                                    <Linkedin size={48} />
                                 </a>
                                 <a
                                     href="https://instagram.com/astronautmarkusdev"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white/10 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition rounded-full p-2 sm:p-3 shadow text-white flex items-center hover:scale-115 transform transition duration-300"
+                                    className="bg-white/10 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition rounded-full p-3 sm:p-4 shadow text-white flex items-center justify-center hover:scale-115 transform transition duration-300"
+                                    style={{ width: "3.5rem", height: "3.5rem" }}
                                 >
-                                    <Instagram size={24} />
+                                    <Instagram size={48} />
+                                </a>
+                                <a
+                                    href="https://reyesandfriends.cl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-white/10 hover:bg-[#590E0E] transition rounded-full shadow text-white flex items-center justify-center hover:scale-115 transform transition duration-300"
+                                    style={{ width: "3.5rem", height: "3.5rem" }}
+                                >
+                                    <img
+                                        src={ReyesAndFriends}
+                                        alt="Reyes and Friends"
+                                        className="w-full h-full object-contain"
+                                        style={{ padding: "0.25rem" }}
+                                    />
                                 </a>
                             </motion.div>
-                        </motion.div>
-                        <motion.div
-                            className="flex flex-col items-center justify-end relative w-full"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8, delay: 0.7 }}
-                        >
-                            <div className="relative">
-                                <img
-                                    src={AstronautMarkus}
-                                    alt="AstronautMarkus"
-                                    className="w-96 h-96 sm:w-[28rem] sm:h-[28rem] md:w-[34rem] md:h-[34rem] pointer-events-none bg-transparent drop-shadow-2xl"
-                                    style={{ objectFit: "contain" }}
-                                />
-                            </div>
+                            <motion.div
+                                className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full items-center md:items-start justify-center md:justify-start"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.7 }}
+                            >
+                                <Link
+                                    to="/contact"
+                                    className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-rose-700 text-white rounded-lg font-bold shadow-lg hover:bg-rose-800 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
+                                >
+                                    <Mail size={18} />
+                                    {t('home.contact')}
+                                </Link>
+                                <Link
+                                    to="/projects"
+                                    className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-white/20 text-white rounded-lg font-bold shadow-lg hover:bg-white/40 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
+                                >
+                                    <Code size={18} />
+                                    {t('home.projects')}
+                                </Link>
+                            </motion.div>
                         </motion.div>
                     </div>
-                    <motion.div
-                        className="flex flex-col md:flex-row gap-3 md:gap-4 mb-4 w-full items-center justify-center"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.8 }}
-                    >
-                        <Link
-                            to="/contact"
-                            className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-rose-700 text-white rounded-lg font-bold shadow-lg hover:bg-rose-800 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
-                        >
-                            <Mail size={18} />
-                            {t('home.contact')}
-                        </Link>
-                        <Link
-                            to="/projects"
-                            className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-white/20 text-white rounded-lg font-bold shadow-lg hover:bg-white/40 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
-                        >
-                            <Code size={18} />
-                            {t('home.projects')}
-                        </Link>
-                    </motion.div>
                 </div>
             </section>
 
