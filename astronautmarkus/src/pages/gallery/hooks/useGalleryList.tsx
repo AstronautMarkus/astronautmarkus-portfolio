@@ -1,3 +1,5 @@
+import { useI18n } from "../../../context/i18n";
+
 interface GalleryItem {
     filename: string;
     path: string;
@@ -11,6 +13,9 @@ interface GalleryItem {
 }
 
 export const useGalleryList = (): GalleryItem[] => {
+
+    const { t } = useI18n();
+
     return [
 {
         "filename": "IMG_2741.JPEG",

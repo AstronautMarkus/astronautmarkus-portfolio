@@ -141,5 +141,14 @@
   "tech-stack":{
       "title":"Tech Stack",
       "description": "Throughout my journey as a developer, I've had the opportunity to work with a wide variety of technologies and tools. Some might say I have quite the attention deficit for learning so many things, but I believe there's nothing wrong with adapting to different stacks beyond your own. Of course, I have my favorites. Below you'll find a summary of the technologies I feel most comfortable working with and use most frequently in my projects."
-    }
+    },
+  "gallery": {
+    "title": "My Gallery",
+    "description": "Welcome to my personal collection of pictures that inspire me and shows my journey through this life.",
+    "file": "File",
+    "size": "Size",
+    "dimensions": "Dimensions",
+    "date": "Date",
+    "alt": "Gallery image"
+  }
 }

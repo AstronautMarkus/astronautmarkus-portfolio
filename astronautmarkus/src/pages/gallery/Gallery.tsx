@@ -3,10 +3,12 @@ import { useGalleryList } from './hooks/useGalleryList';
 import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SeoHelmet from '../../utils/SeoHelmet';
+import { useI18n } from '../../context/i18n';
 
 function Gallery() {
     const galleryItems = useGalleryList();
     const [selectedItem, setSelectedItem] = useState<null | typeof galleryItems[0]>(null);
+    const { t } = useI18n();
 
     const formatDate = (dateStr: string) => {
         const date = new Date(dateStr);
@@ -33,7 +35,7 @@ function Gallery() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0 }}
                 >
-                    My Gallery
+                    {t('gallery.title')}
                 </motion.h1>
                 <motion.p
                     className="text-xl text-gray-700 mb-8 text-center"
@@ -41,7 +43,7 @@ function Gallery() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.15 }}
                 >
-                    Welcome to my personal collection of pictures that inspire me and shows my journey through this life.
+                    {t('gallery.description')}
                 </motion.p>
 
                 <motion.div
@@ -75,7 +77,7 @@ function Gallery() {
                             >
                                 <img
                                     src={item.path}
-                                    alt={item.suggested_title}
+                                    alt={t('gallery.alt')}
                                     className="w-full h-56 object-cover pointer-events-none"
                                 />
                                 <div className="p-4">
@@ -87,16 +89,16 @@ function Gallery() {
                                     </p>
                                     <div className="text-xs text-gray-500 space-y-1">
                                         <div>
-                                            <span className="font-semibold">File:</span> {item.filename}
+                                            <span className="font-semibold">{t('gallery.file')}:</span> {item.filename}
                                         </div>
                                         <div>
-                                            <span className="font-semibold">Size:</span> {item.size_kb.toFixed(1)} KB
+                                            <span className="font-semibold">{t('gallery.size')}:</span> {item.size_kb.toFixed(1)} KB
                                         </div>
                                         <div>
-                                            <span className="font-semibold">Dimensions:</span> {item.width} × {item.height}
+                                            <span className="font-semibold">{t('gallery.dimensions')}:</span> {item.width} × {item.height}
                                         </div>
                                         <div>
-                                            <span className="font-semibold">Date:</span> {formatDate(item.creation_date)}
+                                            <span className="font-semibold">{t('gallery.date')}:</span> {formatDate(item.creation_date)}
                                         </div>
                                     </div>
                                 </div>
@@ -133,7 +135,7 @@ function Gallery() {
                             >
                                 <img
                                     src={selectedItem.path}
-                                    alt={selectedItem.suggested_title}
+                                    alt={t('gallery.alt')}
                                     className="w-full max-h-[80vh] object-contain rounded-lg"
                                 />
                             </motion.div>
