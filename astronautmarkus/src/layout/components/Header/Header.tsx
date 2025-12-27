@@ -31,20 +31,20 @@ function Header() {
     const headerClass = `px-6 h-16 flex items-center justify-between transition-colors duration-300 fixed top-0 left-0 w-full z-50 ${
         isTransparent
             ? "bg-transparent"
-            : "bg-white shadow"
+            : "bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B] shadow"
     }`;
 
     const textClass = isTransparent
-        ? "text-white hover:text-rose-700"
-        : "text-gray-800 hover:text-rose-700";
+        ? "text-white hover:text-purple-700"
+        : "text-white hover:text-purple-700";
 
     const iconTextClass = isTransparent
-        ? "text-white hover:text-rose-700"
-        : "text-gray-700 hover:text-rose-700";
+        ? "text-white hover:text-purple-700"
+        : "text-white hover:text-purple-700";
 
     const blogBtnClass = isTransparent
-        ? "bg-white text-rose-700 hover:bg-rose-700 hover:text-white"
-        : "bg-rose-700 text-white hover:bg-rose-800";
+        ? "bg-white text-purple-700 hover:bg-purple-700 hover:text-white"
+        : "bg-purple-700 text-white hover:bg-purple-800";
 
     return (
         <>

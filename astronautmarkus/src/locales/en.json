@@ -48,7 +48,28 @@
     "techStack": "Tech Stack",
     "tech_stack_description": "These are the main technologies and frameworks I use to build robust and scalable solutions.",
     "and_many_more_technologies": "and many more technologies...",
-    "explore_full_tech_stack": "Explore Full Tech Stack"
+    "explore_full_tech_stack": "Explore Full Tech Stack",
+    "skills_arsenal":{
+      "title":"My Skills Arsenal",
+      "description": "The weapons and tools I master in my crusade for software development.",
+      "skills":{
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "devops": "DevOps",
+        "DBMS": "Databases",
+        "apis": {
+          "title": "APIs",
+          "public_implementation":"Public API Implementation",
+          "payment_gateways":"Payment Gateways"
+        },
+        "architecture": {
+          "title": "Architecture",
+          "monolith":"Monolith",
+          "microservices":"Microservices",
+          "clean_architecture":"Clean Architecture"
+        }
+      }
+    }
   },
   "projects": {
     "seo_title": "Projects & Experiments - AstronautMarkusDev",

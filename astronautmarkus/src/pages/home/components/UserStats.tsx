@@ -40,33 +40,33 @@ function UserStats() {
 
     return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-lg border border-gray-200 mx-auto hover:shadow-xl transition-shadow duration-300">
-                <Clock className="text-rose-700 mb-2" size={24} />
-                <span className="text-2xl sm:text-3xl font-bold text-rose-700">
+            <div className="bg-[#251a3a] rounded-2xl w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-2xl border-4 border-[#a084ee] mx-auto hover:shadow-purple-700/40 transition-shadow duration-300 hover:scale-105 transition-transform">
+                <Clock className="text-[#a084ee] mb-2" size={28} />
+                <span className="text-2xl sm:text-3xl font-bold text-[#a084ee] drop-shadow">
                     <AnimatedCounter value={2} duration={1.2} />+
                 </span>
-                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">{t('home.experience_years')}</span>
+                <span className="text-xs sm:text-sm text-[#e0d7fa] text-center mt-1 px-2">{t('home.experience_years')}</span>
             </div>
-            <div className="bg-white rounded-lg w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-lg border border-gray-200 mx-auto hover:shadow-xl transition-shadow duration-300">
-                <Rocket className="text-rose-700 mb-2" size={24} />
-                <span className="text-2xl sm:text-3xl font-bold text-rose-700">
+            <div className="bg-[#251a3a] rounded-2xl w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-2xl border-4 border-[#a084ee] mx-auto hover:shadow-purple-700/40 transition-shadow duration-300 hover:scale-105 transition-transform">
+                <Rocket className="text-[#a084ee] mb-2" size={28} />
+                <span className="text-2xl sm:text-3xl font-bold text-[#a084ee] drop-shadow">
                     <AnimatedCounter value={25} duration={1.2} />+
                 </span>
-                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">{t('home.completed_projects')}</span>
+                <span className="text-xs sm:text-sm text-[#e0d7fa] text-center mt-1 px-2">{t('home.completed_projects')}</span>
             </div>
-            <div className="bg-white rounded-lg w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-lg border border-gray-200 mx-auto hover:shadow-xl transition-shadow duration-300">
-                <Code className="text-rose-700 mb-2" size={24} />
-                <span className="text-2xl sm:text-3xl font-bold text-rose-700">
+            <div className="bg-[#251a3a] rounded-2xl w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-2xl border-4 border-[#a084ee] mx-auto hover:shadow-purple-700/40 transition-shadow duration-300 hover:scale-105 transition-transform">
+                <Code className="text-[#a084ee] mb-2" size={28} />
+                <span className="text-2xl sm:text-3xl font-bold text-[#a084ee] drop-shadow">
                     <AnimatedCounter value={30} duration={1.2} />+
                 </span>
-                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">{t('home.technologies')}</span>
+                <span className="text-xs sm:text-sm text-[#e0d7fa] text-center mt-1 px-2">{t('home.technologies')}</span>
             </div>
-            <div className="bg-white rounded-lg w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-lg border border-gray-200 mx-auto hover:shadow-xl transition-shadow duration-300">
-                <Coffee className="text-rose-700 mb-2" size={24} />
-                <span className="text-2xl sm:text-3xl font-bold text-rose-700">
+            <div className="bg-[#251a3a] rounded-2xl w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-2xl border-4 border-[#a084ee] mx-auto hover:shadow-purple-700/40 transition-shadow duration-300 hover:scale-105 transition-transform">
+                <Coffee className="text-[#a084ee] mb-2" size={28} />
+                <span className="text-2xl sm:text-3xl font-bold text-[#a084ee] drop-shadow">
                     <AnimatedCounter value={777} duration={0.1} />
                 </span>
-                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">{t('home.coffee_drinked')}</span>
+                <span className="text-xs sm:text-sm text-[#e0d7fa] text-center mt-1 px-2">{t('home.coffee_drinked')}</span>
             </div>
         </div>
     );

@@ -98,7 +98,7 @@ function Home() {
                                         style={{
                                             opacity: showCursor ? 1 : 0,
                                             transition: "opacity 0.2s",
-                                            color: "#f43f5e",
+                                            color: "#9e28deff",
                                             fontWeight: "bold"
                                         }}
                                     >
@@ -107,7 +107,7 @@ function Home() {
                                 </span>
                             </motion.h1>
                             <motion.h2
-                                className="flex flex-col items-center md:items-start gap-2 text-lg sm:text-xl md:text-2xl text-rose-700 font-semibold mb-3 md:mb-4"
+                                className="flex flex-col items-center md:items-start gap-2 text-lg sm:text-xl md:text-2xl text-purple-700 font-semibold mb-3 md:mb-4"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.4 }}
@@ -132,7 +132,7 @@ function Home() {
                                     href="https://github.com/astronautmarkus"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white/10 hover:bg-gray-800 transition rounded-full p-3 sm:p-4 shadow text-white flex items-center justify-center hover:scale-115 transform transition duration-300"
+                                    className="bg-white/10 hover:bg-black transition rounded-full p-3 sm:p-4 shadow text-white flex items-center justify-center hover:scale-115 transform transition duration-300"
                                     style={{ width: "3.5rem", height: "3.5rem" }}
                                 >
                                     <Github size={48} />
@@ -178,7 +178,7 @@ function Home() {
                             >
                                 <Link
                                     to="/contact"
-                                    className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-rose-700 text-white rounded-lg font-bold shadow-lg hover:bg-rose-800 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
+                                    className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-purple-700 text-white rounded-lg font-bold shadow-lg hover:bg-purple-800 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
                                 >
                                     <Mail size={18} />
                                     {t('home.contact')}
@@ -196,7 +196,7 @@ function Home() {
                 </div>
             </section>
 
-            <section className="py-16">
+            <section className="py-16 bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B]">
                 <div className="container mx-auto px-4 sm:px-6">
                     <motion.div
                         className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl mx-auto"
@@ -210,7 +210,7 @@ function Home() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
                         >
-                        <div className="w-64 h-64 bg-gray-300 rounded-full flex items-center justify-center shadow-lg">
+                        <div className="w-64 h-64 bg-gradient-to-tr from-[#3a225d] via-[#4b206b] to-[#18122B] rounded-full flex items-center justify-center shadow-2xl border-4 border-[#a084ee]">
                             <img src={ProfilePic} alt="Profile" className="w-full h-full object-cover rounded-full pointer-events-none" />
                         </div>
                         </motion.div>
@@ -221,28 +221,32 @@ function Home() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.7, delay: 0.3 }}
                         >
-                            <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-6">{t('home.whoami')}</h2>
-                            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                            <h2 className="text-3xl lg:text-4xl font-bold text-[#a084ee] mb-6 drop-shadow-lg">{t('home.whoami')}</h2>
+                            <p className="text-lg text-gray-200 mb-6 leading-relaxed">
                               {t('home.whoami_text')}
                             </p>
 
-                            <blockquote className="border-l-4 border-rose-700 pl-4 italic text-gray-600">
+                            <blockquote className="border-l-4 border-[#a084ee] pl-4 italic text-[#cfc6f8] bg-[#2d2350]/80 py-3 rounded-md shadow-lg">
                                 “{t('home.favorite_quote')} <br />
-                                <span className="font-bold text-gray-800">- Why don't you fix your little problem and light this candle?</span>
+                                <span className="font-bold text-[#e0d7fa]">- Why don't you fix your little problem and light this candle?</span>
                             </blockquote>
                             
                         </motion.div>
                     </motion.div>
 
-                    <UserStats />
+                    <div className="mt-10">
+                        <UserStats />
+                    </div>
                 </div>
             </section>
+
+            <TechStackDemo />
 
             <FeaturedProjects />
 
             <LastPosts />
 
-            <TechStackDemo />
+            
 
         </>
     );
