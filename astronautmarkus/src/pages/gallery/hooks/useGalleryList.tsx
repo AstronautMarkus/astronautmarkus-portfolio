@@ -10,8 +10,7 @@ interface GalleryItem {
 }
 
 export const useGalleryList = (): GalleryItem[] => {
-
-    return [
+    const items: GalleryItem[] = [
         {
             id: "IMG_2741",
             filename: "IMG_2741.JPEG",
@@ -123,4 +122,6 @@ export const useGalleryList = (): GalleryItem[] => {
             height: 2048
         },
     ];
+    
+    return items.sort((a, b) => new Date(b.creation_date).getTime() - new Date(a.creation_date).getTime());
 };

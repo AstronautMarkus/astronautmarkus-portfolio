@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useGalleryList } from './hooks/useGalleryList';
 import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,7 +8,30 @@ import { useI18n } from '../../context/i18n';
 function Gallery() {
     const galleryItems = useGalleryList();
     const [selectedItem, setSelectedItem] = useState<null | typeof galleryItems[0]>(null);
+    const [filterOpen, setFilterOpen] = useState(false);
+    const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'size' | 'name'>('newest');
     const { t } = useI18n();
+
+    const sortOptions = [
+        { key: 'newest', label: t('gallery.filters.newest') },
+        { key: 'oldest', label: t('gallery.filters.oldest') },
+        { key: 'size', label: t('gallery.filters.size') },
+        { key: 'name', label: t('gallery.filters.name') },
+    ];
+
+    const sortedItems = useMemo(() => {
+        let items = [...galleryItems];
+        if (sortBy === 'newest') {
+            items.sort((a, b) => new Date(b.creation_date).getTime() - new Date(a.creation_date).getTime());
+        } else if (sortBy === 'oldest') {
+            items.sort((a, b) => new Date(a.creation_date).getTime() - new Date(b.creation_date).getTime());
+        } else if (sortBy === 'size') {
+            items.sort((a, b) => b.size_kb - a.size_kb);
+        } else if (sortBy === 'name') {
+            items.sort((a, b) => a.filename.localeCompare(b.filename));
+        }
+        return items;
+    }, [galleryItems, sortBy]);
 
     const formatDate = (dateStr: string) => {
         const date = new Date(dateStr);
@@ -46,6 +69,50 @@ function Gallery() {
                     {t('gallery.description')}
                 </motion.p>
 
+                <div className="w-full max-w-5xl flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
+                    <motion.div
+                        className="flex items-center gap-2"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
+                    >
+                        <button
+                            className="px-4 py-2 bg-rose-700 text-white rounded-lg font-semibold shadow hover:bg-rose-800 transition-colors cursor-pointer"
+                            onClick={() => setFilterOpen(v => !v)}
+                            aria-haspopup="true"
+                            aria-expanded={filterOpen}
+                        >
+                            {t('gallery.filters.button')}
+                        </button>
+                        <AnimatePresence>
+                            {filterOpen && (
+                                <motion.ul
+                                    className="absolute mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px]"
+                                    initial={{ opacity: 0, y: -10, scale: 0.97 }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    exit={{ opacity: 0, y: -10, scale: 0.97 }}
+                                    transition={{ duration: 0.2 }}
+                                >
+                                    {sortOptions.map(opt => (
+                                        <li key={opt.key}>
+                                            <button
+                                                className={`w-full text-left px-4 py-2 hover:bg-rose-50 transition-colors cursor-pointer ${
+                                                    sortBy === opt.key ? 'font-bold text-rose-700' : ''
+                                                }`}
+                                                onClick={() => {
+                                                    setSortBy(opt.key as any);
+                                                    setFilterOpen(false);
+                                                }}
+                                            >
+                                                {opt.label}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </motion.ul>
+                            )}
+                        </AnimatePresence>
+                    </motion.div>
+                </div>
                 <motion.div
                     className="w-full max-w-5xl"
                     initial={{ opacity: 0, y: 30 }}
@@ -66,7 +133,7 @@ function Gallery() {
                             },
                         }}
                     >
-                        {galleryItems.map((item, idx) => (
+                        {sortedItems.map((item, idx) => (
                             <motion.div
                                 key={item.filename}
                                 className="rounded-lg overflow-hidden shadow-lg group transition-transform duration-300 hover:scale-105 bg-white cursor-pointer"

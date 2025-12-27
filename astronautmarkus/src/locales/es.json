@@ -150,6 +150,13 @@
     "dimensions": "Dimensiones",
     "date": "Fecha",
     "alt": "Imagen de galería",
+    "filters": {
+      "button": "Ordenar y Filtrar",
+      "newest": "Más nuevas primero",
+      "oldest": "Más viejas primero",
+      "size": "Por tamaño",
+      "name": "Por nombre"
+    },
     "items": {
       "IMG_2741": {
         "title": "Jugando Touhou en mi ThinkPad con Wine",

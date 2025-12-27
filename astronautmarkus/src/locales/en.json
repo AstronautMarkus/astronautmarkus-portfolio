@@ -150,6 +150,13 @@
     "dimensions": "Dimensions",
     "date": "Date",
     "alt": "Gallery image",
+    "filters": {
+      "button": "Sort & Filter",
+      "newest": "Newest First",
+      "oldest": "Oldest First",
+      "size": "By Size",
+      "name": "By Name"
+    },
     "items": {
       "IMG_2741": {
         "title": "Playing Touhou on my ThinkPad with Wine",
