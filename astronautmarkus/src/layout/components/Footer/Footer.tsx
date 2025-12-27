@@ -3,17 +3,35 @@ import { Heart, ChevronUp } from "lucide-react";
 import { useI18n } from "../../../context/i18n";
 import { Link } from "react-router-dom";
 
+import AstronautMarkusStand from "../../../assets/img/astronautmarkus/markus-stand.png";
+import AstronautMarkusGreet from "../../../assets/img/astronautmarkus/markus-greet.png";
+import { useState } from "react";
+
 function Footer() {
 
     const { t } = useI18n();
     const year = new Date().getFullYear();
+    const [isGreet, setIsGreet] = useState(false);
 
     const handleBackToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     return (
-        <footer className="bg-[#101014] px-6 md:px-16 lg:px-24 xl:px-32">
+        <footer className="bg-[#101014] px-6 md:px-16 lg:px-24 xl:px-32 relative overflow-visible">
+            <div
+                className="hidden md:block absolute -top-48 right-10 z-20 transition-all"
+                style={{ pointerEvents: "auto" }}
+                onMouseEnter={() => setIsGreet(true)}
+                onMouseLeave={() => setIsGreet(false)}
+            >
+                <img
+                    src={isGreet ? AstronautMarkusGreet : AstronautMarkusStand}
+                    alt="Astronaut Markus Stand"
+                    className="h-56 drop-shadow-xl select-none transition-all duration-200"
+                    draggable={false}
+                />
+            </div>
             <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-[#23232b] text-gray-400">
                 <div>
                     <div className="flex items-center gap-2">
