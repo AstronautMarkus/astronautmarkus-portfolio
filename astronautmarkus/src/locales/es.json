@@ -7,6 +7,15 @@
     "gallery": "Galería",
     "blog": "Mi Blog Informático"
   },
+  "footer":{
+    "description":"El destino de las grandes almas es ser odidadas por los mediocres.",
+    "rights": "Todos los derechos reservados.",
+    "made_with": "Hecho con",
+    "by": "por",
+    "back_to_top": "Volver arriba",
+    "quick_links": "Enlaces Rápidos",
+    "business_pages": "Páginas de Negocios"
+  },
   "home": {
     "subtitle": "Desarrollador Fullstack y Administrador de Sistemas",
     "description": "Hola, soy Marcos Reyes, un Desarrollador Fullstack y Administrador de Sistemas. Construyo aplicaciones fáciles de usar y resuelvo problemas tecnológicos utilizando herramientas modernas. Disfruto aprender cosas nuevas y mantenerme al día con las tendencias de la industria. ¡Conectemos y trabajemos juntos!",

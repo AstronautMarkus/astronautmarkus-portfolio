@@ -7,6 +7,15 @@
     "gallery": "Gallery",
     "blog": "My Tech Blog"
   },
+  "footer":{
+    "description":"The fate of great souls is to be hated by mediocre ones.",
+    "rights": "All rights reserved.",
+    "made_with": "Made with",
+    "by": "by",
+    "back_to_top": "Back to top",
+    "quick_links": "Quick Links",
+    "business_pages": "Business Pages"
+  },
   "home": {
     "subtitle": "Fullstack Developer & Systems Administrator",
     "description": "Hello, I'm Marcos Reyes, a Fullstack Developer and Systems Administrator. I build user-friendly apps and solve tech problems using modern tools. I enjoy learning new things and keeping up with industry trends. Let's connect and work together!",
