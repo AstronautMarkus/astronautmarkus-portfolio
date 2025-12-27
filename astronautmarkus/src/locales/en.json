@@ -40,5 +40,102 @@
     "tech_stack_description": "These are the main technologies and frameworks I use to build robust and scalable solutions.",
     "and_many_more_technologies": "and many more technologies...",
     "explore_full_tech_stack": "Explore Full Tech Stack"
+  },
+  "projects": {
+    "seo_title": "Projects & Experiments - AstronautMarkusDev",
+    "seo_description": "Explore my full-stack portfolio showcasing diverse projects built with modern technologies and best practices since 2022 to present.",
+    "seo_keywords": "AstronautMarkusDev, Marcos Reyes, Fullstack Developer, Systems Administrator, Portfolio, Projects, Blog",
+    "title": "Projects & Experiments",
+    "description": "Explore my full-stack portfolio showcasing diverse projects built with modern technologies and best practices since 2022 to present.",
+    "view_details": "View Details",
+    "private_repo": "This repository is private",
+    "no_image": "No image available",
+    "items": {
+      "esp8266-labs": {
+        "title": "ESP8266-Labs",
+        "description": "Personal compilation of experiments performed with an ESP8266 with integrated OLED screen and libraries.",
+        "year": 2025
+      },
+      "turnomaster": {
+        "title": "TurnoMaster",
+        "description": "Appointment scheduling platform built with Flask, Python, MariaDB, Docker, Axios, Astro, SQLAlchemy, and Tailwind CSS.",
+        "year": 2025
+      },
+      "fumoindex": {
+        "title": "The Fumo Index",
+        "description": "Portfolio project for tracking Fumo plushies. Built with React, TypeScript, Laravel, MySQL, and Tailwind CSS.",
+        "year": 2025
+      },
+      "abbybot-project": {
+        "title": "AbbyBot Project",
+        "description": "Discord bot built with Discord.py, Python, and MySQL.",
+        "year": 2024
+      },
+      "blog-astronautmarkus": {
+        "title": "Blog AstronautMarkus",
+        "description": "Personal blog built with Laravel, Blade, Tailwind CSS, MySQL, and PHP.",
+        "year": 2025
+      },
+      "abbybot-project-website": {
+        "title": "AbbyBot Project Website",
+        "description": "Website for AbbyBot built with Flask, Python, Bootstrap, MySQL, Gunicorn, and Docker.",
+        "year": 2024
+      },
+      "multi-stock-sync": {
+        "title": "Multi Stock Sync",
+        "description": "Web platform for business management with React, Node.js, Bootstrap, and Chart.js.",
+        "year": 2025
+      },
+      "multi-stock-sync-back": {
+        "title": "Multi Stock Sync Back",
+        "description": "Backend for Multi Stock Sync using Laravel, Sanctum, MySQL, and PHP.",
+        "year": 2025
+      },
+      "multi-stock-sync-api-viewer": {
+        "title": "Multi Stock Sync API Viewer",
+        "description": "API viewer for Multi Stock Sync using Laravel and Swagger.",
+        "year": 2025
+      },
+      "mofustore": {
+        "title": "MOFUStore",
+        "description": "Store management platform built with Python, Django, Bootstrap, and MySQL.",
+        "year": 2023
+      },
+      "camellosfood-repartidor": {
+        "title": "CamellosFood Repartidor",
+        "description": "Delivery app built with Ionic, Angular, and Django.",
+        "year": 2023
+      },
+      "constru-mic": {
+        "title": "CONSTRU_MIC",
+        "description": "Construction management platform using Django, Bootstrap, and MySQL.",
+        "year": 2024
+      },
+      "mofulunches-web": {
+        "title": "Mofu Lunches Web",
+        "description": "Web platform for food requests using Flask and Bootstrap.",
+        "year": 2024
+      },
+      "mofulunches-api": {
+        "title": "Mofu Lunches API",
+        "description": "API for Mofu Lunches built with Python, Flask, and MongoDB.",
+        "year": 2024
+      },
+      "mofulunches-totem": {
+        "title": "Mofu Lunches Totem",
+        "description": "Totem system for Mofu Lunches using Electron, Arduino, and React.",
+        "year": 2024
+      },
+      "mofulunches-eldimon": {
+        "title": "Mofu Lunches ElDimon",
+        "description": "Arduino-based system for Mofu Lunches.",
+        "year": 2024
+      },
+      "mofulunches-listener": {
+        "title": "Mofu Lunches ElDimon Listener",
+        "description": "Listener for Mofu Lunches built with Python and PyQt5.",
+        "year": 2024
+      }
+    }
   }
 }

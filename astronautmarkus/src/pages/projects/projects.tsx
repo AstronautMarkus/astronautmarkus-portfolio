@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { ChevronRight, LockIcon } from "lucide-react";
 
+import { useI18n } from "../../context/i18n";
+
 import SeoHelmet from "../../utils/SeoHelmet";
-
-
 import TurnoMaster from "../../assets/img/projects/turnomaster.png";
 import FumoIndex from "../../assets/img/projects/fumoindex.png";
 import AbbyBotProject from "../../assets/img/projects/abbybot-project.png";
@@ -91,23 +91,16 @@ function styleTag(tag: Tag): Tag {
     : { ...tag, color: "#e5e7eb", textColor: "black" };
 }
 
-const projects: Project[] = [
+const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
   {
     slug: 'esp8266-labs',
-    title: 'ESP8266-Labs',
-    description: 'Personal compilation of experiments performed with an ESP8266 with integrated OLED screen and libraries. ',
-    tags: [
-      styleTag({ name: "Arduino" }),
-      styleTag({ name: "C++" }),
-    ],
     image: ESP8266Labs,
-    year: 2025,
+    tags: [styleTag({ name: "Arduino" }), styleTag({ name: "C++" })],
     githubUrl: 'https://github.com/AstronautMarkus/ESP8266-Labs',
   },
   {
     slug: 'turnomaster',
-    title: 'TurnoMaster',
-    description: 'Appointment scheduling platform built with Flask, Python, MariaDB, Docker, Axios, Astro, SQLAlchemy, and Tailwind CSS.',
+    image: TurnoMaster,
     tags: [
       styleTag({ name: "React" }),
       styleTag({ name: "TailwindCSS" }),
@@ -116,13 +109,10 @@ const projects: Project[] = [
       styleTag({ name: "Chart.js" }),
       styleTag({ name: "Axios" })
     ],
-    image: TurnoMaster,
-    year: 2025,
   },
   {
     slug: 'fumoindex',
-    title: 'The Fumo Index',
-    description: 'Portfolio project for tracking Fumo plushies. Built with React, TypeScript, Laravel, MySQL, and Tailwind CSS.',
+    image: FumoIndex,
     tags: [
       styleTag({ name: "React" }),
       styleTag({ name: "TypeScript" }),
@@ -130,27 +120,21 @@ const projects: Project[] = [
       styleTag({ name: "MySQL" }),
       styleTag({ name: "Tailwind CSS" })
     ],
-    image: FumoIndex,
-    year: 2025,
     githubUrl: 'https://github.com/astronautmarkus/fumoindex',
   },
   {
     slug: 'abbybot-project',
-    title: 'AbbyBot Project',
-    description: 'Discord bot built with Discord.py, Python, and MySQL.',
+    image: AbbyBotProject,
     tags: [
       styleTag({ name: "Discord.py" }),
       styleTag({ name: "Python" }),
       styleTag({ name: "MySQL" })
     ],
-    image: AbbyBotProject,
-    year: 2024,
     githubUrl: 'https://github.com/AbbyBot/Discord-AbbyBot',
   },
   {
     slug: 'blog-astronautmarkus',
-    title: 'Blog AstronautMarkus',
-    description: 'Personal blog built with Laravel, Blade, Tailwind CSS, MySQL, and PHP.',
+    image: BlogAstronautMarkus,
     tags: [
       styleTag({ name: "Laravel" }),
       styleTag({ name: "Blade" }),
@@ -158,14 +142,11 @@ const projects: Project[] = [
       styleTag({ name: "MySQL" }),
       styleTag({ name: "PHP" })
     ],
-    image: BlogAstronautMarkus,
-    year: 2025,
     githubUrl: 'https://github.com/AstronautMarkus/blog.astronautmarkus.dev',
   },
   {
     slug: 'abbybot-project-website',
-    title: 'AbbyBot Project Website',
-    description: 'Website for AbbyBot built with Flask, Python, Bootstrap, MySQL, Gunicorn, and Docker.',
+    image: AbbyBotProjectWebsite,
     tags: [
       styleTag({ name: "Flask" }),
       styleTag({ name: "Python" }),
@@ -174,14 +155,11 @@ const projects: Project[] = [
       styleTag({ name: "Gunicorn" }),
       styleTag({ name: "Docker" })
     ],
-    image: AbbyBotProjectWebsite,
-    year: 2024,
     githubUrl: 'https://github.com/AbbyBot/AbbyBot-Website',
   },
   {
     slug: 'multi-stock-sync',
-    title: 'Multi Stock Sync',
-    description: 'Web platform for business management with React, Node.js, Bootstrap, and Chart.js.',
+    image: MultiStockSync,
     tags: [
       styleTag({ name: "React" }),
       styleTag({ name: "Node.js" }),
@@ -189,147 +167,125 @@ const projects: Project[] = [
       styleTag({ name: "Chart.js" }),
       styleTag({ name: "Axios" })
     ],
-    image: MultiStockSync,
-    year: 2025,
     githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-Sync',
   },
   {
     slug: 'multi-stock-sync-back',
-    title: 'Multi Stock Sync Back',
-    description: 'Backend for Multi Stock Sync using Laravel, Sanctum, MySQL, and PHP.',
+    image: MultiStockSyncBack,
     tags: [
       styleTag({ name: "Laravel" }),
       styleTag({ name: "Sanctum" }),
       styleTag({ name: "MySQL" }),
       styleTag({ name: "PHP" })
     ],
-    image: MultiStockSyncBack,
-    year: 2025,
     githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-Sync-Back',
   },
   {
     slug: 'multi-stock-sync-api-viewer',
-    title: 'Multi Stock Sync API Viewer',
-    description: 'API viewer for Multi Stock Sync using Laravel and Swagger.',
+    image: MultiStockSyncApiViewer,
     tags: [
       styleTag({ name: "Laravel" }),
       styleTag({ name: "Swagger" })
     ],
-    image: MultiStockSyncApiViewer,
-    year: 2025,
     githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-API-Viewer',
   },
   {
     slug: 'mofustore',
-    title: 'MOFUStore',
-    description: 'Store management platform built with Python, Django, Bootstrap, and MySQL.',
+    image: MofuStore,
     tags: [
       styleTag({ name: "Python" }),
       styleTag({ name: "Django" }),
       styleTag({ name: "Bootstrap" }),
       styleTag({ name: "MySQL" })
     ],
-    image: MofuStore,
-    year: 2023,
   },
   {
     slug: 'camellosfood-repartidor',
-    title: 'CamellosFood Repartidor',
-    description: 'Delivery app built with Ionic, Angular, and Django.',
+    image: CamellosFoodRepartidor,
     tags: [
       styleTag({ name: "Ionic" }),
       styleTag({ name: "Angular" }),
       styleTag({ name: "Django" })
     ],
-    image: CamellosFoodRepartidor,
-    year: 2023,
     githubUrl: 'https://github.com/AstronautMarkus/CamellosFood-Repartidor-3.0',
   },
   {
     slug: 'constru-mic',
-    title: 'CONSTRU_MIC',
-    description: 'Construction management platform using Django, Bootstrap, and MySQL.',
+    image: ConstruMic,
     tags: [
       styleTag({ name: "Django" }),
       styleTag({ name: "Bootstrap" }),
       styleTag({ name: "MySQL" })
     ],
-    image: ConstruMic,
-    year: 2024,
     githubUrl: 'https://github.com/MarcosKingsDuoc/CONSTRU_MIC',
   },
   {
     slug: 'mofulunches-web',
-    title: 'Mofu Lunches Web',
-    description: 'Web platform for food requests using Flask and Bootstrap.',
+    image: MofuLunchesWeb,
     tags: [
       styleTag({ name: "Flask" }),
       styleTag({ name: "Bootstrap" })
     ],
-    image: MofuLunchesWeb,
-    year: 2024,
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-Web',
   },
   {
     slug: 'mofulunches-api',
-    title: 'Mofu Lunches API',
-    description: 'API for Mofu Lunches built with Python, Flask, and MongoDB.',
+    image: MofuLunchesApi,
     tags: [
       styleTag({ name: "Python" }),
       styleTag({ name: "Flask" }),
       styleTag({ name: "MongoDB" })
     ],
-    image: MofuLunchesApi,
-    year: 2024,
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-API',
   },
   {
     slug: 'mofulunches-totem',
-    title: 'Mofu Lunches Totem',
-    description: 'Totem system for Mofu Lunches using Electron, Arduino, and React.',
+    image: MofuLunchesTotem,
     tags: [
       styleTag({ name: "Electron" }),
       styleTag({ name: "Arduino" }),
       styleTag({ name: "React" })
     ],
-    image: MofuLunchesTotem,
-    year: 2024,
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-Totem',
   },
   {
     slug: 'mofulunches-eldimon',
-    title: 'Mofu Lunches ElDimon',
-    description: 'Arduino-based system for Mofu Lunches.',
+    image: MofuLunchesElDimon,
     tags: [
       styleTag({ name: "Arduino" }),
       styleTag({ name: "C++" })
     ],
-    image: MofuLunchesElDimon,
-    year: 2024,
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-ElDimon',
   },
   {
     slug: 'mofulunches-listener',
-    title: 'Mofu Lunches ElDimon Listener',
-    description: 'Listener for Mofu Lunches built with Python and PyQt5.',
+    image: MofuLunchesElDimonListener,
     tags: [
       styleTag({ name: "Python" }),
       styleTag({ name: "PyQt5" })
     ],
-    image: MofuLunchesElDimonListener,
-    year: 2024,
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-ElDimon_Listener',
   }
 ];
 
 
 function Projects() {
+  const { t } = useI18n();
+
+  // Merge meta with translations
+  const projects = projectsMeta.map(meta => ({
+    ...meta,
+    title: t(`projects.items.${meta.slug}.title`),
+    description: t(`projects.items.${meta.slug}.description`),
+    year: t(`projects.items.${meta.slug}.year`),
+  }));
+
   return (
     <>
       <SeoHelmet
-        title="Projects & Experiments - AstronautMarkusDev"
-        description="Explore my full-stack portfolio showcasing diverse projects built with modern technologies and best practices since 2022 to present."
-        keywords="AstronautMarkusDev, Marcos Reyes, Fullstack Developer, Systems Administrator, Portfolio, Projects, Blog"
+        title={t("projects.seo_title")}
+        description={t("projects.seo_description")}
+        keywords={t("projects.seo_keywords")}
       />
       <div className="bg-white">
         <div className="container mx-auto px-4 sm:px-6 py-16">
@@ -339,9 +295,9 @@ function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <h1 className="text-4xl font-bold text-rose-700 mb-4 mt-12">Projects & Experiments</h1>
+            <h1 className="text-4xl font-bold text-rose-700 mb-4 mt-12">{t("projects.title")}</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore my full-stack portfolio showcasing diverse projects built with modern technologies and best practices since 2022 to present.
+              {t("projects.description")}
             </p>
           </motion.div>
 
@@ -362,7 +318,7 @@ function Projects() {
                       className="w-full h-full object-cover pointer-events-none"
                     />
                   ) : (
-                    <span className="text-gray-400 text-lg">No image available</span>
+                    <span className="text-gray-400 text-lg">{t("projects.no_image")}</span>
                   )}
                 </div>
                 <div className="p-6 flex flex-col flex-1">
@@ -389,7 +345,7 @@ function Projects() {
                       rel="noopener noreferrer"
                       className="cursor-pointer inline-flex items-center justify-center gap-2 px-3 py-2 bg-rose-700 text-white rounded-lg font-semibold shadow hover:bg-rose-800 transition hover:scale-105 transform duration-300 mt-auto w-fit mx-auto"
                     >
-                      View Details
+                      {t("projects.view_details")}
                       <ChevronRight size={18} />
                     </a>
                   ) : (
@@ -397,7 +353,7 @@ function Projects() {
                       disabled
                       className="inline-flex items-center justify-center gap-2 px-3 py-2 bg-gray-300 text-gray-500 rounded-lg font-semibold shadow mt-auto w-fit mx-auto cursor-not-allowed"
                     >
-                      This repository is private
+                      {t("projects.private_repo")}
                       <LockIcon size={18} />
                     </button>
                   )}
