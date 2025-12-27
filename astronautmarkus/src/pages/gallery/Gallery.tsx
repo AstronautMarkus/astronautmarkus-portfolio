@@ -82,10 +82,10 @@ function Gallery() {
                                 />
                                 <div className="p-4">
                                     <h2 className="text-lg font-semibold text-gray-800 mb-1">
-                                        {item.suggested_title}
+                                        {t(`gallery.items.${item.id}.title`)}
                                     </h2>
                                     <p className="text-gray-600 text-sm mb-2">
-                                        {item.suggested_description}
+                                        {t(`gallery.items.${item.id}.description`)}
                                     </p>
                                     <div className="text-xs text-gray-500 space-y-1">
                                         <div>

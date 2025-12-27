@@ -149,6 +149,48 @@
     "size": "Tamaño",
     "dimensions": "Dimensiones",
     "date": "Fecha",
-    "alt": "Imagen de galería"
+    "alt": "Imagen de galería",
+    "items": {
+      "IMG_2741": {
+        "title": "Jugando Touhou en mi ThinkPad con Wine",
+        "description": "Una foto de una laptop ThinkPad mostrando un juego de Touhou, ejecutándose en Wine. Mientras usaba Arch Linux en mi ThinkPad, decidí jugar algunos Touhou usando Wine."
+      },
+      "IMG_1981": {
+        "title": "Programando en la camioneta en medio del tráfico",
+        "description": "Después de un día de viaje, mi madre me recogió en su camioneta. Mientras estábamos atrapados en el tráfico, aproveché para programar en mi laptop. ¡El tiempo es oro!"
+      },
+      "IMG_3309": {
+        "title": "Programando en el patio mientras mi gato me mira",
+        "description": "En un día de primavera, decidí programar en el patio mientras mi gato, Agustín, estaba cerca mirándome. ¡Tomando Pepsi, por cierto!"
+      },
+      "IMG_3642": {
+        "title": "Monster Mango Loco esperando el servicio del auto",
+        "description": "Disfrutando una bebida Monster Mango Loco mientras espero que le hagan servicio a mi auto."
+      },
+      "IMG_2967": {
+        "title": "Mi primera Raspberry Pi Zero 2W.",
+        "description": "Ese día recibí mi primera Raspberry Pi Zero 2W. Estaba realmente incrédulo porque pensé que todas las Raspberry Pi (y sus carcasas) usaban tornillos para asegurarlas, pero como la Pi Zero 2W es más pequeña, casi como un pendrive, solo un poco más grande, simplemente encajó y quedó fija. Pensé que el vendedor me había estafado o algo, jaja."
+      },
+      "IMG_4023": {
+        "title": "SOCOM 3 U.S. Navy SEALs multijugador en PS2 (PCSX2)",
+        "description": "¡Eso fue muy divertido! Nunca pensé que volvería a jugar SOCOM 3 U.S. Navy SEALs multijugador después de tantos años. Gracias a PCSX2, pude revivir esos momentos jugando con amigos en línea. ¡En 4K también!"
+      },
+      "IMG_2422": {
+        "title": "Arrancando mi Raspberry Pi 4B",
+        "description": "Acabo de instalar Raspbian en mi Raspberry Pi 4B y la estoy arrancando por primera vez. ¡Emocionado por explorar todos los proyectos que puedo hacer con ella!"
+      },
+      "IMG_3596": {
+        "title": "Jugando Halo Infinite Campaign en mi OMEN 16",
+        "description": "Nunca usé esta laptop para juegos; la compré para mi carrera de programación. Después de terminar mis estudios, reinstalé Windows y empecé a usarla para videojuegos. ¡Halo Infinite se ve increíble en ella!"
+      },
+      "IMG_4122": {
+        "title": "Pronóstico del clima con Arduino Uno, LCD I2C y DHT11",
+        "description": "Me encanta I2C; es muy fácil de usar y ahorra muchos pines en el Arduino. En este proyecto usé un Arduino Uno, mi placa 'Jenny'—un Arduino Uno personalizado con gráficos de waifu, buzzer integrado, luces que muestran qué pines se usan en tiempo real y muchos detalles. El proyecto muestra temperatura y humedad usando un sensor DHT11 y una pantalla LCD I2C."
+      },
+      "IMG_4135": {
+        "title": "El mismo proyecto de clima con LCD I2C pero con ESP8266",
+        "description": "Recreé el proyecto de pronóstico del clima usando un ESP8266 en vez de un Arduino Uno. El ESP8266 permite conectividad Wi-Fi, así que agregué funciones para obtener datos del clima de internet y mostrarlos en la LCD I2C. Personalmente, prefiero usar el ESP8266 sobre el ESP32 para proyectos simples."
+      }
+    }
   }
 }
