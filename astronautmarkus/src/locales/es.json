@@ -260,23 +260,26 @@
     "2022-03-10": {
       "title": "Mi primer día en la universidad",
       "description": "Latidos a 150 BPM y mucha emoción. Mi primera clase fue sobre el modelo OSI y bases de datos, demasiada información técnica para el primer día, la verdad, jaja."
-    },
-    "2024-04-05": {
-      "title": "Marcos comienza a usar GNU/Linux",
-      "description": "El mejor cambio que he hecho. Te odio, Windows, te odio con todo mi ser. La libertad está llegando."
-    },
-    "2025-06-01": {
-      "title": "Marcos construye un Rack de Red",
-      "description": "Solo con ChatGPT e imágenes de Reddit, Marcos construye su primer rack de red en casa. Usando un rack Linkmade de 24U, un Fortigate 60D, un switch gigabit de 6 puertos y un HP Proliant DL360 G7 como servidor."
-    },
-    "2025-06-17": {
-      "title": "Presentación final de portafolio. Dev vs Lobos Senior",
-      "description": "Batalla final, el lobo solitario programador vs. los lobos. Aprobado con 100% (no meme)."
-    },
-    "2025-07-01": {
-      "title": "Comienza Reyes&Friends",
-      "description": "Comienza el viaje. Una nueva era de creación de contenido, reseñas tecnológicas y videos de juegos empieza ahora. ¡Únete a esta emocionante aventura!"
+      },
+      "2024-04-05": {
+        "title": "Marcos comienza a usar GNU/Linux",
+        "description": "El mejor cambio que he hecho. Te odio, Windows, te odio con todo mi ser. La libertad está llegando."
+      },
+      "2025-06-01": {
+        "title": "Marcos construye un Rack de Red",
+        "description": "Solo con ChatGPT e imágenes de Reddit, Marcos construye su primer rack de red en casa. Usando un rack Linkmade de 24U, un Fortigate 60D, un switch gigabit de 6 puertos y un HP Proliant DL360 G7 como servidor."
+      },
+      "2025-06-17": {
+        "title": "Presentación final de portafolio. Dev vs Lobos Senior",
+        "description": "Batalla final, el lobo solitario programador vs. los lobos. Aprobado con 100% (no meme)."
+      },
+      "2025-07-01": {
+        "title": "Comienza Reyes&Friends",
+        "description": "Comienza el viaje. Una nueva era de creación de contenido, reseñas tecnológicas y videos de juegos empieza ahora. ¡Únete a esta emocionante aventura!"
+      }
     }
-  }
+  },
+  "contact": {
+    "title": "Contáctame"
   }
 }

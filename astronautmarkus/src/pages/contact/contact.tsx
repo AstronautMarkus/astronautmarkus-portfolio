@@ -4,6 +4,7 @@ import SeoHelmet from "../../utils/SeoHelmet";
 import { useState, useEffect } from "react";
 import AstronautMarkus from "../../assets/img/astronautmarkus/markus-greet.png";
 import Background from "../../assets/img/background.jpg";
+import { useI18n } from "../../context/i18n";
 
 const socialLinks = [
     {
@@ -46,7 +47,9 @@ const socialLinks = [
 
 function Contact() {
 
-    const fullText = "Contact Me";
+    const { t } = useI18n();
+
+    const fullText = t("contact.title");
     const [typedText, setTypedText] = useState("");
     const [showCursor, setShowCursor] = useState(true);
 
