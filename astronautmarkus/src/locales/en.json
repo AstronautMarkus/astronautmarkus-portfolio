@@ -233,5 +233,50 @@
         "description": "After 3 years of hard work (and dealing with uncooperative people), I finally graduated as a Computer Programming Analyst from Duoc UC institute. This certificate gives me a lot to think about. It's not that it excites me or matters too much, but in the early semesters I had pretty average grades and uncommitted teams, to be honest. However, in the last semesters I became more self-sufficient and had better teams, managing to pass with the highest grades, literally. Interestingly, my first grade in the program was a 1.0 due to an anxiety attack, and my final portfolio grade was a 7.0, the highest grade in Chile."
       }
     }
+  },
+  "about-me": {
+    "seo_title": "About Me - AstronautMarkusDev",
+    "seo_description": "Learn more about Marcos Reyes, also known as AstronautMarkusDev. Discover his journey, passions, and interesting facts about his life in technology.",
+    "seo_keywords": "AstronautMarkusDev, Marcos Reyes, Fullstack Developer, Systems Administrator, Portfolio, Projects, Blog",
+    "title": "About Me",
+    "description": "Discover my journey as a Fullstack Developer and Systems Administrator, my skills, experiences, and passion for technology.",
+    "me": {
+      "title": "Who Am I?",
+      "description": "I'm just an ordinary guy, like you, like everyone. I love experimenting with new technologies and learning something new every day. My passion leans especially towards hardware and networking, sometimes even more than programming. But don't worry, I'm also skilled at coding! I believe it's important to be versatile and excel at what you do. What are you good at?"
+    },
+    "journey": {
+      "title": "My Journey",
+      "picture_alt": "A very cool photo",
+      "description": "Choosing this path was surprisingly easy for me. It all started just as I was about to graduate from high school. One day, while driving with my mom, we passed by an institute and I thought: \"Maybe I should see what they offer.\" When I got home, I didn't research much—just saw the 'Computer Programming Analyst' program and literally said: \"That one.\" I had a few minor issues applying, but within two days I was in. Since then, I haven't stopped learning and growing in this fascinating world of technology."
+    },
+    "fun_facts": {
+      "title": "Fun Facts",
+      "photo": "I almost never take photos of myself! Only once a year for my CV or official documents.",
+      "coffee": "I'm probably addicted to caffeine—I can't live without my daily coffee or Monster Energy.",
+      "frontend": "I hate frontend, I hate JavaScript, but we're forced to use it, aren't we?",
+      "tech_truth": "An unpopular truth? The people who hate technology the most are usually the ones who end up needing it the most."
+    },
+    "events": {
+      "2022-03-10": {
+      "title": "My first day at College",
+      "description": "150 BPM heartbeat and a lot of excitement. My first class was about the OSI model and databases, too much technical stuff for day 1 to be honest haha"
+      },
+      "2024-04-05": {
+      "title": "Marcos starts to use GNU/Linux",
+      "description": "The best change I've ever made. I hate you, Windows, I hate you with all my being. Freedom is coming."
+      },
+      "2025-06-01": {
+      "title": "Marcos builds a Network Rack",
+      "description": "With only ChatGPT and Reddit images, Marcos builds his first Network Rack at home. Using a 24U Linkmade rack, a Fortigate 60D, a 6 port gigabit switch and a HP Proliant DL360 G7 as server."
+      },
+      "2025-06-17": {
+      "title": "Final portfolio presentation. Dev vs Senior Wolves",
+      "description": "Final battle, the lone wolf programmed vs. the wolves. Approved with 100% (no meme)."
+      },
+      "2025-07-01": {
+      "title": "Reyes&Friends begins",
+      "description": "The journey begins. A new era of content creation, tech reviews, and gaming videos starts now. Join us on this exciting adventure!"
+      }
+    }
   }
 }

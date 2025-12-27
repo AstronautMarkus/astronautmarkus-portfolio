@@ -1,7 +1,7 @@
 import AstronautMarkus from "../../../assets/img/astronautmarkus/AstronautMarkus-01.png";
 import { Menu, BookOpen, X, User, Code, Mail, GalleryThumbnails } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useI18n } from "../../../context/i18n";
 
 function Header() {
@@ -10,7 +10,6 @@ function Header() {
     const { language, setLanguage, t } = useI18n();
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,7 +25,7 @@ function Header() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const isTransparent = (!isMobile && !scrolled && location.pathname === "/");
+    const isTransparent = (!isMobile && !scrolled);
 
     const headerClass = `px-6 h-16 flex items-center justify-between transition-colors duration-300 fixed top-0 left-0 w-full z-50 ${
         isTransparent

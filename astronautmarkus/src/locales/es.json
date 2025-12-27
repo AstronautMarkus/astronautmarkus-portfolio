@@ -233,5 +233,50 @@
         "description": "Después de 3 años de trabajo duro (y lidiar con personas poco colaborativas), finalmente me gradué como Analista Programador Computacional en el instituto Duoc UC. Este certificado me deja mucho en qué pensar. No es que me emocione o importe demasiado, pero en los primeros semestres tuve calificaciones bastante regulares y equipos poco comprometidos, para ser honesto. Sin embargo, en los últimos semestres me volví más autosuficiente y tuve mejores equipos, logrando aprobar con las notas más altas, literalmente. Curiosamente, mi primera nota en la carrera fue un 1.0 debido a un ataque de ansiedad, y mi última nota de portafolio de título fue un 7.0, la calificación más alta en Chile."
       }
     }
+  },
+  "about-me":{
+    "seo_title": "Sobre Mí - AstronautMarkusDev",
+    "seo_description": "Conoce más sobre Marcos Reyes, también conocido como AstronautMarkusDev. Descubre su trayectoria, pasiones y datos curiosos sobre su vida en la tecnología.",
+    "seo_keywords": "AstronautMarkusDev, Marcos Reyes, Desarrollador Fullstack, Administrador de Sistemas, Portafolio, Proyectos, Blog",
+    "title":"Sobre Mí",
+    "description":"Conoce mi trayectoria como Desarrollador Fullstack y Administrador de Sistemas, mis habilidades, experiencias y pasión por la tecnología.",
+    "me":{
+      "title":"¿Quién Soy?",
+      "description":"Soy solo un tipo común, como tú, como todos. Me encanta experimentar con nuevas tecnologías y aprender algo nuevo cada día. Mi pasión se inclina especialmente hacia el hardware y las redes, a veces incluso más que la programación. ¡Pero no te preocupes, también soy hábil en la codificación! Creo que es importante ser versátil y sobresalir en lo que haces. ¿En qué eres bueno tú?"
+    },
+    "journey": {
+      "title": "Mi Trayectoria",
+      "picture_alt": "Una foto muy genial",
+      "description": "Elegir este camino fue sorprendentemente sencillo para mí. Todo comenzó justo cuando estaba por graduarme de la secundaria. Un día, mientras iba en auto con mi mamá, pasamos por un instituto y pensé: \"Quizás debería ver qué ofrecen\". Al llegar a casa, no investigué mucho—solo vi el programa de “Analista Programador Computacional” y literalmente dije: \"Ese mismo\". Tuve algunos problemas menores para postular, pero en dos días ya estaba dentro. Desde entonces, no he dejado de aprender y crecer en este fascinante mundo de la tecnología."
+    },
+    "fun_facts": {
+      "title": "Datos Curiosos",
+      "photo": "¡Casi nunca me saco fotos! Solo una vez al año para el CV o documentos oficiales.",
+      "coffee": "Probablemente soy adicto a la cafeína—no puedo vivir sin mi café diario o Monster Energy.",
+      "frontend": "Odio el frontend, odio JavaScript, pero estamos obligados a usarlo, ¿no?",
+      "tech_truth": "¿Una verdad impopular? Las personas que más odian la tecnología suelen ser las que más terminan necesitándola."
+    },
+    "events": {
+    "2022-03-10": {
+      "title": "Mi primer día en la universidad",
+      "description": "Latidos a 150 BPM y mucha emoción. Mi primera clase fue sobre el modelo OSI y bases de datos, demasiada información técnica para el primer día, la verdad, jaja."
+    },
+    "2024-04-05": {
+      "title": "Marcos comienza a usar GNU/Linux",
+      "description": "El mejor cambio que he hecho. Te odio, Windows, te odio con todo mi ser. La libertad está llegando."
+    },
+    "2025-06-01": {
+      "title": "Marcos construye un Rack de Red",
+      "description": "Solo con ChatGPT e imágenes de Reddit, Marcos construye su primer rack de red en casa. Usando un rack Linkmade de 24U, un Fortigate 60D, un switch gigabit de 6 puertos y un HP Proliant DL360 G7 como servidor."
+    },
+    "2025-06-17": {
+      "title": "Presentación final de portafolio. Dev vs Lobos Senior",
+      "description": "Batalla final, el lobo solitario programador vs. los lobos. Aprobado con 100% (no meme)."
+    },
+    "2025-07-01": {
+      "title": "Comienza Reyes&Friends",
+      "description": "Comienza el viaje. Una nueva era de creación de contenido, reseñas tecnológicas y videos de juegos empieza ahora. ¡Únete a esta emocionante aventura!"
+    }
+  }
   }
 }
