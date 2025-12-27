@@ -5,6 +5,7 @@ import ProfilePic from "../../assets/img/profile.png";
 import { Github, Linkedin, Mail, Instagram, Code } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useI18n } from "../../context/i18n";
 
 
 import LastPosts from "./components/LastPosts";
@@ -16,6 +17,9 @@ import TechStackDemo from "./components/TechStackDemo";
 import SeoHelmet from "../../utils/SeoHelmet";
 
 function Home() {
+
+    const { t } = useI18n();
+
     const fullText = "AstronautMarkusDev";
     const [typedText, setTypedText] = useState("");
     const [showCursor, setShowCursor] = useState(true);
@@ -90,7 +94,7 @@ function Home() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.4 }}
                             >
-                                Fullstack Developer & Systems Administrator
+                            {t('home.subtitle')}
                             </motion.h2>
                             <motion.p
                                 className="text-base sm:text-lg md:text-xl text-white/80 max-w-md sm:max-w-xl mb-6 md:mb-8 drop-shadow"
@@ -98,7 +102,7 @@ function Home() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.5 }}
                             >
-                                Hello, I'm Marcos Reyes, a Fullstack Developer and Systems Administrator. I build user-friendly apps and solve tech problems using modern tools. I enjoy learning new things and keeping up with industry trends. Let's connect and work together!
+                                {t('home.description')}
                             </motion.p>
 
                             <motion.div
@@ -160,14 +164,14 @@ function Home() {
                             className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-rose-700 text-white rounded-lg font-bold shadow-lg hover:bg-rose-800 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
                         >
                             <Mail size={18} />
-                            Get In Touch
+                            {t('home.contact')}
                         </Link>
                         <Link
                             to="/projects"
                             className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-white/20 text-white rounded-lg font-bold shadow-lg hover:bg-white/40 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
                         >
                             <Code size={18} />
-                            View Projects / Experiments
+                            {t('home.projects')}
                         </Link>
                     </motion.div>
                 </div>
@@ -198,14 +202,16 @@ function Home() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.7, delay: 0.3 }}
                         >
-                            <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-6">Who am I?</h2>
+                            <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-6">{t('home.whoami')}</h2>
                             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                                My full name is <strong>Marcos Andrés Alberto Reyes Martínez</strong>, yes, quite long. I was born on <span className="text-rose-700 font-semibold">March 16, 2003</span> in <strong>Santiago, Chile</strong>. For as long as I can remember, I've been sitting at the computer, always with the desire to <span className="text-rose-700 font-semibold">create things</span>. Sometimes I can't sleep thinking about new projects or ideas I could carry out.
+                              {t('home.whoami_text')}
                             </p>
-                            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                               I graduated as a <strong>Computer Programmer Analyst</strong> in <span className="text-rose-700 font-semibold">2025</span> from <strong>Duoc UC institute</strong>. I currently work as an independent <span className="text-rose-700 font-semibold">Full Stack Developer</span> and also as an independent <span className="text-rose-700 font-semibold">Linux Systems Administrator</span>. I love learning new technologies and tools that allow me to improve my skills and knowledge in software development and systems administration.
-                               I'd say the thing that entertains me the most is <strong>SSR</strong>. How far you can leverage it with creative thinking to achieve interesting things. <span className="italic text-gray-600"> <br /><br /> "Can you imagine reviving an old browser with an intermediate SSR web between the client and server? Crazy things that go through my head."</span>
-                            </p>
+
+                            <blockquote className="border-l-4 border-rose-700 pl-4 italic text-gray-600">
+                                “{t('home.favorite_quote')} <br />
+                                <span className="font-bold text-gray-800">- Why don't you fix your little problem and light this candle?</span>
+                            </blockquote>
+                            
                         </motion.div>
                     </motion.div>
 

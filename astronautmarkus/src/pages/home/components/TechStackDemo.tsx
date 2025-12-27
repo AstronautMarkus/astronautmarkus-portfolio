@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Code } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useI18n } from "../../../context/i18n";
 
 const techCategories = [
     {
@@ -9,18 +10,19 @@ const techCategories = [
             { name: 'Laravel', icon: 'devicon-laravel-plain', color: 'bg-[#FF2D20]' },
             { name: 'React', icon: 'devicon-react-original', color: 'bg-[#61DAFB]' },
             { name: 'TailwindCSS', icon: 'devicon-tailwindcss-plain', color: 'bg-[#06B6D4]' },
-            { name: 'Flask', icon: 'devicon-flask-original', color: 'bg-[#000000]' },
             { name: 'MariaDB', icon: 'devicon-mariadb-plain', color: 'bg-[#003545]' },
             { name: 'Docker', icon: 'devicon-docker-plain', color: 'bg-[#2496ED]' },
-            { name: 'Axios', icon: 'devicon-axios-plain', color: 'bg-[#5A29E4]' },
-            { name: 'Astro', icon: 'devicon-astro-plain', color: 'bg-[#181923]' },
-            { name: 'SQLAlchemy', icon: 'devicon-sqlalchemy-plain', color: 'bg-[#E3B23C]' },
+            { name: 'Nginx', icon: 'devicon-nginx-original', color: 'bg-[#009639]' },
+            { name: 'Apache', icon: 'devicon-apache-plain', color: 'bg-[#D22128]' },
+            { name: 'Linux', icon: 'devicon-linux-plain', color: 'bg-[#FCC624]' },
         ]
     }
 ];
 
 function TechStackDemo() {
     const displayedCategories = techCategories;
+
+    const { t } = useI18n();
 
     return (
         <section className="py-16 bg-white">
@@ -37,9 +39,9 @@ function TechStackDemo() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.2 }}
                     >
-                        <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-4">Technologies I Use</h2>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-4">{t("home.techStack")}</h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            Throughout my career, I've worked with diverse technologies and tools that have enabled me to develop projects efficiently and effectively. I'm always exploring new tools and approaches to enhance my workflow, while maintaining solid expertise in these core technologies that form the foundation of my development stack.
+                            {t("home.tech_stack_description")}
                         </p>
                     </motion.div>
 
@@ -73,7 +75,7 @@ function TechStackDemo() {
                         ))}
                     </div>
 
-                    <p className="text-center text-gray-600 mt-10 mb-10">...and many more technologies in my <strong>Full Tech Stack!</strong></p>
+                    <p className="text-center text-gray-600 mt-10 mb-10">...{t("home.and_many_more_technologies")}</p>
                     <div className="flex justify-center">
                         <Link
                             to="/tech-stack"
@@ -81,7 +83,7 @@ function TechStackDemo() {
                             rel="noopener noreferrer"
                         >
                             <Code size={20} />
-                            View Full Tech Stack
+                            {t("home.explore_full_tech_stack")}
                         </Link>
                     </div>
                 </motion.div>

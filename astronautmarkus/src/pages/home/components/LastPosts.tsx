@@ -4,6 +4,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { BookOpen, ChevronRight } from "lucide-react";
 
+import { useI18n } from "../../../context/i18n";
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 type Post = {
@@ -29,6 +31,8 @@ const LastPosts: React.FC = () => {
       .finally(() => setLoading(false));
   }, []);
 
+  const { t } = useI18n();
+
   if (loading)
     return (
       <section className="py-16">
@@ -44,7 +48,7 @@ const LastPosts: React.FC = () => {
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
             />
-            <span className="text-rose-700 font-semibold text-lg">Loading posts...</span>
+            <span className="text-rose-700 font-semibold text-lg">{t("home.loading_posts")}</span>
           </motion.div>
         </div>
       </section>
@@ -73,9 +77,9 @@ const LastPosts: React.FC = () => {
                 d="M19.5 12c0 3.59-2.91 6.5-6.5 6.5S6.5 15.59 6.5 12 9.41 5.5 13 5.5s6.5 2.91 6.5 6.5zm-6.5 0v.01"
               />
             </svg>
-            <span className="text-gray-500 font-semibold text-lg">No posts found.</span>
+            <span className="text-gray-500 font-semibold text-lg">{t("home.no_posts_found")}</span>
             <span className="text-gray-400 mt-2 text-sm text-center max-w-xs">
-              Please check back later or explore other sections of the site.
+              {t("home.no_posts_found_description")}
             </span>
           </motion.div>
         </div>
@@ -91,9 +95,9 @@ const LastPosts: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-4">Latest Posts</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-4">{t("home.latest_posts")}</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Check out my most recent blog posts and insights.
+            {t("home.latest_posts_description")}
           </p>
         </motion.div>
 
@@ -129,7 +133,7 @@ const LastPosts: React.FC = () => {
                       key={tag}
                       className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full"
                     >
-                      #{tag}
+                      {t("home.post_tag_prefix")}{tag}
                     </span>
                   ))}
                 </div>
@@ -140,7 +144,7 @@ const LastPosts: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Read More
+                    {t("home.read_more")}
                     <ChevronRight size={16} />
                   </Link>
                 </div>
@@ -162,7 +166,7 @@ const LastPosts: React.FC = () => {
             rel="noopener noreferrer"
           >
             <BookOpen size={20} />
-            Visit Blog
+            {t("home.visit_blog")}
           </a>
         </motion.div>
 

@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Clock, Rocket, Code, Coffee } from "lucide-react";
+import { useI18n } from "../../../context/i18n";
 
 function AnimatedCounter({ value, duration = 1.2 }: { value: any; duration?: number }) {
     const [count, setCount] = useState(0);
 
+    
     useEffect(() => {
         let start = 0;
         const end = typeof value === "number" ? value : parseInt(value.replace(/\D/g, ""), 10);
@@ -33,6 +35,9 @@ function AnimatedCounter({ value, duration = 1.2 }: { value: any; duration?: num
 }
 
 function UserStats() {
+
+    const { t } = useI18n();
+
     return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
             <div className="bg-white rounded-lg w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-lg border border-gray-200 mx-auto hover:shadow-xl transition-shadow duration-300">
@@ -40,28 +45,28 @@ function UserStats() {
                 <span className="text-2xl sm:text-3xl font-bold text-rose-700">
                     <AnimatedCounter value={2} duration={1.2} />+
                 </span>
-                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">Years Experience</span>
+                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">{t('home.experience_years')}</span>
             </div>
             <div className="bg-white rounded-lg w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-lg border border-gray-200 mx-auto hover:shadow-xl transition-shadow duration-300">
                 <Rocket className="text-rose-700 mb-2" size={24} />
                 <span className="text-2xl sm:text-3xl font-bold text-rose-700">
                     <AnimatedCounter value={25} duration={1.2} />+
                 </span>
-                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">Projects Completed</span>
+                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">{t('home.completed_projects')}</span>
             </div>
             <div className="bg-white rounded-lg w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-lg border border-gray-200 mx-auto hover:shadow-xl transition-shadow duration-300">
                 <Code className="text-rose-700 mb-2" size={24} />
                 <span className="text-2xl sm:text-3xl font-bold text-rose-700">
                     <AnimatedCounter value={30} duration={1.2} />+
                 </span>
-                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">Technologies</span>
+                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">{t('home.technologies')}</span>
             </div>
             <div className="bg-white rounded-lg w-40 h-28 sm:w-48 sm:h-32 flex flex-col items-center justify-center shadow-lg border border-gray-200 mx-auto hover:shadow-xl transition-shadow duration-300">
                 <Coffee className="text-rose-700 mb-2" size={24} />
                 <span className="text-2xl sm:text-3xl font-bold text-rose-700">
                     <AnimatedCounter value={777} duration={0.1} />
                 </span>
-                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">Coffee Cups Consumed</span>
+                <span className="text-xs sm:text-sm text-gray-600 text-center mt-1 px-2">{t('home.coffee_drinked')}</span>
             </div>
         </div>
     );
