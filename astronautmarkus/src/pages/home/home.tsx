@@ -12,7 +12,7 @@ import { useI18n } from "../../context/i18n";
 import LastPosts from "./components/LastPosts";
 import UserStats from "./components/UserStats";
 import FeaturedProjects from "./components/FeaturedProjects";
-import TechStackDemo from "./components/TechStackDemo";
+import SkillsArsenal from "./components/SkillsArsenal";
 
 
 import SeoHelmet from "../../utils/SeoHelmet";
@@ -240,7 +240,7 @@ function Home() {
                 </div>
             </section>
 
-            <TechStackDemo />
+            <SkillsArsenal />
 
             <FeaturedProjects />
 

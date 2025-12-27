@@ -3,7 +3,7 @@ import { Shield, Globe, Database, Layers, Wand2, LayoutList } from "lucide-react
 
 import { useI18n } from "../../../context/i18n";
 
-function TechStackDemo() {
+function SkillsArsenal() {
 
 const { t } = useI18n();
 
@@ -133,4 +133,4 @@ const skillCategories = [
     )
 }
 
-export default TechStackDemo;
+export default SkillsArsenal;
