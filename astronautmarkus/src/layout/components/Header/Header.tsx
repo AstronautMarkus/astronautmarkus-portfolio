@@ -2,10 +2,12 @@ import AstronautMarkus from "../../../assets/img/astronautmarkus/AstronautMarkus
 import { Menu, BookOpen, X, User, Code, Mail, GalleryThumbnails } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useI18n } from "../../../context/i18n";
 
 function Header() {
     const [navOpen, setNavOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const { language, setLanguage, t } = useI18n();
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const location = useLocation();
@@ -55,29 +57,43 @@ function Header() {
                 </div>
                 <nav className="hidden md:flex flex-1 justify-center items-center gap-6">
                     <Link to="/about-me" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
-                        <User size={18} /> About Me
+                        <User size={18} /> {t('header.aboutMe')}
                     </Link>
                     <Link to="/projects" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
-                        <Code size={18} /> Projects
+                        <Code size={18} /> {t('header.projects')}
                     </Link>
                     <Link to="/tech-stack" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
-                        <Code size={18} /> Tech Stack
+                        <Code size={18} /> {t('header.techStack')}
                     </Link>
                     <Link to="/contact" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
-                        <Mail size={18} /> Contact
+                        <Mail size={18} /> {t('header.contact')}
                     </Link>
                     <Link to="/gallery" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
-                        <GalleryThumbnails size={18} /> Gallery
+                        <GalleryThumbnails size={18} /> {t('header.gallery')}
                     </Link>
                 </nav>
-                <a
-                    href="https://blog.astronautmarkus.dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full transition-all font-semibold ${blogBtnClass} hover:scale-105 transform duration-300`}
-                >
-                    <BookOpen size={18} /> My Tech Blog
-                </a>
+                <div className="hidden md:flex items-center gap-3">
+                    <button
+                        onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
+                        className={`inline-flex items-center gap-2 px-4 py-2 rounded-full transition-all font-semibold ${blogBtnClass} hover:scale-105 transform duration-300 cursor-pointer`}
+                        aria-label="Change language"
+                    >
+                        <img
+                            src={language === 'es' ? '/img/flags/spanish.svg' : '/img/flags/english.svg'}
+                            alt={language === 'es' ? 'Español' : 'English'}
+                            className="w-6 h-6 rounded pointer-events-none"
+                        />
+                        {language === 'es' ? 'Español' : 'English'}
+                    </button>
+                    <a
+                        href="https://blog.astronautmarkus.dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center gap-2 px-4 py-2 rounded-full transition-all font-semibold ${blogBtnClass} hover:scale-105 transform duration-300`}
+                    >
+                        <BookOpen size={18} /> {t('header.blog')}
+                    </a>
+                </div>
                 <button
                     className={`md:hidden p-2 rounded-full transition-colors ml-2 ${
                         isTransparent
@@ -103,36 +119,47 @@ function Header() {
                         className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <User size={20} /> About Me
+                        <User size={20} /> {t('header.aboutMe')}
                     </Link>
                     <Link
                         to="/projects"
                         className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <Code size={20} /> Projects
+                        <Code size={20} /> {t('header.projects')}
                     </Link>
                     <Link
                         to="/tech-stack"
                         className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <Code size={20} /> Tech Stack
+                        <Code size={20} /> {t('header.techStack')}
                     </Link>
                     <Link
                         to="/contact"
                         className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <Mail size={20} /> Contact
+                        <Mail size={20} /> {t('header.contact')}
                     </Link>
                     <Link
                         to="/gallery"
                         className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <GalleryThumbnails size={20} /> Gallery
+                        <GalleryThumbnails size={20} /> {t('header.gallery')}
                     </Link>
+                    <button
+                        onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all font-semibold text-lg ${blogBtnClass} hover:scale-105 transform duration-300 cursor-pointer`}
+                    >
+                        <img
+                            src={language === 'es' ? '/img/flags/spanish.svg' : '/img/flags/english.svg'}
+                            alt={language === 'es' ? 'Español' : 'English'}
+                            className="w-6 h-6 rounded pointer-events-none"
+                        />
+                        {language === 'es' ? 'Español' : 'English'}
+                    </button>
                     <a
                         href="https://blog.astronautmarkus.dev"
                         target="_blank"
@@ -140,7 +167,7 @@ function Header() {
                         className={`flex items-center gap-2 px-4 py-2 rounded-full transition-colors font-semibold text-lg ${blogBtnClass}`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <BookOpen size={20} /> My Tech Blog
+                        <BookOpen size={20} /> {t('header.blog')}
                     </a>
                 </div>
             </div>
