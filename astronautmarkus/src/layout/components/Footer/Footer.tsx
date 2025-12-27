@@ -55,7 +55,6 @@ function Footer() {
                             <li><Link to="/" className="hover:underline hover:text-white transition text-gray-400">Home</Link></li>
                             <li><Link to="/about-me" className="hover:underline hover:text-white transition text-gray-400">About Me</Link></li>
                             <li><Link to="/projects" className="hover:underline hover:text-white transition text-gray-400">Projects</Link></li>
-                            <li><Link to="/tech-stack" className="hover:underline hover:text-white transition text-gray-400">Tech Stack</Link></li>
                             <li><Link to="/contact" className="hover:underline hover:text-white transition text-gray-400">Contact</Link></li>
                             <li><Link to="/gallery" className="hover:underline hover:text-white transition text-gray-400">Gallery</Link></li>
                         </ul>
