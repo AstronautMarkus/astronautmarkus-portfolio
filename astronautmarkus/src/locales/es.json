@@ -137,5 +137,10 @@
         "year": 2024
       }
     }
+  },
+  "tech-stack":{
+    "title": "Stack Tecnológico",
+    "description": "A lo largo de mi trayectoria como desarrollador, he tenido la oportunidad de trabajar con una amplia variedad de tecnologías y herramientas. Muchos podrían decir \"tienes bastante déficit de atención\" por aprender tantas cosas, pero yo digo, bueno, no hay nada de malo en adaptarse a diferentes stacks más allá del propio. Por supuesto, tengo mis favoritas. A continuación encontrarás un resumen de las tecnologías con las que me siento más cómodo trabajando y que utilizo con mayor frecuencia en mis proyectos."
   }
+  
 }
