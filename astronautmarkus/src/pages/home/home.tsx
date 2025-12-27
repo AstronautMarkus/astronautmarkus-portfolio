@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Background from "../../assets/img/background.png";
+import Background from "../../assets/img/background.jpg";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-02.png";
 import ReyesAndFriends from "../../assets/img/icons/reyesandfriends.svg";
 import ProfilePic from "../../assets/img/profile.png";
