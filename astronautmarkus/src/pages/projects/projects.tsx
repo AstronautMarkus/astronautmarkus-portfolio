@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronRight, LockIcon } from "lucide-react";
-
+import { useState, useEffect } from "react";
 import { useI18n } from "../../context/i18n";
-
 import SeoHelmet from "../../utils/SeoHelmet";
 import TurnoMaster from "../../assets/img/projects/turnomaster.png";
 import FumoIndex from "../../assets/img/projects/fumoindex.png";
@@ -21,57 +20,11 @@ import MofuLunchesTotem from "../../assets/img/projects/mofulunches-totem.jpg";
 import MofuLunchesElDimon from "../../assets/img/projects/mofulunches-eldimon.jpg";
 import MofuLunchesElDimonListener from "../../assets/img/projects/mofulunches-eldimon-listener.jpg";
 import ESP8266Labs from "../../assets/img/projects/esp8266-labs.png";
-
-// Tag styles mapping
-const tagStyles: Record<string, { color: string; textColor: string }> = {
-  "Laravel": { color: "#FF2D20", textColor: "white" },
-  "React": { color: "#61DAFB", textColor: "black" },
-  "Tailwind CSS": { color: "#06B6D4", textColor: "white" },
-  "TailwindCSS": { color: "#06B6D4", textColor: "white" },
-  "Flask": { color: "#000000", textColor: "white" },
-  "MariaDB": { color: "#003545", textColor: "white" },
-  "Docker": { color: "#2496ED", textColor: "white" },
-  "Axios": { color: "#5A29E4", textColor: "white" },
-  "Astro": { color: "#181923", textColor: "white" },
-  "SQLAlchemy": { color: "#E3B23C", textColor: "black" },
-  "Python": { color: "#3776AB", textColor: "white" },
-  "PHP": { color: "#777BB4", textColor: "white" },
-  "HTML": { color: "#E34F26", textColor: "white" },
-  "CSS": { color: "#1572B6", textColor: "white" },
-  "TypeScript": { color: "#3178C6", textColor: "white" },
-  "SQL": { color: "#4479A1", textColor: "white" },
-  "Bash": { color: "#4EAA25", textColor: "white" },
-  "Markdown": { color: "#000000", textColor: "white" },
-  "Django": { color: "#092E20", textColor: "white" },
-  "FastAPI": { color: "#009688", textColor: "white" },
-  "Vue": { color: "#42B883", textColor: "white" },
-  "Livewire": { color: "#4E56A6", textColor: "white" },
-  "Bootstrap": { color: "#7952B3", textColor: "white" },
-  "Bulma": { color: "#00D1B2", textColor: "white" },
-  "DevIcons": { color: "#000000", textColor: "white" },
-  "Sanctum": { color: "#4E56A6", textColor: "white" },
-  "Swagger": { color: "#85EA2D", textColor: "black" },
-  "MongoDB": { color: "#47A248", textColor: "white" },
-  "Electron": { color: "#47848F", textColor: "white" },
-  "Arduino": { color: "#00979D", textColor: "white" },
-  "C++": { color: "#00599C", textColor: "white" },
-  "PyQt5": { color: "#41CD52", textColor: "black" },
-  "Json-Server": { color: "#D7263D", textColor: "white" },
-  "Firebase": { color: "#FFCA28", textColor: "black" },
-  "MySQL": { color: "#4479A1", textColor: "white" },
-  "Gunicorn": { color: "#499848", textColor: "white" },
-  "Discord.py": { color: "#FFD43B", textColor: "black" },
-  "Blade": { color: "#F7523F", textColor: "white" },
-  "Node.js": { color: "#339933", textColor: "white" },
-  "Chart.js": { color: "#FF6384", textColor: "white" },
-  "Ionic": { color: "#3880FF", textColor: "white" },
-  "Angular": { color: "#DD0031", textColor: "white" },
-};
+import Background from "../../assets/img/background.jpg";
+import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-03.png";
 
 type Tag = {
   name: string;
-  color?: string;
-  textColor?: string;
 };
 
 type Project = {
@@ -84,41 +37,34 @@ type Project = {
   githubUrl?: string | null;
 };
 
-function styleTag(tag: Tag): Tag {
-  const style = tagStyles[tag.name];
-  return style
-    ? { ...tag, color: style.color, textColor: style.textColor }
-    : { ...tag, color: "#e5e7eb", textColor: "black" };
-}
-
 const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
   {
     slug: 'esp8266-labs',
     image: ESP8266Labs,
-    tags: [styleTag({ name: "Arduino" }), styleTag({ name: "C++" })],
+    tags: [{ name: "Arduino" }, { name: "C++" }],
     githubUrl: 'https://github.com/AstronautMarkus/ESP8266-Labs',
   },
   {
     slug: 'turnomaster',
     image: TurnoMaster,
     tags: [
-      styleTag({ name: "React" }),
-      styleTag({ name: "TailwindCSS" }),
-      styleTag({ name: "Laravel" }),
-      styleTag({ name: "MySQL" }),
-      styleTag({ name: "Chart.js" }),
-      styleTag({ name: "Axios" })
+      { name: "React" },
+      { name: "TailwindCSS" },
+      { name: "Laravel" },
+      { name: "MySQL" },
+      { name: "Chart.js" },
+      { name: "Axios" }
     ],
   },
   {
     slug: 'fumoindex',
     image: FumoIndex,
     tags: [
-      styleTag({ name: "React" }),
-      styleTag({ name: "TypeScript" }),
-      styleTag({ name: "Laravel" }),
-      styleTag({ name: "MySQL" }),
-      styleTag({ name: "Tailwind CSS" })
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Laravel" },
+      { name: "MySQL" },
+      { name: "Tailwind CSS" }
     ],
     githubUrl: 'https://github.com/astronautmarkus/fumoindex',
   },
@@ -126,9 +72,9 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'abbybot-project',
     image: AbbyBotProject,
     tags: [
-      styleTag({ name: "Discord.py" }),
-      styleTag({ name: "Python" }),
-      styleTag({ name: "MySQL" })
+      { name: "Discord.py" },
+      { name: "Python" },
+      { name: "MySQL" }
     ],
     githubUrl: 'https://github.com/AbbyBot/Discord-AbbyBot',
   },
@@ -136,11 +82,11 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'blog-astronautmarkus',
     image: BlogAstronautMarkus,
     tags: [
-      styleTag({ name: "Laravel" }),
-      styleTag({ name: "Blade" }),
-      styleTag({ name: "Tailwind CSS" }),
-      styleTag({ name: "MySQL" }),
-      styleTag({ name: "PHP" })
+      { name: "Laravel" },
+      { name: "Blade" },
+      { name: "Tailwind CSS" },
+      { name: "MySQL" },
+      { name: "PHP" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/blog.astronautmarkus.dev',
   },
@@ -148,12 +94,12 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'abbybot-project-website',
     image: AbbyBotProjectWebsite,
     tags: [
-      styleTag({ name: "Flask" }),
-      styleTag({ name: "Python" }),
-      styleTag({ name: "Bootstrap" }),
-      styleTag({ name: "MySQL" }),
-      styleTag({ name: "Gunicorn" }),
-      styleTag({ name: "Docker" })
+      { name: "Flask" },
+      { name: "Python" },
+      { name: "Bootstrap" },
+      { name: "MySQL" },
+      { name: "Gunicorn" },
+      { name: "Docker" }
     ],
     githubUrl: 'https://github.com/AbbyBot/AbbyBot-Website',
   },
@@ -161,11 +107,11 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'multi-stock-sync',
     image: MultiStockSync,
     tags: [
-      styleTag({ name: "React" }),
-      styleTag({ name: "Node.js" }),
-      styleTag({ name: "Bootstrap" }),
-      styleTag({ name: "Chart.js" }),
-      styleTag({ name: "Axios" })
+      { name: "React" },
+      { name: "Node.js" },
+      { name: "Bootstrap" },
+      { name: "Chart.js" },
+      { name: "Axios" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-Sync',
   },
@@ -173,10 +119,10 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'multi-stock-sync-back',
     image: MultiStockSyncBack,
     tags: [
-      styleTag({ name: "Laravel" }),
-      styleTag({ name: "Sanctum" }),
-      styleTag({ name: "MySQL" }),
-      styleTag({ name: "PHP" })
+      { name: "Laravel" },
+      { name: "Sanctum" },
+      { name: "MySQL" },
+      { name: "PHP" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-Sync-Back',
   },
@@ -184,8 +130,8 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'multi-stock-sync-api-viewer',
     image: MultiStockSyncApiViewer,
     tags: [
-      styleTag({ name: "Laravel" }),
-      styleTag({ name: "Swagger" })
+      { name: "Laravel" },
+      { name: "Swagger" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/Multi-Stock-API-Viewer',
   },
@@ -193,19 +139,19 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'mofustore',
     image: MofuStore,
     tags: [
-      styleTag({ name: "Python" }),
-      styleTag({ name: "Django" }),
-      styleTag({ name: "Bootstrap" }),
-      styleTag({ name: "MySQL" })
+      { name: "Python" },
+      { name: "Django" },
+      { name: "Bootstrap" },
+      { name: "MySQL" }
     ],
   },
   {
     slug: 'camellosfood-repartidor',
     image: CamellosFoodRepartidor,
     tags: [
-      styleTag({ name: "Ionic" }),
-      styleTag({ name: "Angular" }),
-      styleTag({ name: "Django" })
+      { name: "Ionic" },
+      { name: "Angular" },
+      { name: "Django" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/CamellosFood-Repartidor-3.0',
   },
@@ -213,9 +159,9 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'constru-mic',
     image: ConstruMic,
     tags: [
-      styleTag({ name: "Django" }),
-      styleTag({ name: "Bootstrap" }),
-      styleTag({ name: "MySQL" })
+      { name: "Django" },
+      { name: "Bootstrap" },
+      { name: "MySQL" }
     ],
     githubUrl: 'https://github.com/MarcosKingsDuoc/CONSTRU_MIC',
   },
@@ -223,8 +169,8 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'mofulunches-web',
     image: MofuLunchesWeb,
     tags: [
-      styleTag({ name: "Flask" }),
-      styleTag({ name: "Bootstrap" })
+      { name: "Flask" },
+      { name: "Bootstrap" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-Web',
   },
@@ -232,9 +178,9 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'mofulunches-api',
     image: MofuLunchesApi,
     tags: [
-      styleTag({ name: "Python" }),
-      styleTag({ name: "Flask" }),
-      styleTag({ name: "MongoDB" })
+      { name: "Python" },
+      { name: "Flask" },
+      { name: "MongoDB" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-API',
   },
@@ -242,9 +188,9 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'mofulunches-totem',
     image: MofuLunchesTotem,
     tags: [
-      styleTag({ name: "Electron" }),
-      styleTag({ name: "Arduino" }),
-      styleTag({ name: "React" })
+      { name: "Electron" },
+      { name: "Arduino" },
+      { name: "React" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-Totem',
   },
@@ -252,8 +198,8 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'mofulunches-eldimon',
     image: MofuLunchesElDimon,
     tags: [
-      styleTag({ name: "Arduino" }),
-      styleTag({ name: "C++" })
+      { name: "Arduino" },
+      { name: "C++" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-ElDimon',
   },
@@ -261,8 +207,8 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
     slug: 'mofulunches-listener',
     image: MofuLunchesElDimonListener,
     tags: [
-      styleTag({ name: "Python" }),
-      styleTag({ name: "PyQt5" })
+      { name: "Python" },
+      { name: "PyQt5" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-ElDimon_Listener',
   }
@@ -271,6 +217,35 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
 
 function Projects() {
   const { t } = useI18n();
+
+  const fullText = t("projects.title");
+  const [typedText, setTypedText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    let typingTimeout: ReturnType<typeof setTimeout>;
+    let cursorInterval: ReturnType<typeof setInterval>;
+
+    if (typedText.length < fullText.length) {
+      typingTimeout = setTimeout(() => {
+        setTypedText(fullText.slice(0, typedText.length + 1));
+      }, 90);
+    } else {
+      cursorInterval = setInterval(() => {
+        setShowCursor((prev) => !prev);
+      }, 500);
+    }
+
+    return () => {
+      clearTimeout(typingTimeout);
+      clearInterval(cursorInterval);
+    };
+  }, [typedText, fullText]);
+
+  useEffect(() => {
+    setTypedText("");
+    setShowCursor(true);
+  }, [fullText]);
 
   // Merge meta with translations
   const projects = projectsMeta.map(meta => ({
@@ -287,30 +262,87 @@ function Projects() {
         description={t("projects.seo_description")}
         keywords={t("projects.seo_keywords")}
       />
-      <div className="bg-white">
-        <div className="container mx-auto px-4 sm:px-6 py-16">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-          >
-            <h1 className="text-4xl font-bold text-rose-700 mb-4 mt-12">{t("projects.title")}</h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t("projects.description")}
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <section className="relative min-h-screen flex justify-center pt-32">
+                <img
+                    src={Background}
+                    alt="background"
+                    className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none select-none"
+                    aria-hidden="true"
+                />
+                <div className="absolute inset-0 bg-black/30 backdrop-blur-sm pointer-events-none z-10" />
+
+                <div className="relative z-20 w-full max-w-6xl px-4 sm:px-6 flex flex-col items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center w-full mb-10 md:mb-16">
+
+                        <motion.div
+                            className="order-1 md:order-1 flex flex-col items-center justify-center w-full"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <div className="relative flex justify-center md:justify-end w-full">
+                                <img
+                                    src={AstronautMarkus}
+                                    alt="AstronautMarkus"
+                                    className="w-60 h-60 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] pointer-events-none bg-transparent drop-shadow-2xl"
+                                    style={{ objectFit: "contain" }}
+                                />
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            className="order-2 md:order-2 flex flex-col justify-center items-center md:items-start text-center md:text-left w-full"
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0.3 }}
+                        >
+                            <motion.h1
+                                className="flex flex-col items-center md:items-start gap-2 text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-5 md:mb-8 mt-4 sm:mt-6 drop-shadow-lg"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.3 }}
+                            >
+                                <span>
+                                    {typedText}
+                                    <span
+                                        style={{
+                                            opacity: showCursor ? 1 : 0,
+                                            transition: "opacity 0.2s",
+                                            color: "#9e28deff",
+                                            fontWeight: "bold"
+                                        }}
+                                    >
+                                        |
+                                    </span>
+                                </span>
+                            </motion.h1>
+                            <motion.p
+                                className="text-base sm:text-lg md:text-xl text-white/80 max-w-md sm:max-w-xl mb-6 md:mb-8 drop-shadow"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.5 }}
+                            >
+                                {t('projects.description')}
+                            </motion.p>
+                        </motion.div>
+                    </div>
+                </div>
+          </section>
+
+      <div className="bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B]">
+        <div className="container mx-auto px-4 sm:px-6 py-16">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {projects.map((project, idx) => (
-              <motion.section
+              <motion.div
                 key={project.slug}
-                className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 flex flex-col"
-                initial={{ opacity: 0, y: 30 }}
+                className="rounded-xl border-2 border-[#a084ee] bg-gradient-to-br from-[#251a3a]/70 to-[#1e1b3a]/80 shadow-lg p-7 flex flex-col hover:shadow-purple-700/40 transition-shadow duration-300 hover:scale-105 transition-transform"
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 + idx * 0.2 }}
+                transition={{ duration: 0.6, delay: 0.3 + idx * 0.1 }}
               >
-                <div className="h-56 bg-gray-100 flex items-center justify-center border-b border-gray-200">
+                <div className="h-48 bg-gray-100 flex items-center justify-center border-2 border-[#a084ee] mb-4 rounded-lg overflow-hidden">
                   {project.image ? (
                     <img
                       src={project.image}
@@ -321,44 +353,33 @@ function Projects() {
                     <span className="text-gray-400 text-lg">{t("projects.no_image")}</span>
                   )}
                 </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">{project.title} ({project.year})</h2>
-                  <p className="text-gray-600 mb-4 text-base flex-1">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag.name}
-                        className="px-3 py-1 text-xs font-semibold rounded-full"
-                        style={{
-                          backgroundColor: tag.color,
-                          color: tag.textColor
-                        }}
-                      >
-                        {tag.name}
-                      </span>
-                    ))}
-                  </div>
-                  {project.githubUrl ? (
+                <h2 className="text-xl font-bold text-[#a084ee] mb-2">{project.title} <span className="text-[#eaddff] font-normal">({project.year})</span></h2>
+                <p className="text-[#eaddff] mb-4 text-base flex-1">{project.description}</p>
+                <ul className="list-disc ml-6 text-[#eaddff] space-y-1 mb-4">
+                  {project.tags.map((tag) => (
+                    <li key={tag.name} className="text-base">{tag.name}</li>
+                  ))}
+                </ul>
+                {project.githubUrl ? (
                     <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cursor-pointer inline-flex items-center justify-center gap-2 px-3 py-2 bg-rose-700 text-white rounded-lg font-semibold shadow hover:bg-rose-800 transition hover:scale-105 transform duration-300 mt-auto w-fit mx-auto"
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-purple-700 text-white rounded-full font-semibold shadow-lg hover:bg-purple-800 transition hover:scale-105 transform duration-300 mt-4 mx-auto justify-center"
                     >
-                      {t("projects.view_details")}
-                      <ChevronRight size={18} />
+                    {t("projects.view_details")}
+                    <ChevronRight size={18} />
                     </a>
-                  ) : (
-                    <button
-                      disabled
-                      className="inline-flex items-center justify-center gap-2 px-3 py-2 bg-gray-300 text-gray-500 rounded-lg font-semibold shadow mt-auto w-fit mx-auto cursor-not-allowed"
-                    >
-                      {t("projects.private_repo")}
-                      <LockIcon size={18} />
-                    </button>
-                  )}
-                </div>
-              </motion.section>
+                ) : (
+                  <button
+                    disabled
+                    className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gray-300 text-gray-500 rounded-full font-semibold shadow mt-4 mx-auto cursor-not-allowed"
+                  >
+                    {t("projects.private_repo")}
+                    <LockIcon size={18} />
+                  </button>
+                )}
+              </motion.div>
             ))}
           </div>
         </div>
