@@ -190,6 +190,10 @@
       "IMG_4135": {
         "title": "The same I2C LCD weather forecast project but with an ESP8266",
         "description": "I recreated the weather forecast project using an ESP8266 instead of an Arduino Uno. The ESP8266 allows for Wi-Fi connectivity, so I added features to fetch weather data from the internet and display it on the I2C LCD. Personally, I prefer using the ESP8266 over the ESP32 for simpler projects."
+      },
+      "IMG_4227": {
+        "title": "My Degree Certificate",
+        "description": "After 3 years of hard work (and dealing with uncooperative people), I finally graduated as a Computer Programming Analyst from Duoc UC institute. This certificate gives me a lot to think about. It's not that it excites me or matters too much, but in the early semesters I had pretty average grades and uncommitted teams, to be honest. However, in the last semesters I became more self-sufficient and had better teams, managing to pass with the highest grades, literally. Interestingly, my first grade in the program was a 1.0 due to an anxiety attack, and my final portfolio grade was a 7.0, the highest grade in Chile."
       }
     }
   }

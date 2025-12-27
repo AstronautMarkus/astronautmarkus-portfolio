@@ -190,6 +190,10 @@
       "IMG_4135": {
         "title": "El mismo proyecto de clima con LCD I2C pero con ESP8266",
         "description": "Recreé el proyecto de pronóstico del clima usando un ESP8266 en vez de un Arduino Uno. El ESP8266 permite conectividad Wi-Fi, así que agregué funciones para obtener datos del clima de internet y mostrarlos en la LCD I2C. Personalmente, prefiero usar el ESP8266 sobre el ESP32 para proyectos simples."
+      },
+      "IMG_4227": {
+        "title": "Mi Certificado de Título",
+        "description": "Después de 3 años de trabajo duro (y lidiar con personas poco colaborativas), finalmente me gradué como Analista Programador Computacional en el instituto Duoc UC. Este certificado me deja mucho en qué pensar. No es que me emocione o importe demasiado, pero en los primeros semestres tuve calificaciones bastante regulares y equipos poco comprometidos, para ser honesto. Sin embargo, en los últimos semestres me volví más autosuficiente y tuve mejores equipos, logrando aprobar con las notas más altas, literalmente. Curiosamente, mi primera nota en la carrera fue un 1.0 debido a un ataque de ansiedad, y mi última nota de portafolio de título fue un 7.0, la calificación más alta en Chile."
       }
     }
   }

@@ -111,6 +111,16 @@ export const useGalleryList = (): GalleryItem[] => {
             creation_date: "2025-11-18T19:50:39",
             width: 1536,
             height: 2048
-        }
+        },
+        {
+            id: "IMG_4227",
+            filename: "IMG_4227.JPEG",
+            path: "gallery_images/IMG_4227.JPEG",
+            type: "MPO",
+            size_kb: 789.17,
+            creation_date: "2025-11-26T15:50:58",
+            width: 1536,
+            height: 2048
+        },
     ];
 };
