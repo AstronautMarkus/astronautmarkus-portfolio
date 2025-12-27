@@ -18,7 +18,7 @@ function Footer() {
     };
 
     return (
-        <footer className="bg-[#101014] px-6 md:px-16 lg:px-24 xl:px-32 relative overflow-visible">
+        <footer className="bg-gradient-to-b from-[#111111] via-[#181818] to-[#111111] shadow px-6 md:px-16 lg:px-24 xl:px-32 relative overflow-visible">
             <div
                 className="hidden md:block absolute -top-48 right-10 z-20 transition-all"
                 style={{ pointerEvents: "auto" }}
@@ -71,7 +71,7 @@ function Footer() {
                 <div className="w-full md:w-auto flex justify-end mt-6 md:mt-0">
                     <button
                         onClick={handleBackToTop}
-                        className="bg-rose-700 hover:bg-rose-800 text-white font-semibold py-2 px-4 rounded-full transition cursor-pointer"
+                        className="bg-purple-700 text-white hover:bg-purple-800 text-white font-semibold py-2 px-4 rounded-full transition cursor-pointer"
                     >
                         <ChevronUp className="inline-block w-4 h-4 mr-2" />
                         {t("footer.back_to_top")}
@@ -79,7 +79,7 @@ function Footer() {
                 </div>
             </div>
             <p className="py-4 text-center text-sm md:text-base text-gray-500/80">
-                Copyright {year} © AstronautMarkusDev {t("footer.rights")} | {t("footer.made_with")} <Heart className="inline-block w-4 h-4 text-rose-700" /> {t("footer.by")} Marcos Reyes
+                Copyright {year} © AstronautMarkusDev {t("footer.rights")} | {t("footer.made_with")} <Heart className="inline-block w-4 h-4 text-purple-700" /> {t("footer.by")} Marcos Reyes
             </p>
         </footer>
     );

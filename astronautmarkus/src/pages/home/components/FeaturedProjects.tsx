@@ -67,7 +67,7 @@ const FeaturedProjects: React.FC = () => {
   const { t } = useI18n();
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B]">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-12"
@@ -75,8 +75,8 @@ const FeaturedProjects: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-4">{t('home.featured_projects')}</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-[#a084ee] mb-2">{t('home.featured_projects')}</h2>
+          <p className="text-lg text-[#eaddff] max-w-2xl mx-auto">
             {t('home.featured_projects_description')}
           </p>
         </motion.div>
@@ -90,12 +90,13 @@ const FeaturedProjects: React.FC = () => {
           {projects.map((project, idx) => (
             <motion.div
               key={project.slug}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
+              className="rounded-xl border-2 border-[#a084ee] bg-gradient-to-br from-[#251a3a]/70 to-[#1e1b3a]/80 shadow-lg p-7
+                hover:shadow-purple-700/40 transition-shadow duration-300 hover:scale-105 transition-transform flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 + idx * 0.1 }}
             >
-              <div className="h-48 bg-gray-100 flex items-center justify-center border-b border-gray-200">
+              <div className="w-full aspect-[16/9] bg-gray-100 flex items-center justify-center border-2 border-[#a084ee] mb-6 rounded-lg overflow-hidden">
                 {project.image ? (
                   <img
                     src={project.image}
@@ -104,24 +105,13 @@ const FeaturedProjects: React.FC = () => {
                   />
                 ) : null}
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{t(project.titleKey)}</h3>
-                <p className="text-gray-600 mb-4">{t(project.descriptionKey)}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag.name}
-                      className="px-3 py-1 text-xs font-semibold rounded-full"
-                      style={{
-                        backgroundColor: tag.color,
-                        color: tag.textColor || "white"
-                      }}
-                    >
-                      {tag.name}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-[#a084ee] mb-4">{t(project.titleKey)}</h3>
+              <p className="text-[#eaddff] mb-4">{t(project.descriptionKey)}</p>
+              <ul className="list-disc ml-6 text-[#eaddff] space-y-2">
+                {project.tags.map((tag) => (
+                  <li key={tag.name} className="text-base">{tag.name}</li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </motion.div>
@@ -134,7 +124,7 @@ const FeaturedProjects: React.FC = () => {
         >
           <Link
             to="/projects"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-rose-700 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-800 transition hover:scale-105 transform duration-300"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-purple-700 text-white rounded-full font-semibold shadow-lg hover:bg-purple-800 transition hover:scale-105 transform duration-300"
           >
             <Code size={20} />
             {t('home.view_all_projects')}

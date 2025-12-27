@@ -62,9 +62,6 @@ function Header() {
                     <Link to="/projects" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
                         <Code size={18} /> {t('header.projects')}
                     </Link>
-                    <Link to="/tech-stack" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
-                        <Code size={18} /> {t('header.techStack')}
-                    </Link>
                     <Link to="/contact" className={`flex items-center gap-2 transition-colors font-semibold ${iconTextClass}`}>
                         <Mail size={18} /> {t('header.contact')}
                     </Link>
@@ -108,50 +105,43 @@ function Header() {
             </header>
 
             <div
-                className={`fixed top-16 left-0 w-full bg-white transition-transform duration-300 z-40 md:hidden ${
+                className={`fixed top-16 left-0 w-full transition-transform duration-300 z-40 md:hidden ${
                     navOpen ? "translate-y-0" : "-translate-y-full"
-                }`}
+                } bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B]`}
                 style={{ height: "calc(100vh - 64px)" }}
             >
                 <div className="flex flex-col gap-4 px-6 py-8">
                     <Link
                         to="/about-me"
-                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium text-purple-200 hover:text-white`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <User size={20} /> {t('header.aboutMe')}
+                        <User size={20} className="text-purple-400 group-hover:text-white" /> {t('header.aboutMe')}
                     </Link>
                     <Link
                         to="/projects"
-                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium text-purple-200 hover:text-white`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <Code size={20} /> {t('header.projects')}
-                    </Link>
-                    <Link
-                        to="/tech-stack"
-                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
-                        onClick={() => setNavOpen(false)}
-                    >
-                        <Code size={20} /> {t('header.techStack')}
+                        <Code size={20} className="text-purple-400 group-hover:text-white" /> {t('header.projects')}
                     </Link>
                     <Link
                         to="/contact"
-                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium text-purple-200 hover:text-white`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <Mail size={20} /> {t('header.contact')}
+                        <Mail size={20} className="text-purple-400 group-hover:text-white" /> {t('header.contact')}
                     </Link>
                     <Link
                         to="/gallery"
-                        className={`flex items-center gap-2 transition-colors text-lg font-medium ${iconTextClass}`}
+                        className={`flex items-center gap-2 transition-colors text-lg font-medium text-purple-200 hover:text-white`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <GalleryThumbnails size={20} /> {t('header.gallery')}
+                        <GalleryThumbnails size={20} className="text-purple-400 group-hover:text-white" /> {t('header.gallery')}
                     </Link>
                     <button
                         onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all font-semibold text-lg ${blogBtnClass} hover:scale-105 transform duration-300 cursor-pointer`}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all font-semibold text-lg bg-white text-purple-700 hover:bg-purple-700 hover:text-white hover:scale-105 transform duration-300 cursor-pointer`}
                     >
                         <img
                             src={language === 'es' ? '/img/flags/spanish.svg' : '/img/flags/english.svg'}
@@ -164,10 +154,10 @@ function Header() {
                         href="https://blog.astronautmarkus.dev"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center gap-2 px-4 py-2 rounded-full transition-colors font-semibold text-lg ${blogBtnClass}`}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-full transition-colors font-semibold text-lg bg-purple-700 text-white hover:bg-purple-800`}
                         onClick={() => setNavOpen(false)}
                     >
-                        <BookOpen size={20} /> {t('header.blog')}
+                        <BookOpen size={20} className="text-white" /> {t('header.blog')}
                     </a>
                 </div>
             </div>

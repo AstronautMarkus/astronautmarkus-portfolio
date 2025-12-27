@@ -35,7 +35,7 @@ const LastPosts: React.FC = () => {
 
   if (loading)
     return (
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B]">
         <div className="container mx-auto px-4 sm:px-6 flex flex-col items-center justify-center min-h-[200px]">
           <motion.div
             className="flex flex-col items-center"
@@ -56,7 +56,7 @@ const LastPosts: React.FC = () => {
 
   if (!posts.length)
     return (
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B]">
         <div className="container mx-auto px-4 sm:px-6 flex flex-col items-center justify-center min-h-[200px]">
           <motion.div
             className="flex flex-col items-center"
@@ -87,7 +87,7 @@ const LastPosts: React.FC = () => {
     );
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B]">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-12"
@@ -95,8 +95,8 @@ const LastPosts: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-rose-700 mb-4">{t("home.latest_posts")}</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-[#a084ee] mb-2">{t("home.latest_posts")}</h2>
+          <p className="text-lg text-[#eaddff] max-w-2xl mx-auto">
             {t("home.latest_posts_description")}
           </p>
         </motion.div>
@@ -110,28 +110,31 @@ const LastPosts: React.FC = () => {
           {posts.map((post, index) => (
             <motion.div
               key={post.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
+              className="rounded-xl border-2 border-[#a084ee] bg-gradient-to-br from-[#251a3a]/70 to-[#1e1b3a]/80 shadow-lg p-7
+                hover:shadow-purple-700/40 transition-shadow duration-300 hover:scale-105 transition-transform flex flex-col"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
             >
-              <img
-                src={post.image_url}
-                alt={post.title}
-                className="h-48 w-full object-cover pointer-events-none"
-              />
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 truncate">
+              <div className="w-full aspect-[16/9] bg-gray-100 flex items-center justify-center border-2 border-[#a084ee] mb-6 rounded-lg overflow-hidden">
+                <img
+                  src={post.image_url}
+                  alt={post.title}
+                  className="w-full h-full object-cover pointer-events-none"
+                />
+              </div>
+              <div className="flex-1 flex flex-col">
+                <h3 className="text-xl font-bold text-[#a084ee] mb-2 truncate">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 mb-4 line-clamp-2">
+                <p className="text-[#eaddff] mb-4 line-clamp-2">
                   {post.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-2">
                   {post.tags.slice(0, 4).map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-rose-100 text-rose-800 text-xs rounded-full"
+                      className="px-3 py-1 text-[#a084ee] font-semibold text-xs border-2 border-[#a084ee] rounded-full"
                     >
                       {t("home.post_tag_prefix")}{tag}
                     </span>
@@ -140,7 +143,7 @@ const LastPosts: React.FC = () => {
                 <div className="mt-4 justify-center flex">
                   <Link
                     to={post.url}
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-rose-700 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-800 transition hover:scale-105 transform duration-300 mt-4"
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-purple-700 text-white rounded-full font-semibold shadow-lg hover:bg-purple-800 transition hover:scale-105 transform duration-300 mt-4"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -161,7 +164,7 @@ const LastPosts: React.FC = () => {
         >
           <a
             href={API_URL}
-            className="inline-flex items-center gap-2 px-8 py-3 bg-rose-700 text-white rounded-lg font-semibold shadow-lg hover:bg-rose-800 transition hover:scale-105 transform duration-300"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-purple-700 text-white rounded-full font-semibold shadow-lg hover:bg-purple-800 transition hover:scale-105 transform duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
