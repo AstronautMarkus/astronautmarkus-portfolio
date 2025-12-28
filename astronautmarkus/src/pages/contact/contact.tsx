@@ -145,7 +145,7 @@ function Contact() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.5 }}
                             >
-                                Let's connect! You can reach me through any of the platforms below. I'm always open to new opportunities, collaborations, or just a friendly chat.
+                                {t("contact.subtitle")}
                             </motion.p>
                         </motion.div>
                     </div>
