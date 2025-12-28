@@ -6,11 +6,10 @@ import { useI18n } from "../../../context/i18n";
 import MultiStockSync from "../../../assets/img/projects/multi-stock-sync.png";
 import MofuLunchesWeb from "../../../assets/img/projects/mofu-lunches-web.jpg";
 import TurnoMaster from "../../../assets/img/projects/turnomaster.png";
+import ReyesAndFriends from "../../../assets/img/projects/reyesandfriends-app.jpg";
 
 type Tag = {
   name: string;
-  color: string;
-  textColor?: string;
 };
 
 type Project = {
@@ -23,16 +22,30 @@ type Project = {
 
 const projects: Project[] = [
   {
+    titleKey: "home.project_reyesandfriends_title",
+    descriptionKey: "home.project_reyesandfriends_description",
+    image: ReyesAndFriends,
+    tags: [
+      { name: "React" },
+      { name: "TailwindCSS" },
+      { name: "Laravel" },
+      { name: "MySQL" },
+      { name: "Docker" }
+    ],
+    slug: "reyesandfriends",
+  },
+  {
     titleKey: "home.project_multi_stock_sync_title",
     descriptionKey: "home.project_multi_stock_sync_description",
     image: MultiStockSync,
     tags: [
-      { name: "React", color: "#61DAFB", textColor: "black" },
-      { name: "Bootstrap", color: "#7952B3", textColor: "white" },
-      { name: "Laravel", color: "#FF2D20", textColor: "white" },
-      { name: "MySQL", color: "#4479A1", textColor: "white" },
-      { name: "Chart.js", color: "#FF6384", textColor: "black" },
-      { name: "Axios", color: "#5A29E4", textColor: "white" }
+      { name: "React" },
+      { name: "Bootstrap" },
+      { name: "Laravel" },
+      { name: "MySQL" },
+      { name: "Chart.js" },
+      { name: "Axios" },
+      { name: "Docker" }
     ],
     slug: "multi-stock-sync",
   },
@@ -41,9 +54,10 @@ const projects: Project[] = [
     descriptionKey: "home.project_mofu_lunches_web_description",
     image: MofuLunchesWeb,
     tags: [
-      { name: "Flask", color: "#151515ff", textColor: "white" },
-      { name: "Bootstrap", color: "#7952B3", textColor: "white" },
-      { name: "MongoDB", color: "#47A248", textColor: "white" }
+      { name: "Flask" },
+      { name: "Bootstrap" },
+      { name: "MongoDB" },
+      { name: "Docker" }
     ],
     slug: "mofu-lunches-web",
   },
@@ -52,12 +66,13 @@ const projects: Project[] = [
     descriptionKey: "home.project_turnomaster_description",
     image: TurnoMaster,
     tags: [
-      { name: "React", color: "#61DAFB", textColor: "black" },
-      { name: "TailwindCSS", color: "#06B6D4", textColor: "white" },
-      { name: "Laravel", color: "#FF2D20", textColor: "white" },
-      { name: "MySQL", color: "#4479A1", textColor: "white" },
-      { name: "Chart.js", color: "#FF6384", textColor: "black" },
-      { name: "Axios", color: "#5A29E4", textColor: "white" }
+      { name: "React" },
+      { name: "TailwindCSS" },
+      { name: "Laravel" },
+      { name: "MySQL" },
+      { name: "Chart.js" },
+      { name: "Axios" },
+      { name: "Docker" }
     ],
     slug: "turnomaster",
   },

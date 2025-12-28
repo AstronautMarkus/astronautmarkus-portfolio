@@ -20,6 +20,8 @@ import MofuLunchesTotem from "../../assets/img/projects/mofulunches-totem.jpg";
 import MofuLunchesElDimon from "../../assets/img/projects/mofulunches-eldimon.jpg";
 import MofuLunchesElDimonListener from "../../assets/img/projects/mofulunches-eldimon-listener.jpg";
 import ESP8266Labs from "../../assets/img/projects/esp8266-labs.png";
+import ReyesAndFriendsApp from "../../assets/img/projects/reyesandfriends-app.jpg";
+
 import Background from "../../assets/img/background.jpg";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-03.png";
 
@@ -211,6 +213,18 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
       { name: "PyQt5" }
     ],
     githubUrl: 'https://github.com/AstronautMarkus/MofuLunches-ElDimon_Listener',
+  },
+  {
+    slug: 'reyesandfriends-app',
+    image: ReyesAndFriendsApp,
+    tags: [
+      { name: "React" },
+      { name: "Tailwind CSS" },
+      { name: "Flask" },
+      { name: "Docker" },
+      { name: "MySQL" }
+    ],
+    githubUrl: 'https://github.com/reyesandfriends/reyesandfriends-app',
   }
 ];
 

@@ -32,6 +32,8 @@
     "featured_projects_description": "Here are some of my recent projects that showcase my skills in full-stack development and systems administration.",
     "project_multi_stock_sync_title": "Multi Stock Sync",
     "project_multi_stock_sync_description": "Web platform to manage businesses in POS format with direct implementation to MercadoLibre, inventory functions, business, receipts, etc.",
+    "project_reyesandfriends_title": "Reyes&Friends",
+    "project_reyesandfriends_description": "Website from Reyes&Friends page built with React, Tailwind CSS, backend with Flask MySQL and Docker.",
     "project_mofu_lunches_web_title": "Mofu Lunches Web",
     "project_mofu_lunches_web_description": "Administrative web platform for managing food requests in companies, with multiple services and API Gateway for links with digital totems.",
     "project_turnomaster_title": "TurnoMaster",
@@ -165,6 +167,11 @@
         "title": "Mofu Lunches ElDimon Listener",
         "description": "Listener for Mofu Lunches built with Python and PyQt5.",
         "year": 2024
+      },
+      "reyesandfriends-app": {
+        "title": "Reyes&Friends",
+        "description": "Website from Reyes&Friends page built with React, Tailwind CSS, backend with Flask MySQL and Docker.",
+        "year": 2025
       }
     }
   },
