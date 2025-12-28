@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SeoHelmet from '../../utils/SeoHelmet';
 import { useI18n } from '../../context/i18n';
 import Background from '../../assets/img/background.jpg';
-import AstronautMarkus from '../../assets/img/astronautmarkus/AstronautMarkus-01.png';
+import AstronautMarkus from '../../assets/img/astronautmarkus/AstronautMarkus-04.png';
 
 function Gallery() {
     const galleryItems = useGalleryList();
