@@ -8,6 +8,8 @@ import MofuLunchesWeb from "../../../assets/img/projects/mofu-lunches-web.jpg";
 import TurnoMaster from "../../../assets/img/projects/turnomaster.png";
 import ReyesAndFriends from "../../../assets/img/projects/reyesandfriends-app.jpg";
 import ReyesHosting from "../../../assets/img/projects/reyeshosting.jpg";
+import { useState } from "react";
+import { ImageModal } from "../../gallery/Gallery";
 
 type Tag = {
   name: string;
@@ -95,6 +97,7 @@ const projects: Project[] = [
 
 const FeaturedProjects: React.FC = () => {
   const { t } = useI18n();
+  const [modalImg, setModalImg] = useState<string | null>(null);
 
   return (
     <section className="py-16 bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B]">
@@ -126,7 +129,12 @@ const FeaturedProjects: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 + idx * 0.1 }}
             >
-              <div className="w-full aspect-[16/9] bg-gray-100 flex items-center justify-center border-2 border-[#a084ee] mb-6 rounded-lg overflow-hidden">
+              <div
+                className="w-full aspect-[16/9] bg-gray-100 flex items-center justify-center border-2 border-[#a084ee] mb-6 rounded-lg overflow-hidden cursor-pointer"
+                onClick={() => setModalImg(project.image)}
+                title={t("home.expand_image")}
+                style={{ userSelect: "none" }}
+              >
                 {project.image ? (
                   <img
                     src={project.image}
@@ -160,6 +168,13 @@ const FeaturedProjects: React.FC = () => {
             {t('home.view_all_projects')}
           </Link>
         </motion.div>
+
+        <ImageModal
+          open={!!modalImg}
+          src={modalImg || ""}
+          alt={t("home.featured_projects")}
+          onClose={() => setModalImg(null)}
+        />
       </div>
     </section>
   );

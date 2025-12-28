@@ -7,6 +7,57 @@ import { useI18n } from '../../context/i18n';
 import Background from '../../assets/img/background.jpg';
 import AstronautMarkus from '../../assets/img/astronautmarkus/AstronautMarkus-04.png';
 
+
+// Reusable ImageModal component
+export function ImageModal({
+    open,
+    src,
+    alt,
+    onClose,
+}: {
+    open: boolean;
+    src: string;
+    alt?: string;
+    onClose: () => void;
+}) {
+    if (!open) return null;
+    return (
+        <AnimatePresence>
+            <motion.div
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+                onClick={onClose}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.35 }}
+            >
+                <button
+                    className="fixed top-6 right-8 z-60 text-white hover:text-[#a084ee] text-4xl font-bold transition-colors flex items-center justify-center cursor-pointer"
+                    onClick={onClose}
+                    aria-label="Close"
+                    style={{ textShadow: '0 2px 8px #000' }}
+                >
+                    <X size={40} strokeWidth={2.5} />
+                </button>
+                <motion.div
+                    className="relative max-w-3xl w-full mx-4 p-0"
+                    onClick={e => e.stopPropagation()}
+                    initial={{ opacity: 0, scale: 0.95, y: 40 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: 40 }}
+                    transition={{ duration: 0.35 }}
+                >
+                    <img
+                        src={src}
+                        alt={alt}
+                        className="w-full max-h-[80vh] object-contain rounded-lg"
+                    />
+                </motion.div>
+            </motion.div>
+        </AnimatePresence>
+    );
+}
+
 function Gallery() {
     const galleryItems = useGalleryList();
     const [selectedItem, setSelectedItem] = useState<null | typeof galleryItems[0]>(null);
@@ -274,41 +325,12 @@ function Gallery() {
                 </div>
             </div>
 
-            <AnimatePresence>
-                {selectedItem && (
-                    <motion.div
-                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
-                        onClick={closeModal}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.35 }}
-                    >
-                        <button
-                            className="fixed top-6 right-8 z-60 text-white hover:text-[#a084ee] text-4xl font-bold transition-colors flex items-center justify-center cursor-pointer"
-                            onClick={closeModal}
-                            aria-label="Close"
-                            style={{ textShadow: '0 2px 8px #000' }}
-                        >
-                            <X size={40} strokeWidth={2.5} />
-                        </button>
-                        <motion.div
-                            className="relative max-w-3xl w-full mx-4 p-0"
-                            onClick={e => e.stopPropagation()}
-                            initial={{ opacity: 0, scale: 0.95, y: 40 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.95, y: 40 }}
-                            transition={{ duration: 0.35 }}
-                        >
-                            <img
-                                src={selectedItem.path}
-                                alt={t('gallery.alt')}
-                                className="w-full max-h-[80vh] object-contain rounded-lg"
-                            />
-                        </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            <ImageModal
+                open={!!selectedItem}
+                src={selectedItem?.path || ""}
+                alt={t('gallery.alt')}
+                onClose={closeModal}
+            />
         </>
     );
 }

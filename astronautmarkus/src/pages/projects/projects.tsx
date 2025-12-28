@@ -25,6 +25,7 @@ import ReyesHosting from "../../assets/img/projects/reyeshosting.jpg";
 
 import Background from "../../assets/img/background.jpg";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-03.png";
+import { ImageModal } from "../gallery/Gallery";
 
 type Tag = {
   name: string;
@@ -247,6 +248,9 @@ function Projects() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
 
+  // Estado para imagen ampliada
+  const [modalImg, setModalImg] = useState<string | null>(null);
+
   useEffect(() => {
     let typingTimeout: ReturnType<typeof setTimeout>;
     let cursorInterval: ReturnType<typeof setInterval>;
@@ -367,7 +371,12 @@ function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 + idx * 0.1 }}
               >
-                <div className="h-48 bg-gray-100 flex items-center justify-center border-2 border-[#a084ee] mb-4 rounded-lg overflow-hidden">
+                <div
+                  className="h-48 bg-gray-100 flex items-center justify-center border-2 border-[#a084ee] mb-4 rounded-lg overflow-hidden cursor-pointer"
+                  onClick={() => project.image && setModalImg(project.image)}
+                  title={t("projects.expand_image")}
+                  style={{ userSelect: "none" }}
+                >
                   {project.image ? (
                     <img
                       src={project.image}
@@ -409,6 +418,12 @@ function Projects() {
           </div>
         </div>
       </div>
+      <ImageModal
+        open={!!modalImg}
+        src={modalImg || ""}
+        alt={t("projects.title")}
+        onClose={() => setModalImg(null)}
+      />
     </>
   );
 }
