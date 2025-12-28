@@ -7,6 +7,7 @@ import MultiStockSync from "../../../assets/img/projects/multi-stock-sync.png";
 import MofuLunchesWeb from "../../../assets/img/projects/mofu-lunches-web.jpg";
 import TurnoMaster from "../../../assets/img/projects/turnomaster.png";
 import ReyesAndFriends from "../../../assets/img/projects/reyesandfriends-app.jpg";
+import ReyesHosting from "../../../assets/img/projects/reyeshosting.jpg";
 
 type Tag = {
   name: string;
@@ -21,6 +22,20 @@ type Project = {
 };
 
 const projects: Project[] = [
+  {
+    titleKey: "home.project_reyeshosting_title",
+    descriptionKey: "home.project_reyeshosting_description",
+    image: ReyesHosting,
+    tags: [
+      { name: "Laravel" },
+      { name: "TailwindCSS" },
+      { name: "Blade" },
+      { name: "MySQL" },
+      { name: "Livewire" },
+      { name: "Webpay Implementation" }
+    ],
+    slug: "reyeshosting",
+  },
   {
     titleKey: "home.project_reyesandfriends_title",
     descriptionKey: "home.project_reyesandfriends_description",
