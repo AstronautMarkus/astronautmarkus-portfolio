@@ -21,6 +21,7 @@ import MofuLunchesElDimon from "../../assets/img/projects/mofulunches-eldimon.jp
 import MofuLunchesElDimonListener from "../../assets/img/projects/mofulunches-eldimon-listener.jpg";
 import ESP8266Labs from "../../assets/img/projects/esp8266-labs.png";
 import ReyesAndFriendsApp from "../../assets/img/projects/reyesandfriends-app.jpg";
+import ReyesHosting from "../../assets/img/projects/reyeshosting.jpg";
 
 import Background from "../../assets/img/background.jpg";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-03.png";
@@ -225,6 +226,16 @@ const projectsMeta: Omit<Project, "title" | "description" | "year">[] = [
       { name: "MySQL" }
     ],
     githubUrl: 'https://github.com/reyesandfriends/reyesandfriends-app',
+  },
+  {
+    slug: 'reyeshosting',
+    image: ReyesHosting,
+    tags: [
+      { name: "Laravel" },
+      { name: "Tailwind CSS" },
+      { name: "Livewire" },
+      { name: "MySQL" }
+    ],
   }
 ];
 
