@@ -1,144 +1,255 @@
-import { Mail, MapPin, Globe, Code, Server, Shield, Wrench } from "lucide-react"
-import BannerCard from "../../assets/img/banners/home_banner.jpg";
-import ProfilePicture from "../../assets/img/profile_picture.jpg";
 import { Link } from "react-router-dom";
-import { useI18n } from "../../contexts/i18nContext";
+import Background from "../../assets/img/background.jpg";
+import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-02.png";
+import ReyesAndFriends from "../../assets/img/icons/reyesandfriends.svg";
+import ProfilePic from "../../assets/img/profile.png";
+import { Github, Linkedin, Mail, Instagram, Code } from "lucide-react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { useI18n } from "../../context/i18n";
+
+
+import LastPosts from "./components/LastPosts";
+import UserStats from "./components/UserStats";
+import FeaturedProjects from "./components/FeaturedProjects";
+import SkillsArsenal from "./components/SkillsArsenal";
+
+
+import SeoHelmet from "../../utils/SeoHelmet";
 
 function Home() {
-  const { t } = useI18n()
 
-  return (
-    <div className="min-h-screen p-4">
-      <div className="w-full max-w-6xl mx-auto space-y-8">
+    const { t } = useI18n();
 
-        <div className="hidden md:block">
-          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src={BannerCard}
-              alt="Banner"
-              className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+    const fullText = "AstronautMarkusDev";
+    const [typedText, setTypedText] = useState("");
+    const [showCursor, setShowCursor] = useState(true);
+
+    useEffect(() => {
+        let typingTimeout: ReturnType<typeof setTimeout>;
+        let cursorInterval: ReturnType<typeof setInterval>;
+
+        if (typedText.length < fullText.length) {
+            typingTimeout = setTimeout(() => {
+                setTypedText(fullText.slice(0, typedText.length + 1));
+            }, 90);
+        } else {
+            cursorInterval = setInterval(() => {
+                setShowCursor((prev) => !prev);
+            }, 500);
+        }
+
+        return () => {
+            clearTimeout(typingTimeout);
+            clearInterval(cursorInterval);
+        };
+    }, [typedText, fullText]);
+
+    return (
+        <>
+            <SeoHelmet
+                title="AstronautMarkusDev Portfolio - Home"
+                description="Welcome to the portfolio of Marcos Reyes, a Fullstack Developer and Systems Administrator. Explore projects, blog posts, and get in touch!"
+                keywords="AstronautMarkusDev, Marcos Reyes, Fullstack Developer, Systems Administrator, Portfolio, Projects, Blog"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-            <div className="absolute bottom-8 left-8 flex items-end gap-6">
-              <img
-                src={ProfilePicture}
-                alt="Profile"
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-2xl border-4 border-white/20 pointer-events-none"
-              />
-              <div className="pb-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">{t('home.name')}</h1>
-                <p className="text-xl md:text-2xl text-gray-200 font-medium mb-2">{t('home.title')}</p>
-                <div className="flex items-center gap-4 text-gray-300">
-                  <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5" />
-                  <span className="text-lg">{t('home.location')}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                  <Mail className="w-5 h-5" />
-                  <a
-                    href="mailto:marcos@reyesandfriends.cl"
-                    className="text-lg underline hover:text-white transition-colors"
-                  >
-                    marcos@reyesandfriends.cl
-                  </a>
-                  </div>
+            <section className="relative min-h-screen flex justify-center pt-32">
+                <img
+                    src={Background}
+                    alt="background"
+                    className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none select-none"
+                    aria-hidden="true"
+                />
+                <div className="absolute inset-0 bg-black/30 backdrop-blur-sm pointer-events-none z-10" />
+
+                <div className="relative z-20 w-full max-w-6xl px-4 sm:px-6 flex flex-col items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center w-full mb-10 md:mb-16">
+
+                        <motion.div
+                            className="order-1 md:order-1 flex flex-col items-center justify-center w-full"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <div className="relative flex justify-center md:justify-end w-full">
+                                <img
+                                    src={AstronautMarkus}
+                                    alt="AstronautMarkus"
+                                    className="w-60 h-60 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] pointer-events-none bg-transparent drop-shadow-2xl"
+                                    style={{ objectFit: "contain" }}
+                                />
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            className="order-2 md:order-2 flex flex-col justify-center items-center md:items-start text-center md:text-left w-full"
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0.3 }}
+                        >
+                            <motion.h1
+                                className="flex flex-col items-center md:items-start gap-2 text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-5 md:mb-8 mt-4 sm:mt-6 drop-shadow-lg"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.3 }}
+                            >
+                                <span>
+                                    {typedText}
+                                    <span
+                                        style={{
+                                            opacity: showCursor ? 1 : 0,
+                                            transition: "opacity 0.2s",
+                                            color: "#9e28deff",
+                                            fontWeight: "bold"
+                                        }}
+                                    >
+                                        |
+                                    </span>
+                                </span>
+                            </motion.h1>
+                            <motion.h2
+                                className="flex flex-col items-center md:items-start gap-2 text-lg sm:text-xl md:text-2xl text-purple-700 font-semibold mb-3 md:mb-4"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.4 }}
+                            >
+                                {t('home.subtitle')}
+                            </motion.h2>
+                            <motion.p
+                                className="text-base sm:text-lg md:text-xl text-white/80 max-w-md sm:max-w-xl mb-6 md:mb-8 drop-shadow"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.5 }}
+                            >
+                                {t('home.description')}
+                            </motion.p>
+                            <motion.div
+                                className="flex gap-4 sm:gap-6 justify-center md:justify-start flex-wrap mb-6"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.6 }}
+                            >
+                                <a
+                                    href="https://github.com/astronautmarkus"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-white/10 hover:bg-black transition rounded-full p-3 sm:p-4 shadow text-white flex items-center justify-center hover:scale-115 transform transition duration-300"
+                                    style={{ width: "3.5rem", height: "3.5rem" }}
+                                >
+                                    <Github size={48} />
+                                </a>
+                                <a
+                                    href="https://linkedin.com/in/markusreyes"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-white/10 hover:bg-blue-600 transition rounded-full p-3 sm:p-4 shadow text-white flex items-center justify-center hover:scale-115 transform transition duration-300"
+                                    style={{ width: "3.5rem", height: "3.5rem" }}
+                                >
+                                    <Linkedin size={48} />
+                                </a>
+                                <a
+                                    href="https://instagram.com/astronautmarkusdev"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-white/10 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition rounded-full p-3 sm:p-4 shadow text-white flex items-center justify-center hover:scale-115 transform transition duration-300"
+                                    style={{ width: "3.5rem", height: "3.5rem" }}
+                                >
+                                    <Instagram size={48} />
+                                </a>
+                                <a
+                                    href="https://reyesandfriends.cl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-white/10 hover:bg-[#590E0E] transition rounded-full shadow text-white flex items-center justify-center hover:scale-115 transform transition duration-300"
+                                    style={{ width: "3.5rem", height: "3.5rem" }}
+                                >
+                                    <img
+                                        src={ReyesAndFriends}
+                                        alt="Reyes and Friends"
+                                        className="w-full h-full object-contain"
+                                        style={{ padding: "0.25rem" }}
+                                    />
+                                </a>
+                            </motion.div>
+                            <motion.div
+                                className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full items-center md:items-start justify-center md:justify-start"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.7 }}
+                            >
+                                <Link
+                                    to="/contact"
+                                    className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-purple-700 text-white rounded-lg font-bold shadow-lg hover:bg-purple-800 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
+                                >
+                                    <Mail size={18} />
+                                    {t('home.contact')}
+                                </Link>
+                                <Link
+                                    to="/projects"
+                                    className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-white/20 text-white rounded-lg font-bold shadow-lg hover:bg-white/40 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
+                                >
+                                    <Code size={18} />
+                                    {t('home.projects')}
+                                </Link>
+                            </motion.div>
+                        </motion.div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            </section>
 
-        <div className="block md:hidden">
-          <div className="relative aspect-square w-full max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl flex items-end justify-center bg-gray-900">
-            <img
-              src={BannerCard}
-              alt="Banner"
-              className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-            <div className="relative z-10 flex flex-col items-center w-full pb-6 px-4">
-              <img
-                src={ProfilePicture}
-                alt="Profile"
-                className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover shadow-2xl border-4 border-white/20 mb-4 pointer-events-none"
-              />
-              <h1 className="text-2xl md:text-3xl font-bold text-white mb-1 text-center">{t('home.name')}</h1>
-              <p className="text-lg md:text-xl text-gray-200 font-medium mb-1 text-center">{t('home.title')}</p>
-              <div className="flex items-center gap-2 text-gray-300 justify-center">
-                <MapPin className="w-5 h-5" />
-                <span className="text-base md:text-lg">{t('home.location')}</span>
-              </div>
-            </div>
-          </div>
-        </div>
+            <section className="py-16 bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B]">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <motion.div
+                        className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl mx-auto"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.1 }}
+                    >
+                        <motion.div
+                            className="flex-shrink-0"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
+                        >
+                        <div className="w-64 h-64 bg-gradient-to-tr from-[#3a225d] via-[#4b206b] to-[#18122B] rounded-full flex items-center justify-center shadow-2xl border-4 border-[#a084ee]">
+                            <img src={ProfilePic} alt="Profile" className="w-full h-full object-cover rounded-full pointer-events-none" />
+                        </div>
+                        </motion.div>
+                        
+                        <motion.div
+                            className="flex-1 text-center lg:text-left"
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7, delay: 0.3 }}
+                        >
+                            <h2 className="text-3xl lg:text-4xl font-bold text-[#a084ee] mb-6 drop-shadow-lg">{t('home.whoami')}</h2>
+                            <p className="text-lg text-gray-200 mb-6 leading-relaxed">
+                              {t('home.whoami_text')}
+                            </p>
 
-        <div className="space-y-8">
+                            <blockquote className="border-l-4 border-[#a084ee] pl-4 italic text-[#cfc6f8] bg-[#2d2350]/80 py-3 rounded-md shadow-lg">
+                                “{t('home.favorite_quote')} <br />
+                                <span className="font-bold text-[#e0d7fa]">- Why don't you fix your little problem and light this candle?</span>
+                            </blockquote>
+                            
+                        </motion.div>
+                    </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <div className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
-                <h2 className="text-2xl font-bold text-white mb-4">{t('home.aboutTitle')}</h2>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  {t('home.aboutText')}
-                </p>
-              </div>
-            </div>
+                    <div className="mt-10">
+                        <UserStats />
+                    </div>
+                </div>
+            </section>
 
-            <div className="bg-gray-800/80 rounded-xl p-6 shadow-xl">
-              <h3 className="text-xl font-bold text-white mb-4">{t('home.contactProjectsTitle')}</h3>
-              <div className="space-y-3">
-                <Link
-                  to="/contact"
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-white border border-white hover:bg-white hover:text-gray-900 rounded-lg transition-all"
-                >
-                  <Mail className="w-4 h-4" />
-                  {t('home.contactButton')}
-                </Link>
-                <Link
-                  to="/portfolio"
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-white bg-rose-700 hover:bg-rose-800 rounded-lg transition-all"
-                >
-                  <Globe className="w-4 h-4" />
-                  {t('home.portfolioButton')}
-                </Link>
-              </div>
-            </div>
-          </div>
+            <SkillsArsenal />
 
-            <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
-            <h2 className="text-2xl font-bold text-white mb-6">{t('home.servicesTitle')}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="flex items-center gap-3 p-4 bg-blue-900/30 rounded-lg">
-              <Code className="w-6 h-6 text-blue-300" />
-              <span className="text-blue-200 font-medium">{t('home.services.webDev')}</span>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-green-900/30 rounded-lg">
-              <Server className="w-6 h-6 text-green-300" />
-              <span className="text-green-200 font-medium">{t('home.services.serverAdmin')}</span>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-red-900/30 rounded-lg">
-              <Shield className="w-6 h-6 text-red-300" />
-              <span className="text-red-200 font-medium">{t('home.services.security')}</span>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-purple-900/30 rounded-lg">
-              <Wrench className="w-6 h-6 text-purple-300" />
-              <span className="text-purple-200 font-medium">{t('home.services.devops')}</span>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-yellow-900/30 rounded-lg">
-              <Shield className="w-6 h-6 text-yellow-300" />
-              <span className="text-yellow-200 font-medium">{t('home.services.consulting')}</span>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-white rounded-lg opacity-60">
-              <Globe className="w-6 h-6 text-black" />
-              <span className="text-black font-medium">{t('home.services.anything')}</span>
-              </div>
-            </div>
-            </div>
+            <FeaturedProjects />
 
-        </div>
-      </div>
-    </div>
-  )
+            <LastPosts />
+
+            
+
+        </>
+    );
 }
 
-export default Home
+export default Home;

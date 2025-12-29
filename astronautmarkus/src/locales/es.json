@@ -1,334 +1,300 @@
 {
-  "navbar": {
-    "about-me": "Sobre mí",
-    "portfolio": "Portafolio", 
-    "experience": "Experiencia",
-    "contact": "Contacto",
+  "header": {
+    "aboutMe": "Sobre Mí",
     "projects": "Proyectos",
-    "info": {
-      "title": "Info",
-      "about-me": "Sobre mí",
-      "bio": "Biografía"
-    },
-    "blog": "Visitar Blog"
+    "techStack": "Stack Tecnológico",
+    "contact": "Contacto",
+    "gallery": "Galería",
+    "blog": "Mi Blog Informático"
   },
-  "utils": {
-    "no-image": "No hay imagen disponible, waja"
-  },
-  "not-found": {
-    "banner-title": "Página No Encontrada",
-    "title": "¡Ups! Parece que te perdiste",
-    "description": "La página que buscas no existe. Puede que haya sido movida o eliminada.",
-    "home-button": "Ir al Inicio",
-    "back-button": "Volver"
+  "footer":{
+    "description":"El destino de las grandes almas es ser odidadas por los mediocres.",
+    "rights": "Todos los derechos reservados.",
+    "made_with": "Hecho con",
+    "by": "por",
+    "back_to_top": "Volver arriba",
+    "quick_links": "Enlaces Rápidos",
+    "business_pages": "Páginas de Negocios"
   },
   "home": {
-    "name": "Marcos Reyes Martínez",
-    "title": "Analista Programador Computacional",
-    "location": "Santiago de Chile",
-    "aboutTitle": "Sobre mí",
-    "aboutText": "Soy Marcos Reyes Martínez, un apasionado Analista Programador Computacional con años (y toneladas) de experiencia en Desarrollo Web y administración de sistemas. Me especializo en el Desarrollo Web FullStack, también en la administración de sistemas Linux y Windows, redes y seguridad informática, protegiendo cada componente y detalle de salvar tu información.",
-    "contactProjectsTitle": "Visita mis proyectos o hablemos",
-    "contactButton": "Contacto",
-    "portfolioButton": "Ver Proyectos / Portafolio",
-    "servicesTitle": "Servicios que ofrezco",
-    "services": {
-      "webDev": "Desarrollo Web FullStack",
-      "serverAdmin": "Administración de Servidores Linux/Windows",
-      "security": "Seguridad Informática y Redes",
-      "devops": "Automatización y DevOps",
-      "consulting": "Consultoría en AppSec / DevSecOps",
-      "anything": "Lo que tu necesites, para ser honesto"
+    "subtitle": "Desarrollador Fullstack y Administrador de Sistemas",
+    "description": "Hola, soy Marcos Reyes, un Desarrollador Fullstack y Administrador de Sistemas. Construyo aplicaciones fáciles de usar y resuelvo problemas tecnológicos utilizando herramientas modernas. Disfruto aprender cosas nuevas y mantenerme al día con las tendencias de la industria. ¡Conectemos y trabajemos juntos!",
+    "contact": "Contacto",
+    "projects": "Proyectos",
+    "whoami": "¿Quién Soy?",
+    "whoami_text": "Soy un apasionado Desarrollador Fullstack y Administrador de Sistemas con experiencia en la creación de aplicaciones web y la gestión de infraestructuras tecnológicas. Me especializo en construir soluciones eficientes y escalables que satisfacen las necesidades del usuario final. Mi enfoque se centra en la calidad del código, la optimización del rendimiento y la seguridad. Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades para ofrecer lo mejor en cada proyecto en el que trabajo.",
+    "favorite_quote": "Mi cita favorita:",
+    "experience_years": "Años de Experiencia",
+    "completed_projects": "Proyectos Completados",
+    "technologies": "Tecnologías / Frameworks",
+    "coffee_drinked": "Tazas de Café bebidas",
+    "featured_projects": "Proyectos Destacados",
+    "featured_projects_description": "Aquí hay algunos de mis proyectos recientes que muestran mis habilidades en desarrollo full-stack y administración de sistemas.",
+    "project_multi_stock_sync_title": "Multi Stock Sync",
+    "project_multi_stock_sync_description": "Plataforma web para gestionar negocios en formato POS con integración directa a MercadoLibre, funciones de inventario, negocios, recibos, etc.",
+    "project_reyesandfriends_title": "Reyes&Friends",
+    "project_reyesandfriends_description": "Sitio web de Reyes&Friends construido con React, Tailwind CSS, backend con Flask MySQL y Docker.",
+    "project_reyeshosting_title": "ReyesHosting",
+    "project_reyeshosting_description": "Servicio de hosting web y panel de control para servidores de Minecraft Hosting, construido con Laravel, Blade, Tailwind CSS, MySQL, usando Livewire para componentes dinámicos.",
+    "project_mofu_lunches_web_title": "Mofu Lunches Web",
+    "project_mofu_lunches_web_description": "Plataforma web administrativa para gestionar pedidos de comida en empresas, con múltiples servicios y API Gateway para vinculación con tótems digitales.",
+    "project_turnomaster_title": "TurnoMaster",
+    "project_turnomaster_description": "Sistema inteligente y eficiente de gestión de turnos para negocios. Administra fácilmente los turnos, controla la asistencia y optimiza las horas de trabajo.",
+    "view_all_projects": "Ver todos los proyectos",
+    "latest_posts": "Últimas publicaciones (En Inglés)",
+    "latest_posts_description": "Descubre mis últimas publicaciones sobre tecnología, programación y más.",
+    "loading_posts": "Cargando publicaciones...",
+    "no_posts_found": "No se encontraron publicaciones",
+    "no_posts_found_description": "No hay publicaciones disponibles en este momento. Por favor, vuelve más tarde.",
+    "post_tag_prefix": "#",
+    "read_more": "Leer más",
+    "visit_blog": "Visitar Blog Informático",
+    "techStack": "Stack Tecnológico",
+    "tech_stack_description": "Estas son las principales tecnologías y frameworks que utilizo para construir soluciones robustas y escalables.",
+    "and_many_more_technologies": "y muchas tecnologías más...",
+    "explore_full_tech_stack": "Explorar Stack Tecnológico Completo",
+    "skills_arsenal": {
+      "title": "Mi Arsenal de Habilidades",
+      "description": "Las armas y herramientas que domino en mi cruzada por el desarrollo de software.",
+      "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps",
+      "DBMS": "Bases de Datos",
+      "apis": {
+        "title": "APIs",
+        "public_implementation": "Implementación de API Pública",
+        "payment_gateways": "Pasarelas de Pago"
+      },
+      "architecture": {
+        "title": "Arquitectura",
+        "monolith": "Monolito",
+        "microservices": "Microservicios",
+        "clean_architecture": "Arquitectura Limpia"
+      }
+      }
     }
   },
-  "about-me": {
-    "banner": {
-      "title": "Sobre Mí",
-      "subtitle": "Conoce más sobre AstronautMarkus"
-    },
-    "intro": {
-      "title": "¡Hola! Soy Marcos (otra vez)",
-      "description": "Desarrollador full-stack apasionado bla bla bla...",
-      "additional": "A parte de programar, tengo algunas otras pasiones y curiosidades que me gustaría compartir contigo, eso creo."
-    },
-    "sections": {
-      "about-me": "Sobre mí",
-      "curious-facts": "Datos Curiosos",
-      "questions": "Preguntas / Recomendaciones"
-    },
-    "cards": {
-      "modder": {
-        "title": "Ex-Modder y creador de contenido",
-        "description": "Durante mi infancia / adolescencia me dedicada a realizar mods para GTA:San Andreas y videos narrados con Loquendo, diría que no odio a nada pero esta va pa la comunidad del modding y GTA:SA 🖕"
+  "projects": {
+    "seo_title": "Proyectos y Experimentos - AstronautMarkusDev",
+    "seo_description": "Explora mi portafolio full-stack mostrando diversos proyectos construidos con tecnologías modernas y buenas prácticas desde 2022 hasta la fecha.",
+    "seo_keywords": "AstronautMarkusDev, Marcos Reyes, Desarrollador Fullstack, Administrador de Sistemas, Portafolio, Proyectos, Blog",
+    "title": "Proyectos y Experimentos",
+    "description": "Explora mi portafolio full-stack mostrando diversos proyectos construidos con tecnologías modernas y buenas prácticas desde 2022 hasta la fecha.",
+    "view_details": "Ver Repositorio en GitHub",
+    "private_repo": "Este repositorio es privado",
+    "no_image": "Imagen no disponible",
+    "items": {
+      "esp8266-labs": {
+        "title": "ESP8266-Labs",
+        "description": "Compilación personal de experimentos realizados con un ESP8266 con pantalla OLED integrada y librerías.",
+        "year": 2025
       },
-      "caffeine": {
-        "title": "Me gusta la C₈H₁₀N₄O₂",
-        "description": "El combustible que mantiene mi código funcionando o cualquier otra cosa que me mantenga despierto"
+      "turnomaster": {
+        "title": "TurnoMaster",
+        "description": "Plataforma de agendamiento de turnos construida con Flask, Python, MariaDB, Docker, Axios, Astro, SQLAlchemy y Tailwind CSS.",
+        "year": 2025
       },
-      "knowledge": {
-        "title": "Conocimientos que nadie pidió",
-        "description": "Diría que soy ese tipo como 'Lester' en los grupos sociales, con datos que nadie sabe ni nadie pregunta. Sabían que las orcas no son ballenas? son delfines."
-      }
-    },
-    "facts": {
-      "computers": {
-        "title": "1. Computadoras",
-        "description": "Empecé con las computadoras a los 4, con una Compaq presario con Windows Vista, 512MB de RAM y un procesador que se pegaba cada dos por tres."
-      },
-      "career": {
-        "title": "2. Decisión de carrera",
-        "description": "Honestamente, nunca dije \"quiero ser programador\", solo un dia pase con mi madre cerca de un instituto en 2021 y revise su lista de carreas y dije, \"ya esa\", 'Analista Programador Computacional' y ya, LMAO. Ni si quiera pensé en ver otras opciones."
-      },
-      "hello-world": {
-        "title": "3. Hello world",
-        "description": "Mi primer 'Hello World' ni siquiera me salió bien, no entendía el concepto de las comillas, puse algo como print(\"hello world) y nunca funcionó. Ahora que lo considero, nunca fui muy bueno en la carrera, solo al final me tomé las cosas en serio y remonté con honores."
-      },
-      "heights": {
-        "title": "4. Edificios, aviones, alturas...",
-        "description": "Tengo un extraño miedo, sufro de vertigo, especialmente con escaleras desplegables, a la vez siento un gran rechazo al mirar un edificio hacia arriba, no se, ver lo alto que es, y lo más raro es que no le temo a estar en un piso alto de un edificio o a los aviones, es hasta ilógico."
-      }
-    },
-    "qa": {
-      "age": {
-        "question": "¿Cuántos años tienes?",
-        "answer": "Tengo {{age}} años, o dicho de otra forma, tengo {{days}} días, nací el 16 de marzo de 2003 y empecé en el mundo de la programación desde los 18, nunca me canso de aprender, esto explica porque mi tech stack tiene tantas herramientas."
-      },
-      "language": {
-        "question": "¿Cuál es tu lenguaje favorito?",
-        "answer": "La verdad, no tengo un lenguaje favorito como tal, solo se que el lenguaje que mas detesto es JavaScript, lo odio con todo mi ser pero estamos obligados a usarlo, así es la vida no creen? Como lenguajes favoritos diría que PHP y Python, es lo único que uso al día a día practicamente, pero me gusta experimentar con otros lenguajes de vez en cuando."
-      },
-      "remote": {
-        "question": "¿Trabajas de forma remota?",
-        "answer": "Sí, honestamente detesto rodearme de gente, salir a un lugar para trabajar en un lugar rodeado de más gente, no es lo mío. Prefiero mil veces trabajar desde casa, en mi espacio, con mi música y mi café."
-      },
-      "freetime": {
-        "question": "¿Qué te gusta hacer en tu tiempo libre?",
-        "answer": "Me gusta escuchar música todo el día sin importar la hora, eso sí tengo un gusto especial por la musíca de altos BPM, como el eurobeat, mi género favorito. También me gusta jugar videojuegos, especialmente de Halo y Star Wars. También por el bien de la humanidad, debería salir a caminar y tomar aire fresco de vez en cuando."
-      },
-      "coffee": {
-        "question": "¿Cuánto café tomas al día?",
-        "answer": "Como mínimo 3-4 tazas, suelo beber como nada 150mg de cafeína, hay días que no consumo nada y otros que me paso, pero en promedio es lo que consumo una cantidad más del promedio."
-      },
-      "pets": {
-        "question": "¿Tienes mascotas?",
-        "answer": "Sí, por supuesto. Tengo muchos gatos, más abajo verán todos los gatos que tengo, mis compañeros de vida."
-      },
-      "project": {
-        "question": "¿Cuál fue tu primer proyecto?",
-        "answer": "Mi primer proyecto aún lo estoy construyendo, no es algo informático, es algo que va mas allá, prefiero no contarlo, pero es un proyecto de vida, la razón de porqué despierto en las mañanas, la razón para estar vivo, dejémoslo así, estoy trabajando en algo, pero aún no está listo para mostrarse al mundo. Si vuelves algún día, serás de los primeros en saber la existencia de este proyecto!"
-      },
-      "study": {
-        "question": "¿Estudias o eres autodidacta?",
-        "answer": "Una mezcla de ambos. Después de titularme en 2025, sigo estudiando todos los días, aprendiendo por mi cuenta cualquier cosa, actualmente estoy pensando en aprender diseño gráfico y ciberseguridad, para hacerme aún más poderoso."
-      },
-      "waifu": {
-        "question": "¿Tienes una waifu?",
-        "answer": "Como todo informático geek promedio, sí, tengo una waifu, es Chariot Du Nord, de la serie Little Witch Academia. Es una bruja muy linda y poderosa, me gusta su personalidad y su diseño."
-      },
-      "substances": {
-        "question": "¿A parte del café? ¿Alcohol? ¿Drogas?",
-        "answer": "Nah, no consumo nada de eso, no me gusta el alcohol ni las drogas, el café es cultura, es un estilo de vida, el alcohol y drogas son dependencia, yo siempre he apreciado el concepto de libertad, en todos los sentidos, y esas cosas te atan a un vicio, ¿Pero el café no lo hace? bueno... según estudios, no...? Creo que es un mal menor."
-      },
-      "alias": {
-        "question": "¿Por qué tu alias es AstronautMarkus?",
-        "answer": "No sé, yo creo que los alias mientras más simples son más recordables, o sea, que crees que sea mas recordable 'xX_MarquinhosGaming777_Xx' o 'AstronautMarkus'? no es fácil encontrar algo tan sencillo, tuve suerte de hecho al combinar algo común como 'Astronaut' con mi nombre, el estar disponible hasta en el dominio, a parte diría que es mi forma de apoyar la exploración espacial, que es algo que me gusta mucho, y 'Markus' es un nombre que me gusta, es mi nombre pero más 'cool'."
-      },
-      "series": {
-        "question": "¿Serie favorita?",
-        "answer": "No soy de ver series ni televisión la verdad, pero si quieres que te recomiende una serie buenísima, 'Mr. Robot', la mejor serie que he visto en mi vida, trata sobre un hacker con problemas mentales, es una serie que te hace pensar mucho, y tiene giros argumentales que te dejan loco. ¿Saben por que me gusta tanto? porque a diferencia de otros medios donde los 'hackeos' son exagerades nivel Hollywood con colores verdes y animaciones estilo Matrix, acá salen comandos Linux reales, procedimientos reales, es parecido al realismo de Breaking Bad con las drogas, acá es con la informática."
-      },
-      "videogame": {
-        "question": "¿Videojuego favorito?",
-        "answer": "Complicado, pero para ser un poco más amigable diré por consola, para PC mi videojuego favorito es Halo: Combat Evolved, lo solía jugar en la escuela cuando llevaba la Laptop a escondidas, no le digan a nadie. Para PS2 que es la única consola relevante que he tenido, mi videjuego favorito es SOCOM 3: U.S. Navy SEALs, mi tío me lo regaló un dia, me encanta ese juegaso, es tan simple pero tan bueno."
-      },
-      "story": {
-        "question": "¿Algún suceso que no te guste contar?",
-        "answer": "Sí, más que suceso es que cuando era chiquito, un día llegó mi tío con pollo asado para el almuerzo y me traía un juego para la PS2, el Devil May Cry, pero el 2, ya saben el dilema con ese juego, el gesto de mi tío fue muy lindo, algo que si o si haré con mi sobrino, ahora yo soy el tío, el juego para todos es malísimo, para mi es normal, porque claro no conocía nada de la saga, de todas formas me hizo muy feliz ese día, y el pollo asado estaba delicioso."
-      },
-      "os": {
-        "question": "¿Sistema operativo favorito?",
-        "answer": "Diría que entre Manjaro y Linux Mint, ambos son la versión 'chill' de Linux, ya ahora me siento 'más viejo' para estar haciéndome un Arch Linux para el trabajo diario, prefiero Mint para el día a día ya que como usa Ubuntu de base los paquetes son estables, y Manjaro para cuando quiero experimentar un poco más, ya que es rolling release y tiene software más actualizado."
-      },
-      "music-coding":{
-        "question":"¿Qué música escuchas al programar?",
-        "answer":"Como comenté arriba me gusta la música con altos BPM, como el Eurobeat o J-Pop, al programar suelo escuchar 'Toho Eurobeat', una serie de álbumes con música Eurobeat basada en la serie de videojuegos Touhou Project, es música muy energética y me ayuda a concentrarme y estimularme, ese tipo de música es como un shot de serotonina para mi cabeza XD.",
-        "extra-note":"Comparto la playlist de Spotify que suelo oír mientras programo, tiene bastantes horas de música, échale un vistazo:"
-      }
-    },
-    "playlists": {
-      "title": "Playlists Recomendadas",
-      "description": "Aquí algunas playlists que suelo escuchar mientras trabajo o programo, espero que te gusten tanto como a mí.",
-      "footer":"Diría que no es lo mas mainstream, pero a mi me funciona y eso es lo que importa."
-    }
-  },
-  "portfolio": {
-    "banner_title": "Mi Portafolio",
-    "banner_subtitle": "Mis proyectos alocados pero geniales!",
-    "banner_info":"Cada proyecto en mi portafolio muestra distintas tecnologías y habilidades que he desarrollado a lo largo de mi carrera. Demostrando que no existe una sola forma de abordar un problema, con creatividad, inteligencia, \"anarquismo\" y pasión por la tecnología, siempre encuentro soluciones innovadoras y efectivas.",
-    "banner_info_note":"Es posible que no estén todos mis proyectos informáticos, no suelo actualizar esta lista constantemente. Para revisar todos, visita mi perfil de GitHub:",
-    "github_profile": "Visita mi perfil de GitHub",
-    "private_repo": "Este repositorio es privado, lo siento 😈",
-    "private_repo_real":"realmente no",
-    "categories": {
-      "personal": {
-        "title": "Proyectos Personales",
-        "description": "Proyectos personales desarrollados para aprender y experimentar con nuevas tecnologías y contribuir a la comunidad."
-      },
-      "professional-practice": {
-        "title": "Práctica Profesional",
-        "description": "Proyectos realizados durante mi práctica profesional, aplicando conocimientos adquiridos en un entorno real."
-      },
-      "institute": {
-        "title": "Proyectos del Instituto",
-        "description": "Proyectos desarrollados como parte de mi formación académica en el instituto, Duoc UC. Enfocados en el aprendizaje práctico."
-      }
-    },
-    "projects": {
-      "fumo-index": {
-        "title": "The Fumo Index (ふも)",
-        "description": "Plataforma web para la documentación y recopilación de peluches FumoFumo basados en la serie de videojuegos Touhou, ahora adaptada a más franquicias."
+      "fumoindex": {
+        "title": "The Fumo Index",
+        "description": "Proyecto portafolio para seguimiento de peluches Fumo. Construido con React, TypeScript, Laravel, MySQL y Tailwind CSS.",
+        "year": 2025
       },
       "abbybot-project": {
         "title": "AbbyBot Project",
-        "description": "Bot multifuncional para Discord, con funciones de moderación, música y más. Desarrollado con Discord.py y, sobre todo, mucho entusiasmo."
+        "description": "Bot de Discord construido con Discord.py, Python y MySQL.",
+        "year": 2024
       },
       "blog-astronautmarkus": {
-        "title": "Blog de AstronautMarkus",
-        "description": "Blog informático donde se comparten artículos sobre desarrollo web, programación y tecnología en general. Creado con Laravel y Tailwind CSS."
+        "title": "Blog AstronautMarkus",
+        "description": "Blog personal construido con Laravel, Blade, Tailwind CSS, MySQL y PHP.",
+        "year": 2025
       },
       "abbybot-project-website": {
-        "title": "Sitio Web de AbbyBot",
-        "description": "Sitio web oficial del bot AbbyBot, donde los usuarios pueden encontrar información sobre el bot, sus comandos y más. Desarrollado con Flask y Bootstrap. Dockerizado para producción."
+        "title": "AbbyBot Project Website",
+        "description": "Sitio web para AbbyBot construido con Flask, Python, Bootstrap, MySQL, Gunicorn y Docker.",
+        "year": 2024
       },
       "multi-stock-sync": {
         "title": "Multi Stock Sync",
-        "description": "Software para la sincronización de productos con conexión a Mercado Libre, utilizando JWT para autenticación y autorización, y una API RESTful para la gestión de productos."
+        "description": "Plataforma web para gestión de negocios con React, Node.js, Bootstrap y Chart.js.",
+        "year": 2025
       },
       "multi-stock-sync-back": {
         "title": "Multi Stock Sync Back",
-        "description": "Backend del software de sincronización de productos, desarrollado con Laravel. Implementa JWT para autenticación y autorización, y una API RESTful para la gestión de productos."
+        "description": "Backend para Multi Stock Sync usando Laravel, Sanctum, MySQL y PHP.",
+        "year": 2025
       },
       "multi-stock-sync-api-viewer": {
-        "title": "Multi Stock API Viewer",
-        "description": "Documentación de la API del software de sincronización de productos, generada con Swagger. Permite a los desarrolladores explorar y probar la API fácilmente."
+        "title": "Multi Stock Sync API Viewer",
+        "description": "Visualizador de API para Multi Stock Sync usando Laravel y Swagger.",
+        "year": 2025
       },
       "mofustore": {
         "title": "MOFUStore",
-        "description": "Plataforma de comercio electrónico para comprar fumos de Touhou Project. Proyecto realizado en el segundo año de instituto."
+        "description": "Plataforma de gestión de tienda construida con Python, Django, Bootstrap y MySQL.",
+        "year": 2023
       },
       "camellosfood-repartidor": {
-        "title": "CamellosFood - Repartidor",
-        "description": "Aplicación de reparto de comida para Android, construida con Ionic y Django."
+        "title": "CamellosFood Repartidor",
+        "description": "App de repartidor construida con Ionic, Angular y Django.",
+        "year": 2023
       },
       "constru-mic": {
         "title": "CONSTRU_MIC",
-        "description": "Plataforma de comercio electrónico para materiales de construcción, desarrollada con Django y Bootstrap."
-      },
-      "puppies-crud": {
-        "title": "Puppies CRUD",
-        "description": "CRUD sencillo para gestionar cachorros, usando Ionic y Json-Server."
+        "description": "Plataforma de gestión de construcción usando Django, Bootstrap y MySQL.",
+        "year": 2024
       },
       "mofulunches-web": {
-        "title": "MofuLunches Web",
-        "description": "Frontend en Flask para el panel de administración y cocineros de MofuLunches."
+        "title": "Mofu Lunches Web",
+        "description": "Plataforma web para solicitudes de comida usando Flask y Bootstrap.",
+        "year": 2024
       },
       "mofulunches-api": {
-        "title": "MofuLunches API",
-        "description": "Backend SOA para la plataforma MofuLunches, soportando interfaces móviles, web y tótem."
+        "title": "Mofu Lunches API",
+        "description": "API para Mofu Lunches construida con Python, Flask y MongoDB.",
+        "year": 2024
       },
       "mofulunches-totem": {
-        "title": "MofuLunches Totem",
-        "description": "Aplicación desarrollada con Electron y Arduino para gestionar pedidos y pagos."
+        "title": "Mofu Lunches Totem",
+        "description": "Sistema tótem para Mofu Lunches usando Electron, Arduino y React.",
+        "year": 2024
       },
       "mofulunches-eldimon": {
-        "title": "MofuLunches ElDimon",
-        "description": "Script de Arduino que gestiona la comunicación con la API de MofuLunches."
+        "title": "Mofu Lunches ElDimon",
+        "description": "Sistema basado en Arduino para Mofu Lunches.",
+        "year": 2024
       },
       "mofulunches-listener": {
-        "title": "MofuLunches ElDimon Listener",
-        "description": "Interfaz gráfica en Python para escanear y leer eventos de la API ElDimon usando PyQt5."
+        "title": "Mofu Lunches ElDimon Listener",
+        "description": "Listener para Mofu Lunches construido con Python y PyQt5.",
+        "year": 2024
       },
-      "mofulunches-app": {
-        "title": "MofuLunches App",
-        "description": "Aplicación móvil para cocineros, desarrollada con Ionic, para gestionar pedidos en MofuLunches."
+      "reyesandfriends-app": {
+        "title": "Reyes&Friends",
+        "description": "Sitio web de Reyes&Friends construido con React, Tailwind CSS, backend con Flask MySQL y Docker.",
+        "year": 2025
       },
-      "firestore": {
-        "title": "FireStore",
-        "description": "Este proyecto no es mío, pero gracias a él mi compañera aprobó el semestre. Aplicación móvil para gestionar inventarios de plantas en oficinas, desarrollada con Ionic y Firebase."
-      }
-    },
-    "view_repository": "Ver repositorio"
-  },
-  "experience": {
-    "banner": {
-      "title": "Mi Experiencia",
-      "subtitle": "Proyectos profesionales y habilidades técnicas"
-    },
-    "reyes-and-friends": {
-      "title": "Reyes&Friends",
-      "position": "Fundador & Desarrollador",
-      "period": "2025 - Actualidad",
-      "description": "Desde 2025, lidero Reyes&Friends, mi propio negocio enfocado en el desarrollo de proyectos informáticos a medida para clientes. Me encargo de la creación, diseño y despliegue de soluciones tecnológicas, abarcando desde sitios web hasta sistemas personalizados.",
-      "visit-website": "Visitar sitio web de Reyes&Friends"
-    },
-    "featured-project": {
-      "section-title": "Proyecto Destacado",
-      "title": "Multi Stock Sync",
-      "company": "Centro de prácticas LastDon",
-      "period": "Dic 2024 - Feb 2025",
-      "description": "Desarrollo de un software de sincronización de productos con conexión a Mercado Libre, utilizando JWT para autenticación y autorización, y una API RESTful para la gestión de productos."
-    },
-    "tech-stack": {
-      "title": "Lista de Tecnologías"
-    }
-  },
-  "contact":{
-      "title":"Contacto",
-      "subtitle":"Conectar, Colaborar, Crear",
-      "personal-info":"Información Personal",
-      "email":"Correo electrónico",
-      "location":"Ubicación",
-      "location-data":"Santiago de Chile",
-      "website":"Sitio Web",
-      "website-data":"https://astronautmarkus.dev , este mismo sitio, waja",
-      "social-media":"Redes Sociales"
-    },
-    "bio":{
-      "title": "Mi Biografía",
-      "subtitle": "El 'Hello World' de mi vida",
-      "personalIntro": "Hola, soy Marcos, mi nombre es bastante largo, así que solo uso \"Markus\" con mis amigos y en línea.",
-      "showFullName": "Mostrar mi nombre completo",
-      "bioFirstPart": "Soy un entusiasta de la tecnología, especialmente de las redes, el IoT y la programación. Me gusta programar por diversión y aprender cosas nuevas.",
-      "bioSecondPart": "Nací el 16 de Marzo de 2003 en Chile, actualmente dirijo mi propio emprendimiento informático luego de haberme graduado como Analista Programador Computacional en Duoc UC.",
-      "canonical-events": {
-        "title": "Mis eventos canónicos",
-        "early-life": {
-          "title": "Eventos importantes (2003-2019)",
-          "content": "Recuerdo que a los 4 años mis padres se endeudaron para comprarme una computadora, una Compaq Presario, con 512 MB de RAM y el odiado Windows Vista, en ese tiempo también me regalaron la PlayStation 2, la única consola que tuve hasta mi adultez. <br /><br />Durante esa época me fascinaban los trenes, tanques militares, ferrocarriles y todo tipo de maquinaria pesada, tuve muchos sueños desde pequeño, quería ser conductor de Trenes, piloto comercial, militar, conducir un tanque, aviones helicópteros, todas esas cosas que veía en la televisión y en los libros. <br /><br />Cuando era bien chiquito estaba de moda la venta de juegos para computadora a través de kioscos o cereales, recuerdo que teníamos muchos juegos de computadora en CDs, de helicópteros, aviones, carreras, etc. <br /><br />En el año 2011, para el cumpleaños de mi madre, mi padre le regaló un notebook portátil, específicamente el Samsung RV411, con 4 GB de RAM y Windows 7, ese fue mi primer contacto con un sistema operativo moderno, ya que la Compaq Presario era muy lenta y obsoleta. Diría que hasta el día de hoy esa computadora fue la única cosa quién realmente estuvo conmigo cuando más lo necesité. <br /><br />Durante este periodo, entre 2014-2016, me dedicaba activamente a realizar videos Loquendo de GTA San Andreas, bajo el pseudónimo de <strong class=\"text-rose-700 font-bold\">\"PayDayGammer334\"</strong>, esos videos los hacía en el notebook de mi madre, y los subía a YouTube, pasaron muchas cosas la verdad, amigos, enemigos a muerte, cosas que no le desearía a nadie, lo bueno es que todo eso ya es cosa del pasado y la vida continua. <br /><br />En el año 2017, me compraron una PC gamer, luego de bastantes conflictos y que accidentalmente rompieran mi computadora, esa PC fue ese punto de no retorno que tenemos con la tecnología, esa computadora tiene un Ryzen 3 2200G, 8 GB de RAM y una GTX 1050 Ti, actualmente esa computadora es un servidor en mi rack, lo utilizo como el 'laboratorio personal de experimentos y pruebas'. <br /><br />En el año 2019, cambié de colegio, fuí a uno donde conocí a mis amigos más importantes, donde encontré mi motivo para seguir vivo en este mundo, el cual es <strong class=\"text-rose-700 font-bold\">*clasificado*</strong>, hasta el día de hoy sigo trabajando por lograrlo, aunque diría que estamos bastante lejos de terminar aún, eso es lo divertido, ¿No creen?. También durante ese año descubrí el Eurobeat, gracias a Initial D, y me volví fanático de ese género, hasta el día de hoy es mi género musical favorito. <br /><br />"
-        },
-        "higher-education": {
-          "title": "Educación Superior, adultez temprana (2022-2025)",
-          "content": "En el año 2022, luego de la pandemia, me matriculé en Duoc UC, en la carrera de Analista Programador Computacional, a diferencia de lo que todos pensaría, me iba pésimo, no pude hacer ni un 'Hello World' bien, no entenía lo de las comillas, dilemas así, incluso no sabía como invertir números, en ese tiempo conocí a un profesor, que a pesar de su personalidad algo seria y estricta, me ayudaba con conceptos teorícos que en ese tiempo no entendía, pero que en el día de hoy entiendo a la perfección, el profesor <strong class=\"text-rose-700 font-bold\">Julio Herrera</strong>, odiado por algunos, querido por otros, para mí, fue un gran apoyo durante mi carrera, lástima que se fué y nunca volví a saber de él. <br /><br />Durante ese año también conocí a varias personas, pasé de ser un tipo de pocos amigos, a tener bastantes conocidos, no siento \"amigo amigo\" de todos, pero si me llevo bien con la mayoría, y eso es lo importante. Conocí a un tipo que fue mi amigo mas cercano en la universidad, pero este se quedó bastante atrás, terminó reprobando y al final no volvimos a hablar nunca más, tal vez fui un poco \"malvado\", no creen? jeje. <br /><br />En el año 2023, pasó mi \"evento canónico\", mi \"desarrollo de personaje\", como mencioné, la mayoría de tiempo me iba bastante pésimo en la carrera que terminaba \"colándome\" a los grupos de los demás para poder pasar, pero en ese año, todo cambió, me puse las pilas, estudié mucho, y logré sacar notas bastante decentes, aunque casi siempre a costa del grupo y no de mi propio esfuerzo, esto cambió especialmente en mi segundo semestre. <br /><br />En el segundo semestre de 2023, cursábamos una asignatura llamada \"Programación de aplicaciones móviles\", básicamente, desarrollar apps para teléfono utilizando tecnologías web, especificamente Ionic con Angular ☠️, hasta el día de hoy detesto Angular, pero bueno, la cosa es que nuestro equipo formado de 4 personas, en vez de desarrollar una sola app como los otros equipos, nos tryhardeamos es decir, nos decidimos hacer la idea de programar 4 aplicaciones a la vez, creando un sistema de microservicios front-end, sin saber ni si quiera lo que era eso XD, al final, ahí me tomé todo más en serio, de hecho en ese tiempo recién ChatGPT estaba creciendo, así que no era una opción tan víable como los estudiantes de hoy. La cosa es que este profesor, apodado coloquialmente como <strong class=\"font-bold text-rose-700\">\"El Harrys\"</strong> era todo un personaje, literalmente. <br /><br />Basicamente era un profe para nada estandarizado, era grosero, era chistoso, sin filtros, literalmente te puteaba si podía hacerlo, pero a la vez era jodidamente seco para programar, como profesor era bastante cuestionable pero como informático, era un genio, nos enseñó muchas cosas con ejemplos algo cuestionable, podríamos decir que indirectamente dijo que <span class=\"font-semibold text-green-500\">var hombre = 2; var mujer = 1; hombre \">\" mujer.</span> XD, pero bueno, era como Terry Davis, un genio incomprendido. <br /><br />En 2024, esta vez ya independizado como developer, ya no me colaba del esfuerzo de nadie, ya podía hacer mis propios proyectos, y lo mejor de todo, es que me iba bien, el problema es que... ahora me tocaba a mí, que los demás se colaran de mí, y eso era algo que no me gustaba, literalmente estuve dos semestres y medio extras con equipos que en vez de ayudar, hacían el trabajo más difícil, y al final terminé haciendo todo yo solo, aunque mi colega <span class=\"font-semibold text-yellow-500\">Pablo</span> apareció como \"personaje jugable\", y en los últimos semestres carreamos todo. <br /><br />Ya mi último semestre en 2025 me tocó el equipo más XD de todos, este si que fue horrible comparado a los otros, antes al menos tenía la ayuda de Pablo, pero acá literalmente estaba yo solo contra el mundo, a punto de titularme. A pesar de todo... sobreviví. Por cierto, aprobé con nota 7.0, la máxima en Chile, diría que es la remontada más épica de todas, de ser un tipo que no sabía ni poner comillas, a ser no el mejor alumno, pero alguien bastante competente, literalmente. <br /><br />"
-        }
-      },
-      "education": {
-        "title": "Educación y Formación",
-        "secondary_title": "Educación Secundaria",
-        "university_title": "Educación Superior",
-        "secondary_description":"Un lugar donde crecí, espiritualmente y mentalmente, pasé de ser un ser lleno de odio y tristeza, a alguien con un propósito en la vida, gracias a las personas que conocí ahí, y a las experiencias que viví.",
-        "university_description":"Mi instituto, el que me dió la posiblidad de conocer lo que podía lograr si me lo proponía, me dieron las herramientas para construir imperios y derribar muros, me hizo conocer muchas personas, colegas, amigos, maestros, y sobre todo, me dió la oportunidad de crecer como persona y profesional. Graduado como Analista Programador Computacional en Julio de 2025."
-      },
-      "personalReflections": {
-        "title": "Reflexiones Personales",
-        "first":"La autosuficiencia es el verdadero camino hacia la libertad, la libertad es el derecho que todos merecemos pero que pocos alcanzan.",
-        "second":"Cada quién tiene el derecho de cambiar, reinventarse, dejar sus cadenas y volar libre, a pesar de que ni tu mismo creas en ti, siempre hay una luz al final del túnel.",
-        "third":"No busco que me recuerden, busco que recuerden lo que hice, no busco fama, busco dejar un legado, no busco seguidores, busco personas que crean en lo que yo creo.",
-        "fourth":"Diría que algo que todos deberíamos reconsiderar como especie es la seguridad, en el día de hoy la seguridad cada vez se ve más como un lujo/privilegio de pocos, cuando en realidad debería ser un derecho básico y universal."
-      },
-      "futureVision":{
-        "title": "Visión a Futuro",
-        "first":"Como mencioné anteriormente, no busco que Marcos Reyes Martínez sea recordado, quiero que su trabajo lo sea, que AstronautMarkus o Reyes&Friends sean recordados, por construir imperios, por ayudar a los clientes que nos necesitaron, a las almas en pena que necesitaban el apoyo que yo necesité en su momento, quiero que mi trabajo hable por mí, y que las personas que crean en lo que yo creo, me recuerden por eso.",
-        "second":"Espero que en un futuro logre terminar mi proyecto secreto, que todos puedan apreciar mi obra, que la aprecien, que la amen al igual que yo cuando en 2019 encontré el propósito de mi vida, y que todos podamos vivir en un mundo mejor, más seguro, más libre, más justo, más humano."
+      "reyeshosting": {
+        "title": "ReyesHosting",
+        "description": "Servicio de hosting web y panel de control para servidores de Minecraft Hosting, construido con Laravel, Blade, Tailwind CSS, MySQL, usando Livewire para componentes dinámicos.",
+        "year": 2025
       }
     }
+  },
+  "tech-stack":{
+    "title": "Stack Tecnológico",
+    "description": "A lo largo de mi trayectoria como desarrollador, he tenido la oportunidad de trabajar con una amplia variedad de tecnologías y herramientas. Muchos podrían decir \"tienes bastante déficit de atención\" por aprender tantas cosas, pero yo digo, bueno, no hay nada de malo en adaptarse a diferentes stacks más allá del propio. Por supuesto, tengo mis favoritas. A continuación encontrarás un resumen de las tecnologías con las que me siento más cómodo trabajando y que utilizo con mayor frecuencia en mis proyectos."
+  },
+  "gallery": {
+    "title": "Mi Galería",
+    "description": "Bienvenido a mi colección personal de fotos que me inspiran y muestran mi recorrido por esta vida.",
+    "file": "Archivo",
+    "size": "Tamaño",
+    "dimensions": "Dimensiones",
+    "date": "Fecha",
+    "alt": "Imagen de galería",
+    "filters": {
+      "button": "Ordenar y Filtrar",
+      "newest": "Más nuevas primero",
+      "oldest": "Más viejas primero",
+      "size": "Por tamaño",
+      "name": "Por nombre"
+    },
+    "items": {
+      "IMG_2741": {
+        "title": "Jugando Touhou en mi ThinkPad con Wine",
+        "description": "Una foto de una laptop ThinkPad mostrando un juego de Touhou, ejecutándose en Wine. Mientras usaba Arch Linux en mi ThinkPad, decidí jugar algunos Touhou usando Wine."
+      },
+      "IMG_1981": {
+        "title": "Programando en la camioneta en medio del tráfico",
+        "description": "Después de un día de viaje, mi madre me recogió en su camioneta. Mientras estábamos atrapados en el tráfico, aproveché para programar en mi laptop. ¡El tiempo es oro!"
+      },
+      "IMG_3309": {
+        "title": "Programando en el patio mientras mi gato me mira",
+        "description": "En un día de primavera, decidí programar en el patio mientras mi gato, Agustín, estaba cerca mirándome. ¡Tomando Pepsi, por cierto!"
+      },
+      "IMG_3642": {
+        "title": "Monster Mango Loco esperando el servicio del auto",
+        "description": "Disfrutando una bebida Monster Mango Loco mientras espero que le hagan servicio a mi auto."
+      },
+      "IMG_2967": {
+        "title": "Mi primera Raspberry Pi Zero 2W.",
+        "description": "Ese día recibí mi primera Raspberry Pi Zero 2W. Estaba realmente incrédulo porque pensé que todas las Raspberry Pi (y sus carcasas) usaban tornillos para asegurarlas, pero como la Pi Zero 2W es más pequeña, casi como un pendrive, solo un poco más grande, simplemente encajó y quedó fija. Pensé que el vendedor me había estafado o algo, jaja."
+      },
+      "IMG_4023": {
+        "title": "SOCOM 3 U.S. Navy SEALs multijugador en PS2 (PCSX2)",
+        "description": "¡Eso fue muy divertido! Nunca pensé que volvería a jugar SOCOM 3 U.S. Navy SEALs multijugador después de tantos años. Gracias a PCSX2, pude revivir esos momentos jugando con amigos en línea. ¡En 4K también!"
+      },
+      "IMG_2422": {
+        "title": "Arrancando mi Raspberry Pi 4B",
+        "description": "Acabo de instalar Raspbian en mi Raspberry Pi 4B y la estoy arrancando por primera vez. ¡Emocionado por explorar todos los proyectos que puedo hacer con ella!"
+      },
+      "IMG_3596": {
+        "title": "Jugando Halo Infinite Campaign en mi OMEN 16",
+        "description": "Nunca usé esta laptop para juegos; la compré para mi carrera de programación. Después de terminar mis estudios, reinstalé Windows y empecé a usarla para videojuegos. ¡Halo Infinite se ve increíble en ella!"
+      },
+      "IMG_4122": {
+        "title": "Pronóstico del clima con Arduino Uno, LCD I2C y DHT11",
+        "description": "Me encanta I2C; es muy fácil de usar y ahorra muchos pines en el Arduino. En este proyecto usé un Arduino Uno, mi placa 'Jenny'—un Arduino Uno personalizado con gráficos de waifu, buzzer integrado, luces que muestran qué pines se usan en tiempo real y muchos detalles. El proyecto muestra temperatura y humedad usando un sensor DHT11 y una pantalla LCD I2C."
+      },
+      "IMG_4135": {
+        "title": "El mismo proyecto de clima con LCD I2C pero con ESP8266",
+        "description": "Recreé el proyecto de pronóstico del clima usando un ESP8266 en vez de un Arduino Uno. El ESP8266 permite conectividad Wi-Fi, así que agregué funciones para obtener datos del clima de internet y mostrarlos en la LCD I2C. Personalmente, prefiero usar el ESP8266 sobre el ESP32 para proyectos simples."
+      },
+      "IMG_4227": {
+        "title": "Mi Certificado de Título",
+        "description": "Después de 3 años de trabajo duro (y lidiar con personas poco colaborativas), finalmente me gradué como Analista Programador Computacional en el instituto Duoc UC. Este certificado me deja mucho en qué pensar. No es que me emocione o importe demasiado, pero en los primeros semestres tuve calificaciones bastante regulares y equipos poco comprometidos, para ser honesto. Sin embargo, en los últimos semestres me volví más autosuficiente y tuve mejores equipos, logrando aprobar con las notas más altas, literalmente. Curiosamente, mi primera nota en la carrera fue un 1.0 debido a un ataque de ansiedad, y mi última nota de portafolio de título fue un 7.0, la calificación más alta en Chile."
+      }
+    }
+  },
+  "about-me":{
+    "seo_title": "Sobre Mí - AstronautMarkusDev",
+    "seo_description": "Conoce más sobre Marcos Reyes, también conocido como AstronautMarkusDev. Descubre su trayectoria, pasiones y datos curiosos sobre su vida en la tecnología.",
+    "seo_keywords": "AstronautMarkusDev, Marcos Reyes, Desarrollador Fullstack, Administrador de Sistemas, Portafolio, Proyectos, Blog",
+    "title":"Sobre Mí",
+    "description":"Conoce mi trayectoria como Desarrollador Fullstack y Administrador de Sistemas, mis habilidades, experiencias y pasión por la tecnología.",
+    "me":{
+      "title":"¿Quién Soy?",
+      "description":"Soy solo un tipo común, como tú, como todos. Me encanta experimentar con nuevas tecnologías y aprender algo nuevo cada día. Mi pasión se inclina especialmente hacia el hardware y las redes, a veces incluso más que la programación. ¡Pero no te preocupes, también soy hábil en la codificación! Creo que es importante ser versátil y sobresalir en lo que haces. ¿En qué eres bueno tú?"
+    },
+    "journey": {
+      "title": "Mi Trayectoria",
+      "picture_alt": "Una foto muy genial",
+      "description": "Elegir este camino fue sorprendentemente sencillo para mí. Todo comenzó justo cuando estaba por graduarme de la secundaria. Un día, mientras iba en auto con mi mamá, pasamos por un instituto y pensé: \"Quizás debería ver qué ofrecen\". Al llegar a casa, no investigué mucho—solo vi el programa de “Analista Programador Computacional” y literalmente dije: \"Ese mismo\". Tuve algunos problemas menores para postular, pero en dos días ya estaba dentro. Desde entonces, no he dejado de aprender y crecer en este fascinante mundo de la tecnología."
+    },
+    "fun_facts": {
+      "title": "Datos Curiosos",
+      "photo": "¡Casi nunca me saco fotos! Solo una vez al año para el CV o documentos oficiales.",
+      "coffee": "Probablemente soy adicto a la cafeína—no puedo vivir sin mi café diario o Monster Energy.",
+      "frontend": "Odio el frontend, odio JavaScript, pero estamos obligados a usarlo, ¿no?",
+      "tech_truth": "¿Una verdad impopular? Las personas que más odian la tecnología suelen ser las que más terminan necesitándola."
+    },
+    "events": {
+    "2022-03-10": {
+      "title": "Mi primer día en la universidad",
+      "description": "Latidos a 150 BPM y mucha emoción. Mi primera clase fue sobre el modelo OSI y bases de datos, demasiada información técnica para el primer día, la verdad, jaja."
+      },
+      "2024-04-05": {
+        "title": "Marcos comienza a usar GNU/Linux",
+        "description": "El mejor cambio que he hecho. Te odio, Windows, te odio con todo mi ser. La libertad está llegando."
+      },
+      "2025-06-01": {
+        "title": "Marcos construye un Rack de Red",
+        "description": "Solo con ChatGPT e imágenes de Reddit, Marcos construye su primer rack de red en casa. Usando un rack Linkmade de 24U, un Fortigate 60D, un switch gigabit de 6 puertos y un HP Proliant DL360 G7 como servidor."
+      },
+      "2025-06-17": {
+        "title": "Presentación final de portafolio. Dev vs Lobos Senior",
+        "description": "Batalla final, el lobo solitario programador vs. los lobos. Aprobado con 100% (no meme)."
+      },
+      "2025-07-01": {
+        "title": "Comienza Reyes&Friends",
+        "description": "Comienza el viaje. Una nueva era de creación de contenido, reseñas tecnológicas y videos de juegos empieza ahora. ¡Únete a esta emocionante aventura!"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctame",
+    "subtitle": "¡Conectemos! Puedes contactarme a través de cualquiera de las plataformas abajo. Siempre estoy abierto a nuevas oportunidades, colaboraciones o simplemente una charla amistosa."
+  }
 }

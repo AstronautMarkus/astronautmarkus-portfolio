@@ -1,492 +1,254 @@
-import { Star } from "lucide-react";
-import Astronaut from "../../assets/img/animated/astronaut.gif";
-import AboutMeBanner from "../../assets/img/banners/about-me_banner.jpg";
-import CJ from "../../assets/img/animated/cj.gif";
-import Coffeine from "../../assets/img/animated/coffee.gif";
-import Lester from "../../assets/img/animated/lester.gif";
-import HelloWorld from "../../assets/img/animated/hello-world.gif";
-import JavascriptMeme from "../../assets/img/about-me/javascript-meme.jpg";
-import Chariot from "../../assets/img/about-me/102661516_p0_master1200.jpg";
-import MrRobot from "../../assets/img/about-me/mr-robot.gif";
-import BanderaTux from "../../assets/img/about-me/banderatux.gif";
-import { useI18n } from "../../contexts/i18nContext";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import ProfilePic from "../../assets/img/profile.png";
+import Picture from "../../assets/img/about-me/picture.jpg";
+import Background from "../../assets/img/background.jpg";
+import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-05.png";
+import EventSchedule from "./components/EventSchedule";
+
+import SeoHelmet from "../../utils/SeoHelmet";
+import { Camera, Coffee, Keyboard, Star, MonitorSmartphone } from "lucide-react";
+import { useI18n } from "../../context/i18n";
 
 function AboutMe() {
-  const { t } = useI18n();
+    const { t } = useI18n();
 
-  function getMarcosAge() {
-    const birthDate = new Date('2003-03-16');
-    const today = new Date();
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDifference = today.getMonth() - birthDate.getMonth();
+    const fullText = t("about-me.title");
+    const [typedText, setTypedText] = useState("");
+    const [showCursor, setShowCursor] = useState(true);
 
-    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
-    }
+    useEffect(() => {
+        let typingTimeout: ReturnType<typeof setTimeout>;
+        let cursorInterval: ReturnType<typeof setInterval>;
 
-    return age;
-  }
+        if (typedText.length < fullText.length) {
+            typingTimeout = setTimeout(() => {
+                setTypedText(fullText.slice(0, typedText.length + 1));
+            }, 90);
+        } else {
+            cursorInterval = setInterval(() => {
+                setShowCursor((prev) => !prev);
+            }, 500);
+        }
 
-  function getMarcosAgeInDays() {
-    const birthDate = new Date('2003-03-16');
-    const today = new Date();
-    const timeDifference = today.getTime() - birthDate.getTime();
-    const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
-    return daysDifference;
-  }
+        return () => {
+            clearTimeout(typingTimeout);
+            clearInterval(cursorInterval);
+        };
+    }, [typedText, fullText]);
 
-  const marcosAge = getMarcosAge();
-  const marcosAgeInDays = getMarcosAgeInDays();
+    useEffect(() => {
+        setTypedText("");
+        setShowCursor(true);
+    }, [fullText]);
 
-  return (
-    <div className="min-h-screen p-4">
-      <div className="w-full max-w-6xl mx-auto space-y-8">
-        
-        <div className="hidden md:block">
-          <div className="relative h-56 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
-            <img
-              src={AboutMeBanner}
-              alt="About Me Banner"
-              className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+    return (
+        <>
+            <SeoHelmet
+                title={t("about-me.seo_title") || "About Me - AstronautMarkusDev"}
+                description={t("about-me.seo_description") || "Learn more about Marcos Reyes, also known as AstronautMarkusDev. Discover his journey, passions, and fun facts about his life in technology."}
+                keywords={t("about-me.seo_keywords") || "AstronautMarkusDev, Marcos Reyes, Fullstack Developer, Systems Administrator, Portfolio, Projects, Blog"}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-            <div className="relative z-10 flex flex-col items-center justify-center w-full">
-              <div className="flex items-center gap-8 justify-center">
-                <div className="text-center">
-                  <h1 className="text-5xl font-extrabold text-white mb-2">{t('about-me.banner.title')}</h1>
-                  <p className="text-2xl text-gray-200 font-semibold">{t('about-me.banner.subtitle')}</p>
-                </div>
+
+            <section className="relative min-h-screen flex justify-center pt-32">
                 <img
-                  src={Astronaut}
-                  alt="Astronaut"
-                  className="w-48 h-48 object-contain drop-shadow-lg pointer-events-none"
+                    src={Background}
+                    alt="background"
+                    className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none select-none"
+                    aria-hidden="true"
                 />
-              </div>
-            </div>
-          </div>
-        </div>
+                <div className="absolute inset-0 bg-black/30 backdrop-blur-sm pointer-events-none z-10" />
 
-        <div className="block md:hidden">
-          <div className="relative h-32 w-full rounded-2xl overflow-hidden shadow-2xl bg-gray-900 flex items-center justify-center">
-            <img
-              src={AboutMeBanner}
-              alt="About Me Banner"
-              className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-            <div className="relative z-10 flex flex-col items-center justify-center w-full">
-              <h1 className="text-xl font-bold text-white mb-1 text-center">{t('about-me.banner.title')}</h1>
-              <p className="text-sm text-gray-200 font-medium text-center">{t('about-me.banner.subtitle')}</p>
-            </div>
-            <img
-              src={Astronaut}
-              alt="Astronaut"
-              className="absolute bottom-2 right-2 w-18 h-18 object-contain drop-shadow-lg pointer-events-none"
-            />
-          </div>
-        </div>
+                <div className="relative z-20 w-full max-w-6xl px-4 sm:px-6 flex flex-col items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center w-full mb-10 md:mb-16">
 
-        <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            <div className="flex-shrink-0">
-              <img
-                src="https://github.com/astronautmarkus.png"
-                alt="astronautmarkus avatar"
-                className="w-32 h-32 rounded-full border-4 border-rose-700 shadow-lg pointer-events-none"
-              />
-            </div>
-            <div className="flex-1 text-center lg:text-left">
-              <h2 className="text-3xl font-bold text-white mb-4">{t('about-me.intro.title')}</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                {t('about-me.intro.description')}
-              </p>
-              <p className="text-gray-400">
-                {t('about-me.intro.additional')}
-              </p>
-            </div>
-          </div>
-        </div>
+                        <motion.div
+                            className="order-1 md:order-1 flex flex-col items-center justify-center w-full"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                        >
+                            <div className="relative flex justify-center md:justify-end w-full">
+                                <img
+                                    src={AstronautMarkus}
+                                    alt="AstronautMarkus"
+                                    className="w-60 h-60 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] pointer-events-none bg-transparent drop-shadow-2xl"
+                                    style={{ objectFit: "contain" }}
+                                />
+                            </div>
+                        </motion.div>
 
-        <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
-          <h2 className="text-2xl font-bold mb-6 text-white text-center">{t('about-me.sections.about-me')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all  text-center flex flex-col items-center">
-              <h3 className="text-xl font-semibold mb-3 text-white">{t('about-me.cards.modder.title')}</h3>
-              <img
-                src={CJ}
-                alt="Ex-Modder y creador de contenido"
-                className="w-24 h-24 object-cover rounded-lg mb-3 pointer-events-none"
-              />
-              <p className="text-gray-300 text-sm">{t('about-me.cards.modder.description')}</p>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all text-center flex flex-col items-center">
-              <h3 className="text-xl font-semibold mb-3 text-white">{t('about-me.cards.caffeine.title')}</h3>
-              <img
-                src={Coffeine}
-                alt="Café y Cafeína"
-                className="w-24 h-24 object-cover rounded-lg mb-3 pointer-events-none"
-              />
-              <p className="text-gray-300 text-sm">{t('about-me.cards.caffeine.description')}</p>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all text-center flex flex-col items-center">
-              <h3 className="text-xl font-semibold mb-3 text-white">{t('about-me.cards.knowledge.title')}</h3>
-              <img
-                src={Lester}
-                alt="Lester"
-                className="w-24 h-24 object-cover rounded-lg mb-3 pointer-events-none"
-              />
-              <p className="text-gray-300 text-sm">{t('about-me.cards.knowledge.description')}</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-gray-800/80  rounded-xl p-8 shadow-xl">
-          <h2 className="text-2xl font-bold mb-6 text-white">{t('about-me.sections.curious-facts')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 text-rose-700 mt-1">
-                  <Star size={20} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">{t('about-me.facts.computers.title')}</h3>
-                  <p className="text-gray-300 text-sm">{t('about-me.facts.computers.description')}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-800/70">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 text-rose-700 mt-1">
-                  <Star size={20} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">{t('about-me.facts.career.title')}</h3>
-                  <p className="text-gray-300 text-sm">{t('about-me.facts.career.description')}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-800/70">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 text-rose-700 mt-1">
-                  <Star size={20} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">{t('about-me.facts.hello-world.title')}</h3>
-                  <p className="text-gray-300 text-sm">{t('about-me.facts.hello-world.description')}</p>
-                    <div className="mt-2 flex justify-center">
-                    <img
-                      src={HelloWorld}
-                      alt="Hello World"
-                      className="h-48 object-contain rounded-lg pointer-events-none"
-                    />
+                        <motion.div
+                            className="order-2 md:order-2 flex flex-col justify-center items-center md:items-start text-center md:text-left w-full"
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0.3 }}
+                        >
+                            <motion.h1
+                                className="flex flex-col items-center md:items-start gap-2 text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-5 md:mb-8 mt-4 sm:mt-6 drop-shadow-lg"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.3 }}
+                            >
+                                <span>
+                                    {typedText}
+                                    <span
+                                        style={{
+                                            opacity: showCursor ? 1 : 0,
+                                            transition: "opacity 0.2s",
+                                            color: "#9e28deff",
+                                            fontWeight: "bold"
+                                        }}
+                                    >
+                                        |
+                                    </span>
+                                </span>
+                            </motion.h1>
+                            <motion.p
+                                className="text-base sm:text-lg md:text-xl text-white/80 max-w-md sm:max-w-xl mb-6 md:mb-8 drop-shadow"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.5 }}
+                            >
+                                {t('about-me.description')}
+                            </motion.p>
+                        </motion.div>
                     </div>
                 </div>
-              </div>
-            </div>
+            </section>
 
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all hover:bg-gray-800/70">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 text-rose-700 mt-1">
-                  <Star size={20} />
+            <section className="min-h-screen flex flex-col items-center justify-center py-16 px-0 bg-gradient-to-b from-[#18122B] via-[#1E1B3A] to-[#18122B] w-full">
+                <motion.h1
+                    className="text-4xl font-bold text-[#a084ee] mb-12 mt-12 text-center"
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0 }}
+                >
+                    {t("about-me.title")}
+                </motion.h1>
+
+                <div className="w-full flex justify-center mb-10">
+                    <motion.div
+                        className="bg-[#251a3a] shadow-2xl border-4 border-[#a084ee] rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center w-full max-w-7xl hover:shadow-purple-700/40 transition-shadow duration-300 hover:scale-105 transition-transform"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.1 }}
+                    >
+                        <div className="w-48 h-48 bg-gray-300 rounded-full flex items-center justify-center shadow-lg mb-8 md:mb-0 md:mr-10">
+                            <img
+                                src={ProfilePic}
+                                alt="Profile"
+                                className="w-48 h-48 rounded-full object-cover pointer-events-none border-4 border-[#a084ee]"
+                            />
+                        </div>
+                        <div className="flex-1">
+                            <motion.h2
+                                className="text-2xl font-semibold text-[#a084ee] mb-4 text-center md:text-left"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.2 }}
+                            >
+                                Marcos Reyes / AstronautMarkusDev
+                            </motion.h2>
+                            <motion.p
+                                className="text-lg text-white mb-6 leading-relaxed text-center md:text-left"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.3 }}
+                            >
+                                {t("about-me.me.description")}
+                            </motion.p>
+                        </div>
+                    </motion.div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">{t('about-me.facts.heights.title')}</h3>
-                  <p className="text-gray-300 text-sm">{t('about-me.facts.heights.description')}</p>
+
+                <div className="w-full flex justify-center mb-10">
+                    <motion.div
+                        className="bg-[#251a3a] shadow-2xl border-4 border-[#a084ee] rounded-2xl shadow-lg p-8 flex flex-col md:flex-row items-center w-full max-w-7xl hover:shadow-purple-700/40 transition-shadow duration-300 hover:scale-105 transition-transform"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.4 }}
+                    >
+                        <div className="w-64 h-48 bg-gray-300 rounded-xl flex items-center justify-center shadow-lg mb-8 md:mb-0 md:ml-10 overflow-hidden">
+                            <img
+                                src={Picture}
+                                alt={t("about-me.journey.picture_alt") || "A very cool picture"}
+                                className="w-full h-full object-cover pointer-events-none"
+                            />
+                        </div>
+                        <div className="flex-1">
+                            <motion.h3
+                                className="text-xl font-bold text-[#a084ee] mb-4 mt-2 text-center md:text-right"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.5 }}
+                            >
+                                {t("about-me.journey.title") || "My Journey"}
+                            </motion.h3>
+                            <motion.p
+                                className="text-lg text-white mb-6 leading-relaxed text-center md:text-right"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.6 }}
+                            >
+                                <span>
+                                    {t("about-me.journey.description") ||
+                                    `Choosing this path was surprisingly straightforward for me. It all began just as I was about to graduate from high school. One day, while riding with my mom, we passed by an institute and I thought, "Maybe I should check out what they offer." When I got home, I didn’t look too deeply—just saw the “Computational Programmer Analyst” program and literally said, "Okay, that one." I had a few minor issues applying, but within two days, I was in. Since then, I haven’t stopped learning and growing in this fascinating world of technology.`}
+                                </span>
+                            </motion.p>
+                        </div>
+                    </motion.div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
-          <h2 className="text-2xl font-bold mb-6 text-white text-center">{t('about-me.sections.questions')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.age.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      {t('about-me.qa.age.answer')
-                        .replace('{{age}}', marcosAge.toString())
-                        .replace('{{days}}', marcosAgeInDays.toString())}
-                    </p>
-                  </div>
+                <div className="w-full flex justify-center mb-10">
+                    <div>
+                        <EventSchedule />
+                    </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.language.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.language.answer')}</p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <img
-                      src={JavascriptMeme}
-                      alt="JavaScript Meme"
-                      className="w-20 h-20 object-cover rounded-lg pointer-events-none"
-                    />
-                  </div>
+                <div className="w-full flex justify-center mb-10">
+                    <motion.div
+                        className="bg-[#251a3a] shadow-2xl border-4 border-[#a084ee] rounded-2xl shadow-lg p-8 flex flex-col items-center w-full max-w-7xl hover:shadow-purple-700/40 transition-shadow duration-300 hover:scale-105 transition-transform"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 1.0 }}
+                    >
+                        <motion.h3
+                            className="w-full text-2xl font-extrabold text-[#a084ee] mb-6 mt-2 text-center tracking-wide"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 1.1 }}
+                        >
+                            <Star className="w-7 h-7 text-[#a084ee] inline-block mr-2" aria-label="star" /> {t("about-me.fun_facts.title") || "Fun Facts"}
+                        </motion.h3>
+                        <motion.ul
+                            className="w-full flex flex-col gap-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 1.2 }}
+                        >
+                            <li className="bg-[#1a1330] border-2 border-[#a084ee] rounded-xl p-6 shadow-lg text-white text-lg flex items-center gap-4 justify-center transition-all duration-200 hover:bg-[#2a1d4d] hover:scale-[1.03]">
+                                <Camera className="w-7 h-7 text-[#a084ee]" aria-label="camera" />
+                                {t("about-me.fun_facts.photo") || "I almost never take photos of myself! Only once a year for my CV or official documents."}
+                            </li>
+                            <li className="bg-[#1a1330] border-2 border-[#a084ee] rounded-xl p-6 shadow-lg text-white text-lg flex items-center gap-4 justify-center transition-all duration-200 hover:bg-[#2a1d4d] hover:scale-[1.03]">
+                                <Coffee className="w-7 h-7 text-[#a084ee]" aria-label="coffee" />
+                                {t("about-me.fun_facts.coffee") || "I'm probably addicted to caffeine—I can't live without my daily cup of coffee or Monster Energy."}
+                            </li>
+                            <li className="bg-[#1a1330] border-2 border-[#a084ee] rounded-xl p-6 shadow-lg text-white text-lg flex items-center gap-4 justify-center transition-all duration-200 hover:bg-[#2a1d4d] hover:scale-[1.03]">
+                                <Keyboard className="w-7 h-7 text-[#a084ee]" aria-label="keyboard" />
+                                {t("about-me.fun_facts.frontend") || "I hate frontend, I hate JavaScript, but we're forced to use it, aren't we?"}
+                            </li>
+                            <li className="bg-[#1a1330] border-2 border-[#a084ee] rounded-xl p-6 shadow-lg text-white text-lg flex items-center gap-4 justify-center transition-all duration-200 hover:bg-[#2a1d4d] hover:scale-[1.03]">
+                                <MonitorSmartphone className="w-7 h-7 text-[#a084ee]" aria-label="star" />
+                                {t("about-me.fun_facts.tech_truth") || "An unpopular truth? The people who hate technology the most are usually the ones who end up needing it the most."}
+                            </li>
+                        </motion.ul>
+                    </motion.div>
                 </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.remote.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.remote.answer')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.freetime.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.freetime.answer')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.coffee.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.coffee.answer')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.pets.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.pets.answer')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80  rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.project.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.project.answer')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.study.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.study.answer')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col sm:flex-row gap-4 items-center">
-                <div className="flex-1 sm:w-7/10">
-                  <h3 className="text-lg font-semibold text-white">{t('about-me.qa.waifu.question')}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.waifu.answer')}</p>
-                </div>
-                <div className="sm:w-3/10 flex justify-center">
-                  <img
-                    src={Chariot}
-                    alt="Chariot"
-                    className="w-32 h-32 object-cover rounded-lg pointer-events-none"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80  rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.substances.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.substances.answer')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80  rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.alias.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.alias.answer')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.series.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.series.answer')}</p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <img
-                      src={MrRobot}
-                      alt="Mr Robot"
-                      className="w-20 h-20 object-cover rounded-lg pointer-events-none"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.videogame.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.videogame.answer')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.story.question')}</h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.story.answer')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-              <h3 className="text-lg font-semibold text-white">{t('about-me.qa.os.question')}</h3>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex-1">
-                <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.os.answer')}</p>
-                </div>
-              </div>
-              <div className="flex justify-center mt-4">
-                <img
-                src={BanderaTux}
-                alt="Bandera Tux"
-                className="w-64 h-64 object-contain rounded-lg pointer-events-none"
-                />
-              </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/80 rounded-lg p-6 hover:shadow-2xl transition-all">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-lg font-semibold text-white">{t('about-me.qa.music-coding.question')}</h3>
-                <div className="flex flex-col gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.music-coding.answer')}</p>
-                  </div>
-                </div>
-                <div className="flex justify-center">
-                  <div className="w-full max-w-xs sm:max-w-md">
-                    <iframe
-                      style={{ borderRadius: "12px" }}
-                      src="https://open.spotify.com/embed/playlist/5r6Lp0iFPR3fwZoPSbfCLl?utm_source=generator"
-                      width="100%"
-                      height="152"
-                      frameBorder="0"
-                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                      loading="lazy"
-                      title="Spotify playlist"
-                      className="mb-4"
-                    ></iframe>
-                    <p className="text-gray-300 text-sm leading-relaxed">{t('about-me.qa.music-coding.extra-note')}</p>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div className="bg-gray-800/80 rounded-xl p-8 shadow-xl">
-          <h2 className="text-2xl font-bold mb-4 text-white text-center">{t('about-me.playlists.title')}</h2>
-          <p className="text-gray-300 text-center mb-6 max-w-3xl mx-auto">
-            {t('about-me.playlists.description')}
-          </p>
-          <div className="flex overflow-x-auto gap-6 pb-4">
-
-            <div className="flex-shrink-0 bg-gray-800/80 rounded-lg p-4 hover:shadow-2xl transition-all">
-              <iframe
-                style={{ borderRadius: "12px" }}
-                src="https://open.spotify.com/embed/playlist/5r6Lp0iFPR3fwZoPSbfCLl?utm_source=generator"
-                width="300"
-                height="152"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                title="Coding Vibes playlist"
-              ></iframe>
-            </div>
-
-            <div className="flex-shrink-0 bg-gray-800/80 rounded-lg p-4 hover:shadow-2xl transition-all">
-              <iframe
-                style={{ borderRadius: "12px" }}
-                src="https://open.spotify.com/embed/playlist/03OXOTX3VQyHLpQMb0lVwW?utm_source=generator&theme=0"
-                width="300"
-                height="152"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                title="Chill Beats playlist"
-              ></iframe>
-            </div>
-
-            <div className="flex-shrink-0 bg-gray-800/80 rounded-lg p-4 hover:shadow-2xl transition-all">
-              <iframe
-                style={{ borderRadius: "12px" }}
-                src="https://open.spotify.com/embed/album/1P4zxnE9WYLHs4k8VZPlNw?utm_source=generator"
-                width="300"
-                height="152"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                title="Focus Zone playlist"
-              ></iframe>
-            </div>
-
-          </div>
-          <p className="text-gray-400 text-center mt-6 max-w-2xl mx-auto text-sm">
-            {t('about-me.playlists.footer')}
-          </p>
-        </div>
-
-      </div>
-    </div>
-  );
+            </section>
+        </>
+    );
 }
 
 export default AboutMe;
