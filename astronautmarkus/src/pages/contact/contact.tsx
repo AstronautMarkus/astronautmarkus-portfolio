@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Twitter, Instagram, BookOpen } from "lucide-react";
 import SeoHelmet from "../../utils/SeoHelmet";
 import { useState, useEffect } from "react";
-import AstronautMarkus from "../../assets/img/astronautmarkus/markus-greet.png";
+import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-06.png";
 import Background from "../../assets/img/background.jpg";
 import { useI18n } from "../../context/i18n";
 

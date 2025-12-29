@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
 import ProfilePic from "../../assets/img/profile.png";
 import Picture from "../../assets/img/about-me/picture.jpg";
 import Background from "../../assets/img/background.jpg";
-import AstronautMarkus from "../../assets/img/astronautmarkus/markus-stand.png";
-
+import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-05.png";
 import EventSchedule from "./components/EventSchedule";
 
 import SeoHelmet from "../../utils/SeoHelmet";
