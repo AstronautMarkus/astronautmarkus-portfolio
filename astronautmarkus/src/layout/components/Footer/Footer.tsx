@@ -28,7 +28,7 @@ function Footer() {
                 <img
                     src={isGreet ? AstronautMarkusGreet : AstronautMarkusStand}
                     alt="Astronaut Markus Stand"
-                    className="h-56 drop-shadow-xl select-none transition-all duration-200"
+                    className="h-56 drop-shadow-xl select-none transition-all duration-200 pointer-events-none"
                     draggable={false}
                 />
             </div>

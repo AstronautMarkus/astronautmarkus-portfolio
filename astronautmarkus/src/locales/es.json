@@ -8,7 +8,7 @@
     "blog": "Mi Blog Informático"
   },
   "footer":{
-    "description":"El destino de las grandes almas es ser odidadas por los mediocres.",
+    "description":"El destino de las grandes almas es ser odiadas por los mediocres.",
     "rights": "Todos los derechos reservados.",
     "made_with": "Hecho con",
     "by": "por",
@@ -57,21 +57,21 @@
       "title": "Mi Arsenal de Habilidades",
       "description": "Las armas y herramientas que domino en mi cruzada por el desarrollo de software.",
       "skills": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "devops": "DevOps",
-      "DBMS": "Bases de Datos",
-      "apis": {
-        "title": "APIs",
-        "public_implementation": "Implementación de API Pública",
-        "payment_gateways": "Pasarelas de Pago"
-      },
-      "architecture": {
-        "title": "Arquitectura",
-        "monolith": "Monolito",
-        "microservices": "Microservicios",
-        "clean_architecture": "Arquitectura Limpia"
-      }
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "devops": "DevOps",
+        "DBMS": "Bases de Datos",
+        "apis": {
+          "title": "APIs",
+          "public_implementation": "Implementación de API Pública",
+          "payment_gateways": "Pasarelas de Pago"
+        },
+        "architecture": {
+          "title": "Arquitectura",
+          "monolith": "Monolito",
+          "microservices": "Microservicios",
+          "clean_architecture": "Arquitectura Limpia"
+        }
       }
     }
   },
