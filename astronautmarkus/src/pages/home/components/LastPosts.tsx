@@ -26,7 +26,15 @@ const LastPosts: React.FC = () => {
   useEffect(() => {
     axios
       .get(`${API_URL}/posts/`)
-      .then((res) => setPosts(res.data))
+      .then((res) => {
+        const mappedPosts = res.data.map((post: any) => ({
+          ...post,
+          image_url: post.image_url || post.image || post.banner_image || "",
+          tags: post.tags || [],
+          url: post.url || "#",
+        }));
+        setPosts(mappedPosts);
+      })
       .catch(() => setPosts([]))
       .finally(() => setLoading(false));
   }, []);
