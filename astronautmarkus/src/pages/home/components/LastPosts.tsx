@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { BookOpen, ChevronRight } from "lucide-react";
-
+import { ImageModal } from "../../gallery/Gallery";
 import { useI18n } from "../../../context/i18n";
 
 const API_URL = import.meta.env.VITE_API_URL;
@@ -22,6 +22,7 @@ type Post = {
 const LastPosts: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
+  const [modalImg, setModalImg] = useState<string | null>(null);
 
   useEffect(() => {
     axios
@@ -94,12 +95,19 @@ const LastPosts: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
             >
-              <div className="w-full aspect-[16/9] bg-gray-100 flex items-center justify-center border-2 border-[#a084ee] mb-6 rounded-lg overflow-hidden">
-                <img
-                  src={post.image_url}
-                  alt={post.title}
-                  className="w-full h-full object-cover pointer-events-none"
-                />
+              <div
+                className="w-full aspect-[16/9] bg-gray-100 flex items-center justify-center border-2 border-[#a084ee] mb-6 rounded-lg overflow-hidden cursor-pointer"
+                onClick={() => setModalImg(post.image_url)}
+                title={t("home.expand_image")}
+                style={{ userSelect: "none" }}
+              >
+                {post.image_url ? (
+                  <img
+                    src={post.image_url}
+                    alt={post.title}
+                    className="w-full h-full object-cover pointer-events-none"
+                  />
+                ) : null}
               </div>
               <div className="flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-[#a084ee] mb-2 truncate">
@@ -151,6 +159,12 @@ const LastPosts: React.FC = () => {
           </a>
         </motion.div>
 
+        <ImageModal
+          open={!!modalImg}
+          src={modalImg || ""}
+          alt={t("home.latest_posts")}
+          onClose={() => setModalImg(null)}
+        />
       </div>
     </section>
   );
