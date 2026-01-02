@@ -3,7 +3,7 @@ import Background from "../../assets/img/background.jpg";
 import AstronautMarkus from "../../assets/img/astronautmarkus/AstronautMarkus-02.png";
 import ReyesAndFriends from "../../assets/img/icons/reyesandfriends.svg";
 import ProfilePic from "../../assets/img/profile.png";
-import { Github, Linkedin, Mail, Instagram, Code } from "lucide-react";
+import { Github, Linkedin, Mail, Instagram, Code, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useI18n } from "../../context/i18n";
@@ -171,24 +171,34 @@ function Home() {
                                 </a>
                             </motion.div>
                             <motion.div
-                                className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full items-center md:items-start justify-center md:justify-start"
+                                className="flex flex-row gap-3 md:gap-4 w-full items-center justify-center md:justify-start"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7, delay: 0.7 }}
                             >
                                 <Link
                                     to="/contact"
-                                    className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-purple-700 text-white rounded-lg font-bold shadow-lg hover:bg-purple-800 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
+                                    className="flex items-center gap-3 px-5 sm:px-6 py-2 bg-purple-700 text-white rounded-lg font-bold shadow-lg hover:bg-purple-800 transition text-sm sm:text-base md:text-lg hover:scale-105 duration-300"
+                                    style={{ minHeight: "2.5rem" }}
                                 >
                                     <Mail size={18} />
                                     {t('home.contact')}
                                 </Link>
                                 <Link
                                     to="/projects"
-                                    className="flex items-center gap-3 px-6 sm:px-7 py-2 sm:py-2.5 bg-white/20 text-white rounded-lg font-bold shadow-lg hover:bg-white/40 transition justify-center text-sm sm:text-base md:text-lg hover:scale-105 transform transition duration-300"
+                                    className="flex items-center gap-3 px-5 sm:px-6 py-2 bg-white/20 text-white rounded-lg font-bold shadow-lg hover:bg-white/40 transition text-sm sm:text-base md:text-lg hover:scale-105 duration-300"
+                                    style={{ minHeight: "2.5rem" }}
                                 >
                                     <Code size={18} />
                                     {t('home.projects')}
+                                </Link>
+                                <Link
+                                    to={`/documents/${t('home.download_cv_url')}`} target="_blank"
+                                    className="flex items-center gap-3 px-5 sm:px-6 py-2 bg-sky-500 text-white rounded-lg font-bold shadow-lg hover:bg-sky-600 transition text-sm sm:text-base md:text-lg hover:scale-105 duration-300"
+                                    style={{ minHeight: "2.5rem" }}
+                                >
+                                    <Download size={18} />
+                                    {t('home.download_cv')}
                                 </Link>
                             </motion.div>
                         </motion.div>

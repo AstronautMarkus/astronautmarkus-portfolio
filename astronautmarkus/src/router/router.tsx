@@ -22,7 +22,7 @@ function AnimatedRoutes() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/gallery" element={<Gallery />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="/*" element={<Navigate to="/" replace />} />
             </Route>
         </Routes>
     );
