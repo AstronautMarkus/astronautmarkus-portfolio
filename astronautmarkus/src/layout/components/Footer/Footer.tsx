@@ -77,9 +77,12 @@ function Footer() {
                     </button>
                 </div>
             </div>
-            <p className="py-4 text-center text-sm md:text-base text-gray-500/80">
-                Copyright {year} © AstronautMarkusDev {t("footer.rights")} | {t("footer.made_with")} <Heart className="inline-block w-4 h-4 text-purple-700" /> {t("footer.by")} Marcos Reyes
-            </p>
+            <div className="py-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm md:text-base text-gray-500/80">
+                <p>
+                    Copyright {year} © AstronautMarkusDev {t("footer.rights")} | {t("footer.made_with")} <Heart className="inline-block w-4 h-4 text-purple-700" /> {t("footer.by")} Marcos Reyes
+                </p>
+                <img src="https://count.getloli.com/@astronautmarkus.dev?name=astronautmarkus.dev&theme=booru-lewd&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" alt="Page Views Counter" className="h-auto" />
+            </div>
         </footer>
     );
 }
